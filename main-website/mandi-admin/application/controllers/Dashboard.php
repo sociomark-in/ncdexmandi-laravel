@@ -12,16 +12,8 @@ class Dashboard extends CI_Controller
 	}
 	public function index()
 	{
-		switch ($this->input->get('type')) {
-			case 'nominations':
-				$this->load->admin_dashboard('dashboard/nominations/index');
-				break;
-
-			default:
-				$this->load->admin_dashboard('dashboard/basic/index');
-				break;
-		}
-	}
+        $this->load->admin_dashboard('index');
+    }
 
 	public function login()
 	{

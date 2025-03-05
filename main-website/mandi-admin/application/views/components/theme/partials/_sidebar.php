@@ -17,7 +17,7 @@
 					<span class="link-title">Dashboard</span>
 				</a>
 			</li>
-			
+
 			<!-- Nominations -->
 			<li class="nav-item nav-category">Events Management</li>
 			<!-- Access Level: jury -->
@@ -35,53 +35,80 @@
 			</li>
 
 			<!-- Nominations -->
-			<li class="nav-item nav-category">Nominations Management</li>
+			<li class="nav-item nav-category">Content Management</li>
 			<!-- Access Level: jury -->
-			<li class="nav-item">
-				<a href="<?= base_url('nominations') ?>" class="nav-link">
+            <li class="nav-item">
+				<a class="nav-link" data-bs-toggle="collapse" href="#blogs" role="button" aria-expanded="false" aria-controls="blogs">
 					<i class="link-icon" data-feather="database"></i>
-					<span class="link-title">Nominations</span>
+					<span class="link-title">Blogs</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
 				</a>
+				<div class="collapse" id="blogs">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="#" class="nav-link">All Blogs</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Add New Blog</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+            <li class="nav-item">
+				<a class="nav-link" data-bs-toggle="collapse" href="#episodes" role="button" aria-expanded="false" aria-controls="episodes">
+					<i class="link-icon" data-feather="database"></i>
+					<span class="link-title">Episodes</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+				</a>
+				<div class="collapse" id="episodes">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="#" class="nav-link">All Episodes</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Add New Episode</a>
+						</li>
+					</ul>
+				</div>
 			</li>
 			<li class="nav-item">
-				<a href="<?= base_url('categories') ?>" class="nav-link">
-					<i class="link-icon" data-feather="book"></i>
+				<a href="<?= base_url('') ?>" class="nav-link">
+					<i class="link-icon" data-feather="bookmark"></i>
 					<span class="link-title">Categories</span>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="<?= base_url('all-cities') ?>" class="nav-link">
-					<i class="link-icon" data-feather="map-pin"></i>
-					<span class="link-title">Cities</span>
+				<a href="<?= base_url('') ?>" class="nav-link">
+					<i class="link-icon" data-feather="bookmark"></i>
+					<span class="link-title">Tags</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?= base_url('') ?>" class="nav-link">
+					<i class="link-icon" data-feather="message-square"></i>
+					<span class="link-title">Comments</span>
 				</a>
 			</li>
 
 			<!-- Access Level: admin -->
 
 			<li class="nav-item nav-category">User Management</li>
-			<!-- <li class="nav-item">
+			<li class="nav-item">
 				<a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
 					<i class="link-icon" data-feather="users"></i>
-					<span class="link-title">Jury Panel</span>
+					<span class="link-title">Users</span>
 					<i class="link-arrow" data-feather="chevron-down"></i>
 				</a>
 				<div class="collapse" id="emails">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="#" class="nav-link">Juries</a>
+							<a href="#" class="nav-link">All Users</a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">Menu Items</a>
+							<a href="#" class="nav-link">Add New User</a>
 						</li>
 					</ul>
 				</div>
-			</li> -->
-
-			<li class="nav-item">
-				<a href="dashboard.html" class="nav-link">
-					<i class="link-icon" data-feather="users"></i>
-					<span class="link-title">Users</span>
-				</a>
 			</li>
 			<li class="nav-item">
 				<a href="dashboard.html" class="nav-link">
