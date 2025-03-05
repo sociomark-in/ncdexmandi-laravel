@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'localhost/ncdexmandi-laravel/main-website/'),
+    'url' => env('APP_URL', 'http://localhost/ncdexmandi-laravel/main-website/'),
 
     /*
     |--------------------------------------------------------------------------
