@@ -1,11 +1,11 @@
 <!-- partial:partials/_footer.html -->
-<?php //$this->load->view('components/theme/partials/_footer'); ?>
+<?php //$this->load->view('components/partials/_footer'); ?>
 <!-- partial -->
 
 </div>
 </div>
 
-<?php $this->load->view('components/theme/partials/_js') ?>
+<?php $this->load->view('components/partials/_js') ?>
 
 </body>
 

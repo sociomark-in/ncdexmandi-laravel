@@ -9,7 +9,7 @@ License: For each use you must have a valid license purchased only from above li
 <html lang="en">
 
 <head>
-	<?php $this->load->view('components/theme/_head'); ?>
+	<?php $this->load->view('components/_head'); ?>
 	<title><?= (isset($page['title']))? $page['title']: APP_NAME ?></title>
 </head>
 
@@ -17,11 +17,11 @@ License: For each use you must have a valid license purchased only from above li
 	<div class="main-wrapper">
 
 		<!-- partial:partials/_sidebar.html -->
-		<?php $this->load->view('components/theme/partials/_sidebar'); ?>
+		<?php $this->load->view('components/partials/_sidebar'); ?>
 		<!-- partial -->
 
 		<div class="page-wrapper">
 
 			<!-- partial:partials/_navbar.html -->
-			<?php $this->load->view('components/theme/partials/_navbar'); ?>
+			<?php $this->load->view('components/partials/_navbar'); ?>
 			<!-- partial -->
