@@ -60,6 +60,17 @@ $route['api-auth-register'] = 'auth/register';
 $route['api-event-register'] = 'EventsController/api_event_register';
 $route['event/(:any)/check-in/(:any)'] = 'EventsController/check_in_verify/$1/$2';
 
+
+$route['blogs'] ="posts/BlogsController";
+$route['blogs/new-post'] ="posts/BlogsController/new_post";
+$route['blogs/post/(:any)'] ="posts/BlogsController/view_post/$1";
+$route['blogs/post/(:any)/edit'] ="posts/BlogsController/edit_post/$1";
+
+$route['episodes'] ="posts/EpisodesController";
+$route['episodes/new-post'] ="posts/EpisodesController/new_post";
+$route['episodes/post/(:any)'] ="posts/EpisodesController/view_post/$1";
+$route['episodes/post/(:any)/edit'] ="posts/EpisodesController/edit_post/$1";
+
 $route['register'] = 'dashboard/register';
 
 $route[''] = 'dashboard/index';

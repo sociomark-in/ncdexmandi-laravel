@@ -1,4 +1,3 @@
-
 <!-- core:js -->
 <!-- <script src="<?= base_url("assets") ?>/vendors/core/core.js"></script> -->
 <!-- endinject -->
@@ -16,3 +15,19 @@
 <script src="<?= base_url("assets") ?>/js/dashboard-light.js"></script>
 <script src="<?= base_url("assets") ?>/js/app.js"></script>
 <!-- End custom js for this page -->
+
+<script>
+    $('main select.form-select').each((index, elem) => {
+        $(elem).select2();
+    })
+    $('main input[data-type=date]').each((index, elem) => {
+        $(elem).datepicker({
+            changeMonth: true,
+            changeYear: true,
+            showButtonPanel: true,
+            dateFormat: 'dd/mm/yy',
+            maxDate: "+1D",
+            yearRange: "-100:+0"
+        });
+    })
+</script>

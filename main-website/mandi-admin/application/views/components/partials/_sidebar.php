@@ -37,7 +37,7 @@
 			<!-- Nominations -->
 			<li class="nav-item nav-category">Content Management</li>
 			<!-- Access Level: jury -->
-            <li class="nav-item">
+            <li class="nav-item <?= link_is_active("blogs") ?>">
 				<a class="nav-link" data-bs-toggle="collapse" href="#blogs" role="button" aria-expanded="false" aria-controls="blogs">
 					<i class="link-icon" data-feather="database"></i>
 					<span class="link-title">Blogs</span>
@@ -46,7 +46,7 @@
 				<div class="collapse" id="blogs">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="#" class="nav-link">All Blogs</a>
+							<a href="<?= base_url("blogs") ?>" class="nav-link <?= link_is_active("blogs") ?>">All Blogs</a>
 						</li>
 						<li class="nav-item">
 							<a href="#" class="nav-link">Add New Blog</a>
