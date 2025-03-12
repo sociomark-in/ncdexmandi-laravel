@@ -3,6 +3,11 @@
         <div>
             <h4 class="mb-3 mb-md-0">Blog Posts</h4>
         </div>
+        <div class="">
+            <a href="" class="btn btn-icon-text btn-primary">
+                <i class="btn-icon-prepend" data-feather="plus"></i>
+                Add New Post</a>
+        </div>
     </div>
 
     <!-- row -->
@@ -69,7 +74,7 @@
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-hover mb-0" id="leadsDataTable">
+                        <table class="table table-hover mb-0 w-100" id="leadsDataTable">
                             <thead>
                                 <tr>
                                     <th class="pt-0"></th>
