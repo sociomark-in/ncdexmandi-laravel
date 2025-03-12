@@ -20,7 +20,7 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-12">
-                            <form action="<?= base_url("blogs/search") ?>" method="get">
+                            <form action="<?= base_url("blogs") ?>" method="get">
                                 <div class="row g-2">
                                     <div class="col-lg-2 col-md-3 col-12">
                                         <select name="post_category" class="form-select" id="">
@@ -57,13 +57,13 @@
                         <div class="col-md-auto col-12">
                             <ul class="nav nav-underline">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">All Posts <span class="badge bg-dark">200</span></a>
+                                    <a class="nav-link <?= (in_array($this->input->get('post_status'), [NULL, ""])) ? "active" : "" ?>" aria-current="page" href="<?= current_url() ?>">All Posts <span class="badge bg-dark">200</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Released <span class="badge bg-dark">200</span></a>
+                                    <a class="nav-link <?= ($this->input->get('post_status') == "released") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=released">Released <span class="badge bg-dark">200</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Draft <span class="badge bg-dark">200</span></a>
+                                    <a class="nav-link <?= ($this->input->get('post_status') == "draft") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=draft">Draft <span class="badge bg-dark">200</span></a>
                                 </li>
                             </ul>
                         </div>
