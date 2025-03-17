@@ -65,6 +65,7 @@
 <link rel="shortcut icon" href="<?= base_url("assets") ?>/images/favicon.png" />
 
 <link rel="stylesheet" href="<?= base_url("assets") ?>/css/custom.min.css">
+<script src="<?= base_url("assets") ?>/js/app.js"></script>
 
 <?php switch (explode(base_url(), current_url())[1]):
 	case 'dashboard': ?>

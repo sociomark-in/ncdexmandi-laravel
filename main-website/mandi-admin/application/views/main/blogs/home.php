@@ -4,7 +4,7 @@
             <h4 class="mb-3 mb-md-0">Blog Posts</h4>
         </div>
         <div class="">
-            <a href="" class="btn btn-icon-text btn-primary">
+            <a href="<?= base_url('blogs/new-post') ?>" target="_blank" class="btn btn-icon-text btn-primary">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
                 Add New Post</a>
         </div>
@@ -17,11 +17,6 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline mb-2">
                         <h6 class="card-title mb-0">All Posts</h6>
-                        <div class="dropdown mb-2">
-                            <a type="button" id="dropdownMenuButton7" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-                            </a>
-                        </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-12">
@@ -81,9 +76,9 @@
                                     <th class="pt-0">Blog Title</th>
                                     <th class="pt-0">Categories</th>
                                     <th class="pt-0">Tags</th>
+                                    <!-- <th class="pt-0">Lang</th>
                                     <th class="pt-0">Lang</th>
-                                    <th class="pt-0">Lang</th>
-                                    <th class="pt-0">Lang</th>
+                                    <th class="pt-0">Lang</th> -->
                                     <th class="pt-0">Comments</th>
                                     <th class="pt-0">Date</th>
                                 </tr>
@@ -97,7 +92,7 @@
                                                 <i class="link-icon px-1 mb-1" data-feather="trash-2"></i>
                                             </button>
                                         </td>
-                                        <td><a target="_blank" href="<?= base_url('blogs/post/' . $i . '/view') ?>" class="blog-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, praesentium.</a></td>
+                                        <td><a target="_blank" href="<?= base_url('blogs/post/' . $i . '?post_preview=true') ?>"><span class="blog-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, praesentium.</span><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a></td>
                                         <td>
                                             <span class="badge">Released</span>
                                             <span class="badge">Released</span>
@@ -109,7 +104,7 @@
                                                 <span class="badge">+4 More</span>
                                             </div>
                                         </td>
-                                        <td>
+                                        <!-- <td>
                                             <a href="<?= base_url('') ?>">
                                                 <i class="link-icon px-1 mb-1" data-feather="plus"></i>
                                             </a>
@@ -123,7 +118,7 @@
                                             <a href="<?= base_url('') ?>">
                                                 <i class="link-icon px-1 mb-1" data-feather="plus"></i>
                                             </a>
-                                        </td>
+                                        </td> -->
                                         <td>-</td>
                                         <td>
                                             <span>Released</span><br>

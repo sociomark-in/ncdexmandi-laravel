@@ -35,16 +35,6 @@ form label.error {
   color: red;
   font-size: 0.8rem;
 }
-form .form-check-input:checked {
-  background-color: #b72026;
-  border-color: #b72026;
-}
-form .form-check-input:focus {
-  border-color: rgba(183, 32, 38, 0.5);
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(183, 32, 38, 0.2);
-}
-
 .badge {
   padding: 0.35rem 0.8rem;
   font-size: 0.8rem;
@@ -127,8 +117,12 @@ table a {
 }
 
 .blog-title {
-  display: block;
+  display: inline-block;
   text-overflow: ellipsis;
   width: 400px;
   overflow: hidden;
+}
+
+.embed-fullscreen {
+  height: 100vh;
 }

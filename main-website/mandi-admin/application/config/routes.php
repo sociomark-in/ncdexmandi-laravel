@@ -61,6 +61,10 @@ $route['api-event-register'] = 'EventsController/api_event_register';
 $route['event/(:any)/check-in/(:any)'] = 'EventsController/check_in_verify/$1/$2';
 
 
+$route['api/v2/blog/new'] = 'posts/BlogsController/api_new_post';
+
+
+
 $route['blogs'] ="posts/BlogsController";
 $route['blogs/new-post'] ="posts/BlogsController/new_post";
 $route['blogs/post/(:any)'] ="posts/BlogsController/view_post/$1";
