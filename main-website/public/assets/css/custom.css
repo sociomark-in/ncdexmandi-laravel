@@ -1,0 +1,7 @@
+.banner-area div {
+  height: 800px;
+}
+
+.curve-text a {
+  transform: translate(-50%, -50%);
+}
