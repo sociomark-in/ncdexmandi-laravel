@@ -111,7 +111,7 @@
 				</div>
 			</li>
 			<li class="nav-item">
-				<a href="dashboard.html" class="nav-link">
+				<a href="<?= base_url('settings') ?>" class="nav-link">
 					<i class="link-icon" data-feather="settings"></i>
 					<span class="link-title">Settings</span>
 				</a>

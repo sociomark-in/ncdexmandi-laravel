@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'Dashboard';
+$route['default_controller'] = 'DashboardController';
 
 $route['login'] = 'pages/login';
 $route['logout'] = 'auth/logout';
@@ -64,23 +64,26 @@ $route['event/(:any)/check-in/(:any)'] = 'EventsController/check_in_verify/$1/$2
 $route['api/v2/blog/new'] = 'posts/BlogsController/api_new_post';
 
 
+$route['settings'] ="app/SettingsController";
+$route['settings/languages'] ="app/SettingsController/localization";
 
 $route['blogs'] ="posts/BlogsController";
 $route['blogs/new-post'] ="posts/BlogsController/new_post";
 $route['blogs/post/(:any)'] ="posts/BlogsController/view_post/$1";
 $route['blogs/post/(:any)/edit'] ="posts/BlogsController/edit_post/$1";
 
+
 $route['episodes'] ="posts/EpisodesController";
 $route['episodes/new-post'] ="posts/EpisodesController/new_post";
 $route['episodes/post/(:any)'] ="posts/EpisodesController/view_post/$1";
 $route['episodes/post/(:any)/edit'] ="posts/EpisodesController/edit_post/$1";
 
-$route['register'] = 'dashboard/register';
+$route['register'] = 'DashboardController/register';
 
-$route[''] = 'dashboard/index';
-$route['menu'] = 'dashboard/menu_master';
-$route['menu/categories'] = 'dashboard/categories_all';
-$route['menu/category/(:any)/menu-items'] = 'dashboard/menu_items/$1';
+$route[''] = 'DashboardController/index';
+$route['menu'] = 'DashboardController/menu_master';
+$route['menu/categories'] = 'DashboardController/categories_all';
+$route['menu/category/(:any)/menu-items'] = 'DashboardController/menu_items/$1';
 
 
 $route['404_override'] = '';

@@ -1,6 +1,6 @@
 <!-- Start Footer
     ============================================= -->
-<footer class="bg-dark text-light" style="background-image: url(assets/img/shape/8.png);">
+<footer class="bg-black text-light" style="background-image: url(assets/img/shape/8.png);">
     <div class="container">
         <div class="f-items default-padding">
             <div class="row">
@@ -8,15 +8,15 @@
                 <!-- Single Itme -->
                 <div class="col-lg-4 col-md-6 item">
                     <div class="footer-item about">
-                        <img class="logo" src="{{ asset('assets/img/logo-light.png') }}" alt="Logo">
+                        <img class="logo" src="{{ asset('assets/img/ncdex-logo.jpeg') }}" alt="Logo">
+                        {{-- <img class="logo" src="https://placehold.co/200x200" alt="Logo"> --}}
                         <p>
-                            Happen active county. Winding morning ambition shyness evident to poor. Because elderly new
-                            to the point to main success.
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         </p>
-                        <form action="#">
+                        {{-- <form action="#">
                             <input type="email" placeholder="Your Email" class="form-control" name="email">
                             <button type="submit"> Go</button>
-                        </form>
+                        </form> --}}
                     </div>
                 </div>
                 <!-- End Single Itme -->
@@ -41,9 +41,9 @@
                             <li>
                                 <a href="contact-us.html">Contact Us</a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <a href="team-details.html">Volunteers</a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
@@ -57,28 +57,28 @@
                             <li>
                                 <div class="thumb">
                                     <a href="blog-single-with-sidebar.html">
-                                        <img src="{{ asset('assets/img/100x100.png') }}" alt="Thumb">
+                                        <img src="{{ url('https://iamsabbirislam.github.io/landi-Jekyll-theme-live/assets/images/about/2.jpg') }}" alt="Thumb">
                                     </a>
                                 </div>
                                 <div class="info">
                                     <div class="meta-title">
                                         <span class="post-date">12 Sep, 2025</span>
                                     </div>
-                                    <h5><a href="blog-single-with-sidebar.html">Meant widow equal an share least part.
+                                    <h5><a href="blog-single-with-sidebar.html">Lorum ipsum
                                         </a></h5>
                                 </div>
                             </li>
                             <li>
                                 <div class="thumb">
                                     <a href="blog-single-with-sidebar.html">
-                                        <img src="{{ asset('assets/img/100x100.png') }}" alt="Thumb">
+                                        <img src="{{ url('https://iamsabbirislam.github.io/landi-Jekyll-theme-live/assets/images/about/2.jpg') }}" alt="Thumb">
                                     </a>
                                 </div>
                                 <div class="info">
                                     <div class="meta-title">
-                                        <span class="post-date">18 Jul, 2025</span>
+                                        <span class="post-date">12 Sep, 2025</span>
                                     </div>
-                                    <h5><a href="blog-single-with-sidebar.html">Future Plan & Strategy for Consutruction
+                                    <h5><a href="blog-single-with-sidebar.html">Lorum ipsum
                                         </a></h5>
                                 </div>
                             </li>
@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="content">
                                     <strong>Address:</strong>
-                                    5919 Trussville Crossings Pkwy, Birmingham
+                                    <span class="text-theme">Lorum ipsum</span>
                                 </div>
                             </li>
                             <li>
@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="content">
                                     <strong>Email:</strong>
-                                    <a href="mailto:info@validtheme.com">info@validtheme.com</a>
+                                    <a class="text-theme" href="mailto:ncdex.mandi@gmail.com">ncdex.mandi@gmail.com</a>
                                 </div>
                             </li>
                             <li>
@@ -116,7 +116,7 @@
                                 </div>
                                 <div class="content">
                                     <strong>Phone:</strong>
-                                    <a href="tel:2151234567">+123 34598768</a>
+                                    <a class="text-theme" href="tel:18001034861">+1800-103-4861</a>
                                 </div>
                             </li>
                         </ul>
@@ -130,14 +130,16 @@
         <div class="footer-bottom text-center">
             <div class="row">
                 <div class="col-lg-12">
-                    <p>&copy; Copyright {{ date('Y') }}. All Rights Reserved by <a href="#">Sociomark</a></p>
+                    <p>&copy; Copyright {{ date('Y') }}.
+                    <!--All Rights Reserved by <a href="#">Sociomark</a>-->
+                    </p>
                 </div>
             </div>
         </div>
         <!-- End Footer Bottom -->
     </div>
     <div class="shape-right-bottom">
-        <img src="{{ asset('assets/img/shape/7.png') }}" alt="Image Not Found">
+        <!--<img src="{{ asset('assets/img/shape/7.png') }}" alt="Image Not Found">-->
     </div>
 </footer>
 <!-- End Footer -->

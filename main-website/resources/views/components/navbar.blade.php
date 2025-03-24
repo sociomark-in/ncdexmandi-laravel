@@ -9,7 +9,7 @@
                         <i class="fas fa-clock"></i> Opening Hours : Sunday- Friday, 08:00 am - 05:00pm
                     </li>
                     <li>
-                        <a href="tel:+4733378901"><i class="fas fa-phone-alt"></i> +4733378901</a>
+                        <a href="tel:18001034861"><i class="fas fa-phone-alt"></i> 1800-103-4861</a>
                     </li>
                 </ul>
             </div>
@@ -59,8 +59,9 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="{{ asset('assets/img/logo-mix.png') }}" class="logo" alt="Logo">
+                    <a class="navbar-brand" href="{{ route('main_home') }}">
+                        <img src="{{ asset('assets/img/ncdex-logo.jpeg') }}" class="logo" alt="Logo">
+                        {{-- <img src="https://placehold.co/200x200" class="logo" alt="Logo"> --}}
                     </a>
                 </div>
                 <!-- End Header Navigation -->
@@ -69,69 +70,23 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
 
-                <img src="{{ asset('assets/img/logo.png') }}" alt="Logo">
+                <img src="{{ asset('assets/img/ncdex-logo.jpeg') }}" alt="Logo">
+                {{-- <img src="https://placehold.co/200x200" alt="Logo"> --}}
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-times"></i>
                 </button>
 
                 <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Home</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="index.html">Home Agriculture</a></li>
-                            <li><a href="index-2.html">Home Farming</a></li>
-                            <li><a href="index-3.html">Agriculture Shop</a></li>
-                            <li><a href="index-4.html">Dairy Farm</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a href="{{ route('main_home') }}" class="nav-link">Home</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="farmers.html">Team</a></li>
-                            <li><a href="farmer-details.html">Team Details</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="404.html">Error Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="project.html" class="dropdown-toggle" data-toggle="dropdown">Projects</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="project.html">Project</a></li>
-                            <li><a href="project-details.html">Project Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="services.html">Services Version One</a></li>
-                            <li><a href="services-2.html">Services Version Two</a></li>
-                            <li><a href="services-details.html">Services Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="blog-standard.html">Blog Standard</a></li>
-                            <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
-                            <li><a href="blog-2-colum.html">Blog Grid Two Colum</a></li>
-                            <li><a href="blog-3-colum.html">Blog Grid Three Colum</a></li>
-                            <li><a href="blog-single.html">Blog Single</a></li>
-                            <li><a href="blog-single-with-sidebar.html">Blog Single With Sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="shop.html">Shop Product</a></li>
-                            <li><a href="shop-single.html">Shop Single</a></li>
-                            <li><a href="shop-single-thumb-only.html">Shop Single Version Two</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a href="{{ route('main_about') }}" class="nav-link">About</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
 
-            <div class="attr-right">
+            <div class="attr-right d-none">
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>

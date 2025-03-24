@@ -12,82 +12,6 @@
             </div>
         </form>
         <ul class="navbar-nav">
-            <li class="nav-item" style="width: 200px;">
-                <div class="actions w-100">
-                    <form action="" class="nav-link">
-                        <select name="lang" id="langSelect" class="form-control">
-                            <option value="en-IN" data-origin="en">English</option>
-                            <option value="hi-IN" data-origin="hi">Hindi</option>
-                            <option value="mr-IN" data-origin="mr">Marathi</option>
-                            <option value="gu-IN" data-origin="gj">Gujarati</option>
-                            <!-- <option value="wyj496iThHwgfU6w" data-origin="Sociomark">Sociomark - Digital Marketing Agency</option> -->
-                        </select>
-                    </form>
-                </div>
-                <script>
-                    $("#langSelect").select2({
-                        templateSelection: (state) => {
-                            if (!state.id) {
-                                return state.text;
-                            }
-
-                            var baseUrl = "/user/pages/images/flags";
-                            var $state = $(
-                                '<span><i class="flag-icon" title="us" id="us"></i><span class="ms-1 d-none d-md-inline"></span></span>'
-
-                            );
-
-                            // Use .text() instead of HTML string concatenation to avoid script injection issues
-                            $state.find("span").text(state.text);
-                            switch (state.element.getAttribute('data-origin').toLowerCase()) {
-                                case 'hi':
-                                    $state.find("i").addClass("flag-icon-in");
-                                    $state.find("i").attr("title", "in");
-                                    $state.find("i").attr("id", "hi-in");
-                                    break;
-                                case 'mr':
-                                    $state.find("i").addClass("flag-icon-in");
-                                    $state.find("i").attr("title", "in");
-                                    $state.find("i").attr("id", "mr-in");
-                                    break;
-                                case 'gj':
-                                    $state.find("i").addClass("flag-icon-in");
-                                    $state.find("i").attr("title", "in");
-                                    $state.find("i").attr("id", "gj-in");
-                                    break;
-                                default:
-                                    $state.find("i").addClass("flag-icon-us");
-                                    $state.find("i").attr("title", "us");
-                                    $state.find("i").attr("id", "us");
-                                    break;
-                            }
-                            return $state;
-                        }
-                    });
-
-                    $("#langSelect").on('change', (event) => {
-                        $.ajax({
-                            method: 'POST',
-                            data: {
-                                'lang': $("#langSelect").val(),
-                                'redirect' : '<?= current_url() ?>'
-                            },
-                            url: "<?= base_url('api/v2/') ?>",
-                            success: (response) => {
-                                // location.reload();
-                            },
-                            error: (error) => {
-                                console.log(error);
-                            }
-                        })
-                    })
-                </script>
-                <style>
-                    .select2_option-icon {
-                        height: 20px;
-                    }
-                </style>
-            </li>
             <li class="nav-item"><?= byte_size_format(directory_size("assets")) ?></li>
             <!-- <li class="nav-item">XXX.XXX.XXX.XXX</li> -->
             <li class="nav-item">
@@ -95,7 +19,7 @@
                     <i data-feather="help-circle"></i>
                 </button>
             </li>
-            <li class="nav-item dropdown">
+            <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="flag-icon flag-icon-us mt-1" title="us"></i> <span class="ms-1 me-1 d-none d-md-inline-block">English</span>
                 </a>
@@ -106,7 +30,7 @@
                     <a href="<?= base_url("") ?>" class="dropdown-item py-2"><i class="flag-icon flag-icon-pt" title="pt" id="pt"></i> <span class="ms-1"> Portuguese </span></a>
                     <a href="<?= base_url("") ?>" class="dropdown-item py-2"><i class="flag-icon flag-icon-es" title="es" id="es"></i> <span class="ms-1"> Spanish </span></a>
                 </div>
-            </li>
+            </li> -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i data-feather="grid"></i>
