@@ -117,7 +117,7 @@
                 <div class="row align-center">
                     <div class="col-xl-6 col-lg-5">
                         <div class="about-style-one-thumb">
-                            <img src="{{ url('https://www.shutterstock.com/shutterstock/photos/2304603711/display_1500/stock-photo-two-farmers-using-technology-to-check-crop-quality-2304603711.jpg') }}" alt="Image Not Found">
+                            <img src="{{ url('https://img.freepik.com/free-photo/hard-work-garden-brings-results_329181-4615.jpg?t=st=1742827318~exp=1742830918~hmac=936451b2dd16b5d6850ab352dd46f5c0e418ded83c58850594634a380adca513&w=740') }}" alt="Image Not Found">
                             <div class="animation-shape">
                                 <img src="{{ url('https://validthemes.net/site-template/agrica/assets/img/illustration/1.png')}}" alt="Image Not Found">
                             </div>

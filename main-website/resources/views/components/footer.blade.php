@@ -27,23 +27,23 @@
                         <h4 class="widget-title">Explore</h4>
                         <ul>
                             <li>
-                                <a href="about-us.html">About Us</a>
+                                <a href="{{ route('main_about') }}">About Us</a>
                             </li>
-                            <li>
-                                <a href="team.html">Meet Our Team</a>
-                            </li>
-                            <li>
-                                <a href="blog-single-with-sidebar.html">News & Media</a>
-                            </li>
-                            <li>
-                                <a href="services.html">Services</a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html">Contact Us</a>
-                            </li>
-                            {{-- <li>
-                                <a href="team-details.html">Volunteers</a>
-                            </li> --}}
+                            <!--<li>-->
+                            <!--    <a href="team.html">Meet Our Team</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--    <a href="blog-single-with-sidebar.html">News & Media</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--    <a href="services.html">Services</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--    <a href="contact-us.html">Contact Us</a>-->
+                            <!--</li>-->
+                            <!--{{-- <li>-->
+                            <!--    <a href="team-details.html">Volunteers</a>-->
+                            <!--</li> --}}-->
                         </ul>
                     </div>
                 </div>
