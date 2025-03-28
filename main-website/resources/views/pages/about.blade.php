@@ -103,40 +103,28 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="timeline-items">
+                    <div class="col-lg-12 col-10 offset-1 offset-lg-0">
+                        <div class="timeline-items row g-0">
                             <!-- Single Item -->
-                            <div class="timeline-item">
+                            <div class="timeline-item col-md">
                                 <h2>1906</h2>
                                 <h4>Lorem ipsum dolor sit.</h4>
                             </div>
                             <!-- End Single Item -->
                             <!-- Single Item -->
-                            <div class="timeline-item">
+                            <div class="timeline-item col-md">
                                 <h2>1920</h2>
                                 <h4>Lorem ipsum dolor sit.</h4>
                             </div>
                             <!-- End Single Item -->
                             <!-- Single Item -->
-                            <div class="timeline-item">
+                            <div class="timeline-item col-md">
                                 <h2>1925</h2>
                                 <h4>Lorem ipsum dolor sit.</h4>
                             </div>
                             <!-- End Single Item -->
                             <!-- Single Item -->
-                            <div class="timeline-item">
-                                <h2>1925</h2>
-                                <h4>Lorem ipsum dolor sit.</h4>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="timeline-item">
-                                <h2>1925</h2>
-                                <h4>Lorem ipsum dolor sit.</h4>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="timeline-item">
+                            <div class="timeline-item col-md">
                                 <h2>1925</h2>
                                 <h4>Lorem ipsum dolor sit.</h4>
                             </div>

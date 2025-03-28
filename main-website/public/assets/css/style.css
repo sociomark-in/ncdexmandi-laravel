@@ -6802,8 +6802,6 @@ img.loader {
 }
 
 .timeline-items {
-	display: flex;
-    justify-content: space-between;
 	gap: 50px;
 	border-top: 2px solid var(--dark);
 	padding-top: 50px;

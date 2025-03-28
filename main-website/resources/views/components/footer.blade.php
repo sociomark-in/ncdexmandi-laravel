@@ -27,7 +27,16 @@
                         <h4 class="widget-title">Explore</h4>
                         <ul>
                             <li>
-                                <a href="{{ route('main_about') }}">About Us</a>
+                                <a href="{{ route('main_about') }}">About NCDEX Mandi</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_episodes') }}">IPFT Schools</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_publications') }}">Publications</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('blogs_home') }}">Blogs</a>
                             </li>
                             <!--<li>-->
                             <!--    <a href="team.html">Meet Our Team</a>-->

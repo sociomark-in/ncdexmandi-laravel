@@ -35,7 +35,30 @@ class BlogsController extends CI_Controller
     public function api_new_post()
     {
         $this->request = $this->input->post();
-        echo "<pre>";
-        print_r($this->request);
+
+        if (!file_exists(FILE_UPLOAD_PATH)) {
+            mkdir(FILE_UPLOAD_PATH, 0777, true);
+        }
+
+        $config['upload_path']          =  FILE_UPLOAD_PATH;
+        $config['allowed_types']        = 'jpeg|jpg';
+        $new_name = time() . "_" . $_FILES["post_image"]['name'];
+        $config['file_name'] = $new_name;
+
+        $this->load->library('upload', $config);
+        $this->load->helper('image');
+
+        if ($this->upload->do_upload('post_image')) {
+            if (
+                resize_image($this->upload->data('file_name'), $this->upload->data('file_path'), 200) &&
+                resize_image($this->upload->data('file_name'), $this->upload->data('file_path'), 580)) {
+                echo "<pre>";
+                print_r($this->request);
+                print_r($_FILES);
+            }
+        } else {
+            echo "<pre>";
+            print_r($this->request);
+        }
     }
 }

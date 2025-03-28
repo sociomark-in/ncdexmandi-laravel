@@ -15,14 +15,14 @@
             </div>
             <div class="col-lg-4 text-end">
                 <div class="social">
-                    <ul>
+                    <ul class="d-flex align-items-center">
                         <li>
                             <div id="google_translate_element"></div>
                             <script type="text/javascript">
                                 function googleTranslateElementInit() {
                                     new google.translate.TranslateElement({
                                         pageLanguage: 'en',
-                                        includedLanguages: 'en,mr,hi,gu'
+                                        includedLanguages: 'en,mr,hi,gu',
                                     }, 'google_translate_element');
                                 }
 
@@ -38,8 +38,14 @@
                             </script>
                             <style>
                                 #google_translate_element {
-                                    height: 1.5rem;
+                                    height: 2rem;
                                     overflow: hidden;
+                                }
+                                #google_translate_element .goog-te-combo{
+                                    font-size: 1rem;
+                                    font-family: 'Poppins', 'Segoe UI', Tahoma, 'Geneva', 'Verdana', sans-serif;
+                                    padding: 0.15rem;
+                                    margin: 0;
                                 }
 
                                 iframe.skiptranslate {
