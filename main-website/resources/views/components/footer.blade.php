@@ -11,7 +11,9 @@
                         <img class="logo" src="{{ asset('assets/img/ncdex-logo.jpeg') }}" alt="Logo">
                         {{-- <img class="logo" src="https://placehold.co/200x200" alt="Logo"> --}}
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.
                         </p>
                         {{-- <form action="#">
                             <input type="email" placeholder="Your Email" class="form-control" name="email">
@@ -66,7 +68,8 @@
                             <li>
                                 <div class="thumb">
                                     <a href="blog-single-with-sidebar.html">
-                                        <img src="{{ url('https://iamsabbirislam.github.io/landi-Jekyll-theme-live/assets/images/about/2.jpg') }}" alt="Thumb">
+                                        <img src="{{ url('https://iamsabbirislam.github.io/landi-Jekyll-theme-live/assets/images/about/2.jpg') }}"
+                                            alt="Thumb">
                                     </a>
                                 </div>
                                 <div class="info">
@@ -80,7 +83,8 @@
                             <li>
                                 <div class="thumb">
                                     <a href="blog-single-with-sidebar.html">
-                                        <img src="{{ url('https://iamsabbirislam.github.io/landi-Jekyll-theme-live/assets/images/about/2.jpg') }}" alt="Thumb">
+                                        <img src="{{ url('https://iamsabbirislam.github.io/landi-Jekyll-theme-live/assets/images/about/2.jpg') }}"
+                                            alt="Thumb">
                                     </a>
                                 </div>
                                 <div class="info">
@@ -133,6 +137,94 @@
                 </div>
                 <!-- Single Itme -->
 
+                <!-- Pages Link -->
+                <!-- Single Itme -->
+                <div class="col-lg-3 col-md-6 item">
+                    <div class="footer-item link">
+                        <h4 class="widget-title">Resources</h4>
+                        <ul>
+                            <li>
+                                <a href="{{ route('main_home') }}">Calculators</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">Reports</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Single Itme -->
+
+                <!-- Single Itme -->
+                <div class="col-lg-3 col-md-6 item">
+                    <div class="footer-item link">
+                        <h4 class="widget-title">Lorem, ipsum dolor.</h4>
+                        <ul>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Single Itme -->
+
+                <!-- Single Itme -->
+                <div class="col-lg-3 col-md-6 item">
+                    <div class="footer-item link">
+                        <h4 class="widget-title">Lorem, ipsum dolor.</h4>
+                        <ul>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Single Itme -->
+
+                <!-- Single Itme -->
+                <div class="col-lg-3 col-md-6 item">
+                    <div class="footer-item link">
+                        <h4 class="widget-title">Lorem, ipsum dolor.</h4>
+                        <ul>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Single Itme -->
             </div>
         </div>
         <!-- Start Footer Bottom -->
@@ -140,7 +232,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p>&copy; Copyright {{ date('Y') }}.
-                    <!--All Rights Reserved by <a href="#">Sociomark</a>-->
+                        <!--All Rights Reserved by <a href="#">Sociomark</a>-->
                     </p>
                 </div>
             </div>

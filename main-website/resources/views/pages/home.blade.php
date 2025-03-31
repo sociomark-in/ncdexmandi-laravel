@@ -357,7 +357,7 @@
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3">
                         <div class="site-heading text-center">
-                            <h5 class="sub-title">Awesome Initaitives</h5>
+                            <h5 class="sub-title">Awesome Initiatives</h5>
                             <h2 class="title">Explore CSR Initiatives</h2>
                         </div>
                     </div>

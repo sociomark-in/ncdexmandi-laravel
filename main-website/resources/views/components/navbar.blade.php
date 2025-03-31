@@ -41,7 +41,8 @@
                                     height: 2rem;
                                     overflow: hidden;
                                 }
-                                #google_translate_element .goog-te-combo{
+
+                                #google_translate_element .goog-te-combo {
                                     font-size: 1rem;
                                     font-family: 'Poppins', 'Segoe UI', Tahoma, 'Geneva', 'Verdana', sans-serif;
                                     padding: 0.15rem;
@@ -94,7 +95,7 @@
     <!-- Start Navigation -->
     <nav class="navbar mobile-sidenav inc-shape navbar-sticky navbar-default validnavs dark">
 
-        <div class="container d-flex justify-content-between align-items-center">
+        <div class="container-fluid px-0 px-md-3 px-lg-4 d-flex justify-content-between align-items-center">
 
 
             <div class="navbar-brand-left">
@@ -110,7 +111,6 @@
                 </div>
                 <!-- End Header Navigation -->
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
 
@@ -125,17 +125,45 @@
                         <a href="{{ route('main_home') }}" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('main_about') }}" class="nav-link">About</a>
+                        <a href="{{ route('main_about') }}" class="nav-link">About NCDEX Mandi</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('main_episodes') }}">NCDEX&nbsp;IPFT Schools</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('main_episodes') }}">NCDEX&nbsp;IPFT Academy</a>
+                    </li>
+                    <li class="nav-item d-none">
+                        <a href="{{ route('main_home') }}" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('main_episodes') }}" class="nav-link">Panel Discussions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('main_home') }}" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
 
-            <div class="attr-right d-none">
+
+            <div class="attr-right">
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-
-                        <li class="dropdown">
+                        <li class="button"><a href="#">Login / Register</a></li>
+                        <li class="dropdown d-none">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="far fa-user"></i>
+                                <span class="badge">3</span>
+                            </a>
+                            <ul class="dropdown-menu cart-list">
+                                <li><a href="index.html">Home Agriculture</a></li>
+                                <li><a href="index-2.html">Home Farming</a></li>
+                                <li><a href="index-3.html">Agriculture Shop</a></li>
+                                <li><a href="index-4.html">Dairy Farm</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown d-none">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="far fa-shopping-cart"></i>
                                 <span class="badge">3</span>
@@ -176,7 +204,6 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="button"><a href="#">Register</a></li>
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
