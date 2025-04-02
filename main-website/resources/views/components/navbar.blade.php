@@ -127,17 +127,24 @@
                     <li class="nav-item">
                         <a href="{{ route('main_about') }}" class="nav-link">About NCDEX Mandi</a>
                     </li>
-                    <li>
-                        <a href="{{ route('main_episodes') }}">NCDEX&nbsp;IPFT Schools</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('main_episodes') }}">NCDEX&nbsp;IPFT Academy</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >NCDEX Ki Pathshala</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ route('main_episodes') }}">Key Institutions</a></li>
+                            <li><a href="{{ route('main_episodes') }}">Reports</a></li>
+                            <li><a href="{{ route('main_episodes') }}">Podcast</a></li>
+                            <li><a href="{{ route('main_episodes') }}">Infographics</a></li>
+                            <li><a href="{{ route('main_episodes') }}">FAQs</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item d-none">
                         <a href="{{ route('main_home') }}" class="nav-link">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('main_episodes') }}" class="nav-link">Panel Discussions</a>
+                        <a href="{{ route('main_episodes') }}" class="nav-link">Kheti ke Sikandar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('main_episodes') }}" class="nav-link">Events</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('main_home') }}" class="nav-link">Contact Us</a>

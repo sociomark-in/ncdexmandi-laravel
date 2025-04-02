@@ -81,6 +81,27 @@
             </div>
         </div>
         <!-- End About -->
+        <!-- Start About
+        ============================================= -->
+        <div class="about-style-one-area default-padding overflow-hidden">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-12">
+                        <div class="about-style-one-info">
+
+                            <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ea accusamus sint officia iure praesentium pariatur tempora obcaecati iusto natus ullam voluptatum, neque, labore fugiat. Impedit accusamus dolorum commodi vitae quas! Aliquid obcaecati facilis dicta, dignissimos minus, minima ullam ad doloribus quasi id quod, est alias ipsum eveniet. Fugiat accusamus unde explicabo vitae nostrum labore eius, ab odit facere incidunt amet quam qui aut consequatur sint eaque quod sunt dolorem a nam? Maiores a tempora rerum harum ullam aliquam aspernatur dicta, atque, quae, iusto incidunt. Perferendis expedita esse vero omnis laudantium, in nemo praesentium. Temporibus voluptates laborum quae autem nihil!
+                            </p>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ea accusamus sint officia iure praesentium pariatur tempora obcaecati iusto natus ullam voluptatum, neque, labore fugiat. Impedit accusamus dolorum commodi vitae quas! Aliquid obcaecati facilis dicta, dignissimos minus, minima ullam ad doloribus quasi id quod, est alias ipsum eveniet. Fugiat accusamus unde explicabo vitae nostrum labore eius, ab odit facere incidunt amet quam qui aut consequatur sint eaque quod sunt dolorem a nam? Maiores a tempora rerum harum ullam aliquam aspernatur dicta, atque, quae, iusto incidunt. Perferendis expedita esse vero omnis laudantium, in nemo praesentium. Temporibus voluptates laborum quae autem nihil!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End About -->
 
         <!-- Start Timeline
                 ============================================= -->

@@ -185,7 +185,7 @@
                 <!-- Single Itme -->
                 <div class="col-lg-3 col-md-6 item">
                     <div class="footer-item link">
-                        <h4 class="widget-title">Lorem, ipsum dolor.</h4>
+                        <h4 class="widget-title">Lorem ipsum dolor sit.</h4>
                         <ul>
                             <li>
                                 <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
@@ -207,19 +207,37 @@
                 <!-- Single Itme -->
                 <div class="col-lg-3 col-md-6 item">
                     <div class="footer-item link">
-                        <h4 class="widget-title">Lorem, ipsum dolor.</h4>
+                        <h4 class="widget-title">Important Links</h4>
                         <ul>
                             <li>
-                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                                <a href="https://www.nabard.org/" target="_blank">NABARD</a>
                             </li>
                             <li>
-                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                                <a href="https://wdra.gov.in/" target="_blank">WDRA</a>
                             </li>
                             <li>
-                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                                <a href="http://agriwelfare.gov.in/" target="_blank">Ministry of Agriculture</a>
                             </li>
                             <li>
-                                <a href="{{ route('main_home') }}">Lorem ipsum dolor sit.</a>
+                                <a href="https://consumeraffairs.nic.in/" target="_blank">Ministry of Consumer Affairs</a>
+                            </li>
+                            <li>
+                                <a href="http://fci.gov.in/" target="_blank">Food Corporation of India</a>
+                            </li>
+                            <li>
+                                <a href="http://www.nafed-india.com/" target="_blank">NAFED</a>
+                            </li>
+                            <li>
+                                <a href="http://agmarknet.gov.in/" target="_blank">AGMARKNET</a>
+                            </li>
+                            <li>
+                                <a href="https://mausam.imd.gov.in/" target="_blank">IMD</a>
+                            </li>
+                            <li>
+                                <a href="https://enam.gov.in/web/" target="_blank">eNAM</a>
+                            </li>
+                            <li>
+                                <a href="http://www.remsl.in/" target="_blank">ReMS</a>
                             </li>
                         </ul>
                     </div>
