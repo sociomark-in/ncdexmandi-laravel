@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row g-4 g-md-5">
                 <div class="col-12">
-                    <div class="row">
+                    <div class="row g-3">
                         <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                             <div class="footer-description footer-social">
                                 <h5>Lorem, ipsum dolor.</h5>

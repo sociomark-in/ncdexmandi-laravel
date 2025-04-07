@@ -233,7 +233,7 @@
                                     <h2 class="section-title">Markets</h2>
                                     <div class="row g-3">
                                         @for ($i = 0; $i < 4; $i++)
-                                            <div class="col-xl-6">
+                                            <div class="col-6">
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
@@ -248,7 +248,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-6">
+                                            <div class="col-6">
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
@@ -263,7 +263,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-6">
+                                            <div class="col-6">
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
