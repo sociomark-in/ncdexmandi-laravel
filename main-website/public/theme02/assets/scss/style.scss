@@ -33,21 +33,21 @@ a {
         --bs-btn-disabled-bg: #{$color-green};
         --bs-btn-disabled-border-color: #{$color-green};
     }
-    &.btn-secondary{
+    &.btn-secondary {
         --bs-btn-color: $color-black;
-    --bs-btn-bg: #{$color-yellow};
-    --bs-btn-border-color: #{$color-yellow};
-    --bs-btn-hover-color: $color-black;
-    --bs-btn-hover-bg: #{lighten($color-yellow, 5)};
-    --bs-btn-hover-border-color: #{lighten($color-yellow, 5)};
-    --bs-btn-focus-shadow-rgb: 130, 138, 145;
-    --bs-btn-active-color: $color-black;
-    --bs-btn-active-bg: #{lighten($color-yellow, 5)};
-    --bs-btn-active-border-color: #{lighten($color-yellow, 5)};
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: $color-black;
-    --bs-btn-disabled-bg: #{$color-yellow};
-    --bs-btn-disabled-border-color: #{$color-yellow};
+        --bs-btn-bg: #{$color-yellow};
+        --bs-btn-border-color: #{$color-yellow};
+        --bs-btn-hover-color: $color-black;
+        --bs-btn-hover-bg: #{lighten($color-yellow, 5)};
+        --bs-btn-hover-border-color: #{lighten($color-yellow, 5)};
+        --bs-btn-focus-shadow-rgb: 130, 138, 145;
+        --bs-btn-active-color: $color-black;
+        --bs-btn-active-bg: #{lighten($color-yellow, 5)};
+        --bs-btn-active-border-color: #{lighten($color-yellow, 5)};
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: $color-black;
+        --bs-btn-disabled-bg: #{$color-yellow};
+        --bs-btn-disabled-border-color: #{$color-yellow};
     }
 
     &.btn-round {
@@ -113,6 +113,47 @@ header {
     }
 }
 
+main {
+    padding-top: 150px;
+}
+
+.breadcrumb-area {
+    padding: 150px 0;
+    padding-top: 160px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-position: center center !important;
+    background-size: cover !important;
+    &.shadow.dark-hard {
+        position: relative;
+        z-index: 1;
+        &::after {
+            background: $color-black none repeat scroll 0 0;
+            content: "";
+            height: 100%;
+            left: 0;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+            -webkit-transition: all 0.35s ease-in-out;
+            transition: all 0.35s ease-in-out;
+        }
+    }
+
+    .breadcrumb{
+        .breadcrumb-item,
+        .breadcrumb-item{
+            color: $color-white;
+        }
+        .breadcrumb-item+.breadcrumb-item::before{
+            color: $color-white;
+        }
+    }
+}
+
 section {
     &.nospacing {
         padding: 0;
@@ -137,6 +178,38 @@ section {
             bottom: -0.5rem;
             left: 0;
         }
+    }
+}
+
+.event-style-one {
+    .thumb {
+        position: relative;
+        margin-bottom: 2.5rem;
+        .date {
+            position: absolute;
+            left: 0;
+            bottom: -32px;
+            background: $color-yellow;
+            color: $color-black;
+            text-align: center;
+            strong {
+                font-size: 36px;
+                line-height: 1;
+                padding: 15px 10px;
+                display: block;
+            }
+            span {
+                display: block;
+                background: $color-green;
+                color: $color-white;
+                padding: 5px 10px;
+                font-weight: 400;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .event_image {
     }
 }
 

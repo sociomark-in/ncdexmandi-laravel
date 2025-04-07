@@ -99,6 +99,43 @@ header nav.navbar .navbar-nav .nav-item .nav-link {
   color: #000;
 }
 
+main {
+  padding-top: 150px;
+}
+
+.breadcrumb-area {
+  padding: 150px 0;
+  padding-top: 160px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+.breadcrumb-area.shadow.dark-hard {
+  position: relative;
+  z-index: 1;
+}
+.breadcrumb-area.shadow.dark-hard::after {
+  background: #000 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  transition: all 0.35s ease-in-out;
+}
+.breadcrumb-area .breadcrumb .breadcrumb-item,
+.breadcrumb-area .breadcrumb .breadcrumb-item {
+  color: #e4e4e4;
+}
+.breadcrumb-area .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: #e4e4e4;
+}
+
 section.nospacing {
   padding: 0;
 }
@@ -123,6 +160,32 @@ section .section-title::after {
   left: 0;
 }
 
+.event-style-one .thumb {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.event-style-one .thumb .date {
+  position: absolute;
+  left: 0;
+  bottom: -32px;
+  background: #f7c35f;
+  color: #000;
+  text-align: center;
+}
+.event-style-one .thumb .date strong {
+  font-size: 36px;
+  line-height: 1;
+  padding: 15px 10px;
+  display: block;
+}
+.event-style-one .thumb .date span {
+  display: block;
+  background: #19641e;
+  color: #e4e4e4;
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 15px;
+}
 footer {
   padding: max(5%, 1rem) 0;
   color: #e4e4e4;
