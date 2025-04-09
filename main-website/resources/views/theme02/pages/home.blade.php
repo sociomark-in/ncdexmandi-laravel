@@ -4,9 +4,9 @@
         <section class="nospacing">
 
         </section>
-        <section class="default-spacing pb-0">
+        <section class="nospacing">
             <div class="container">
-                <div class="row g-3">
+                <div class="row g-3 g-md-4">
                     <div class="col-xl-9 col-12">
                         <div class="swiper bannerSwiper">
                             <div class="swiper-wrapper">
@@ -64,7 +64,6 @@
                             });
                         </script>
                     </div>
-
                     <div class="col-xl-3 col-lg-6 col-12">
                         <div class="text-content">
                             <div class="row gap-3">
@@ -74,11 +73,20 @@
                                             <a href="javascript:void(0)" data-bs-toggle="modal"
                                                 data-bs-target="#contactShortModal">Contact Us</a>
                                         </li>
+                                        <li class="list-group-item">
+                                            <a href="{{ route('main_about') }}">About NCDEX Mandi</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="{{ route('episodes_home') }}">Kheti Ke Sikandar</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="{{ route('main_events') }}">Upcoming Events</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-12">
                                     <ul class="list-group">
-                                        @for ($i = 0; $i < 10; $i++)
+                                        @for ($i = 0; $i < 6; $i++)
                                             <li class="list-group-item">
                                                 <a href="">Useful Link</a>
                                             </li>
@@ -124,8 +132,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="contactShortModalLabel">Contact Form</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form action="">
@@ -185,11 +192,13 @@
                                                             <div class="col-12">
                                                                 <div class="row">
                                                                     <div class="col-12">
-                                                                        <h4>
-                                                                            <a href="">Lorem ipsum dolor sit amet
+                                                                        <a href="">
+                                                                            <h4>
+                                                                                Lorem ipsum dolor sit amet
                                                                                 dolor
-                                                                                sit.</a>
-                                                                            </h3>
+                                                                                sit.
+                                                                            </h4>
+                                                                        </a>
                                                                     </div>
                                                                     <div class="col-12">
                                                                         <p>
@@ -221,7 +230,7 @@
                                     </script>
                                 </div>
                                 <div class="col-12">
-                                    <a href="" class="btn btn-primary">View More Case Studies</a>
+                                    <a href="{{ route('episodes_home') }}" class="btn btn-primary">View More Case Studies</a>
                                 </div>
                             </div>
                         </div>
@@ -238,7 +247,7 @@
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
                                                             <div class="col-auto">
-                                                                Product #{{ $i+1 }}
+                                                                Product #{{ $i + 1 }}
                                                             </div>
                                                             <div class="col-auto">
                                                                 <span class="text-success">{{ rand(199, 599) }}&nbsp;<i
@@ -253,7 +262,7 @@
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
                                                             <div class="col-auto">
-                                                                Product #{{ $i+1 }}
+                                                                Product #{{ $i + 1 }}
                                                             </div>
                                                             <div class="col-auto">
                                                                 <span class="text-danger">{{ rand(199, 599) }}&nbsp;<i
@@ -268,7 +277,7 @@
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
                                                             <div class="col-auto">
-                                                                Product #{{ $i+1 }}
+                                                                Product #{{ $i + 1 }}
                                                             </div>
                                                             <div class="col-auto">
                                                                 <span class="text-success">{{ rand(199, 599) }}&nbsp;<i
@@ -310,11 +319,13 @@
                                                         <div class="col-12">
                                                             <div class="row">
                                                                 <div class="col-12">
+                                                                    <a href="">
                                                                     <h4>
-                                                                        <a href="">Lorem ipsum dolor sit amet
+                                                                            Lorem ipsum dolor sit amet
                                                                             dolor
-                                                                            sit.</a>
-                                                                        </h3>
+                                                                            sit.
+                                                                        </h4>
+                                                                    </a>
                                                                 </div>
                                                                 <div class="col">
                                                                     <p>
@@ -352,7 +363,8 @@
                                 </script>
                             </div>
                             <div class="col-12">
-                                <a href="{{ route('main_events') }}" target="_blank" class="btn btn-primary">View More Events</a>
+                                <a href="{{ route('main_events') }}" target="_blank" class="btn btn-primary">View More
+                                    Events</a>
                             </div>
                         </div>
                     </div>

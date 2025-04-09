@@ -92,7 +92,8 @@ a {
 }
 
 header {
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 99;
 }
 header nav.navbar .navbar-nav .nav-item .nav-link {
@@ -156,6 +157,9 @@ section .section-title::after {
   left: 0;
 }
 
+.event-style-one a h3, .event-style-one a h4 {
+  color: #19641e;
+}
 .event-style-one .thumb {
   position: relative;
   margin-bottom: 2.5rem;
@@ -182,6 +186,92 @@ section .section-title::after {
   font-weight: 400;
   font-size: 15px;
 }
+.event-style-one .social-share .social-icon {
+  color: #000;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.clipped-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.clipped-content.line-1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1; /* Standard property */
+}
+.clipped-content.line-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2; /* Standard property */
+}
+.clipped-content.line-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; /* Standard property */
+}
+.clipped-content.line-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4; /* Standard property */
+}
+.clipped-content.line-5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5; /* Standard property */
+}
+
+.event-style-two a h3, .event-style-two a h4 {
+  color: #19641e;
+}
+.event-style-two .thumb {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.event-style-two .thumb .date {
+  position: absolute;
+  left: 0;
+  bottom: -32px;
+  background: #f7c35f;
+  color: #000;
+  text-align: center;
+}
+.event-style-two .thumb .date strong {
+  font-size: 36px;
+  line-height: 1;
+  padding: 15px 10px;
+  display: block;
+}
+.event-style-two .thumb .date span {
+  display: block;
+  background: #19641e;
+  color: #e4e4e4;
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 15px;
+}
+.event-style-two .social-share .social-icon {
+  color: #000;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
 footer {
   padding: max(5%, 1rem) 0;
   color: #e4e4e4;

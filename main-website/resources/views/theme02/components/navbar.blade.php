@@ -1,5 +1,5 @@
 <header class="w-100">
-    {{-- <nav class="navbar bg-white">
+    <nav class="navbar bg-white">
         <div class="container-fluid">
             <marquee class="navbar-text">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. In ipsam illo ad at ullam obcaecati a
@@ -10,7 +10,7 @@
                 velit. Inventore.
             </marquee>
         </div>
-    </nav> --}}
+    </nav>
     <nav class="navbar navbar-expand-xl bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="{{ route('main_home') }}">
@@ -34,7 +34,7 @@
                         <a class="nav-link" href="{{ route('main_about') }}">About NCDEX Mandi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Kheti Ke Sikandar</a>
+                        <a class="nav-link" href="{{ route('episodes_home') }}">Kheti Ke Sikandar</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -61,7 +61,7 @@
             </div>
         </div>
     </nav>
-    {{-- <nav class="navbar bg-white">
+    <nav class="navbar bg-white">
         <div class="container-fluid">
             <div class="swiper bidSwiper">
                 <div class="swiper-wrapper">
@@ -144,7 +144,7 @@
                 });
             </script>
         </div>
-    </nav> --}}
+    </nav>
 </header>
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">

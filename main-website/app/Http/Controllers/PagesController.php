@@ -35,6 +35,15 @@ class PagesController extends Controller
         ];
         return view('theme02.pages.events', $this->data);
     }
+    public function episodes(){
+        $page = [
+            'title' => "NCDEX"
+        ];
+        $this->data = [
+            "page" => $page
+        ];
+        return view('theme02.pages.episodes', $this->data);
+    }
     public function contact(){
         $page = [
             'title' => "NCDEX"
