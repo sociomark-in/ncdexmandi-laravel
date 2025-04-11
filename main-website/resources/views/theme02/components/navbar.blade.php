@@ -23,9 +23,58 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between flex-row-reverse ms-0 ms-xl-5 mt-3 mt-xl-0"
                 id="navbarNavDropdown">
-                <div class="btn btn-icon btn-search" data-bs-toggle="modal" data-bs-target="#searchModal"><i
-                        class="fa-solid fa-magnifying-glass icon-prepend"></i><span
-                        class="ms-2">Search</span></div>
+                <ul class="navbar-nav gap-2">
+                    <li>
+                        <div id="google_translate_element"></div>
+                        <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement({
+                                    pageLanguage: 'en',
+                                    includedLanguages: 'en,mr,hi,gu',
+                                }, 'google_translate_element');
+                            }
+
+                            $('.lang-select').on("click", () => {
+                                var theLang = $(this).attr('data-lang');
+                                $('.goog-te-combo').val(theLang);
+
+                                //alert($(this).attr('href'));
+                                window.location = $(this).attr('href');
+                                // location.reload();
+
+                            });
+                        </script>
+                        <style>
+                            #google_translate_element {
+                                height: 2.6rem;
+                                overflow: hidden;
+                            }
+
+                            #google_translate_element .goog-te-combo {
+                                font-size: 1rem;
+                                font-family: 'Poppins', 'Segoe UI', Tahoma, 'Geneva', 'Verdana', sans-serif;
+                                padding: 0.5rem;
+                                margin: 0;
+                            }
+
+                            iframe.skiptranslate {
+                                display: none !important;
+                            }
+
+                            body {
+                                top: 0px !important;
+                            }
+                        </style>
+
+                        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                        </script>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn btn-icon btn-search" data-bs-toggle="modal" data-bs-target="#searchModal"><i
+                            class="fa-solid fa-magnifying-glass icon-prepend"></i><span
+                            class="ms-2">Search</span></div>
+                    </li>
+                </ul>
                 <ul class="navbar-nav g-3 g-md-4">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('main_home') }}">Home</a>

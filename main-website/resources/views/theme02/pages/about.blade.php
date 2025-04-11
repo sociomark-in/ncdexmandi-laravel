@@ -12,7 +12,7 @@
                         <nav aria-label="">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a
-                                        href="https://ncdex.apogeedigitech.in/ncdexmandi-laravel/main-website"><i
+                                        href="{{  route('main_home') }}"><i
                                             class="fas fa-home"></i>&nbsp;&nbsp;Home</a></li>
                                 <li class="breadcrumb-item active">About NCDEX Mandi</li>
                             </ol>

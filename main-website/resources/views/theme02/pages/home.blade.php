@@ -101,7 +101,7 @@
                             <div class="row g-3">
                                 <div class="col-12">
                                     <h2 class="section-title">About NCDEX Mandi</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quas excepturi
+                                    <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quas excepturi
                                         ratione quaerat rerum explicabo earum repudiandae, dolores veritatis sed. Fugit
                                         inventore molestiae consequatur veniam iure quas nisi animi in rerum tenetur
                                         vitae
@@ -161,6 +161,92 @@
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="default-spacing pb-0">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="text-content">
+                            <h2 class="section-title">Latest News</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-12">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="swiper newsSwiper">
+                                    <div class="swiper-wrapper">
+                                        @for ($i = 0; $i < 1; $i++)
+                                            <div class="swiper-slide">
+                                                <div class="event-style-one">
+                                                    <div class="thumb">
+                                                        <a href="blog-single-with-sidebar.html"><img
+                                                                src="https://i3.ytimg.com/vi/7tk9oSJKK1w/hqdefault.jpg"
+                                                                alt="Image Not Found" class="w-100"></a>
+                                                        <div class="date">
+                                                            <strong>7</strong>
+                                                            <span>April, 2025</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="event-details">
+                                                        <div class="col-12">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <a href="" class="clipped-content line-1">
+                                                                        <h4>
+                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, porro!
+                                                                        </h4>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <p class="clipped-content line-2">
+                                                                        Lorem ipsum dolor sit, amet consectetur dolor sit elit. Cum alias ut in dolor quae itaque tenetur laborum? Id, deleniti fuga?
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endfor
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <script>
+                                    new Swiper('.newsSwiper', {
+                                        loop: true,
+                                        spaceBetween: 20,
+                                        autoplay: {
+                                            enabled: true,
+                                            delay: 1000
+                                        },
+                                        pagination: {
+                                            el: ".swiper-pagination",
+                                        },
+                                    });
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-6 col-12">
+                        <div class="row g-3 g-md-4">
+                            @for ($i = 0; $i < 5; $i++)
+                                <div class="col-12" data-aos="fade-left" data-aos-delay="{{ 100 * $i }}">
+                                    <a class="clipped-content line-2" href="">
+                                        <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum nisi delectus
+                                            ex ullam esse iure, dolorem, voluptate quo temporibus alias, deleniti labore
+                                            perspiciatis? Fugit, repellat. Cupiditate similique ullam repellat voluptate?
+                                        </h4>
+                                    </a>
+                                </div>
+                            @endfor
+                            <div class="col-12 pt-3">
+                                <a href="" class="btn btn-primary">View All News Articles</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -230,7 +316,8 @@
                                     </script>
                                 </div>
                                 <div class="col-12">
-                                    <a href="{{ route('episodes_home') }}" class="btn btn-primary">View More Case Studies</a>
+                                    <a href="{{ route('episodes_home') }}" class="btn btn-primary">View More Case
+                                        Studies</a>
                                 </div>
                             </div>
                         </div>
@@ -243,7 +330,7 @@
                                     <div class="row g-3">
                                         @for ($i = 0; $i < 4; $i++)
                                             <div class="col-6">
-                                                <div class="card">
+                                                <div class="card" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="{{ 100 * $i }}">
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
                                                             <div class="col-auto">
@@ -258,7 +345,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-6">
-                                                <div class="card">
+                                                <div class="card" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="{{ 100 * $i + 100 }}">
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
                                                             <div class="col-auto">
@@ -273,7 +360,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-6">
-                                                <div class="card">
+                                                <div class="card" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="{{ 100 * $i + 100 }}">
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
                                                             <div class="col-auto">
@@ -320,7 +407,7 @@
                                                             <div class="row">
                                                                 <div class="col-12">
                                                                     <a href="">
-                                                                    <h4>
+                                                                        <h4>
                                                                             Lorem ipsum dolor sit amet
                                                                             dolor
                                                                             sit.

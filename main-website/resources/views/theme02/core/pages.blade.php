@@ -5,6 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('theme02/assets/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('theme02/assets/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('theme02/assets/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('theme02/assets/site.webmanifest') }}">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -22,6 +28,10 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link rel="stylesheet" href="{{ asset('theme02/assets/css/style.min.css') }}">
 
     <title>{{ $page['title'] }}</title>
@@ -31,6 +41,13 @@
     @include('theme02.components.navbar')
     @yield('content')
     @include('theme02.components.footer')
+    {{-- Initialize AOS --}}
+    <script>
+        AOS.init({
+            // once: true,
+            duration: 1000,
+        });
+    </script>
     @yield('javascript')
 </body>
 
