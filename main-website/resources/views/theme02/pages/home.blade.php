@@ -101,7 +101,8 @@
                             <div class="row g-3">
                                 <div class="col-12">
                                     <h2 class="section-title">About NCDEX Mandi</h2>
-                                    <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quas excepturi
+                                    <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+                                        quas excepturi
                                         ratione quaerat rerum explicabo earum repudiandae, dolores veritatis sed. Fugit
                                         inventore molestiae consequatur veniam iure quas nisi animi in rerum tenetur
                                         vitae
@@ -197,13 +198,16 @@
                                                                 <div class="col-12">
                                                                     <a href="" class="clipped-content line-1">
                                                                         <h4>
-                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, porro!
+                                                                            Lorem ipsum dolor sit amet consectetur
+                                                                            adipisicing elit. Quia, porro!
                                                                         </h4>
                                                                     </a>
                                                                 </div>
                                                                 <div class="col-12">
                                                                     <p class="clipped-content line-2">
-                                                                        Lorem ipsum dolor sit, amet consectetur dolor sit elit. Cum alias ut in dolor quae itaque tenetur laborum? Id, deleniti fuga?
+                                                                        Lorem ipsum dolor sit, amet consectetur dolor sit
+                                                                        elit. Cum alias ut in dolor quae itaque tenetur
+                                                                        laborum? Id, deleniti fuga?
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -233,20 +237,32 @@
                         </div>
                     </div>
                     <div class="col-xl-8 col-lg-6 col-12">
-                        <div class="row g-3 g-md-4">
+                        <ul class="list-group news-group">
                             @for ($i = 0; $i < 5; $i++)
-                                <div class="col-12" data-aos="fade-left" data-aos-delay="{{ 100 * $i }}">
-                                    <a class="clipped-content line-2" href="">
-                                        <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum nisi delectus
-                                            ex ullam esse iure, dolorem, voluptate quo temporibus alias, deleniti labore
-                                            perspiciatis? Fugit, repellat. Cupiditate similique ullam repellat voluptate?
-                                        </h4>
+                                <li class="list-group-item news-text">
+                                    <a href="" data-aos="fade-left"
+                                        data-aos-delay="{{ 100 * $i }}">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <img src="https://placehold.co/140x80" alt="">
+                                            </div>
+                                            <div class="col">
+                                                <p class="clipped-content line-2 mb-0">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum nisi
+                                                    delectus
+                                                    ex ullam esse iure, dolorem, voluptate quo temporibus alias, deleniti labore
+                                                    perspiciatis? Fugit, repellat. Cupiditate similique ullam repellat
+                                                    voluptate?
+                                                </p>
+                                            </div>
+                                        </div>
+
                                     </a>
-                                </div>
+                                </li>
                             @endfor
-                            <div class="col-12 pt-3">
-                                <a href="" class="btn btn-primary">View All News Articles</a>
-                            </div>
+                        </ul>
+                        <div class="col-12 pt-3">
+                            <a href="" class="btn btn-primary">View All News Articles</a>
                         </div>
                     </div>
                 </div>
@@ -330,7 +346,8 @@
                                     <div class="row g-3">
                                         @for ($i = 0; $i < 4; $i++)
                                             <div class="col-6">
-                                                <div class="card" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="{{ 100 * $i }}">
+                                                <div class="card" data-aos="zoom-in" data-aos-duration="400"
+                                                    data-aos-delay="{{ 100 * $i }}">
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
                                                             <div class="col-auto">
@@ -345,7 +362,8 @@
                                                 </div>
                                             </div>
                                             <div class="col-6">
-                                                <div class="card" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="{{ 100 * $i + 100 }}">
+                                                <div class="card" data-aos="zoom-in" data-aos-duration="400"
+                                                    data-aos-delay="{{ 100 * $i + 100 }}">
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
                                                             <div class="col-auto">
@@ -360,7 +378,8 @@
                                                 </div>
                                             </div>
                                             <div class="col-6">
-                                                <div class="card" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="{{ 100 * $i + 100 }}">
+                                                <div class="card" data-aos="zoom-in" data-aos-duration="400"
+                                                    data-aos-delay="{{ 100 * $i + 100 }}">
                                                     <div class="card-body">
                                                         <div class="row g-0 justify-content-between">
                                                             <div class="col-auto">

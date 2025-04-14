@@ -100,7 +100,7 @@ header {
   z-index: 99;
 }
 header nav.navbar .navbar-nav .nav-item .nav-link {
-  color: #000;
+  color: #e4e4e4;
 }
 
 .swiper .swiper-button-prev::after {
