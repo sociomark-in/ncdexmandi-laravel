@@ -78,6 +78,8 @@ $route['episodes/new-post'] ="posts/EpisodesController/new_post";
 $route['episodes/post/(:any)'] ="posts/EpisodesController/view_post/$1";
 $route['episodes/post/(:any)/edit'] ="posts/EpisodesController/edit_post/$1";
 
+$route['events'] ="posts/EventsController";
+
 $route['register'] = 'DashboardController/register';
 
 $route[''] = 'DashboardController/index';

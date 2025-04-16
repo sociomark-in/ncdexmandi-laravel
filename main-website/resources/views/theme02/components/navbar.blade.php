@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <a class="navbar-brand logo" href="{{ route('main_home') }}">
                 <img src="{{ asset('theme02/assets/logo.jpeg') }}" class="me-2" height="50" alt="Mandi Logo">
-                <img src="{{ asset('theme02/assets/NCDEx-main.png') }}" height="30" alt="Mandi Logo">
+                <img src="{{ asset('theme02/assets/NCDEx-IPFT.png') }}" height="30" alt="Mandi Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

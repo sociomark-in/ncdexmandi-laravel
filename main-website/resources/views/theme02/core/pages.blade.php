@@ -36,7 +36,7 @@
 
     <link rel="stylesheet" href="{{ asset('theme02/assets/css/style.min.css') }}">
 
-    <title>{{ $page['title'] }}</title>
+    <title>@yield('title', env('APP_NAME'))</title>
 </head>
 
 <body>

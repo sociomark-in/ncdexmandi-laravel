@@ -1,7 +1,7 @@
 <main class="page-content">
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
         <div>
-            <h4 class="mb-3 mb-md-0">Episodes List</h4>
+            <h4 class="mb-3 mb-md-0">Events List</h4>
         </div>
     </div>
 
@@ -11,11 +11,11 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline mb-2">
-                        <h6 class="card-title mb-0">All Episodes</h6>
+                        <h6 class="card-title mb-0">All Events</h6>
                     </div>
                     <div class="row mb-3">
                         <div class="col-12">
-                            <form action="<?= base_url("episodes") ?>" method="get">
+                            <form action="<?= base_url("events") ?>" method="get">
                                 <div class="row g-2">
                                     <div class="col-lg-2 col-md-3 col-12">
                                         <select name="post_category" class="form-select" id="">
@@ -60,7 +60,7 @@
                             <thead>
                                 <tr>
                                     <th class="pt-0"></th>
-                                    <th class="pt-0">Episode Title</th>
+                                    <th class="pt-0">Event Title</th>
                                     <th class="pt-0">Categories</th>
                                     <th class="pt-0">Date</th>
                                 </tr>
@@ -109,7 +109,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline mb-2">
-                        <h6 class="card-title mb-0">Add New Episode</h6>
+                        <h6 class="card-title mb-0">Add New Event</h6>
                     </div>
                 </div>
             </div>

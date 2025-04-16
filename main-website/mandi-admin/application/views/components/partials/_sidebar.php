@@ -19,10 +19,10 @@
 			</li>
 
 			<!-- Nominations -->
-			<li class="nav-item nav-category">Events Management</li>
+			<li class="nav-item nav-category d-none">Events Management</li>
 			<!-- Access Level: jury -->
-			<li class="nav-item">
-				<a href="<?= base_url('nominations') ?>" class="nav-link">
+			<li class="nav-item d-none">
+				<a href="<?= base_url('events') ?>" class="nav-link">
 					<i class="link-icon" data-feather="database"></i>
 					<span class="link-title">All Events</span>
 				</a>
@@ -54,7 +54,24 @@
 					</ul>
 				</div>
 			</li>
-            <li class="nav-item">
+            <li class="nav-item <?= link_is_active("events") ?>">
+				<a class="nav-link" data-bs-toggle="collapse" href="#events" role="button" aria-expanded="false" aria-controls="events">
+					<i class="link-icon" data-feather="database"></i>
+					<span class="link-title">Events</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+				</a>
+				<div class="collapse" id="events">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="<?= base_url("events") ?>" class="nav-link <?= link_is_active("events") ?>">All Events</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Add New Event</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+            <li class="nav-item <?= link_is_active("episodes") ?>">
 				<a class="nav-link" data-bs-toggle="collapse" href="#episodes" role="button" aria-expanded="false" aria-controls="episodes">
 					<i class="link-icon" data-feather="database"></i>
 					<span class="link-title">Episodes</span>
@@ -63,7 +80,7 @@
 				<div class="collapse" id="episodes">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
-							<a href="#" class="nav-link">All Episodes</a>
+							<a href="<?= base_url('episodes') ?>" class="nav-link <?= link_is_active("episodes") ?>">All Episodes</a>
 						</li>
 						<li class="nav-item">
 							<a href="#" class="nav-link">Add New Episode</a>

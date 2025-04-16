@@ -16,7 +16,18 @@ a {
         color: $color-green;
     }
 }
-
+.list-group.news-group{
+    .list-group-item{
+        border-left: none;
+        border-right: none;
+        &:first-child{
+            border-top: none;
+        }
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+}
 .btn {
     padding: 0.25rem 1rem;
     font-size: calc(max(2vmin, 16px));
@@ -110,7 +121,7 @@ header {
         .navbar-nav {
             .nav-item {
                 .nav-link {
-                    color: $color-white;
+                    color: $color-black;
                 }
             }
         }

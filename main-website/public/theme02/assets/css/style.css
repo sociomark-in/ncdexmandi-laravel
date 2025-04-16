@@ -12,6 +12,17 @@ a:hover {
   color: #19641e;
 }
 
+.list-group.news-group .list-group-item {
+  border-left: none;
+  border-right: none;
+}
+.list-group.news-group .list-group-item:first-child {
+  border-top: none;
+}
+.list-group.news-group .list-group-item:last-child {
+  border-bottom: none;
+}
+
 .btn {
   padding: 0.25rem 1rem;
   font-size: max(2vmin, 16px);
@@ -100,7 +111,7 @@ header {
   z-index: 99;
 }
 header nav.navbar .navbar-nav .nav-item .nav-link {
-  color: #e4e4e4;
+  color: #000;
 }
 
 .swiper .swiper-button-prev::after {
