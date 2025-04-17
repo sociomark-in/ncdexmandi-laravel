@@ -16,6 +16,12 @@ a {
         color: $color-green;
     }
 }
+
+table{
+    th{
+        font-weight: 500;
+    }
+}
 .list-group.news-group{
     .list-group-item{
         border-left: none;
@@ -102,6 +108,29 @@ a {
         }
     }
 }
+
+.card-stack{
+    &.colored{
+        .data-card{
+            border-radius: 0.25rem;
+            overflow: hidden;
+            .card-body{
+                padding: 1rem;
+                .text{
+                    *{
+                        margin: 0;
+                    }
+                }
+            }
+            &.style-green{
+                background-color: rgba($color-green, 0.1);
+            }
+            &.style-yellow{
+                background-color: rgba($color-yellow, 0.1);
+            }
+        }
+    }
+}
 .form-control {
     &:focus {
         border-color: rgba($color-green, 0.1);
@@ -152,8 +181,7 @@ header {
     }
 }
 .breadcrumb-area {
-    padding: 150px 0;
-    padding-top: 160px;
+    padding: 80px 0;
     position: relative;
     z-index: 1;
     overflow: hidden;

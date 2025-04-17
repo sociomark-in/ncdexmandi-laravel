@@ -21,26 +21,31 @@
                 </div>
             </div>
         </div>
-        <section class="default-spacing">
+        <section class="default-spacing pb-0">
             <div class="container">
                 <div class="row mb-3 mb-md-4">
-                    <div class="col-xl"></div>
+                    <div class="col-xl">
+                        <div class="">
+                            <div class="text-content">
+                                <h2 class="section-title">All Episodes</h2>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-xl-auto">
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
-                                Apply Filters
-                            </button>
+                            <div class="btn btn-icon btn-search" data-bs-toggle="modal" data-bs-target="#searchPageModal"><i
+                                class="fa-solid fa-magnifying-glass icon-prepend"></i><span class="ms-2">Search</span>
+                        </div>
                         </div>
                     </div>
                 </div>
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="searchPageModal" tabindex="-1" aria-labelledby="searchPageModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Search & Filter Episodes</h1>
+                                <h1 class="modal-title fs-5" id="searchPageModalLabel">Select an FPO or State</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -133,7 +138,29 @@
                                                                 </h3>
                                                             </a>
                                                         </div>
-                                                        <div class="col-12">
+                                                        <div class="col-xxl-5 col-xl-6">
+                                                            <table class="table table-bordered">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>Lorem, ipsum.</th>
+                                                                        <td>300B+ Views</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Lorem, ipsum.</th>
+                                                                        <td>300B+ Views</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Lorem, ipsum.</th>
+                                                                        <td>300B+ Views</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Lorem, ipsum.</th>
+                                                                        <td>300B+ Views</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-xxl-7 col-xl-6 col-12">
                                                             <p class="clipped-content line-3">
                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                                                 Vero
@@ -145,8 +172,6 @@
                                                                 tempore quos dicta quas, amet officia possimus magnam
                                                                 perferendis facilis sunt ducimus laboriosam. Totam.
                                                             </p>
-                                                        </div>
-                                                        <div class="col-12">
                                                             <ul class="nav social-share align-items-center gap-2">
                                                                 <li class="nav-item me-3">Share:</li>
                                                                 <li class="nav-item">
@@ -176,6 +201,26 @@
                             </div>
                         </div>
                     @endfor
+                </div>
+            </div>
+        </section>
+        <section class="default-spacing">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="text-content">
+                            <h2 class="section-title">Episodes Archives</h2>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row g-2">
+                            @for ($i = date("Y"); $i > 2000; $i--)
+                            <div class="col-xl-3 col-6">
+                                <a href="">{{ $i }}</a>
+                            </div>
+                            @endfor
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

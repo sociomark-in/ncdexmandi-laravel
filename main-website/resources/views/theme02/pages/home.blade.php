@@ -2,9 +2,6 @@
 @section('content')
     <main>
         <section class="nospacing">
-
-        </section>
-        <section class="nospacing">
             <div class="container-fluid">
                 <div class="row g-3 g-md-4">
                     <div class="col-xl-9 col-12">
@@ -99,12 +96,31 @@
                     </div>
                     <div class="col-lg-6 col-12">
                         <div class="text-content">
-                            <div class="row g-3">
-                                @for ($i = 0; $i < 9; $i++)
+                            <div class="card-stack colored row g-3">
+                                @for ($i = 0; $i < 4; $i++)
                                     <div class="col-xl-4 col-lg-6 col-12">
-                                        <div class="card">
-                                            <div class="card-body"></div>
-                                        </div>
+                                        <a href="">
+                                            <div class="data-card style-green">
+                                                <div class="card-body">
+                                                    <div class="text text-center">
+                                                        <h3>200+</h3>
+                                                        <p>Lorem ipsum dolor sit.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-12">
+                                        <a href="">
+                                            <div class="data-card style-yellow">
+                                                <div class="card-body">
+                                                    <div class="text text-center">
+                                                        <h3>200+</h3>
+                                                        <p>Lorem ipsum dolor sit.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
                                 @endfor
                             </div>

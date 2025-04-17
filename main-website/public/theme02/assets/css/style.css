@@ -12,6 +12,10 @@ a:hover {
   color: #19641e;
 }
 
+table th {
+  font-weight: 500;
+}
+
 .list-group.news-group .list-group-item {
   border-left: none;
   border-right: none;
@@ -94,6 +98,23 @@ a:hover {
   }
 }
 
+.card-stack.colored .data-card {
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.card-stack.colored .data-card .card-body {
+  padding: 1rem;
+}
+.card-stack.colored .data-card .card-body .text * {
+  margin: 0;
+}
+.card-stack.colored .data-card.style-green {
+  background-color: rgba(25, 100, 30, 0.1);
+}
+.card-stack.colored .data-card.style-yellow {
+  background-color: rgba(247, 195, 95, 0.1);
+}
+
 .form-control:focus {
   border-color: rgba(25, 100, 30, 0.1);
   outline: 0;
@@ -136,8 +157,7 @@ header nav.navbar .navbar-nav .nav-item .nav-link {
 }
 
 .breadcrumb-area {
-  padding: 150px 0;
-  padding-top: 160px;
+  padding: 80px 0;
   position: relative;
   z-index: 1;
   overflow: hidden;
