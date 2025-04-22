@@ -11,8 +11,7 @@
                         </div>
                         <nav aria-label="">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a
-                                        href="{{  route('main_home') }}"><i
+                                <li class="breadcrumb-item"><a href="{{ route('main_home') }}"><i
                                             class="fas fa-home"></i>&nbsp;&nbsp;Home</a></li>
                                 <li class="breadcrumb-item active">About NCDEX Mandi</li>
                             </ol>
@@ -59,7 +58,7 @@
                     </div>
                 </div>
         </section>
-        <section class="default-spacing">
+        <section class="default-spacing pb-0">
             <div class="container">
                 <div class="row g-3">
                     <div class="col-12">
@@ -81,6 +80,87 @@
                             modi.</p>
                     </div>
                 </div>
+        </section>
+        <section class="default-spacing">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <h2 class="section-title">Our Team</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="swiper TeamSwiper">
+                            <div class="swiper-wrapper">
+                                @for ($i = 0; $i < 10; $i++)
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="row g-3">
+                                                <div class="col-12">
+                                                    <img src="{{ asset('theme02/assets/person.png') }}" alt=""
+                                                class="w-100">
+                                                </div>
+                                                <div class="col-12">
+                                                    <h4>Lorem, ipsum dolor.</h4>
+                                                    <p>Lorem ipsum, dolor sit amet consectetur.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                @endfor
+                            </div>
+                            @push('scripts')
+                            <script>
+                                new Swiper('.TeamSwiper', {
+                                    slidesPerView: 4,
+                                    spaceBetween: 30,
+                                })
+                            </script>
+                            @endpush
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="default-spacing">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <h2 class="section-title">Our FPO Partners</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="swiper FPOSwiper">
+                            <div class="swiper-wrapper">
+                                @for ($i = 0; $i < 10; $i++)
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="row g-3">
+                                                <div class="col-12">
+                                                    <img src="{{ asset('theme02/assets/person.png') }}" alt=""
+                                                class="w-100">
+                                                </div>
+                                                <div class="col-12">
+                                                    <h5>Lorem, ipsum dolor.</h5>
+                                                    <p>Lorem ipsum, dolor sit amet consectetur.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    @endfor
+                                </div>
+                                @push('scripts')
+                                <script>
+                                    new Swiper('.FPOSwiper', {
+                                        slidesPerView: 6,
+                                        spaceBetween: 30,
+                                    })
+                                    </script>
+                            @endpush
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <a href="" class="btn btn-primary">View All FPO Partners</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 @endsection

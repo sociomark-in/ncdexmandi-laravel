@@ -67,63 +67,152 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
-                        <div class="text-content">
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <h2 class="section-title">About NCDEX Mandi</h2>
-                                    <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-                                        quas excepturi
-                                        ratione quaerat rerum explicabo earum repudiandae, dolores veritatis sed. Fugit
-                                        inventore molestiae consequatur veniam iure quas nisi animi in rerum tenetur
-                                        vitae
-                                        doloremque, maiores voluptatibus ab officiis nam nesciunt cumque corporis modi,
-                                        itaque unde, quaerat cupiditate illo quam! Consectetur nostrum ratione eos
-                                        voluptatem error aliquid cumque quod velit, omnis, consequatur unde beatae non
-                                        aut
-                                        nam molestias tempora vel dolore placeat ipsam nulla accusamus sequi natus!
-                                        Earum,
-                                        aliquid fugit! Perferendis quae quaerat, aperiam iste deleniti est? Debitis ut
-                                        est
-                                        cumque, provident possimus vel sapiente fugit, suscipit voluptatem maxime
-                                        cupiditate
-                                        modi.</p>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="text-content">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <h2 class="section-title">About NCDEX Mandi</h2>
+                                            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                Repellat
+                                                quas excepturi
+                                                ratione quaerat rerum explicabo earum repudiandae, dolores veritatis sed.
+                                                Fugit
+                                                inventore molestiae consequatur veniam iure quas nisi animi in rerum tenetur
+                                                vitae
+                                                doloremque, maiores voluptatibus ab officiis nam nesciunt cumque corporis
+                                                modi,
+                                                itaque unde, quaerat cupiditate illo quam! Consectetur nostrum ratione eos
+                                                voluptatem error aliquid cumque quod velit, omnis, consequatur unde beatae
+                                                non
+                                                aut
+                                                nam molestias tempora vel dolore placeat ipsam nulla accusamus sequi natus!
+                                                Earum,
+                                                aliquid fugit! Perferendis quae quaerat, aperiam iste deleniti est? Debitis
+                                                ut
+                                                est
+                                                cumque, provident possimus vel sapiente fugit, suscipit voluptatem maxime
+                                                cupiditate
+                                                modi.</p>
+                                        </div>
+                                        <div class="col-12">
+                                            <a href="{{ route('main_about') }}" class="btn btn-primary">Know More</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-12">
-                                    <a href="{{ route('main_about') }}" class="btn btn-primary">Know More</a>
+                            </div>
+                            <div class="col-12">
+                                <div class="text-content">
+                                    <div class="card-stack colored row g-3">
+                                        @for ($i = 0; $i < 4; $i++)
+                                            <div class="col-xl-4 col-lg-6 col-12">
+                                                <a href="">
+                                                    <div class="data-card style-green">
+                                                        <div class="card-body">
+                                                            <div class="text text-center">
+                                                                <h3>200+</h3>
+                                                                <p>Lorem ipsum dolor sit.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-6 col-12">
+                                                <a href="">
+                                                    <div class="data-card style-yellow">
+                                                        <div class="card-body">
+                                                            <div class="text text-center">
+                                                                <h3>200+</h3>
+                                                                <p>Lorem ipsum dolor sit.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        @endfor
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
-                        <div class="text-content">
-                            <div class="card-stack colored row g-3">
-                                @for ($i = 0; $i < 4; $i++)
-                                    <div class="col-xl-4 col-lg-6 col-12">
-                                        <a href="">
-                                            <div class="data-card style-green">
-                                                <div class="card-body">
-                                                    <div class="text text-center">
-                                                        <h3>200+</h3>
-                                                        <p>Lorem ipsum dolor sit.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-6 col-12">
-                                        <a href="">
-                                            <div class="data-card style-yellow">
-                                                <div class="card-body">
-                                                    <div class="text text-center">
-                                                        <h3>200+</h3>
-                                                        <p>Lorem ipsum dolor sit.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                @endfor
-                            </div>
+                        <div class="">
+                            <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+                            <script src="{{ asset('theme02/assets/json/india_state.geojson') }}"></script>
+                            <div id="india-map" style="width: 800px; height: 600px;"></div>
+                            <script type="text/javascript">
+                                var chartDom = document.getElementById('india-map');
+                                var myChart = echarts.init(chartDom);
+                                var option;
+                                myChart.showLoading();
+                                $.get("{{ asset('theme02/assets/json/india_state.geojson') }}", function(india_states) {
+                                    myChart.hideLoading();
+                                    // Register the India map data
+                                    echarts.registerMap('India', india_states); // Assuming india_states is loaded from the JSON
+                                    option = {
+                                        title: {
+                                            text: 'India Population Estimates (2012)',
+                                            subtext: 'Data from www.india.gov',
+                                            sublink: 'http://www.india.gov',
+                                            left: 'right'
+                                        },
+                                        tooltip: {
+                                            trigger: 'item',
+                                            showDelay: 0,
+                                            transitionDuration: 0.2
+                                        },
+                                        visualMap: {
+                                            left: 'right',
+                                            min: 50,
+                                            max: 3800,
+                                            inRange: {
+                                                color: [
+                                                    '#313695',
+                                                    '#4575b4',
+                                                    '#74add1',
+                                                    '#abd9e9',
+                                                    '#e0f3f8',
+                                                    '#ffffbf',
+                                                    '#fee090',
+                                                    '#fdae61',
+                                                    '#f46d43',
+                                                    '#d73027',
+                                                    '#a50026'
+                                                ]
+                                            },
+                                            text: ['High', 'Low'],
+                                            calculable: true
+                                        },
+                                        series: [{
+                                            name: 'Population Map',
+                                            type: 'map',
+                                            map: 'India',
+                                            roam: true, // Enable zooming and panning
+                                            itemStyle: {
+                                                areaColor: '#eee',
+                                                borderColor: '#333'
+                                            },
+                                            label: {
+                                                show: true,
+                                                fontSize: 12
+                                            },
+                                            nameProperty: 'NAME_1',
+                                            data: [
+                                                // You can add data here to visualize on the map.
+                                                // The 'name' property should match the state name in your GeoJSON data.
+                                                {
+                                                    name: 'Maharashtra',
+                                                    value: 100
+                                                },
+                                                // Add data for other states as needed
+                                            ]
+                                        }]
+                                    };
+                                    myChart.setOption(option);
+                                });
+                                // Handle resizing of the chart
+                                window.addEventListener('resize', myChart.resize);
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -169,7 +258,7 @@
                 </div>
             </div>
         </section>
-        <section class="default-spacing pb-0">
+        <section class="default-spacing pb-0 d-none">
             <div class="container-fluid">
                 <div class="row g-3">
                     <div class="col-12">
@@ -380,6 +469,19 @@
                                 <div class="col-12">
                                     <h2 class="section-title">Markets</h2>
                                     <div class="row g-3">
+                                        <div class="col-12">
+                                            <p>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem
+                                                ducimus veniam aspernatur. Consequatur excepturi nihil nostrum natus placeat
+                                                consectetur obcaecati.
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore aspernatur
+                                                consectetur molestiae neque eos earum, ratione nobis praesentium debitis,
+                                                delectus, quibusdam mollitia ipsam ducimus? Aliquam nam officiis harum
+                                                tempora officia.
+                                            </p>
+                                        </div>
                                         @for ($i = 0; $i < 4; $i++)
                                             <div class="col-xxl-4 col-6">
                                                 <div class="card" data-aos="zoom-in" data-aos-duration="400"
