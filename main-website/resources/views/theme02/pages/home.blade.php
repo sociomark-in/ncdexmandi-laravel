@@ -139,7 +139,7 @@
                         <div class="">
                             <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
                             <script src="{{ asset('theme02/assets/json/india_state.geojson') }}"></script>
-                            <div id="india-map" style="width: 800px; height: 600px;"></div>
+                            <div id="india-map" style="width: 800px; height: 900px;"></div>
                             <script type="text/javascript">
                                 var chartDom = document.getElementById('india-map');
                                 var myChart = echarts.init(chartDom);
