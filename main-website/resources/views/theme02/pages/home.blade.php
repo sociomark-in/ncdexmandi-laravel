@@ -136,83 +136,88 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
-                        <div class="">
-                            <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-                            <script src="{{ asset('theme02/assets/json/india_state.geojson') }}"></script>
-                            <div id="india-map" style="width: 800px; height: 900px;"></div>
-                            <script type="text/javascript">
-                                var chartDom = document.getElementById('india-map');
-                                var myChart = echarts.init(chartDom);
-                                var option;
-                                myChart.showLoading();
-                                $.get("{{ asset('theme02/assets/json/india_state.geojson') }}", function(india_states) {
-                                    myChart.hideLoading();
-                                    // Register the India map data
-                                    echarts.registerMap('India', india_states); // Assuming india_states is loaded from the JSON
-                                    option = {
-                                        title: {
-                                            text: 'India Population Estimates (2012)',
-                                            subtext: 'Data from www.india.gov',
-                                            sublink: 'http://www.india.gov',
-                                            left: 'right'
-                                        },
-                                        tooltip: {
-                                            trigger: 'item',
-                                            showDelay: 0,
-                                            transitionDuration: 0.2
-                                        },
-                                        visualMap: {
-                                            left: 'right',
-                                            min: 50,
-                                            max: 3800,
-                                            inRange: {
-                                                color: [
-                                                    '#313695',
-                                                    '#4575b4',
-                                                    '#74add1',
-                                                    '#abd9e9',
-                                                    '#e0f3f8',
-                                                    '#ffffbf',
-                                                    '#fee090',
-                                                    '#fdae61',
-                                                    '#f46d43',
-                                                    '#d73027',
-                                                    '#a50026'
-                                                ]
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="section-title">Our FPO Partners</h2>
+                            </div>
+                            <div class="col-12">
+                                <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+                                <script src="{{ asset('theme02/assets/json/india_state.geojson') }}"></script>
+                                <div id="india-map" style="width: 800px; height: 900px;"></div>
+                                <script type="text/javascript">
+                                    var chartDom = document.getElementById('india-map');
+                                    var myChart = echarts.init(chartDom);
+                                    var option;
+                                    myChart.showLoading();
+                                    $.get("{{ asset('theme02/assets/json/india_state.geojson') }}", function(india_states) {
+                                        myChart.hideLoading();
+                                        // Register the India map data
+                                        echarts.registerMap('India', india_states); // Assuming india_states is loaded from the JSON
+                                        option = {
+                                            title: {
+                                                text: 'NCDEX FPO Partners (2024-25)',
+                                                subtext: 'Data from www.ncdex.com',
+                                                sublink: 'http://www.ncdex.com',
+                                                left: 'right'
                                             },
-                                            text: ['High', 'Low'],
-                                            calculable: true
-                                        },
-                                        series: [{
-                                            name: 'Population Map',
-                                            type: 'map',
-                                            map: 'India',
-                                            roam: true, // Enable zooming and panning
-                                            itemStyle: {
-                                                areaColor: '#eee',
-                                                borderColor: '#333'
+                                            tooltip: {
+                                                trigger: 'item',
+                                                showDelay: 0,
+                                                transitionDuration: 0.2
                                             },
-                                            label: {
-                                                show: true,
-                                                fontSize: 12
-                                            },
-                                            nameProperty: 'NAME_1',
-                                            data: [
-                                                // You can add data here to visualize on the map.
-                                                // The 'name' property should match the state name in your GeoJSON data.
-                                                {
-                                                    name: 'Maharashtra',
-                                                    value: 100
+                                            visualMap: {
+                                                left: 'right',
+                                                min: 50,
+                                                max: 3800,
+                                                inRange: {
+                                                    color: [
+                                                        '#313695',
+                                                        '#4575b4',
+                                                        '#74add1',
+                                                        '#abd9e9',
+                                                        '#e0f3f8',
+                                                        '#ffffbf',
+                                                        '#fee090',
+                                                        '#fdae61',
+                                                        '#f46d43',
+                                                        '#d73027',
+                                                        '#a50026'
+                                                    ]
                                                 },
-                                                // Add data for other states as needed
-                                            ]
-                                        }]
-                                    };
-                                    myChart.setOption(option);
-                                });
-                                // Handle resizing of the chart
-                                window.addEventListener('resize', myChart.resize);
-                            </script>
+                                                text: ['High', 'Low'],
+                                                calculable: true
+                                            },
+                                            series: [{
+                                                name: 'Population Map',
+                                                type: 'map',
+                                                map: 'India',
+                                                roam: true, // Enable zooming and panning
+                                                itemStyle: {
+                                                    areaColor: '#eee',
+                                                    borderColor: '#333'
+                                                },
+                                                label: {
+                                                    show: true,
+                                                    fontSize: 12
+                                                },
+                                                nameProperty: 'NAME_1',
+                                                data: [
+                                                    // You can add data here to visualize on the map.
+                                                    // The 'name' property should match the state name in your GeoJSON data.
+                                                    {
+                                                        name: 'Maharashtra',
+                                                        value: 100
+                                                    },
+                                                    // Add data for other states as needed
+                                                ]
+                                            }]
+                                        };
+                                        myChart.setOption(option);
+                                    });
+                                    // Handle resizing of the chart
+                                    window.addEventListener('resize', myChart.resize);
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -614,6 +619,87 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+        {{-- <section class="default-spacing">
+            <div class="container-fluid">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <h2 class="section-title">Our FPO Partners</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="swiper FPOSwiper">
+                            <div class="swiper-wrapper">
+                                @for ($i = 0; $i < 10; $i++)
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="row g-3">
+                                                <div class="col-12">
+                                                    <img src="{{ asset('theme02/assets/person.png') }}" alt=""
+                                                class="w-100">
+                                                </div>
+                                                <div class="col-12">
+                                                    <h5>Lorem, ipsum dolor.</h5>
+                                                    <p>Lorem ipsum, dolor sit amet consectetur.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    @endfor
+                                </div>
+                                @push('scripts')
+                                <script>
+                                    new Swiper('.FPOSwiper', {
+                                        slidesPerView: 7,
+                                        spaceBetween: 30,
+                                    })
+                                    </script>
+                            @endpush
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <a href="" class="btn btn-primary">View All FPO Partners</a>
+                    </div>
+                </div>
+            </div>
+        </section> --}}
+        <section class="default-spacing">
+            <div class="container-fluid">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <h2 class="section-title">Our Team</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="swiper TeamSwiper">
+                            <div class="swiper-wrapper">
+                                @for ($i = 0; $i < 10; $i++)
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="row g-3">
+                                                <div class="col-12">
+                                                    <img src="{{ asset('theme02/assets/person.png') }}" alt=""
+                                                class="w-100">
+                                                </div>
+                                                <div class="col-12">
+                                                    <h4>Lorem, ipsum dolor.</h4>
+                                                    <p>Lorem ipsum, dolor sit amet consectetur.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                @endfor
+                            </div>
+                            @push('scripts')
+                            <script>
+                                new Swiper('.TeamSwiper', {
+                                    slidesPerView: 5,
+                                    spaceBetween: 30,
+                                })
+                            </script>
+                            @endpush
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

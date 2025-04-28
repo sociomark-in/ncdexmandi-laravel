@@ -142,20 +142,28 @@
                                                             <table class="table table-bordered">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <th>Lorem, ipsum.</th>
-                                                                        <td>300B+ Views</td>
+                                                                        <th>Establishment</th>
+                                                                        <td>{{ date('F j, Y') }}</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>Lorem, ipsum.</th>
-                                                                        <td>300B+ Views</td>
+                                                                        <th>Turnover</th>
+                                                                        <td>300B+</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>Lorem, ipsum.</th>
-                                                                        <td>300B+ Views</td>
+                                                                        <th>Commodities</th>
+                                                                        <td>300B+</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <th>Lorem, ipsum.</th>
-                                                                        <td>300B+ Views</td>
+                                                                        <th>No of Trades</th>
+                                                                        <td>300B+</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Members</th>
+                                                                        <td>300B+</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Locations</th>
+                                                                        <td>300</td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
