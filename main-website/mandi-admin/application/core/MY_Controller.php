@@ -4,7 +4,7 @@ date_default_timezone_set("Asia/Kolkata");
 
 class MY_Controller extends CI_Controller
 {
-	public $COMPANY_NAME, $APP_ID = "", $IP;
+	public $COMPANY_NAME, $APP_ID = "", $IP, $APP_STORAGE;
 	public function __construct()
 	{
 		parent::__construct();
@@ -14,6 +14,7 @@ class MY_Controller extends CI_Controller
 			$this->session->set_flashdata('http_error', 'Please change url to HTTPS!!');
 		}
 		$this->APP_ID = get_cookie("app_id", true);
+        $this->APP_STORAGE = directory_size(FILE_UPLOAD_FOLDER);
 	}
 	public function _auth_(){
 		$app_id = get_cookie("app_id", true);

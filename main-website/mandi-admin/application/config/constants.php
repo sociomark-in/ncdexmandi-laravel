@@ -2,6 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 defined('APP_NAME') OR define('APP_NAME', 'NCDEX Mandi');
+defined('FILE_UPLOAD_FOLDER') OR define('FILE_UPLOAD_FOLDER', 'mandi-uploads');
+defined('FILE_UPLOAD_LIMIT') OR define('FILE_UPLOAD_LIMIT', 30000000000);
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace

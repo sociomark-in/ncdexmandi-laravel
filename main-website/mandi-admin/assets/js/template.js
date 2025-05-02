@@ -7,7 +7,7 @@
     var footer = $('footer');
     var sidebar = $('.sidebar');
     var navbar = $('.navbar').not('.top-navbar');
-    
+
 
     // Enable feather-icons with SVG markup
     feather.replace();
@@ -45,10 +45,10 @@
     })
 
 
-    // Applying perfect-scrollbar 
-    if ($('.sidebar .sidebar-body').length) {
-      const sidebarBodyScroll = new PerfectScrollbar('.sidebar-body');
-    }
+    // Applying perfect-scrollbar
+    // if ($('.sidebar .sidebar-body').length) {
+    //   const sidebarBodyScroll = new PerfectScrollbar('.sidebar-body');
+    // }
     // commented beacuse of hang (scroll from  dropdown.html with small height)
     // if ($('.content-nav-wrapper').length) {
     //   const contentNavWrapper = new PerfectScrollbar('.content-nav-wrapper');
@@ -155,7 +155,7 @@
     });
 
 
-    // close sidebar when click outside on mobile/table    
+    // close sidebar when click outside on mobile/table
     $(document).on('click touchstart', function(e){
       e.stopPropagation();
 
@@ -184,7 +184,7 @@
           navItemClicked.removeClass('show-submenu');
         }
         $(this).toggleClass('show-submenu');
-      }        
+      }
     })
 
     $(window).scroll(function() {
@@ -205,7 +205,7 @@
     }, function () {
       $('body').removeClass('overflow-hidden');
     });
-   
+
 
   });
 })(jQuery);
