@@ -1,6 +1,6 @@
 <?php
-
-class EventsController extends CI_Controller
+require_once APPPATH . "core/My_Controller.php";
+class EventsController extends My_Controller
 {
 	public $error, $data, $request, $response;
 
@@ -8,6 +8,7 @@ class EventsController extends CI_Controller
     {
         parent::__construct();
         $this->error = [];
+        $this->data = ["APP_STORAGE" => $this->APP_STORAGE];
     }
 
     public function index()

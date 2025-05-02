@@ -7,7 +7,7 @@
 
     <!-- row -->
     <div class="row">
-        <div class="col-lg-8 col-12 grid-margin">
+        <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline mb-2">
@@ -101,15 +101,6 @@
                                 ],
                             });
                         </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-12 grid-margin">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-baseline mb-2">
-                        <h6 class="card-title mb-0">Add New Episode</h6>
                     </div>
                 </div>
             </div>

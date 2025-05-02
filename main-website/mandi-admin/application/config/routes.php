@@ -68,15 +68,20 @@ $route['settings'] ="app/SettingsController";
 $route['settings/languages'] ="app/SettingsController/localization";
 
 $route['blogs'] ="posts/BlogsController";
-$route['blogs/new-post'] ="posts/BlogsController/new_post";
-$route['blogs/post/(:any)'] ="posts/BlogsController/view_post/$1";
-$route['blogs/post/(:any)/edit'] ="posts/BlogsController/edit_post/$1";
+$route['blog/new-post'] ="posts/BlogsController/new_post";
+$route['blog/post/(:any)'] ="posts/BlogsController/view_post/$1";
+$route['blog/post/(:any)/edit'] ="posts/BlogsController/edit_post/$1";
 
 
 $route['episodes'] ="posts/EpisodesController";
-$route['episodes/new-post'] ="posts/EpisodesController/new_post";
-$route['episodes/post/(:any)'] ="posts/EpisodesController/view_post/$1";
-$route['episodes/post/(:any)/edit'] ="posts/EpisodesController/edit_post/$1";
+$route['episode/new-post'] ="posts/EpisodesController/new_post";
+$route['episode/post/(:any)'] ="posts/EpisodesController/view_post/$1";
+$route['episode/post/(:any)/edit'] ="posts/EpisodesController/edit_post/$1";
+
+$route['reports'] ="posts/ReportsController";
+$route['report/new-post'] ="posts/ReportsController/new_post";
+$route['report/post/(:any)'] ="posts/ReportsController/view_post/$1";
+$route['report/post/(:any)/edit'] ="posts/EpisodesController/edit_post/$1";
 
 $route['events'] ="posts/EventsController";
 

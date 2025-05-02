@@ -1,15 +1,16 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-
-class BlogsController extends CI_Controller
+require_once APPPATH . "core/My_Controller.php";
+class BlogsController extends My_Controller
 {
     public $error, $data, $request, $response;
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->error = [];
-    }
+	public function __construct()
+	{
+		parent::__construct();
+		$this->error = [];
+		$this->data = ["APP_STORAGE" => $this->APP_STORAGE];
+	}
 
     public function index()
     {
