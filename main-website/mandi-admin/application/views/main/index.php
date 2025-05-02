@@ -350,7 +350,19 @@
                             </div>
                         </div>
                     </div>
-                    <div id="storageChart"></div>
+                    <div id="storageUploadLimitChart"></div>
+                    <script src="<?= base_url('assets/js/dashboard-light.js') ?>" type="module"></script>
+                    <script type="module">
+                        import {
+                            options,
+                            createChart, updateChartSeries
+                        } from '<?= base_url('assets/js/dashboard-light.js') ?>';
+
+                        // Create the chart when the module loads
+                        const chartInstance = createChart('#storageUploadLimitChart');
+                        console.log(chartInstance);
+
+                    </script>
                     <div class="row mb-3">
                         <div class="col-6 d-flex justify-content-end">
                             <div>

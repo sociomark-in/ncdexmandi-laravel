@@ -54,6 +54,23 @@
 					</ul>
 				</div>
 			</li>
+            <li class="nav-item <?= link_is_active("podcasts") ?>">
+				<a class="nav-link" data-bs-toggle="collapse" href="#podcasts" role="button" aria-expanded="false" aria-controls="podcasts">
+					<i class="link-icon" data-feather="database"></i>
+					<span class="link-title">Podcasts</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+				</a>
+				<div class="collapse" id="podcasts">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="<?= base_url("podcasts") ?>" class="nav-link <?= link_is_active("podcasts") ?>">All Podcasts</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Broadcast New Podcast</a>
+						</li>
+					</ul>
+				</div>
+			</li>
             <li class="nav-item <?= link_is_active("events") ?>">
 				<a class="nav-link" data-bs-toggle="collapse" href="#events" role="button" aria-expanded="false" aria-controls="events">
 					<i class="link-icon" data-feather="database"></i>
@@ -72,18 +89,52 @@
 				</div>
 			</li>
             <li class="nav-item <?= link_is_active("episodes") ?>">
-				<a class="nav-link" data-bs-toggle="collapse" href="#episodes" role="button" aria-expanded="false" aria-controls="episodes">
+				<a class="nav-link" data-bs-toggle="collapse" href="#kkp_episodes" role="button" aria-expanded="false" aria-controls="kkp_episodes">
 					<i class="link-icon" data-feather="database"></i>
 					<span class="link-title">Episodes</span>
 					<i class="link-arrow" data-feather="chevron-down"></i>
 				</a>
-				<div class="collapse" id="episodes">
+				<div class="collapse" id="kkp_episodes">
 					<ul class="nav sub-menu">
 						<li class="nav-item">
 							<a href="<?= base_url('episodes') ?>" class="nav-link <?= link_is_active("episodes") ?>">All Episodes</a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">Add New Episode</a>
+							<a href="#" class="nav-link">Broadcast New Episode</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+            <li class="nav-item <?= link_is_active("fpos") ?>">
+				<a class="nav-link" data-bs-toggle="collapse" href="#fpos" role="button" aria-expanded="false" aria-controls="fpos">
+					<i class="link-icon" data-feather="database"></i>
+					<span class="link-title">FPOs</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+				</a>
+				<div class="collapse" id="fpos">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="<?= base_url('fpos') ?>" class="nav-link <?= link_is_active("fpos") ?>">All FPOs</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Add New FPO</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+            <li class="nav-item <?= link_is_active("reports") ?>">
+				<a class="nav-link" data-bs-toggle="collapse" href="#reports" role="button" aria-expanded="false" aria-controls="reports">
+					<i class="link-icon" data-feather="database"></i>
+					<span class="link-title">Reports</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+				</a>
+				<div class="collapse" id="reports">
+					<ul class="nav sub-menu">
+						<li class="nav-item">
+							<a href="<?= base_url('reports') ?>" class="nav-link <?= link_is_active("reports") ?>">All Reports</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Publish New Report</a>
 						</li>
 					</ul>
 				</div>
