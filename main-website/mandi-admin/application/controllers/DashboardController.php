@@ -1,18 +1,21 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class DashboardController extends CI_Controller
+require_once APPPATH . "core/My_Controller.php";
+
+class DashboardController extends MY_Controller
 {
-	public $error;
+	public $data, $error;
 
 	public function __construct()
 	{
 		parent::__construct();
 		$this->error = [];
+		$this->data = ["APP_STORAGE" => $this->APP_STORAGE];
 	}
 	public function index()
 	{
-        $this->load->admin_dashboard('index');
+        $this->load->admin_dashboard('index', $this->data);
     }
 
 	public function login()

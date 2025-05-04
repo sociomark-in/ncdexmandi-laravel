@@ -336,7 +336,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline">
-                        <h6 class="card-title mb-0">Cloud storage</h6>
+                        <h6 class="card-title mb-0">Disk Usage</h6>
                         <div class="dropdown mb-2">
                             <a type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
@@ -350,18 +350,18 @@
                             </div>
                         </div>
                     </div>
-                    <div id="storageChart"></div>
+                    <?php $this->load->view('components/widgets/charts/donutChart', ['id' => "storageUploadLimitChart", 'series' => json_encode([number_format(($APP_STORAGE/FILE_UPLOAD_LIMIT)*100, 2)])]) ?>
                     <div class="row mb-3">
                         <div class="col-6 d-flex justify-content-end">
                             <div>
                                 <label class="d-flex align-items-center justify-content-end tx-10 text-uppercase fw-bolder">Total storage <span class="p-1 ms-1 rounded-circle bg-secondary"></span></label>
-                                <h5 class="fw-bolder mb-0 text-end">8TB</h5>
+                                <h5 class="fw-bolder mb-0 text-end"><?= byte_size_format(FILE_UPLOAD_LIMIT, 'GB') ?></h5>
                             </div>
                         </div>
                         <div class="col-6">
                             <div>
                                 <label class="d-flex align-items-center tx-10 text-uppercase fw-bolder"><span class="p-1 me-1 rounded-circle bg-primary"></span> Used storage</label>
-                                <h5 class="fw-bolder mb-0">~5TB</h5>
+                                <h5 class="fw-bolder mb-0"><?= byte_size_format($APP_STORAGE, 'GB') ?></h5>
                             </div>
                         </div>
                     </div>

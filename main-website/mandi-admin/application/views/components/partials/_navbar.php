@@ -12,7 +12,7 @@
             </div>
         </form>
         <ul class="navbar-nav">
-            <li class="nav-item"><?= byte_size_format(directory_size("assets")) ?></li>
+            <li class="nav-item"><?= byte_size_format($APP_STORAGE, 'GB') ?></li>
             <!-- <li class="nav-item">XXX.XXX.XXX.XXX</li> -->
             <li class="nav-item">
                 <button id="startTour" class="btn nav-link">
