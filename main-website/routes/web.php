@@ -14,6 +14,7 @@ Route::get('/episodes', [EpisodesController::class, 'index'])->name('episodes_ho
 Route::get('/publications', [PublicationsController::class, 'index'])->name('main_publications');
 Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs_home');
 Route::get('/blogs/search', [BlogsController::class, 'search'])->name('blogs_search');
+Route::get('/member/{name}', [PagesController::class, 'member_single'])->name('member_single');
 Route::fallback(function () {
     return view('theme02.errors.404');
 });

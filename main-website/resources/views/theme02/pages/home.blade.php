@@ -263,7 +263,7 @@
                 </div>
             </div>
         </section>
-        <section class="default-spacing pb-0 d-none">
+        <section class="default-spacing pb-0">
             <div class="container-fluid">
                 <div class="row g-3">
                     <div class="col-12">
@@ -674,7 +674,7 @@
                             <div class="swiper-wrapper">
                                 @for ($i = 0; $i < 10; $i++)
                                     <div class="swiper-slide">
-                                        <a href="">
+                                        <a href="{{ route('member_single', ['name' => 'single']) }}">
                                             <div class="row g-3">
                                                 <div class="col-12">
                                                     <img src="{{ asset('theme02/assets/person.png') }}" alt=""
