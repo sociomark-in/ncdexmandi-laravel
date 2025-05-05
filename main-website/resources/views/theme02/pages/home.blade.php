@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
-                        <div class="row g-3">
+                        <div class="row g-3 gy-lg-5">
                             <div class="col-12">
                                 <div class="text-content">
                                     <div class="row g-3">
@@ -103,7 +103,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="text-content">
-                                    <div class="card-stack colored row g-3">
+                                    <div class="card-stack colored row g-3 g-md-4">
                                         @for ($i = 0; $i < 4; $i++)
                                             <div class="col-xl-4 col-lg-6 col-12">
                                                 <a href="">
@@ -263,7 +263,8 @@
                 </div>
             </div>
         </section>
-        <section class="default-spacing pb-0">
+        {{-- Latest News --}}
+        <section class="default-spacing pb-0 d-none">
             <div class="container-fluid">
                 <div class="row g-3">
                     <div class="col-12">
@@ -398,7 +399,8 @@
                 </div>
             </div>
         </section>
-        <section class="default-spacing">
+        {{-- Kheti Ke Sikandar --}}
+        <section class="default-spacing pb-0">
             <div class="container-fluid">
                 <div class="row g-3">
                     <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
@@ -663,40 +665,91 @@
                 </div>
             </div>
         </section> --}}
+        {{-- Our Team --}}
         <section class="default-spacing">
             <div class="container-fluid">
-                <div class="row g-3">
+                <div class="row g-4">
                     <div class="col-12">
-                        <h2 class="section-title">Our Team</h2>
-                    </div>
-                    <div class="col-12">
-                        <div class="swiper TeamSwiper">
-                            <div class="swiper-wrapper">
-                                @for ($i = 0; $i < 10; $i++)
-                                    <div class="swiper-slide">
-                                        <a href="{{ route('member_single', ['name' => 'single']) }}">
-                                            <div class="row g-3">
-                                                <div class="col-12">
-                                                    <img src="{{ asset('theme02/assets/person.png') }}" alt=""
-                                                class="w-100">
-                                                </div>
-                                                <div class="col-12">
-                                                    <h4>Lorem, ipsum dolor.</h4>
-                                                    <p>Lorem ipsum, dolor sit amet consectetur.</p>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <h2 class="section-title">Our Team</h2>
+                            </div>
+                            <div class="col-12">
+                                <div class="swiper TeamSwiper">
+                                    <div class="swiper-wrapper">
+                                        @for ($i = 0; $i < 10; $i++)
+                                            <div class="swiper-slide">
+                                                <div class="row g-3 g-md-4 align-items-center">
+                                                    <div class="col-xl-4 col-12">
+                                                        <div class="rounded-overflow">
+                                                            <img src="{{ asset('theme02/assets/farmer.jpg') }}" alt=""
+                                                                class="w-100">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-8 col-12">
+                                                        <h4>Lorem, ipsum dolor.</h4>
+                                                        <p class="text-clipped" style="--clamp-lines:2">Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Magnam et ipsam necessitatibus quibusdam
+                                                            repudiandae. Provident facilis hic aperiam ea a.</p>
+                                                        {{-- <a href="{{ route('member_single', ['name' => 'single']) }}"
+                                                            class="btn btn-sm btn-primary">View Details</a> --}}
+                                                        <a data-bs-toggle="modal" data-bs-target="#teamModal"
+                                                            class="btn btn-sm btn-primary">View Details</a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        @endfor
                                     </div>
-                                @endfor
+                                    <!-- Modal -->
+                                    @push('scripts')
+                                    <script>
+                                            new Swiper('.TeamSwiper', {
+                                                slidesPerView: 3,
+                                                spaceBetween: 50,
+                                                loop: true,
+                                                autoplay:{
+                                                    delay: 3000,
+                                                }
+                                            })
+                                        </script>
+                                    @endpush
+                                </div>
                             </div>
-                            @push('scripts')
-                            <script>
-                                new Swiper('.TeamSwiper', {
-                                    slidesPerView: 5,
-                                    spaceBetween: 30,
-                                })
-                            </script>
-                            @endpush
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title fs-5" id="teamModalLabel">Name: Lorem, ipsum dolor.</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-3 g-md-4 align-items-center">
+                                <div class="col-xl-3 col-12">
+                                    <div class="rounded-overflow">
+                                        <img src="{{ asset('theme02/assets/farmer.jpg') }}" alt=""
+                                            class="w-100">
+                                    </div>
+                                </div>
+                                <div class="offset-xl-1 col-xl-8 col-12">
+                                    <h4>Lorem, ipsum dolor.</h4>
+                                    <p>Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Magnam et ipsam necessitatibus quibusdam
+                                        repudiandae. Provident facilis hic aperiam ea a.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ route('member_single', ['name' => 'single']) }}"
+                                class="btn btn-sm btn-primary">View Details</a>
+                            <button type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Close</button>
+                            {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
                         </div>
                     </div>
                 </div>

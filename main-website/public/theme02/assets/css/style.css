@@ -98,21 +98,38 @@ table th {
   }
 }
 
+.text-clipped {
+  display: -webkit-box;
+  line-clamp: var(--clamp-lines);
+  -webkit-line-clamp: var(--clamp-lines);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .card-stack.colored .data-card {
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
   overflow: hidden;
 }
 .card-stack.colored .data-card .card-body {
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 .card-stack.colored .data-card .card-body .text * {
   margin: 0;
+}
+.card-stack.colored .data-card .card-body .text h3 {
+  font-size: max(5vmin, 2rem);
 }
 .card-stack.colored .data-card.style-green {
   background-color: rgba(25, 100, 30, 0.1);
 }
 .card-stack.colored .data-card.style-yellow {
   background-color: rgba(247, 195, 95, 0.1);
+}
+
+.rounded-overflow {
+  border-radius: 0.75rem;
+  overflow: hidden;
 }
 
 .form-control:focus {

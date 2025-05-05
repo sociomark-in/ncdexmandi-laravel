@@ -109,16 +109,28 @@ table{
     }
 }
 
+.text-clipped{
+    display: -webkit-box;
+    line-clamp: var(--clamp-lines);
+    -webkit-line-clamp: var(--clamp-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .card-stack{
     &.colored{
         .data-card{
-            border-radius: 0.25rem;
+            border-radius: 0.75rem;
             overflow: hidden;
             .card-body{
-                padding: 1rem;
+                padding: 2rem 1rem;
                 .text{
                     *{
                         margin: 0;
+                    }
+                    h3{
+                        font-size: calc(max(5vmin, 2rem));
                     }
                 }
             }
@@ -131,6 +143,12 @@ table{
         }
     }
 }
+
+.rounded-overflow{
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
 .form-control {
     &:focus {
         border-color: rgba($color-green, 0.1);
