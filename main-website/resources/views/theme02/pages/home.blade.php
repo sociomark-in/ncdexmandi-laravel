@@ -8,30 +8,34 @@
                         <div class="swiper bannerSwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <picture>
-                                        <source media="(min-width: 1200px)" srcset="https://placehold.co/1920x700"
-                                            type="image/webp">
-                                        <source media="(min-width: 1200px)" srcset="https://placehold.co/1920x700"
-                                            type="image/jpeg">
-                                        <source media="(max-width: 1200px)" srcset="https://placehold.co/1920x700"
-                                            type="image/webp">
-                                        <source media="(max-width: 1200px)" srcset="https://placehold.co/1920x700"
-                                            type="image/jpeg">
-                                        <img src="https://placehold.co/1920x700" alt="A placeholder image" class="w-100">
-                                    </picture>
+                                    <a href="" target="_blank" title="External Page Link, Opens in New Tab">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
+                                                type="image/webp">
+                                            <source media="(min-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
+                                                type="image/jpeg">
+                                            <source media="(max-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
+                                                type="image/webp">
+                                            <source media="(max-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
+                                                type="image/jpeg">
+                                            <img src="{{ asset('mandi-uploads/banners/banner_1.jpg') }}" alt="A placeholder image" class="w-100">
+                                        </picture>
+                                    </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <picture>
-                                        <source media="(min-width: 1200px)" srcset="https://placehold.co/1920x700"
-                                            type="image/webp">
-                                        <source media="(min-width: 1200px)" srcset="https://placehold.co/1920x700"
-                                            type="image/jpeg">
-                                        <source media="(max-width: 1200px)" srcset="https://placehold.co/1920x700"
-                                            type="image/webp">
-                                        <source media="(max-width: 1200px)" srcset="https://placehold.co/1920x700"
-                                            type="image/jpeg">
-                                        <img src="https://placehold.co/1920x700" alt="A placeholder image" class="w-100">
-                                    </picture>
+                                    <a href="" target="_blank" title="External Page Link, Opens in New Tab">
+                                        <picture>
+                                            <source media="(min-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
+                                                type="image/webp">
+                                            <source media="(min-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
+                                                type="image/jpeg">
+                                            <source media="(max-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
+                                                type="image/webp">
+                                            <source media="(max-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
+                                                type="image/jpeg">
+                                            <img src="{{ asset('mandi-uploads/banners/banner_2.jpg') }}" alt="A placeholder image" class="w-100">
+                                        </picture>
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-button-next"></div>
