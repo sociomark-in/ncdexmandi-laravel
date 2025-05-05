@@ -109,7 +109,7 @@
                                 <div class="text-content">
                                     <div class="card-stack colored row g-3 g-md-4">
                                         @for ($i = 0; $i < 4; $i++)
-                                            <div class="col-xl-4 col-lg-6 col-12">
+                                            <div class="col-xl-4 col-lg-6 col-12" data-aos="fade-up" data-aos-delay="{{ 100 * $i  }}">
                                                 <a href="">
                                                     <div class="data-card style-green">
                                                         <div class="card-body">
@@ -121,7 +121,7 @@
                                                     </div>
                                                 </a>
                                             </div>
-                                            <div class="col-xl-4 col-lg-6 col-12">
+                                            <div class="col-xl-4 col-lg-6 col-12" data-aos="fade-up" data-aos-delay="{{ 100 * $i  }}">
                                                 <a href="">
                                                     <div class="data-card style-yellow">
                                                         <div class="card-body">
@@ -153,6 +153,19 @@
                                     var myChart = echarts.init(chartDom);
                                     var option;
                                     myChart.showLoading();
+                                    myChart.on('click', function (params) {
+                                        if (params.componentType === 'series') {
+                                            // Get the data associated with the clicked data point
+                                            const data = params.data;
+
+                                            // Assuming your data object has a 'url' property
+                                            if (data && data.url) {
+                                            window.open(data.url + "?state=" + data.name, '_blank'); // Open the URL in a new tab
+                                            } else {
+                                            console.log('No URL associated with this data point.');
+                                            }
+                                        }
+                                    });
                                     $.get("{{ asset('theme02/assets/json/india_state.geojson') }}", function(india_states) {
                                         myChart.hideLoading();
                                         // Register the India map data
@@ -195,7 +208,8 @@
                                                 name: 'Population Map',
                                                 type: 'map',
                                                 map: 'India',
-                                                roam: true, // Enable zooming and panning
+                                                roam: 'move',
+                                                // roam: true, // Enable zooming and panning
                                                 itemStyle: {
                                                     areaColor: '#eee',
                                                     borderColor: '#333'
@@ -210,7 +224,8 @@
                                                     // The 'name' property should match the state name in your GeoJSON data.
                                                     {
                                                         name: 'Maharashtra',
-                                                        value: 100
+                                                        value: 100,
+                                                        url: "{{ route('main_events') }}"
                                                     },
                                                     // Add data for other states as needed
                                                 ]
@@ -686,8 +701,10 @@
                                                 <div class="row g-3 g-md-4 align-items-center">
                                                     <div class="col-xl-4 col-12">
                                                         <div class="rounded-overflow">
-                                                            <img src="{{ asset('theme02/assets/farmer.jpg') }}" alt=""
+                                                            <div class="frame frame-01">
+                                                                <img src="{{ asset('mandi-uploads/team/member.jpg') }}" alt=""
                                                                 class="w-100">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-8 col-12">
@@ -736,7 +753,7 @@
                             <div class="row g-3 g-md-4 align-items-center">
                                 <div class="col-xl-3 col-12">
                                     <div class="rounded-overflow">
-                                        <img src="{{ asset('theme02/assets/farmer.jpg') }}" alt=""
+                                        <img src="{{ asset('mandi-uploads/team/member.jpg') }}" alt=""
                                             class="w-100">
                                     </div>
                                 </div>

@@ -27,7 +27,7 @@
                         <div class="row g-3 g-md-4">
                             <div class="col-12">
                                 <div class="rounded-overflow">
-                                    <img src="{{ asset('theme02/assets/farmer.jpg') }}" alt="" class="w-100">
+                                    <img src="{{ asset('mandi-uploads/team/member.jpg') }}" alt="" class="w-100">
                                 </div>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                                         <div class="row g-3 g-md-4 align-items-center">
                                             <div class="col-xl-4 col-12">
                                                 <div class="rounded-overflow">
-                                                    <img src="{{ asset('theme02/assets/farmer.jpg') }}" alt=""
+                                                    <img src="{{ asset('mandi-uploads/team/member.jpg') }}" alt=""
                                                         class="w-100">
                                                 </div>
                                             </div>

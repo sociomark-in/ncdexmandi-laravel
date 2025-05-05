@@ -72,7 +72,7 @@
                                     <a class="nav-link" href="#">Calculators</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Infographics</a>
+                                    <a class="nav-link" href="{{ route('main_gallery') }}">Infographics</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">FAQs</a>

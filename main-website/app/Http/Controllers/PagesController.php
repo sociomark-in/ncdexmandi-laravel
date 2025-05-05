@@ -19,9 +19,6 @@ class PagesController extends Controller
     public function about(){
         return view('theme02.pages.about', $this->data);
     }
-    public function events(){
-        return view('theme02.pages.events', $this->data);
-    }
     public function episodes(){
         return view('theme02.pages.episodes', $this->data);
     }

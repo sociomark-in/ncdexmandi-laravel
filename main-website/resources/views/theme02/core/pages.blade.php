@@ -34,12 +34,15 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    @stack('libraries')
+
     <link rel="stylesheet" href="{{ asset('theme02/assets/css/style.min.css') }}">
 
     <title>@yield('title', env('APP_NAME'))</title>
 </head>
 
 <body>
+    @include('theme02.components.loader')
     @include('theme02.components.navbar')
     @yield('content')
     @include('theme02.components.footer')

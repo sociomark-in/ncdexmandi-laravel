@@ -95,7 +95,7 @@
                                         <div class="row g-3 g-md-4 align-items-center">
                                             <div class="col-xl-4 col-12">
                                                 <div class="rounded-overflow">
-                                                    <img src="{{ asset('theme02/assets/farmer.jpg') }}" alt=""
+                                                    <img src="{{ asset('mandi-uploads/team/member.jpg') }}" alt=""
                                                         class="w-100">
                                                 </div>
                                             </div>
@@ -104,7 +104,9 @@
                                                 <p class="text-clipped" style="--clamp-lines:2">Lorem ipsum dolor sit amet
                                                     consectetur adipisicing elit. Magnam et ipsam necessitatibus quibusdam
                                                     repudiandae. Provident facilis hic aperiam ea a.</p>
-                                                <a href="{{ route('member_single', ['name' => 'single']) }}"
+                                                {{-- <a href="{{ route('member_single', ['name' => 'single']) }}"
+                                                    class="btn btn-sm btn-primary">View Details</a> --}}
+                                                <a data-bs-toggle="modal" data-bs-target="#teamModal"
                                                     class="btn btn-sm btn-primary">View Details</a>
                                             </div>
                                         </div>
@@ -115,7 +117,7 @@
                             @push('scripts')
                             <script>
                                     new Swiper('.TeamSwiper', {
-                                        slidesPerView: 2,
+                                        slidesPerView: 2.2,
                                         spaceBetween: 50,
                                         loop: true,
                                         autoplay:{
@@ -140,25 +142,31 @@
                             <div class="swiper-wrapper">
                                 @for ($i = 0; $i < 10; $i++)
                                     <div class="swiper-slide">
-                                        <a href="">
-                                            <div class="row g-3">
-                                                <div class="col-12">
-                                                    <img src="{{ asset('theme02/assets/person.png') }}" alt=""
-                                                class="w-100">
-                                                </div>
-                                                <div class="col-12">
-                                                    <h5>Lorem, ipsum dolor.</h5>
-                                                    <p>Lorem ipsum, dolor sit amet consectetur.</p>
+                                        <div class="row g-3 g-md-4 align-items-center">
+                                            <div class="col-xl-4 col-12">
+                                                <div class="rounded-overflow">
+                                                    <img src="{{ asset('mandi-uploads/partners/farmer.jpg') }}" alt=""
+                                                        class="w-100">
                                                 </div>
                                             </div>
-                                        </a>
+                                            <div class="col-xl-8 col-12">
+                                                <h4>Lorem, ipsum dolor.</h4>
+                                                <p class="text-clipped" style="--clamp-lines:2">Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing elit. Magnam et ipsam necessitatibus quibusdam
+                                                    repudiandae. Provident facilis hic aperiam ea a.</p>
+                                                {{-- <a href="{{ route('member_single', ['name' => 'single']) }}"
+                                                    class="btn btn-sm btn-primary">View Details</a> --}}
+                                                <a data-bs-toggle="modal" data-bs-target="#teamModal"
+                                                    class="btn btn-sm btn-primary">View Details</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     @endfor
                                 </div>
                                 @push('scripts')
                                 <script>
                                     new Swiper('.FPOSwiper', {
-                                        slidesPerView: 6,
+                                        slidesPerView: 2.2,
                                         spaceBetween: 30,
                                     })
                                     </script>

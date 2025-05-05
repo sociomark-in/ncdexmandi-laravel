@@ -17,19 +17,19 @@ a {
     }
 }
 
-table{
-    th{
+table {
+    th {
         font-weight: 500;
     }
 }
-.list-group.news-group{
-    .list-group-item{
+.list-group.news-group {
+    .list-group-item {
         border-left: none;
         border-right: none;
-        &:first-child{
+        &:first-child {
             border-top: none;
         }
-        &:last-child{
+        &:last-child {
             border-bottom: none;
         }
     }
@@ -69,6 +69,22 @@ table{
         --bs-btn-disabled-bg: #{$color-yellow};
         --bs-btn-disabled-border-color: #{$color-yellow};
     }
+    &.btn-transparent {
+        --bs-btn-color: #000;
+        --bs-btn-bg: transparent;
+        --bs-btn-border-color: transparent;
+        --bs-btn-hover-color: #000;
+        --bs-btn-hover-bg: transparent;
+        --bs-btn-hover-border-color: transparent;
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: #000;
+        --bs-btn-active-bg: transparent;
+        --bs-btn-active-border-color: transparent;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #000;
+        --bs-btn-disabled-bg: transparent;
+        --bs-btn-disabled-border-color: transparent;
+    }
 
     &.btn-round {
         width: 3rem;
@@ -78,15 +94,18 @@ table{
         border-radius: 50%;
     }
     &.btn-icon {
+        display: flex;
         &:has(.icon-prepend) {
             padding-left: 0.75rem;
             .icon-prepend {
+                padding: 0.4rem;
                 margin-right: 0.1rem;
             }
         }
         &:has(.icon-append) {
             padding-right: 0.75rem;
             .icon-append {
+                padding: 0.4rem;
                 margin-left: 0.1rem;
             }
         }
@@ -109,7 +128,7 @@ table{
     }
 }
 
-.text-clipped{
+.text-clipped {
     display: -webkit-box;
     line-clamp: var(--clamp-lines);
     -webkit-line-clamp: var(--clamp-lines);
@@ -118,35 +137,54 @@ table{
     text-overflow: ellipsis;
 }
 
-.card-stack{
-    &.colored{
-        .data-card{
+.card-stack {
+    &.colored {
+        .data-card {
             border-radius: 0.75rem;
             overflow: hidden;
-            .card-body{
+            .card-body {
                 padding: 2rem 1rem;
-                .text{
-                    *{
+                .text {
+                    * {
                         margin: 0;
                     }
-                    h3{
+                    h3 {
                         font-size: calc(max(5vmin, 2rem));
                     }
                 }
             }
-            &.style-green{
+            &.style-green {
                 background-color: rgba($color-green, 0.1);
             }
-            &.style-yellow{
+            &.style-yellow {
                 background-color: rgba($color-yellow, 0.1);
             }
         }
     }
 }
 
-.rounded-overflow{
+.rounded-overflow {
     border-radius: 0.75rem;
     overflow: hidden;
+}
+
+.frame {
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    background-color: $color-green;
+    &.frame-01 {
+        background: linear-gradient(
+            30deg,
+            $color-green 0%,
+            $color-green 50%,
+            $color-yellow 50%,
+            $color-yellow 100%
+        );
+    }
+    img {
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
 }
 
 .form-control {
@@ -155,6 +193,10 @@ table{
         outline: 0;
         box-shadow: 0 0 0 0.25rem rgba($color-green, 0.25);
     }
+}
+.form-control-transparent {
+    border: none;
+    background: none;
 }
 .logo {
     overflow: hidden;
@@ -240,6 +282,33 @@ section {
     }
     &.default-spacing {
         padding: calc(max(5%, 1rem)) 0;
+    }
+
+    .title-icon {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+        display: flex;
+        align-items: center;
+        .icon {
+            mask-image: url("../masks/hexagonal.svg");
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+            padding: 1rem;
+            font-size: 1.2rem;
+            background-color: $color-green;
+            color: white;
+        }
+        &:has(.icon-prepend) {
+            .icon-prepend {
+                margin-right: 0.5rem;
+            }
+        }
+        &:has(.icon-append) {
+            .icon-append {
+                margin-left: 0.5rem;
+            }
+        }
     }
 
     .section-title {
