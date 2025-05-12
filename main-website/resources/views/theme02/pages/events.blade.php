@@ -70,10 +70,12 @@
                                     <div class="swiper-wrapper">
                                         @for ($i = 0; $i < 10; $i++)
                                             <div class="swiper-slide">
-                                                <a href="?state=Maharashtra">
-                                                    <div class="row g-3">
-                                                        <div class="col-12 text-center">
-                                                            <img src="https://placehold.co/64x64" alt="State Icon">
+                                                <a class="thumbnail-style-01" href="?state=Maharashtra">
+                                                    <div class="row g-3 justify-content-center">
+                                                        <div class="col-auto text-center">
+                                                            <div class="icon">
+                                                                <img src="https://placehold.co/64x64" alt="State Icon">
+                                                            </div>
                                                         </div>
                                                         <div class="col-12 text-center">
                                                             <p>Maharashtra</p>
@@ -216,8 +218,8 @@
                         <div class="dropdown">
                             <div class="btn btn-icon btn-search" data-bs-toggle="modal"
                                 data-bs-target="#searchPageModal">
-                                <i class="fa-solid fa-magnifying-glass icon-prepend"></i><span
-                                    class="ms-2">Search</span>
+                                <i class="fa-solid fa-filter icon-prepend"></i><span
+                                    class="ms-2">Filter By</span>
                             </div>
                         </div>
                     </div>
@@ -334,22 +336,51 @@
         </div>
         <section class="default-spacing">
             <div class="container">
-                <div class="row g-3">
-                    <div class="col-12">
-                        <div class="text-content">
-                            <h2 class="title-icon">
-                                <i class="fa-solid fa-clock-rotate-left icon icon-prepend"></i>
-                                Event Archives
-                            </h2>
+                <div class="row g-3 flex-row-reverse">
+                    <div class="col-xl-5 col-lg-6 col-12">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="text-content">
+                                    <h2 class="title-icon">
+                                        <i class="fa-solid fa-question icon icon-prepend"></i>
+                                        Hosting an Event?
+                                    </h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, perspiciatis.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form action="" method="post">
+                                            @csrf
+                                            <x-forms type="event-enquiry"></x-forms>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <div class="row g-2">
-                            @for ($i = date('Y'); $i > 2000; $i--)
-                                <div class="col-xl-3 col-6">
-                                    <a href="">{{ $i }}</a>
+                    <div class="col-xl-7 col-lg-6 col-12">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="text-content">
+                                    <h2 class="title-icon">
+                                        <i class="fa-solid fa-clock-rotate-left icon icon-prepend"></i>
+                                        Event Archives
+                                    </h2>
                                 </div>
-                            @endfor
+                            </div>
+                            <div class="col-12">
+                                <div class="row g-2">
+                                    @for ($i = date('Y'); $i > 2000; $i--)
+                                        <div class="col-xl-3 col-6">
+                                            <a href="">{{ $i }}</a>
+                                        </div>
+                                    @endfor
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

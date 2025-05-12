@@ -95,8 +95,10 @@
                                         <div class="row g-3 g-md-4 align-items-center">
                                             <div class="col-xl-4 col-12">
                                                 <div class="rounded-overflow">
-                                                    <img src="{{ asset('mandi-uploads/team/member.jpg') }}" alt=""
-                                                        class="w-100">
+                                                    <div class="frame-01 frame">
+                                                        <img src="{{ asset('mandi-uploads/team/member.jpg') }}" alt="" onerror="this.onerror=null;this.src='https://placehold.co/150x200';"
+                                                            class="w-100">
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-xl-8 col-12">
@@ -145,8 +147,10 @@
                                         <div class="row g-3 g-md-4 align-items-center">
                                             <div class="col-xl-4 col-12">
                                                 <div class="rounded-overflow">
-                                                    <img src="{{ asset('mandi-uploads/partners/farmer.jpg') }}" alt=""
-                                                        class="w-100">
+                                                    <div class="frame frame-01">
+                                                        <img src="{{ asset('mandi-uploads/partners/farmer.jpg') }}" alt="" onerror="this.onerror=null;this.src='https://placehold.co/150x200';"
+                                                            class="w-100">
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-xl-8 col-12">

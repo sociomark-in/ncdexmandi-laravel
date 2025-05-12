@@ -22,7 +22,21 @@
             </div>
         </div>
         <section class="default-spacing">
-
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-6 col-12"></div>
+                    <div class="col-xl-4 offset-xl-1 col-lg-6 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="" method="post">
+                                    @csrf
+                                    <x-forms type="contact-short"></x-forms>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 @endsection

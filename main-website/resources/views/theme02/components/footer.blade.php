@@ -2,7 +2,33 @@
     ============================================= -->
 <footer class="bg-black">
     <div class="container">
-        <div class="row g-4 g-md-5">
+        <div class="row g-3 g-lg-4">
+            <div class="col-12">
+                <div class="footer-form">
+                    <div class="row g-2 g-md-3">
+                        <div class="col-xl-5 col-lg-6 col-12">
+                            <h4>Subscribe to the Newsletter</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate eius, culpa quaerat sapiente nemo amet doloribus voluptates esse deleniti dolor.</p>
+                        </div>
+                        <div class="offset-xl-1 col-lg-6">
+                            <form action="" method="post">
+                                @csrf
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <div class="">
+                                            <input type="email" name="" id="" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-secondary btn-icon">Subscribe</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
             <div class="col-12">
                 <div class="row g-3">
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12">
@@ -88,21 +114,25 @@
                                 <div class="col-xl-6">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="https://www.nabard.org/" target="_blank">NABARD</a>
+                                            <a class="nav-link" href="https://www.nabard.org/"
+                                                target="_blank">NABARD</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="https://wdra.gov.in/" target="_blank">WDRA</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="http://agriwelfare.gov.in/" target="_blank">Ministry of
+                                            <a class="nav-link" href="http://agriwelfare.gov.in/"
+                                                target="_blank">Ministry of
                                                 Agriculture</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="https://consumeraffairs.nic.in/" target="_blank">Ministry
+                                            <a class="nav-link" href="https://consumeraffairs.nic.in/"
+                                                target="_blank">Ministry
                                                 of Consumer Affairs</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="http://fci.gov.in/" target="_blank">Food Corporation of
+                                            <a class="nav-link" href="http://fci.gov.in/" target="_blank">Food
+                                                Corporation of
                                                 India</a>
                                         </li>
                                     </ul>
@@ -110,16 +140,20 @@
                                 <div class="col-xl-6">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="http://www.nafed-india.com/" target="_blank">NAFED</a>
+                                            <a class="nav-link" href="http://www.nafed-india.com/"
+                                                target="_blank">NAFED</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="http://agmarknet.gov.in/" target="_blank">AGMARKNET</a>
+                                            <a class="nav-link" href="http://agmarknet.gov.in/"
+                                                target="_blank">AGMARKNET</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="https://mausam.imd.gov.in/" target="_blank">IMD</a>
+                                            <a class="nav-link" href="https://mausam.imd.gov.in/"
+                                                target="_blank">IMD</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="https://enam.gov.in/web/" target="_blank">eNAM</a>
+                                            <a class="nav-link" href="https://enam.gov.in/web/"
+                                                target="_blank">eNAM</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="http://www.remsl.in/" target="_blank">ReMS</a>
