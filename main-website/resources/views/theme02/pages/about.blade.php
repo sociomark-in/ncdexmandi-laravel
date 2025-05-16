@@ -133,7 +133,7 @@
                 </div>
             </div>
         </section>
-        <section class="default-spacing">
+        <section class="default-spacing d-none">
             <div class="container">
                 <div class="row g-3">
                     <div class="col-12">

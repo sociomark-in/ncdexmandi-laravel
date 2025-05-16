@@ -139,7 +139,7 @@
                                                             </a>
                                                         </div>
                                                         <div class="col-xxl-5 col-xl-6">
-                                                            <table class="table table-bordered">
+                                                            <table class="table table-sm table-striped">
                                                                 <tbody>
                                                                     <tr>
                                                                         <th>Establishment</th>
@@ -192,11 +192,7 @@
                                                                 </li>
                                                                 <li class="nav-item">
                                                                     <a class="nav-link social-icon" href="#"><i
-                                                                            class="fa-brands fa-x-twitter"></i></a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link social-icon" href="#"><i
-                                                                            class="fa-brands fa-facebook-f"></i></a>
+                                                                            class="fa-brands fa-whatsapp"></i></a>
                                                                 </li>
                                                             </ul>
                                                         </div>

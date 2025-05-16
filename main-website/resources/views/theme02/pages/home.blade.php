@@ -10,30 +10,40 @@
                                 <div class="swiper-slide">
                                     <a href="" target="_blank" title="External Page Link, Opens in New Tab">
                                         <picture>
-                                            <source media="(min-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
+                                            <source media="(min-width: 1200px)"
+                                                srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
                                                 type="image/webp">
-                                            <source media="(min-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
+                                            <source media="(min-width: 1200px)"
+                                                srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
                                                 type="image/jpeg">
-                                            <source media="(max-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
+                                            <source media="(max-width: 1200px)"
+                                                srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
                                                 type="image/webp">
-                                            <source media="(max-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
+                                            <source media="(max-width: 1200px)"
+                                                srcset="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
                                                 type="image/jpeg">
-                                            <img src="{{ asset('mandi-uploads/banners/banner_1.jpg') }}" alt="A placeholder image" class="w-100">
+                                            <img src="{{ asset('mandi-uploads/banners/banner_1.jpg') }}"
+                                                alt="A placeholder image" class="w-100">
                                         </picture>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <a href="" target="_blank" title="External Page Link, Opens in New Tab">
                                         <picture>
-                                            <source media="(min-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
+                                            <source media="(min-width: 1200px)"
+                                                srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
                                                 type="image/webp">
-                                            <source media="(min-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
+                                            <source media="(min-width: 1200px)"
+                                                srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
                                                 type="image/jpeg">
-                                            <source media="(max-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
+                                            <source media="(max-width: 1200px)"
+                                                srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
                                                 type="image/webp">
-                                            <source media="(max-width: 1200px)" srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
+                                            <source media="(max-width: 1200px)"
+                                                srcset="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
                                                 type="image/jpeg">
-                                            <img src="{{ asset('mandi-uploads/banners/banner_2.jpg') }}" alt="A placeholder image" class="w-100">
+                                            <img src="{{ asset('mandi-uploads/banners/banner_2.jpg') }}"
+                                                alt="A placeholder image" class="w-100">
                                         </picture>
                                     </a>
                                 </div>
@@ -60,6 +70,10 @@
                             <div class="row gap-3">
                                 <div class="col-12">
                                     <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <a href="" data-bs-toggle="modal" data-bs-target="#contactShortModal">Ask
+                                                Your Query</a>
+                                        </li>
                                         @for ($i = 0; $i < 11; $i++)
                                             <li class="list-group-item">
                                                 <a href="">Useful Link</a>
@@ -101,6 +115,8 @@
                                         </div>
                                         <div class="col-12">
                                             <a href="{{ route('main_about') }}" class="btn btn-primary">Know More</a>
+                                            <button class="btn btn-secondary" data-bs-toggle="modal"
+                                                data-bs-target="#contactShortModal">Contact Us</button>
                                         </div>
                                     </div>
                                 </div>
@@ -108,32 +124,50 @@
                             <div class="col-12">
                                 <div class="text-content">
                                     <div class="card-stack colored row g-3 g-md-4">
-                                        @for ($i = 0; $i < 4; $i++)
-                                            <div class="col-xl-4 col-lg-6 col-12" data-aos="fade-up" data-aos-delay="{{ 100 * $i  }}">
-                                                <a href="">
-                                                    <div class="data-card style-green">
-                                                        <div class="card-body">
-                                                            <div class="text text-center">
-                                                                <h3>200+</h3>
-                                                                <p>Lorem ipsum dolor sit.</p>
+                                        @php
+                                            $pointers = [
+                                                'States' => 200,
+                                                'FPOs Onboard' => 200,
+                                                'Farmer Base' => 200,
+                                                'Commodities Traded' => 23,
+                                                'Y-o-Y Growth Volume (%)' => 200,
+                                            ];
+                                            $i = 0;
+                                        @endphp
+                                        @foreach ($pointers as $key => $value)
+                                            @if ($i % 2 == 0)
+                                                <div class="col-xl-4 col-lg-6 col-12" data-aos="fade-up"
+                                                    data-aos-delay="{{ 100 * $i }}">
+                                                    <a href="">
+                                                        <div class="data-card style-green">
+                                                            <div class="card-body">
+                                                                <div class="text text-center">
+                                                                    <h3>{{ $value }}+</h3>
+                                                                    <p>{{ $key }}</p>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-6 col-12" data-aos="fade-up" data-aos-delay="{{ 100 * $i  }}">
-                                                <a href="">
-                                                    <div class="data-card style-yellow">
-                                                        <div class="card-body">
-                                                            <div class="text text-center">
-                                                                <h3>200+</h3>
-                                                                <p>Lorem ipsum dolor sit.</p>
+                                                    </a>
+                                                </div>
+                                            @else
+                                                <div class="col-xl-4 col-lg-6 col-12" data-aos="fade-up"
+                                                    data-aos-delay="{{ 100 * $i }}">
+                                                    <a href="">
+                                                        <div class="data-card style-yellow">
+                                                            <div class="card-body">
+                                                                <div class="text text-center">
+                                                                    <h3>{{ $value }}+</h3>
+                                                                    <p>{{ $key }}</p>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        @endfor
+                                                    </a>
+                                                </div>
+                                            @endif
+                                            @php
+                                                $i ++;
+                                            @endphp
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -153,16 +187,16 @@
                                     var myChart = echarts.init(chartDom);
                                     var option;
                                     myChart.showLoading();
-                                    myChart.on('click', function (params) {
+                                    myChart.on('click', function(params) {
                                         if (params.componentType === 'series') {
                                             // Get the data associated with the clicked data point
                                             const data = params.data;
 
                                             // Assuming your data object has a 'url' property
                                             if (data && data.url) {
-                                            window.open(data.url + "?state=" + data.name, '_blank'); // Open the URL in a new tab
+                                                window.open(data.url + "?state=" + data.name, '_blank'); // Open the URL in a new tab
                                             } else {
-                                            console.log('No URL associated with this data point.');
+                                                console.log('No URL associated with this data point.');
                                             }
                                         }
                                     });
@@ -185,20 +219,11 @@
                                             visualMap: {
                                                 left: 'right',
                                                 min: 50,
-                                                max: 3800,
+                                                max: 500,
                                                 inRange: {
                                                     color: [
-                                                        '#313695',
-                                                        '#4575b4',
-                                                        '#74add1',
-                                                        '#abd9e9',
-                                                        '#e0f3f8',
-                                                        '#ffffbf',
-                                                        '#fee090',
-                                                        '#fdae61',
-                                                        '#f46d43',
-                                                        '#d73027',
-                                                        '#a50026'
+                                                        '#19641e',
+                                                        '#f7c35f',
                                                     ]
                                                 },
                                                 text: ['High', 'Low'],
@@ -227,6 +252,11 @@
                                                         value: 100,
                                                         url: "{{ route('main_events') }}"
                                                     },
+                                                    {
+                                                        name: 'Karnataka',
+                                                        value: 500,
+                                                        url: "{{ route('main_events') }}"
+                                                    },
                                                     // Add data for other states as needed
                                                 ]
                                             }]
@@ -237,46 +267,6 @@
                                     window.addEventListener('resize', myChart.resize);
                                 </script>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="contactShortModal" tabindex="-1" aria-labelledby="contactShortModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="contactShortModalLabel">Contact Form</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="">
-                                <div class="row g-3">
-                                    <div class="col-12">
-                                        <label for="" class="form-label">Name</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="" class="form-label">Email Address</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="" class="form-label">Contact</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="row g-3">
-                                            <div class="col-auto">
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </div>
-                                            <div class="col-auto">
-                                                <button type="reset" class="btn btn-secondary">Reset</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -696,21 +686,25 @@
                             <div class="col-12">
                                 <div class="swiper TeamSwiper">
                                     <div class="swiper-wrapper">
-                                        @for ($i = 0; $i < 10; $i++)
+                                        @for ($i = 0; $i < 3; $i++)
                                             <div class="swiper-slide">
                                                 <div class="row g-3 g-md-4 align-items-center">
                                                     <div class="col-xl-4 col-12">
                                                         <div class="rounded-overflow">
                                                             <div class="frame frame-01">
-                                                                <img src="{{ asset('mandi-uploads/team/member.jpg') }}" alt="" onerror="this.onerror=null;this.src='https://placehold.co/150x200';"
-                                                                class="w-100">
+                                                                <img src="{{ asset('mandi-uploads/team/member.jpg') }}"
+                                                                    alt=""
+                                                                    onerror="this.onerror=null;this.src='https://placehold.co/150x200';"
+                                                                    class="w-100">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-8 col-12">
                                                         <h4>Lorem, ipsum dolor.</h4>
-                                                        <p class="text-clipped" style="--clamp-lines:2">Lorem ipsum dolor sit amet
-                                                            consectetur adipisicing elit. Magnam et ipsam necessitatibus quibusdam
+                                                        <p class="text-clipped" style="--clamp-lines:2">Lorem ipsum dolor
+                                                            sit amet
+                                                            consectetur adipisicing elit. Magnam et ipsam necessitatibus
+                                                            quibusdam
                                                             repudiandae. Provident facilis hic aperiam ea a.</p>
                                                         {{-- <a href="{{ route('member_single', ['name' => 'single']) }}"
                                                             class="btn btn-sm btn-primary">View Details</a> --}}
@@ -723,12 +717,12 @@
                                     </div>
                                     <!-- Modal -->
                                     @push('scripts')
-                                    <script>
+                                        <script>
                                             new Swiper('.TeamSwiper', {
                                                 slidesPerView: 3,
                                                 spaceBetween: 50,
-                                                loop: true,
-                                                autoplay:{
+                                                // loop: true,
+                                                autoplay: {
                                                     delay: 3000,
                                                 }
                                             })
@@ -740,8 +734,7 @@
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel"
-                aria-hidden="true">
+            <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -753,12 +746,16 @@
                             <div class="row g-3 g-md-4 align-items-center">
                                 <div class="col-xl-3 col-12">
                                     <div class="rounded-overflow">
-                                        <img src="{{ asset('mandi-uploads/team/member.jpg') }}" alt="" onerror="this.onerror=null;this.src='https://placehold.co/150x200';"
+                                        <img src="{{ asset('mandi-uploads/team/member.jpg') }}" alt=""
+                                            onerror="this.onerror=null;this.src='https://placehold.co/150x200';"
                                             class="w-100">
                                     </div>
                                 </div>
                                 <div class="offset-xl-1 col-xl-8 col-12">
                                     <h4>Lorem, ipsum dolor.</h4>
+                                    <p>Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Magnam et ipsam necessitatibus quibusdam
+                                        repudiandae. Provident facilis hic aperiam ea a.</p>
                                     <p>Lorem ipsum dolor sit amet
                                         consectetur adipisicing elit. Magnam et ipsam necessitatibus quibusdam
                                         repudiandae. Provident facilis hic aperiam ea a.</p>
@@ -768,13 +765,69 @@
                         <div class="modal-footer">
                             <a href="{{ route('member_single', ['name' => 'single']) }}"
                                 class="btn btn-sm btn-primary">View Details</a>
-                            <button type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
+        {{-- Popup Modal --}}
+        <!-- Modal -->
+        <div class="modal fade" id="contactShortModal" tabindex="-1" aria-labelledby="contactShortModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="contactShortModalLabel">Fill Details Below</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="" class="form-label">Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-12">
+                                    <label for="" class="form-label">Email Address</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-12">
+                                    <label for="" class="form-label">Contact</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-12">
+                                    <label for="" class="form-label">Message</label>
+                                    <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row g-3">
+                                        <div class="col-auto">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="reset" class="btn btn-secondary">Reset</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- @push('scripts')
+            <script>
+                $(document).ready(function() {
+                    setTimeout(function() {
+                        $('#contactShortModal').modal('show');
+                    }, 5000); // 5000 milliseconds = 5 seconds
+                });
+            </script>
+        @endpush --}}
+        {{-- Popup Modal --}}
     </main>
 @endsection

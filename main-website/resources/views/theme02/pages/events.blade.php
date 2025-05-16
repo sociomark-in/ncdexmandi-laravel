@@ -1,4 +1,44 @@
 @extends('theme02.core.pages')
+@php
+    $states = [
+        'Andhra Pradesh',
+        'Arunachal Pradesh',
+        'Assam',
+        'Bihar',
+        'Chhattisgarh',
+        'Goa',
+        'Gujarat',
+        'Haryana',
+        'Himachal Pradesh',
+        'Jharkhand',
+        'Karnataka',
+        'Kerala',
+        'Maharashtra',
+        'Madhya Pradesh',
+        'Manipur',
+        'Meghalaya',
+        'Mizoram',
+        'Nagaland',
+        'Odisha',
+        'Punjab',
+        'Rajasthan',
+        'Sikkim',
+        'Tamil Nadu',
+        'Tripura',
+        'Telangana',
+        'Uttar Pradesh',
+        'Uttarakhand',
+        'West Bengal',
+        'Andaman & Nicobar (UT)',
+        'Chandigarh (UT)',
+        'Dadra & Nagar Haveli and Daman & Diu (UT)',
+        'Delhi [National Capital Territory (NCT)]',
+        'Jammu & Kashmir (UT)',
+        'Ladakh (UT)',
+        'Lakshadweep (UT)',
+        'Puducherry (UT)',
+    ];
+@endphp
 @section('content')
     <main>
         <section class="nospacing">
@@ -68,9 +108,9 @@
                             <div class="col-12">
                                 <div class="swiper statesMainEventSwiper">
                                     <div class="swiper-wrapper">
-                                        @for ($i = 0; $i < 10; $i++)
+                                        @for ($i = 0; $i < count($states); $i++)
                                             <div class="swiper-slide">
-                                                <a class="thumbnail-style-01" href="?state=Maharashtra">
+                                                <a class="thumbnail-style-01" href="?state={{$states[$i]}}">
                                                     <div class="row g-3 justify-content-center">
                                                         <div class="col-auto text-center">
                                                             <div class="icon">
@@ -78,7 +118,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-12 text-center">
-                                                            <p>Maharashtra</p>
+                                                            <p>{{$states[$i]}}</p>
                                                         </div>
                                                     </div>
                                                 </a>
@@ -209,7 +249,7 @@
                             <div class="text-content">
                                 <h2 class="title-icon">
                                     <i class="fa-solid fa-calendar icon icon-prepend"></i>
-                                    All Events
+                                    Previous Events
                                 </h2>
                             </div>
                         </div>
@@ -218,14 +258,13 @@
                         <div class="dropdown">
                             <div class="btn btn-icon btn-search" data-bs-toggle="modal"
                                 data-bs-target="#searchPageModal">
-                                <i class="fa-solid fa-filter icon-prepend"></i><span
-                                    class="ms-2">Filter By</span>
+                                <i class="fa-solid fa-filter icon-prepend"></i><span class="ms-2">Filter By</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row g-3">
-                    @for ($i = 0; $i < 9; $i++)
+                    @for ($i = 0; $i < 3; $i++)
                         <div class="col-xl-4 col-lg-6 col-12">
                             <div class="event-style-one">
                                 <div class="thumb">
@@ -285,15 +324,15 @@
                             <div class="col-12">
                                 <div class="swiper statesEventSwiper">
                                     <div class="swiper-wrapper">
-                                        @for ($i = 0; $i < 10; $i++)
+                                        @for ($i = 0; $i < count($states); $i++)
                                             <div class="swiper-slide">
-                                                <a href="?state=Maharashtra">
+                                                <a href="?state={{$states[$i]}}">
                                                     <div class="row g-3">
                                                         <div class="col-12 text-center">
                                                             <img src="https://placehold.co/64x64" alt="State Icon">
                                                         </div>
                                                         <div class="col-12 text-center">
-                                                            <p>Maharashtra</p>
+                                                            <p>{{$states[$i]}}</p>
                                                         </div>
                                                     </div>
                                                 </a>
@@ -343,7 +382,7 @@
                                 <div class="text-content">
                                     <h2 class="title-icon">
                                         <i class="fa-solid fa-question icon icon-prepend"></i>
-                                        Hosting an Event?
+                                        Want to Get Featured?
                                     </h2>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, perspiciatis.
