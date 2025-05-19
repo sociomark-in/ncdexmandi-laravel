@@ -137,6 +137,17 @@ table {
     text-overflow: ellipsis;
 }
 
+.text-flashy {
+    @keyframes flash {
+        0% {
+        }
+        1000% {
+        }
+    }
+    .flashy-red {
+    }
+}
+
 .card-stack {
     &.colored {
         .data-card {
@@ -202,13 +213,13 @@ table {
     overflow: hidden;
     border-radius: 0.25rem;
 }
-.thumbnail-style-01{
-    &:hover{
-        .icon{
+.thumbnail-style-01 {
+    &:hover {
+        .icon {
             box-shadow: 0 0 0 0.2rem $color-yellow;
         }
     }
-    .icon{
+    .icon {
         border-radius: 50%;
         overflow: hidden;
         width: 100%;
@@ -216,7 +227,7 @@ table {
         box-shadow: 0 0 0 0.2rem $color-green;
         padding: 0.25rem;
         margin: 0.2rem;
-        img{
+        img {
             border-radius: 50%;
             overflow: hidden;
             width: 100%;
@@ -486,11 +497,31 @@ section {
     }
 }
 
+svg#india_map {
+    path {
+        fill: $color-white;
+        stroke: $color-black;
+        cursor: pointer;
+        &.active{
+            fill: $color-green;
+        }
+        &:not(.active){
+            &:hover {
+                fill: $color-yellow;
+            }
+        }
+        &:active {
+            fill: darken($color-yellow, 10);
+        }
+    }
+}
+
 footer {
     padding: calc(max(5%, 1rem)) 0;
     color: $color-white;
     font-size: 0.9rem;
-    .footer-form{}
+    .footer-form {
+    }
     .footer-social {
         .social-icon {
             width: 2.5rem;

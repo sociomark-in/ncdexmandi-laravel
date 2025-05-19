@@ -41,7 +41,7 @@
 @endphp
 @section('content')
     <main>
-        <section class="nospacing">
+        <section class="nospacing d-none">
             <div class="container-fluid">
                 <div class="row g-3">
                     <div class="col-12">
@@ -114,7 +114,7 @@
                                                     <div class="row g-3 justify-content-center">
                                                         <div class="col-auto text-center">
                                                             <div class="icon">
-                                                                <img src="https://placehold.co/64x64" alt="State Icon">
+                                                                <img src="{{ asset('theme02/assets/icons/state.png') }}" alt="State Icon" >
                                                             </div>
                                                         </div>
                                                         <div class="col-12 text-center">
@@ -407,7 +407,7 @@
                                 <div class="text-content">
                                     <h2 class="title-icon">
                                         <i class="fa-solid fa-clock-rotate-left icon icon-prepend"></i>
-                                        Event Archives
+                                        Past Events
                                     </h2>
                                 </div>
                             </div>

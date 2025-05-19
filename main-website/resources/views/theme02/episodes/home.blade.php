@@ -7,14 +7,13 @@
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
                         <div class="page-title mb-3 mb-lg-4">
-                            <h1>Kheti Ke Sikandar Episodes</h1>
+                            <h1>Kheti Ke Sikandar</h1>
                         </div>
                         <nav aria-label="">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a
-                                        href="{{  route('main_home') }}"><i
+                                <li class="breadcrumb-item"><a href="{{ route('main_home') }}"><i
                                             class="fas fa-home"></i>&nbsp;&nbsp;Home</a></li>
-                                <li class="breadcrumb-item active">All Episodes</li>
+                                <li class="breadcrumb-item active">Kheti Ke Sikandar FPOs</li>
                             </ol>
                         </nav>
                     </div>
@@ -27,15 +26,15 @@
                     <div class="col-xl">
                         <div class="">
                             <div class="text-content">
-                                <h2 class="section-title">All Episodes</h2>
+                                <h2 class="section-title">Kheti Ke Sikandar</h2>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-auto">
                         <div class="dropdown">
                             <div class="btn btn-icon btn-search" data-bs-toggle="modal" data-bs-target="#searchPageModal"><i
-                                class="fa-solid fa-magnifying-glass icon-prepend"></i><span class="ms-2">Search</span>
-                        </div>
+                                    class="fa-solid fa-magnifying-glass icon-prepend"></i><span class="ms-2">Search</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,11 +109,11 @@
                     </div>
                 </div>
                 <div class="row g-3">
-                    @for ($i = 0; $i < 9; $i++)
+                    @for ($i = 0; $i < 5; $i++)
                         <div class="col-12">
                             <div class="event-style-two">
                                 <div class="row">
-                                    <div class="col-xl-4 col-lg-6 col-12">
+                                    <div class="col-xl-4 col-lg-6 col-12 d-none">
                                         <div class="thumb">
                                             <a href="blog-single-with-sidebar.html"><img
                                                     src="https://i3.ytimg.com/vi/7tk9oSJKK1w/hqdefault.jpg"
@@ -125,7 +124,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xl-8 col-lg-6 col-12">
+                                    {{-- <div class="col-xl-8 col-lg-6 col-12"> --}}
+                                    <div class="col-12">
                                         <div class="event-details">
                                             <div class="col-12">
                                                 <div class="py-0 py-md-4">
@@ -133,14 +133,17 @@
                                                         <div class="col-12">
                                                             <a href="">
                                                                 <h3>
-                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                                    Repudiandae iste veniam ipsam suscipit, alias eaque.
+                                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, repudiandae! Ipsum nemo perferendis praesentium illum possimus magnam officiis esse molestias dolores.
                                                                 </h3>
                                                             </a>
                                                         </div>
                                                         <div class="col-xxl-5 col-xl-6">
                                                             <table class="table table-sm table-striped">
                                                                 <tbody>
+                                                                    <tr>
+                                                                        <th>Name of FPO</th>
+                                                                        <td>Lorem ipsum dolor sit amet consectetur.</td>
+                                                                    </tr>
                                                                     <tr>
                                                                         <th>Establishment</th>
                                                                         <td>{{ date('F j, Y') }}</td>
@@ -151,10 +154,6 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th>Commodities</th>
-                                                                        <td>300B+</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <th>No of Trades</th>
                                                                         <td>300B+</td>
                                                                     </tr>
                                                                     <tr>
@@ -169,7 +168,7 @@
                                                             </table>
                                                         </div>
                                                         <div class="col-xxl-7 col-xl-6 col-12">
-                                                            <p class="clipped-content line-3">
+                                                            <p class="clipped-content line-5">
                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                                                 Vero
                                                                 vel repudiandae id temporibus eius aliquam cum doloremque
@@ -197,6 +196,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
+                                                    <hr>
                                                 </div>
                                             </div>
                                         </div>
@@ -218,10 +218,10 @@
                     </div>
                     <div class="col-12">
                         <div class="row g-2">
-                            @for ($i = date("Y"); $i > 2000; $i--)
-                            <div class="col-xl-3 col-6">
-                                <a href="">{{ $i }}</a>
-                            </div>
+                            @for ($i = date('Y'); $i > 2000; $i--)
+                                <div class="col-xl-3 col-6">
+                                    <a href="">{{ $i }}</a>
+                                </div>
                             @endfor
                         </div>
                     </div>
