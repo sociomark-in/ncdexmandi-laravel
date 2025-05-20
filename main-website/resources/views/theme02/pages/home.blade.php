@@ -488,11 +488,11 @@
                                                             success: function(outputdata) {
                                                                 $(".india_features .details-view #title").text($(element).attr('title'))
                                                                 $("#AJAX_LABEL").text(outputdata.data.value)
-                                                            //     if(null != outputdata.data.url){
-                                                            //         $("#AJAX_LINK").attr("href" , "{{ route('main_events') }}" + "/" + outputdata.data.url)
-                                                            //     } else{
-                                                            //         $("#AJAX_LINK").attr("href" , "")
-                                                            //     }
+                                                                // if(null != outputdata.data.url){
+                                                                //     $("#AJAX_LINK").attr("href" , "{{ route('main_events') }}" + "/" + outputdata.data.url)
+                                                                // } else{
+                                                                //     $("#AJAX_LINK").attr("href" , "")
+                                                                // }
                                                             },
                                                             error: function(xhr, status, error) {
                                                                 // This function is called if there's an error during the AJAX request
