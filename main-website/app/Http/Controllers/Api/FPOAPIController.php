@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\FPOModel;
 use Illuminate\Http\Request;
 
-class FPOController extends Controller
+class FPOAPIController extends Controller
 {
     /**
      * Display a listing of the resource.

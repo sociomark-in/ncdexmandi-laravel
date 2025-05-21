@@ -177,7 +177,7 @@
                                     <div class="col-xl-4 col-lg-6 col-12">
                                         <div class="thumb">
                                             <a href="blog-single-with-sidebar.html"><img
-                                                    src="https://i3.ytimg.com/vi/7tk9oSJKK1w/hqdefault.jpg"
+                                                    src="https://i3.ytimg.com/vi/QOj9Bx7SrkI/hqdefault.jpg"
                                                     alt="Image Not Found" class="w-100"></a>
                                             <div class="date">
                                                 <strong>7</strong>
@@ -427,3 +427,112 @@
         </section>
     </main>
 @endsection
+
+
+<form action="https://health.ayushakti.com/treatments/book_appointment" method="post" class="row g-3" id="popupForm" novalidate="novalidate">
+    <div class="col-md-12 text-center">
+        <div class="d-flex justify-content-end text-center">
+<!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Welcome To Ayushakti</h1> -->
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+        <!-- <h5> <b>Your gateway to Heal  Naturally includes </b> </h5> -->
+        <p class="text-black">Your gateway to Heal Chronic Health Problems Naturally includes</p>
+        <p class="text-black">First Consultation - Video/Pulse Reading @ Rs. 300/-</p>
+        <p class="text-black">Meal Wise Diet Plan + Home Remedies @ Rs. 1000/- </p>
+        <p class="text-black">Second Follow up consultation @ Rs.200/-</p>
+        <h4><b>Total = <strike>1500/-</strike></b></h4>
+        <h3 style="color:blue"><b>Only at Rs 400/-</b></h3>
+
+    </div>
+    <div class="col-md-6">
+        <label for="validationDefault01" class="form-label">First name*</label>
+        <input type="text" placeholder="Enter name" class="form-control b" name="name" required="">
+
+    </div>
+    <div class="col-md-6">
+        <label for="validationDefault03" class="form-label">Email*</label>
+        <input type="email" placeholder="Enter email" class="form-control b" name="email" required="">
+    </div>
+    <div class="col-md-12">
+        <label for="validationDefault04" class="form-label">Mobile Number*</label>
+        <input type="number" placeholder="Enter contact no." class="form-control b" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="contact" required="">
+    </div>
+    <div class="col-md-12">
+
+<div class="form-group country">
+   <input type="hidden" name="country" id="country" value="india">
+<!-- <select class="form-control b" id="country" name="country" required>
+   <option value="">Select country</option>
+
+   <option value="india">India</option>
+</select> -->
+</div>
+</div>
+
+<div class="col-md-12">
+<div class="form-group clinic1" style="">
+   <select class="form-control b" name="city" id="cities">
+       <option value="">Select City</option>
+       <option value="Mumbai">Mumbai</option>
+       <option value="Navi Mumbai">Navi Mumbai</option>
+       <option value="Delhi">Delhi</option>
+       <option value="Nashik">Nashik</option>
+       <option value="Thane">Thane</option>
+       <option value="Aurangabad">Aurangabad</option>
+       <option value="Ahmednagar">Ahmednagar</option>
+       <option value="Sangli">Sangli</option>
+       <option value="Pune">Pune</option>
+       <option value="Gujarat">Surat(Gujarat)</option>
+       <!-- <option value="online_consultation">Online Consultation</option> -->
+   </select>
+</div>
+</div>
+
+<div class="col-md-12" id="center7"></div>
+
+    <div class="col-md-12">
+        <div class="form-group mb-3">
+            <input type="date" name="date" required="" min="2025-05-22" class="form-control b" id="date">
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group time mb-3">
+            <select class="form-control" name="time">
+                <option value="">Select Time</option>
+                <option value="11:00 am">11:00 AM</option>
+                <option value="11:30 am">11:30 AM</option>
+                <option value="12:00 pm">12:00 PM</option>
+                <option value="12:30 pm">12:30 PM</option>
+                <option value="01:00 pm">01:00 PM</option>
+                <option value="01:30 pm">01:30 PM</option>
+                <option value="02:00 pm">02:00 PM</option>
+                <option value="02:30 pm">02:30 PM</option>
+                <option value="03:00 pm">03:00 PM</option>
+                <option value="03:30 pm">03:30 PM</option>
+                <option value="04:00 pm">04:00 PM</option>
+                <option value="04:30 pm">04:30 PM</option>
+                <option value="05:00 pm">05:00 PM</option>
+                <option value="05:30 pm">05:30 PM</option>
+                <option value="06:00 pm">06:00 PM</option>
+                <option value="06:30 pm">06:30 PM</option>
+                <option value="07:00 pm">07:00 PM</option>
+                <option value="07:30 pm">07:30 PM</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-12 mb-3">
+        <p class="mb_10 text-yellow" style="font-size: 11px;">
+            <span class="text-danger">*</span> By clicking on button you are agree with T&amp;C
+        </p>
+    </div>
+    <input type="hidden" name="source" value="Website">
+    <input type="hidden" name="medium" value="Treatment Page">
+    <input type="hidden" name="treatment" value="">
+    <input type="hidden" name="url" value="https://health.ayushakti.com/">
+    <input type="hidden" name="type" value="">
+    <div class="col-12">
+        <button class="btn" type="submit">Book Appointment</button>
+    </div>
+</form>
