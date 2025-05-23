@@ -119,6 +119,10 @@ table th {
   }
 }
 
+.text-primary {
+  color: #19641e !important;
+}
+
 .text-clipped {
   display: -webkit-box;
   line-clamp: var(--clamp-lines);
@@ -198,8 +202,6 @@ table th {
 .thumbnail-style-01 .icon img {
   border-radius: 50%;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -458,6 +460,11 @@ svg#india_map path:not(.active):hover {
 }
 svg#india_map path:active {
   fill: #f5b12e;
+}
+
+.details-view {
+  top: 0;
+  right: 0;
 }
 
 footer {

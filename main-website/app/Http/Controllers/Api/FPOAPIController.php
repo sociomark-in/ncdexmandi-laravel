@@ -59,6 +59,41 @@ class FPOAPIController extends Controller
                 "value" => 214,
                 "url" => "maharashtra"
             ],
+            [
+                "name" => 'Karnataka',
+                "value" => 19,
+                "url" => "karnataka"
+            ],
+            [
+                "name" => 'Telangana',
+                "value" => 44,
+                "url" => "telangana"
+            ],
+            [
+                "name" => 'Kerala',
+                "value" => 1,
+                "url" => "kerala"
+            ],
+            [
+                "name" => 'Chhattisgarh',
+                "value" => 5,
+                "url" => "chhattisgarh"
+            ],
+            [
+                "name" => 'Odisha',
+                "value" => 3,
+                "url" => "Odisha"
+            ],
+            [
+                "name" => 'Andhra Pradesh',
+                "value" => 6,
+                "url" => "andhra-pradesh"
+            ],
+            [
+                "name" => 'Tamil Nadu',
+                "value" => 6,
+                "url" => "tamil-nadu"
+            ],
         ];
 
         $values = array_column($data, 'value');
