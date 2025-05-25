@@ -218,11 +218,11 @@
                     </div>
                     <div class="col-12">
                         <div class="row g-2">
-                            @for ($i = date('Y'); $i > 2000; $i--)
-                                <div class="col-xl-3 col-6">
-                                    <a href="">{{ $i }}</a>
-                                </div>
-                            @endfor
+                            @for ($i = new DateTime("2025-05-01"); $i >= new DateTime("2024-01-01"); $i->modify('-2 month'))
+                            <div class="col-xl-3 col-6">
+                                <a href="">{{ $i->format('F Y')}}</a>
+                            </div>
+                        @endfor
                         </div>
                     </div>
                 </div>
