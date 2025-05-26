@@ -144,7 +144,7 @@
                                     </ul>
                                     <div class="card">
                                         <div class="card-body">
-                                            <h3 class="card-title">Lorem ipsum dolor sit.</h3>
+                                            <h3 class="card-title">Generel Query Form</h3>
                                             <form action="">
                                                 <div class="row g-3">
                                                     <div class="col-12">
@@ -166,10 +166,12 @@
                                                     <div class="col-12">
                                                         <div class="row g-3">
                                                             <div class="col-auto">
-                                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary">Submit</button>
                                                             </div>
                                                             <div class="col-auto">
-                                                                <button type="reset" class="btn btn-secondary">Reset</button>
+                                                                <button type="reset"
+                                                                    class="btn btn-secondary">Reset</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -187,7 +189,10 @@
                                 <div class="text-content">
                                     <div class="row g-3">
                                         <div class="col-12">
-                                            <h2 class="section-title">About NCDEX Mandi</h2>
+                                            <h2 class="title-icon">
+                                                <i class="fa-solid fa-info icon icon-prepend"></i>
+                                                About NCDEX Mandi
+                                            </h2>
                                             <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                                 Repellat
                                                 quas excepturi
@@ -273,7 +278,10 @@
                     <div class="col-lg-6 col-12">
                         <div class="row">
                             <div class="col-12">
-                                <h2 class="section-title">Our FPO Partners</h2>
+                                <h2 class="title-icon">
+                                    <i class="fa-solid fa-users icon icon-prepend"></i>
+                                    Our FPO Partners
+                                </h2>
                             </div>
                             <div class="col-12 d-none">
                                 <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
@@ -370,19 +378,18 @@
                                 <div class="row justify-content-center">
                                     <div class="col-12">
                                         <div class="india_features position-relative">
-                                            <div class="map-view" style="width: min(100%, 30vw)">
+                                            <div class="map-view" style="width:min(100%, 700px)">
                                                 <svg id="india_map" xmlns:mapsvg="http://mapsvg.com"
                                                     xmlns:dc="http://purl.org/dc/elements/1.1/"
                                                     xmlns:cc="http://creativecommons.org/ns#"
                                                     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                                                    xmlns:svg="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 620 800"
+                                                    xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 620 800"
                                                     xmlns="http://www.w3.org/2000/svg" version="1.1"
                                                     mapsvg:geoViewBox="68.184010 37.084109 97.418146 6.753659">
                                                     <style>
-                                                        #india_map{
+                                                        #india_map {
                                                             width: 100%;
-                                                            height:auto;
+                                                            height: auto;
                                                         }
                                                     </style>
 
@@ -474,7 +481,10 @@
                                                                         </tr>
                                                                         <tr>
                                                                             <td colspan="2">
-                                                                                <a href="" id="AJAX_LINK" target="_blank" rel="noopener noreferrer">View Details</a>
+                                                                                <a href="" id="AJAX_LINK"
+                                                                                    target="_blank"
+                                                                                    rel="noopener noreferrer">View
+                                                                                    Details</a>
                                                                             </td>
                                                                         </tr>
                                                                     </table>
@@ -494,10 +504,11 @@
                                                             success: function(outputdata) {
                                                                 $(".india_features .details-view #title").text($(element).attr('title'))
                                                                 $("#AJAX_LABEL").text(outputdata.data.value)
-                                                                if(null != outputdata.data.url){
-                                                                    $("#AJAX_LINK").attr("href" , "{{ route('main_events') }}" + "?state=" + outputdata.data.name)
-                                                                } else{
-                                                                    $("#AJAX_LINK").attr("href" , "")
+                                                                if (null != outputdata.data.url) {
+                                                                    $("#AJAX_LINK").attr("href", "{{ route('main_events') }}" +
+                                                                        "?state=" + outputdata.data.name)
+                                                                } else {
+                                                                    $("#AJAX_LINK").attr("href", "")
                                                                 }
                                                             },
                                                             error: function(xhr, status, error) {
@@ -523,7 +534,10 @@
                 <div class="row g-3">
                     <div class="col-12">
                         <div class="text-content">
-                            <h2 class="section-title">Latest News</h2>
+                            <h2 class="title-icon">
+                                <i class="fa-solid fa-info icon icon-prepend"></i>
+                                Latest News
+                            </h2>
                         </div>
                     </div>
                     <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
@@ -659,7 +673,10 @@
                 <div class="row g-3">
                     <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
                         <div class="text-content">
-                            <h2 class="section-title">Kheti Ke Sikandar</h2>
+                            <h2 class="title-icon">
+                                <i class="fa-solid fa-info icon icon-prepend"></i>
+                                Kheti Ke Sikandar
+                            </h2>
                             <div class="row g-3">
                                 <div class="col-12">
                                     <div class="swiper eventSwiper">
@@ -724,11 +741,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-12">
+                    <div class="col-xxl-6 col-xl-4 col-12">
                         <div class="text-content">
                             <div class="row g-3">
                                 <div class="col-12">
-                                    <h2 class="section-title">Markets</h2>
+                                    <h2 class="title-icon">
+                                        <i class="fa-solid fa-chart-simple icon icon-prepend"></i>
+                                        Markets
+                                    </h2>
                                     <div class="row g-3">
                                         <div class="col-12">
                                             <p>
@@ -804,7 +824,10 @@
                     </div>
                     <div class="col-xxl-3 col-xl-4 col-lg-6 col-12">
                         <div class="text-content">
-                            <h2 class="section-title">Upcoming Events</h2>
+                            <h2 class="title-icon">
+                                <i class="fa-regular fa-calendar icon icon-prepend"></i>
+                                Upcoming Events
+                            </h2>
                             <div class="row g-3">
                                 <div class="col-12">
                                     <div class="swiper eventSwiper">
@@ -874,7 +897,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
         {{-- <section class="default-spacing">
@@ -926,10 +948,13 @@
                     <div class="col-12">
                         <div class="row g-3">
                             <div class="col-12">
-                                <h2 class="section-title">Our Team</h2>
+                                <h2 class="title-icon">
+                                    <i class="fa-solid fa-users icon icon-prepend"></i>
+                                    Our Team
+                                </h2>
                             </div>
                             <div class="col-12">
-                                <div class="swiper TeamSwiper">
+                                <div class="swiper teamSwiper">
                                     <div class="swiper-wrapper">
                                         @for ($i = 0; $i < 3; $i++)
                                             <div class="swiper-slide">
@@ -963,13 +988,27 @@
                                     <!-- Modal -->
                                     @push('scripts')
                                         <script>
-                                            new Swiper('.TeamSwiper', {
-                                                slidesPerView: 3,
+                                            new Swiper('.teamSwiper', {
+                                                slidesPerView: 2,
                                                 spaceBetween: 50,
                                                 // loop: true,
                                                 autoplay: {
                                                     delay: 3000,
-                                                }
+                                                },
+                                                breakpoints: {
+                                                    640: {
+                                                        slidesPerView: 1,
+                                                        spaceBetween: 20,
+                                                    },
+                                                    768: {
+                                                        slidesPerView: 2,
+                                                        spaceBetween: 40,
+                                                    },
+                                                    1024: {
+                                                        slidesPerView: 3,
+                                                        spaceBetween: 50,
+                                                    },
+                                                },
                                             })
                                         </script>
                                     @endpush

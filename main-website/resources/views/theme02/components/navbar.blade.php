@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse justify-content-between flex-row-reverse ms-0 ms-xl-5 mt-3 mt-xl-0"
                 id="navbarNavDropdown">
                 <ul class="navbar-nav gap-2">
-                    <li>
+                    <li class="d-none">
                         <div id="google_translate_element"></div>
                         <script type="text/javascript">
                             function googleTranslateElementInit() {
@@ -104,7 +104,7 @@
                     <li class="nav-item">
                         <a class="nav-link text-flashy" href="{{ route('main_events') }}">Upcoming Events</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none">
                         <a class="nav-link" href="{{ route('main_contact') }}">Contact Us</a>
                     </li>
                 </ul>

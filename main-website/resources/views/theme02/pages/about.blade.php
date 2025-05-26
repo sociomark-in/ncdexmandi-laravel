@@ -24,7 +24,10 @@
             <div class="container">
                 <div class="row g-3">
                     <div class="col-12">
-                        <h2 class="section-title">About NCDEX Mandi</h2>
+                        <h2 class="title-icon">
+                            <i class="fa-solid fa-info icon icon-prepend"></i>
+                            About NCDEX Mandi
+                        </h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quas excepturi
                             ratione quaerat rerum explicabo earum repudiandae, dolores veritatis sed. Fugit
                             inventore molestiae consequatur veniam iure quas nisi animi in rerum tenetur
@@ -62,7 +65,10 @@
             <div class="container">
                 <div class="row g-3">
                     <div class="col-12">
-                        <h2 class="section-title">About NCDEX IPFT</h2>
+                        <h2 class="title-icon">
+                            <i class="fa-solid fa-info icon icon-prepend"></i>
+                            About NCDEX IPFT
+                        </h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quas excepturi
                             ratione quaerat rerum explicabo earum repudiandae, dolores veritatis sed. Fugit
                             inventore molestiae consequatur veniam iure quas nisi animi in rerum tenetur
@@ -85,7 +91,10 @@
             <div class="container">
                 <div class="row g-3">
                     <div class="col-12">
-                        <h2 class="section-title">Our Team</h2>
+                        <h2 class="title-icon">
+                            <i class="fa-solid fa-users icon icon-prepend"></i>
+                            Our Team
+                        </h2>
                     </div>
                     <div class="col-12">
                         <div class="swiper TeamSwiper">

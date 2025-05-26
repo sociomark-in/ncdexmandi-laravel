@@ -166,10 +166,24 @@
                                         new Swiper('.statesMainEventSwiper', {
                                             loop: true,
                                             spaceBetween: 10,
-                                            slidesPerView: 6,
+                                            slidesPerView: 2,
                                             pagination: {
                                                 el: ".swiper-pagination",
                                             },
+                                            breakpoints: {
+                                                    640: {
+                                                        slidesPerView: 4,
+                                                        spaceBetween: 20,
+                                                    },
+                                                    768: {
+                                                        slidesPerView: 5,
+                                                        spaceBetween: 20,
+                                                    },
+                                                    1024: {
+                                                        slidesPerView: 6,
+                                                        spaceBetween: 30,
+                                                    },
+                                                },
                                         });
                                     </script>
                                 @endpush

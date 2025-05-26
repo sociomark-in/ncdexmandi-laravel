@@ -15,7 +15,7 @@
             </div>
             <div class="col-12">
                 <label for="" class="form-label">Your Message</label>
-                <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                <textarea name="" id="" cols="30" rows="4" class="form-control"></textarea>
             </div>
             <div class="col-12">
                 <div class="row">

@@ -172,7 +172,13 @@ table {
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background: linear-gradient(-45deg, $color-yellow, #e73c7e, #23a6d5, $color-green);
+    background: linear-gradient(
+        -45deg,
+        $color-yellow,
+        #e73c7e,
+        #23a6d5,
+        $color-green
+    );
     background-clip: text;
     background-size: cover;
     animation: "flash" 5s ease-in-out infinite;
@@ -274,6 +280,27 @@ table {
         }
     }
 }
+.accordion{
+    &.accordion-spaced{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .accordion-item{
+            border: 1px solid $color-green;
+            border-radius: 0.4rem;
+            overflow: hidden;
+            .accordion-button{
+                border-left: 0.4rem solid $color-green;
+                font-size: calc(max(2vmin, 16px));
+                font-size: calc(max(2vmin, 16px));
+            }
+            .accordion-button:not(.collapsed){
+                color: $color-green;
+                background-color: rgba($color-green, 0.1);
+            }
+        }
+    }
+}
 
 header {
     position: sticky;
@@ -338,6 +365,10 @@ header {
         }
     }
 
+    h1 {
+        color: $color-white;
+    }
+
     .breadcrumb {
         .breadcrumb-item,
         .breadcrumb-item {
@@ -354,12 +385,12 @@ section {
         padding: 0;
     }
     &.default-spacing {
-        padding: calc(max(5%, 1rem)) 0;
+        padding: calc(max(4%, 1rem)) 0;
     }
 
     .title-icon {
         font-size: 2rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
         display: flex;
         align-items: center;
         .icon {
@@ -562,6 +593,20 @@ footer {
     padding: calc(max(5%, 1rem)) 0;
     color: $color-white;
     font-size: 0.9rem;
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $color-white;
+    }
     .footer-form {
     }
     .footer-social {

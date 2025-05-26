@@ -95,6 +95,7 @@
                                 perspiciatis. Animi perferendis praesentium eveniet placeat cupiditate! Nisi veritatis
                                 doloremque omnis.
                             </p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#contactPersonModal" class="btn btn-secondary btn-icon">NCDEX Contact Person Details&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
                         </div>
                         <div class="col-lg-6 col-12">
                             <table class="table table-sm table-striped">
@@ -188,6 +189,24 @@
                 </div>
             </div>
         </section>
+        <div class="modal fade" id="contactPersonModal" tabindex="-1" aria-labelledby="contactPersonModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="contactPersonModalLabel">NCDEX Contact Persoin for [FPO]</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p><strong>Contact Details:</strong></p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi error quos quasi reprehenderit fugiat iusto, porro tenetur maxime laudantium unde.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
         <section class="default-spacing pb-0">
             <div class="container">
                 <div class="row">

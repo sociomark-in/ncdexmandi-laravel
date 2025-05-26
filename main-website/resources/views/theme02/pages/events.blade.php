@@ -41,7 +41,7 @@
 @endphp
 @section('content')
     <main>
-        <section class="nospacing">
+        <section class="nospacing d-none">
             <div class="container-fluid">
                 <div class="row g-3">
                     <div class="col-12">
@@ -193,7 +193,7 @@
                     </div>
                 </div>
                 <div class="row g-3 flex-row-reverse">
-                    <div class="col-xl-5 col-lg-6 col-12">
+                    <div class="col-xl-4 col-lg-6 col-12">
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="text-content">
@@ -218,45 +218,45 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-7 col-lg-6 col-12">
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <div class="card card-bordered border-primary">
-                                    <div class="card-body">
-                                        <div class="row g-2">
-                                            <div class="col-12">
-                                                <h2>Industry Events</h2>
-                                            </div>
-                                            <div class="col-12">
-                                                <p>
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla quod
-                                                    eligendi delectus accusantium placeat vitae sit laudantium non a illum.
-                                                </p>
-                                            </div>
-                                            <div class="col-12">
-                                                <a href="" class="btn btn-primary btn-icon">View More&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
-                                            </div>
-                                        </div>
+                    <div class="col-xl-4 col-lg-6 col-12">
+                        <div class="card card-bordered border-primary">
+                            <div class="card-body">
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <h2>Global Events</h2>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, error.</p>
+                                        <p>
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla quod
+                                            eligendi delectus accusantium placeat vitae sit laudantium non a illum.
+                                        </p>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, error.</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <a href="" class="btn btn-primary btn-icon">View More&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="card card-bordered border-secondary">
-                                    <div class="card-body">
-                                        <div class="row g-2">
-                                            <div class="col-12">
-                                                <h2>Regular Events</h2>
-                                            </div>
-                                            <div class="col-12">
-                                                <p>
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla quod
-                                                    eligendi delectus accusantium placeat vitae sit laudantium non a illum.
-                                                </p>
-                                            </div>
-                                            <div class="col-12">
-                                                <a href="" class="btn btn-secondary btn-icon">View More&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
-                                            </div>
-                                        </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-12">
+                        <div class="card card-bordered border-secondary">
+                            <div class="card-body">
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <h2>Mandi Events</h2>
+                                    </div>
+                                    <div class="col-12">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, error.</p>
+                                        <p>
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla quod
+                                            eligendi delectus accusantium placeat vitae sit laudantium non a illum.
+                                        </p>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, error.</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <a href="" class="btn btn-secondary btn-icon">View More&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
                                     </div>
                                 </div>
                             </div>

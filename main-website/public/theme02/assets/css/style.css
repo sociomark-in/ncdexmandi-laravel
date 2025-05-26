@@ -256,6 +256,26 @@ table th {
      object-fit: cover;
 }
 
+.accordion.accordion-spaced {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.accordion.accordion-spaced .accordion-item {
+  border: 1px solid #19641e;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.accordion.accordion-spaced .accordion-item .accordion-button {
+  border-left: 0.4rem solid #19641e;
+  font-size: max(2vmin, 16px);
+  font-size: max(2vmin, 16px);
+}
+.accordion.accordion-spaced .accordion-item .accordion-button:not(.collapsed) {
+  color: #19641e;
+  background-color: rgba(25, 100, 30, 0.1);
+}
+
 header {
   position: sticky;
   top: 0;
@@ -310,6 +330,9 @@ header nav.navbar .navbar-nav .nav-item .nav-link {
   z-index: -1;
   transition: all 0.35s ease-in-out;
 }
+.breadcrumb-area h1 {
+  color: #e4e4e4;
+}
 .breadcrumb-area .breadcrumb .breadcrumb-item,
 .breadcrumb-area .breadcrumb .breadcrumb-item {
   color: #e4e4e4;
@@ -322,11 +345,11 @@ section.nospacing {
   padding: 0;
 }
 section.default-spacing {
-  padding: max(5%, 1rem) 0;
+  padding: max(4%, 1rem) 0;
 }
 section .title-icon {
   font-size: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
 }
@@ -521,6 +544,20 @@ footer {
   padding: max(5%, 1rem) 0;
   color: #e4e4e4;
   font-size: 0.9rem;
+}
+footer .h1,
+footer .h2,
+footer .h3,
+footer .h4,
+footer .h5,
+footer .h6,
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
+  color: #e4e4e4;
 }
 footer .footer-social .social-icon {
   width: 2.5rem;
