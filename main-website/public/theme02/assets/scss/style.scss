@@ -17,7 +17,9 @@ a {
         color: $color-green;
     }
 }
-
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    color: $color-black;
+}
 table {
     th {
         font-weight: 500;
@@ -38,6 +40,7 @@ table {
 .btn {
     padding: 0.25rem 1rem;
     font-size: calc(max(2vmin, 16px));
+    width: fit-content;
     &.btn-primary {
         --bs-btn-color: #fff;
         --bs-btn-bg: #{$color-green};
@@ -153,6 +156,13 @@ table {
     }
 }
 
+.border-primary{
+    border-color: $color-green !important;
+}
+.border-secondary{
+    border-color: $color-yellow !important;
+}
+
 .card-stack {
     &.colored {
         .data-card {
@@ -177,6 +187,9 @@ table {
             }
         }
     }
+}
+.card-bordered{
+    border: 0.25rem solid;
 }
 
 .rounded-overflow {

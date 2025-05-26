@@ -41,7 +41,7 @@
 @endphp
 @section('content')
     <main>
-        <section class="nospacing d-none">
+        <section class="nospacing">
             <div class="container-fluid">
                 <div class="row g-3">
                     <div class="col-12">
@@ -161,14 +161,37 @@
                                         </h3>
                                     </button>
                                 </div>
-                                <div class="col-lg-auto col-12"></div>
+                                <div class="col-lg-auto col-12">
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Filter By Year
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            @for ($i = date('Y'); $i > 2020; $i--)
+                                                <li><a class="dropdown-item" href="#">{{ $i }}</a></li>
+                                            @endfor
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
         </section>
-        <section class="default-spacing pb-0">
+        <section class="default-spacing pb-0 pt-3 pt-md-4">
             <div class="container">
+                <div class="row g-3 mb-3">
+                    <div class="col-12">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus, pariatur explicabo omnis
+                            eius maiores quas nihil sed similique illo nam impedit veniam eum error ad! Ab quibusdam iste a
+                            quam perspiciatis itaque nemo excepturi eveniet assumenda. Doloremque culpa, eligendi dolore
+                            voluptatem dolor magnam nesciunt velit, distinctio, aperiam aliquam mollitia!
+                        </p>
+                    </div>
+                </div>
                 <div class="row g-3 flex-row-reverse">
                     <div class="col-xl-5 col-lg-6 col-12">
                         <div class="row g-3">
@@ -190,6 +213,50 @@
                                             @csrf
                                             <x-forms type="event-enquiry"></x-forms>
                                         </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-6 col-12">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="card card-bordered border-primary">
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <div class="col-12">
+                                                <h2>Industry Events</h2>
+                                            </div>
+                                            <div class="col-12">
+                                                <p>
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla quod
+                                                    eligendi delectus accusantium placeat vitae sit laudantium non a illum.
+                                                </p>
+                                            </div>
+                                            <div class="col-12">
+                                                <a href="" class="btn btn-primary btn-icon">View More&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card card-bordered border-secondary">
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <div class="col-12">
+                                                <h2>Regular Events</h2>
+                                            </div>
+                                            <div class="col-12">
+                                                <p>
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla quod
+                                                    eligendi delectus accusantium placeat vitae sit laudantium non a illum.
+                                                </p>
+                                            </div>
+                                            <div class="col-12">
+                                                <a href="" class="btn btn-secondary btn-icon">View More&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -285,21 +352,13 @@
         <section class="default-spacing pb-0">
             <div class="container">
                 <div class="row mb-3 mb-md-4">
-                    <div class="col-xl">
+                    <div class="col-xl-12">
                         <div class="">
                             <div class="text-content">
                                 <h2 class="title-icon">
                                     <i class="fa-solid fa-calendar icon icon-prepend"></i>
                                     Previous Events
                                 </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-auto">
-                        <div class="dropdown">
-                            <div class="btn btn-icon btn-search" data-bs-toggle="modal"
-                                data-bs-target="#searchPageModal">
-                                <i class="fa-solid fa-filter icon-prepend"></i><span class="ms-2">Filter By</span>
                             </div>
                         </div>
                     </div>
@@ -429,11 +488,11 @@
                             </div>
                             <div class="col-12">
                                 <div class="row g-2">
-                                    @for ($i = new DateTime("2025-05-01"); $i >= new DateTime("2024-01-01"); $i->modify('-2 month'))
-                                    <div class="col-xl-3 col-6">
-                                        <a href="">{{ $i->format('F Y')}}</a>
-                                    </div>
-                                @endfor
+                                    @for ($i = new DateTime('2025-05-01'); $i >= new DateTime('2024-01-01'); $i->modify('-2 month'))
+                                        <div class="col-xl-3 col-6">
+                                            <a href="">{{ $i->format('F Y') }}</a>
+                                        </div>
+                                    @endfor
                                 </div>
                             </div>
                         </div>

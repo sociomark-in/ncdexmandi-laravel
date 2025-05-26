@@ -12,6 +12,10 @@ a:hover {
   color: #19641e;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #000;
+}
+
 table th {
   font-weight: 500;
 }
@@ -30,6 +34,8 @@ table th {
 .btn {
   padding: 0.25rem 1rem;
   font-size: max(2vmin, 16px);
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .btn.btn-primary {
   --bs-btn-color: #fff;
@@ -133,6 +139,14 @@ table th {
 }
 
 @keyframes flash {}
+.border-primary {
+  border-color: #19641e !important;
+}
+
+.border-secondary {
+  border-color: #f7c35f !important;
+}
+
 .card-stack.colored .data-card {
   border-radius: 0.75rem;
   overflow: hidden;
@@ -151,6 +165,10 @@ table th {
 }
 .card-stack.colored .data-card.style-yellow {
   background-color: rgba(247, 195, 95, 0.1);
+}
+
+.card-bordered {
+  border: 0.25rem solid;
 }
 
 .rounded-overflow {
