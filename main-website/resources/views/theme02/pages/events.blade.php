@@ -199,7 +199,7 @@
                                 <div class="text-content">
                                     <h2 class="title-icon">
                                         <i class="fa-solid fa-question icon icon-prepend"></i>
-                                        Want to Get Featured?
+                                        Get Featured Form
                                     </h2>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, perspiciatis.

@@ -11,7 +11,7 @@ class BlogsController extends Controller
         $this->data = [
             'slug' => str()->random(10)
         ];
-        return view('blogs.home', $this->data);
+        return view('theme02.blogs.home', $this->data);
     }
     public function search(){
         $this->data = [
