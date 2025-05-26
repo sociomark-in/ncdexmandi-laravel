@@ -424,20 +424,96 @@
                             <div class="col-12">
                                 <div class="swiper statesEventSwiper">
                                     <div class="swiper-wrapper">
-                                        @for ($i = 0; $i < count($states); $i++)
-                                            <div class="swiper-slide">
-                                                <a href="?state={{ $states[$i] }}">
-                                                    <div class="row g-3">
-                                                        <div class="col-12 text-center">
-                                                            <img src="https://placehold.co/64x64" alt="State Icon">
-                                                        </div>
-                                                        <div class="col-12 text-center">
-                                                            <p>{{ $states[$i] }}</p>
+                                        <div class="swiper-slide">
+                                            <a class="thumbnail-style-01" href="?state=Maharashtra">
+                                                <div class="row g-3 justify-content-center">
+                                                    <div class="col-auto text-center">
+                                                        <div class="icon">
+                                                            <img src="{{ asset('theme02/assets/icons/state.png') }}"
+                                                                alt="State Icon" width="80">
                                                         </div>
                                                     </div>
-                                                </a>
-                                            </div>
-                                        @endfor
+                                                    <div class="col-12 text-center">
+                                                        <p>Maharashtra</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="thumbnail-style-01" href="?state=Madhya Pradesh">
+                                                <div class="row g-3 justify-content-center">
+                                                    <div class="col-auto text-center">
+                                                        <div class="icon">
+                                                            <img src="{{ asset('theme02/assets/icons/state.png') }}"
+                                                                alt="State Icon" width="80">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 text-center">
+                                                        <p>Madhya Pradesh</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="thumbnail-style-01" href="?state=Rajasthan">
+                                                <div class="row g-3 justify-content-center">
+                                                    <div class="col-auto text-center">
+                                                        <div class="icon">
+                                                            <img src="{{ asset('theme02/assets/icons/state.png') }}"
+                                                                alt="State Icon" width="80">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 text-center">
+                                                        <p>Rajasthan</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="thumbnail-style-01" href="?state=Gujarat">
+                                                <div class="row g-3 justify-content-center">
+                                                    <div class="col-auto text-center">
+                                                        <div class="icon">
+                                                            <img src="{{ asset('theme02/assets/icons/state.png') }}"
+                                                                alt="State Icon" width="80">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 text-center">
+                                                        <p>Gujarat</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="thumbnail-style-01" href="?state=Karnataka">
+                                                <div class="row g-3 justify-content-center">
+                                                    <div class="col-auto text-center">
+                                                        <div class="icon">
+                                                            <img src="{{ asset('theme02/assets/icons/state.png') }}"
+                                                                alt="State Icon" width="80">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 text-center">
+                                                        <p>Karnataka</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="thumbnail-style-01" href="?state=Telangana">
+                                                <div class="row g-3 justify-content-center">
+                                                    <div class="col-auto text-center">
+                                                        <div class="icon">
+                                                            <img src="{{ asset('theme02/assets/icons/state.png') }}"
+                                                                alt="State Icon" width="80">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 text-center">
+                                                        <p>Telangana</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 @push('scripts')
@@ -455,14 +531,13 @@
                             </div>
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <p class="text-center">All States in India</p>
+                                    <p class="text-center">All States & UTs in India</p>
                                 </div>
                                 <div class="" style="height: 200px; overflow-y:scroll">
                                     <div class="row m-0">
-                                        @for ($i = 0; $i < 200; $i++)
+                                        @for ($i = 0; $i < count($states); $i++)
                                             <div class="col-xl-3 col-lg-4 col-12">
-                                                <a href="?state=Maharashtra" class="nav-link"><small>Lorem ipsum dolor
-                                                        sit.</small></a>
+                                                <a href="?state={{ $states[$i] }}" class="nav-link"><small>{{ $states[$i] }}</small></a>
                                             </div>
                                         @endfor
                                     </div>

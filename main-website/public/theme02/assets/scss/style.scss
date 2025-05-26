@@ -17,7 +17,18 @@ a {
         color: $color-green;
     }
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: $color-black;
 }
 table {
@@ -132,7 +143,7 @@ table {
     }
 }
 
-.text-primary{
+.text-primary {
     color: $color-green !important;
 }
 
@@ -145,21 +156,32 @@ table {
     text-overflow: ellipsis;
 }
 
+@keyframes flash {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .text-flashy {
-    @keyframes flash {
-        0% {
-        }
-        1000% {
-        }
-    }
-    .flashy-red {
-    }
+    font-weight: 700;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(-45deg, $color-yellow, #e73c7e, #23a6d5, $color-green);
+    background-clip: text;
+    background-size: cover;
+    animation: "flash" 5s ease-in-out infinite;
 }
 
-.border-primary{
+.border-primary {
     border-color: $color-green !important;
 }
-.border-secondary{
+.border-secondary {
     border-color: $color-yellow !important;
 }
 
@@ -188,7 +210,7 @@ table {
         }
     }
 }
-.card-bordered{
+.card-bordered {
     border: 0.25rem solid;
 }
 
@@ -518,10 +540,10 @@ svg#india_map {
         fill: $color-white;
         stroke: $color-black;
         cursor: pointer;
-        &.active{
+        &.active {
             fill: $color-green;
         }
-        &:not(.active){
+        &:not(.active) {
             &:hover {
                 fill: $color-yellow;
             }
@@ -531,7 +553,7 @@ svg#india_map {
         }
     }
 }
-.details-view{
+.details-view {
     top: 0;
     right: 0;
 }

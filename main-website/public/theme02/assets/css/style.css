@@ -12,7 +12,18 @@ a:hover {
   color: #19641e;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #000;
 }
 
@@ -138,7 +149,28 @@ table th {
   text-overflow: ellipsis;
 }
 
-@keyframes flash {}
+@keyframes flash {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.text-flashy {
+  font-weight: 700;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(-45deg, #f7c35f, #e73c7e, #23a6d5, #19641e);
+  background-clip: text;
+  background-size: cover;
+  animation: "flash" 5s ease-in-out infinite;
+}
+
 .border-primary {
   border-color: #19641e !important;
 }

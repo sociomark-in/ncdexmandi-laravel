@@ -83,7 +83,8 @@
                         <a class="nav-link" href="{{ route('main_about') }}">About NCDEX Mandi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('episodes_home') }}">Kheti Ke Sikandar</a>
+                        {{-- <a class="nav-link" href="{{ route('episodes_home') }}">Kheti Ke Sikandar</a> --}}
+                        <a class="nav-link" href="{{ route('kks_home') }}">Kheti Ke Sikandar</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -101,7 +102,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-flashy flashy-red" href="{{ route('main_events') }}">Upcoming Events</a>
+                        <a class="nav-link text-flashy" href="{{ route('main_events') }}">Upcoming Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('main_contact') }}">Contact Us</a>
