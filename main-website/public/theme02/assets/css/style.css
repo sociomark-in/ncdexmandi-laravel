@@ -221,6 +221,15 @@ table th {
   overflow: hidden;
 }
 
+.form-select:checked {
+  background-color: #19641e;
+  color: #e4e4e4;
+}
+.form-select option {
+  color: #000;
+}
+
+.form-select:focus,
 .form-control:focus {
   border-color: rgba(25, 100, 30, 0.1);
   outline: 0;
@@ -403,6 +412,29 @@ section .section-title::before {
   background-size: 105% auto;
 }
 
+.floating-widget {
+  z-index: 9999;
+}
+.floating-widget.floating-style-01 {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 0;
+  display: flex;
+}
+.floating-widget.floating-style-01 * {
+  flex: 1;
+}
+@media screen and (min-width: 768px) {
+  .floating-widget.floating-style-01 {
+    display: block;
+    right: 10%;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 0.25rem;
+  }
+}
+
 .event-style-one a h3,
 .event-style-one a h4 {
   color: #19641e;
@@ -446,37 +478,28 @@ section .section-title::before {
 
 .clipped-content {
   overflow: hidden;
-  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 .clipped-content.line-1 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  line-clamp: 1; /* Standard property */
+  line-clamp: 1;
 }
 .clipped-content.line-2 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  line-clamp: 2; /* Standard property */
+  line-clamp: 2;
 }
 .clipped-content.line-3 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  line-clamp: 3; /* Standard property */
+  line-clamp: 3;
 }
 .clipped-content.line-4 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
-  line-clamp: 4; /* Standard property */
+  line-clamp: 4;
 }
 .clipped-content.line-5 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
-  line-clamp: 5; /* Standard property */
+  line-clamp: 5;
 }
 
 .event-style-two a h3,

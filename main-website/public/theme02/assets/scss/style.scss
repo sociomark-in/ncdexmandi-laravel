@@ -244,6 +244,16 @@ table {
     }
 }
 
+.form-select{
+    &:checked{
+        background-color: $color-green;
+        color: $color-white;
+    }
+    option{
+        color: $color-black;
+    }
+}
+.form-select,
 .form-control {
     &:focus {
         border-color: rgba($color-green, 0.1);
@@ -446,6 +456,26 @@ section {
     }
 }
 
+.floating-widget{
+    z-index: 9999;
+    &.floating-style-01{
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 0;
+        display: flex;
+        *{
+            flex: 1;
+        }
+        @media screen and (min-width: 768px) {
+            display: block;
+            right: 10%;
+            width: fit-content;
+            border-radius: 0.25rem;
+        }
+    }
+}
+
 .event-style-one {
     a {
         h3,
@@ -498,17 +528,19 @@ section {
         }
     }
 }
+
 .clipped-content {
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: hidden; // Keep this for overall clipping
+    // text-overflow: ellipsis; // This is not needed here and can cause issues
+
+    // Add these for multi-line ellipsis to work with line-clamp
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 
     @for $i from 1 through 5 {
-        // Generate classes for 1 to 5 lines
         &.line-#{$i} {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
             -webkit-line-clamp: $i;
-            line-clamp: $i; /* Standard property */
+            line-clamp: $i;
         }
     }
 }

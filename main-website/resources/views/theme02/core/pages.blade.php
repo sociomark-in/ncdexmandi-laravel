@@ -50,6 +50,55 @@
 <body>
     @include('theme02.components.loader')
     @include('theme02.components.navbar')
+    {{-- Popup Modal --}}
+    <div class="modal fade" id="contactShortModal" tabindex="-1" aria-labelledby="contactShortModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="contactShortModalLabel">Fill Details Below</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="" class="form-label">Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12">
+                                <label for="" class="form-label">Email Address</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12">
+                                <label for="" class="form-label">Contact</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12">
+                                <label for="" class="form-label">Message</label>
+                                <textarea name="" id="" cols="30" rows="4" class="form-control"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="row g-3">
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="reset" class="btn btn-secondary">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- Popup Modal --}}
+    <aside class="position-fixed floating-widget floating-style-01 ">
+        <a href="" data-bs-toggle="modal" data-bs-target="#contactShortModal" class="btn btn-secondary">Contact
+            Us</a>
+    </aside>
     @yield('content')
     @include('theme02.components.footer')
     {{-- Initialize AOS --}}

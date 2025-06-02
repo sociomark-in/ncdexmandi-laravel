@@ -1,19 +1,28 @@
-<main>
-    <section class="my-5">
-        <div class="row m-0 justify-content-center g-0">
-            <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-12">
-                <?= form_open(base_url('api-auth-login')) ?>
-                <div class="mb-3">
-                    <label for="inputUsername" class="form-label">Username</label>
-                    <input type="text" class="form-control" name="username" id="inputUsername">
+<main class="main-wrapper">
+    <section class="page-wrapper full-page">
+        <div class="page-content d-flex align-items-center justify-content-center">
+            <div class="row w-100 justify-content-center">
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center mb-3 mb-lg-4">
+                                <img src="<?= base_url('assets/logo.png') ?>" height="40" alt="Platform Logo">
+                            </div>
+                            <?= form_open(base_url('api-auth-login')) ?>
+                            <div class="mb-3">
+                                <label for="inputUsername" class="form-label">Username</label>
+                                <input type="text" class="form-control" name="username" id="inputUsername">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" name="password" id="inputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="inputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password" id="inputPassword1">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</div>

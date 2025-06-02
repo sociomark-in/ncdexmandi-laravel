@@ -171,19 +171,19 @@
                                                 el: ".swiper-pagination",
                                             },
                                             breakpoints: {
-                                                    640: {
-                                                        slidesPerView: 4,
-                                                        spaceBetween: 20,
-                                                    },
-                                                    768: {
-                                                        slidesPerView: 5,
-                                                        spaceBetween: 20,
-                                                    },
-                                                    1024: {
-                                                        slidesPerView: 6,
-                                                        spaceBetween: 30,
-                                                    },
+                                                640: {
+                                                    slidesPerView: 4,
+                                                    spaceBetween: 20,
                                                 },
+                                                768: {
+                                                    slidesPerView: 5,
+                                                    spaceBetween: 20,
+                                                },
+                                                1024: {
+                                                    slidesPerView: 6,
+                                                    spaceBetween: 30,
+                                                },
+                                            },
                                         });
                                     </script>
                                 @endpush
@@ -198,6 +198,28 @@
                             </nav>
                         </div>
                         <div class="col-12">
+                            <form action="" method="get">
+                                <div class="row justify-content-between">
+                                    <div class="col-xl col-lg-4"><input type="text" placeholder="Search All Episodes by Title" class="form-control"></div>
+                                    <div class="col-xl-2">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">Select A Comodity</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-2">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">Select A State</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-auto">
+                                        <button type="submit" class="btn btn-primary">
+                                            Apply Filters
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-12 d-none">
                             <div class="row justify-content-between">
                                 <div class="col-lg-auto col-12">
                                     <p class="mb-0">Find FPOs in:</p>
@@ -210,9 +232,94 @@
                                     </button>
                                 </div>
                                 <div class="col-lg-auto">
-                                    <div class="dropdown">
-                                        <div class="btn btn-icon btn-search" data-bs-toggle="modal" data-bs-target="#searchPageModal">
-                                            <i class="fa-solid fa-filter icon-prepend"></i><span class="ms-2">Filter By</span>
+                                    <div class="dropdown dropdown-hover position-static">
+                                        <a data-bs-dropdown-init class="nav-link dropdown-toggle" href="#"
+                                            id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            Mega menu
+                                        </a>
+                                        <!-- Dropdown menu -->
+                                        <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown"
+                                            style="border-top-left-radius: 0;
+                                                          border-top-right-radius: 0;
+                                                        ">
+
+                                            <div class="container">
+                                                <div class="row my-4">
+                                                    <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                        <div class="list-group list-group-flush">
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Lorem
+                                                                ipsum</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Dolor
+                                                                sit</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Amet
+                                                                consectetur</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Cras justo
+                                                                odio</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Adipisicing
+                                                                elit</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                                        <div class="list-group list-group-flush">
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Explicabo
+                                                                voluptas</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Perspiciatis
+                                                                quo</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Cras justo
+                                                                odio</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Laudantium
+                                                                maiores</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Provident
+                                                                dolor</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                                                        <div class="list-group list-group-flush">
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Iste
+                                                                quaerato</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Cras justo
+                                                                odio</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Est iure</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Praesentium</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Laboriosam</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="list-group list-group-flush">
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Cras justo
+                                                                odio</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Saepe</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Vel
+                                                                alias</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Sunt
+                                                                doloribus</a>
+                                                            <a href=""
+                                                                class="list-group-item list-group-item-action">Cum
+                                                                dolores</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -229,7 +336,7 @@
                         <div class="col-12">
                             <div class="swiper featuredFPOSwiper">
                                 <div class="swiper-wrapper">
-                                    @for ($i = 0; $i < 10; $i++)
+                                    @for ($i = 0; $i < 1; $i++)
                                         <div class="swiper-slide">
                                             <div class="event-style-two">
                                                 <div class="row">
@@ -249,9 +356,12 @@
                                                             <div class="py-0 py-md-4">
                                                                 <div class="row g-3">
                                                                     <div class="col-12">
-                                                                        <a href="{{ route('fpo_single', ['episode' => rand()]) }}">
+                                                                        <a
+                                                                            href="{{ route('fpo_single', ['episode' => rand()]) }}">
                                                                             <h3 class="clipped-content line-1">
-                                                                                DD Kisan 22 December 2024: Transforming Agriculture through the Digital Agriculture Mission
+                                                                                DD Kisan 22 December 2024: Transforming
+                                                                                Agriculture through the Digital Agriculture
+                                                                                Mission
                                                                             </h3>
                                                                         </a>
                                                                     </div>
@@ -260,8 +370,10 @@
                                                                             <tbody>
                                                                                 <tr>
                                                                                     <th>Name of FPO</th>
-                                                                                    <td class="clipped-content line-1">Lorem ipsum
-                                                                                        dolor, sit amet consectetur adipisicing elit.
+                                                                                    <td class="clipped-content line-1">
+                                                                                        Lorem ipsum
+                                                                                        dolor, sit amet consectetur
+                                                                                        adipisicing elit.
                                                                                         Officiis, molestiae?</td>
                                                                                 </tr>
                                                                                 <tr>
@@ -289,24 +401,34 @@
                                                                     </div>
                                                                     <div class="col-lg-6 col-12">
                                                                         <p class="clipped-content line-4">
-                                                                            The Digital Agriculture Mission of the Government of India is a new technological initiative to bring about a transformation in the agriculture sector. How are farmers getting technological help through this mission? Watch this special report of Mandi.com
+                                                                            The Digital Agriculture Mission of the
+                                                                            Government of India is a new technological
+                                                                            initiative to bring about a transformation in
+                                                                            the agriculture sector. How are farmers getting
+                                                                            technological help through this mission? Watch
+                                                                            this special report of Mandi.com
                                                                         </p>
-                                                                        <ul class="nav social-share align-items-center gap-2">
+                                                                        <ul
+                                                                            class="nav social-share align-items-center gap-2">
                                                                             <li class="nav-item me-3">Share:</li>
                                                                             <li class="nav-item">
-                                                                                <a class="nav-link social-icon" href="#"><i
+                                                                                <a class="nav-link social-icon"
+                                                                                    href="#"><i
                                                                                         class="fa-brands fa-facebook-f"></i></a>
                                                                             </li>
                                                                             <li class="nav-item">
-                                                                                <a class="nav-link social-icon" href="#"><i
+                                                                                <a class="nav-link social-icon"
+                                                                                    href="#"><i
                                                                                         class="fa-brands fa-linkedin-in"></i></a>
                                                                             </li>
                                                                             <li class="nav-item">
-                                                                                <a class="nav-link social-icon" href="#"><i
+                                                                                <a class="nav-link social-icon"
+                                                                                    href="#"><i
                                                                                         class="fa-brands fa-whatsapp"></i></a>
                                                                             </li>
                                                                             <li class="nav-item">
-                                                                                <a class="nav-link social-icon" href="#"><i
+                                                                                <a class="nav-link social-icon"
+                                                                                    href="#"><i
                                                                                         class="fa-brands fa-instagram"></i></a>
                                                                             </li>
                                                                         </ul>
@@ -324,7 +446,7 @@
                             @push('scripts')
                                 <script>
                                     new Swiper('.featuredFPOSwiper', {
-                                        loop: true,
+                                        // loop: true,
                                         spaceBetween: 10,
                                         pagination: {
                                             el: ".swiper-pagination",
@@ -371,7 +493,8 @@
                                                     <div class="col-12">
                                                         <a href="{{ route('fpo_single', ['episode' => rand()]) }}">
                                                             <h3 class="clipped-content line-1">
-                                                                DD Kisan 22 December 2024: Transforming Agriculture through the Digital Agriculture Mission
+                                                                DD Kisan 22 December 2024: Transforming Agriculture through
+                                                                the Digital Agriculture Mission
                                                             </h3>
                                                         </a>
                                                     </div>
@@ -409,7 +532,11 @@
                                                     </div>
                                                     <div class="col-lg-6 col-12">
                                                         <p class="clipped-content line-4">
-                                                            The Digital Agriculture Mission of the Government of India is a new technological initiative to bring about a transformation in the agriculture sector. How are farmers getting technological help through this mission? Watch this special report of Mandi.com
+                                                            The Digital Agriculture Mission of the Government of India is a
+                                                            new technological initiative to bring about a transformation in
+                                                            the agriculture sector. How are farmers getting technological
+                                                            help through this mission? Watch this special report of
+                                                            Mandi.com
                                                         </p>
                                                         <ul class="nav social-share align-items-center gap-2">
                                                             <li class="nav-item me-3">Share:</li>
@@ -577,7 +704,8 @@
                                     <div class="row m-0">
                                         @for ($i = 0; $i < count($states); $i++)
                                             <div class="col-xl-3 col-lg-4 col-12">
-                                                <a href="?state={{ $states[$i] }}" class="nav-link"><small>{{ $states[$i] }}</small></a>
+                                                <a href="?state={{ $states[$i] }}"
+                                                    class="nav-link"><small>{{ $states[$i] }}</small></a>
                                             </div>
                                         @endfor
                                     </div>
@@ -601,9 +729,9 @@
                     </div>
                     <div class="col-12">
                         <div class="row g-2">
-                            @for ($i = new DateTime("2025-05-01"); $i >= new DateTime("2024-01-01"); $i->modify('-2 month'))
+                            @for ($i = new DateTime('2025-05-01'); $i >= new DateTime('2024-01-01'); $i->modify('-2 month'))
                                 <div class="col-xl-3 col-6">
-                                    <a href="">{{ $i->format('F Y')}}</a>
+                                    <a href="">{{ $i->format('F Y') }}</a>
                                 </div>
                             @endfor
                         </div>

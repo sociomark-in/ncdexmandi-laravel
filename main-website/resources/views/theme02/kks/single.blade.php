@@ -45,7 +45,7 @@
             <div class="container">
                 <div class="row mb-4 justify-content-end">
                     <div class="col-auto">
-                        <a href="" class="btn btn-secondary">Next FPO in [Present FPO State]</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactPersonModal" class="btn btn-secondary btn-icon">NCDEX Contact Person Details&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
                     </div>
                 </div>
                 <div class="event-style-two">
@@ -95,7 +95,7 @@
                                 perspiciatis. Animi perferendis praesentium eveniet placeat cupiditate! Nisi veritatis
                                 doloremque omnis.
                             </p>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#contactPersonModal" class="btn btn-secondary btn-icon">NCDEX Contact Person Details&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
+
                         </div>
                         <div class="col-lg-6 col-12">
                             <table class="table table-sm table-striped">

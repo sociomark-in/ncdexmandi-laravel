@@ -4,7 +4,7 @@
         <section class="nospacing">
             <div class="container-fluid">
                 <div class="row g-3 g-md-4">
-                    <div class="col-xl-9 col-12">
+                    <div class="col-12">
                         <div class="swiper bannerSwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -109,7 +109,7 @@
                             });
                         </script>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="col-xl-3 col-lg-6 col-12 d-none">
                         <div class="text-content">
                             <div class="row gap-3 justify-content-end">
                                 <div class="col-xl-10 col-12">
@@ -193,27 +193,13 @@
                                                 <i class="fa-solid fa-info icon icon-prepend"></i>
                                                 About NCDEX Mandi
                                             </h2>
-                                            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Repellat
-                                                quas excepturi
-                                                ratione quaerat rerum explicabo earum repudiandae, dolores veritatis sed.
-                                                Fugit
-                                                inventore molestiae consequatur veniam iure quas nisi animi in rerum tenetur
-                                                vitae
-                                                doloremque, maiores voluptatibus ab officiis nam nesciunt cumque corporis
-                                                modi,
-                                                itaque unde, quaerat cupiditate illo quam! Consectetur nostrum ratione eos
-                                                voluptatem error aliquid cumque quod velit, omnis, consequatur unde beatae
-                                                non
-                                                aut
-                                                nam molestias tempora vel dolore placeat ipsam nulla accusamus sequi natus!
-                                                Earum,
-                                                aliquid fugit! Perferendis quae quaerat, aperiam iste deleniti est? Debitis
-                                                ut
-                                                est
-                                                cumque, provident possimus vel sapiente fugit, suscipit voluptatem maxime
-                                                cupiditate
-                                                modi.</p>
+                                            <p data-aos="fade-up">
+                                                NCDEXMANDI.COM is India's leading agri-knowledge hub powered by NCDEX IPFT (Investor Protection Fund Trust). From simplifying commodity markets to showcasing inspiring FPO success stories, the platform empowers over 20,000 farmers across 21+ states through expert insights, futures trading education, and real-time market awareness.
+                                            </p>
+                                            <p data-aos="fade-up">
+                                                Watch our weekly show on DD Kisan and explore other key initiatives undertaken via NCDEX IPFT - all designed to build an informed, resilient rural economy.
+                                                Smarter farming starts here.
+                                            </p>
                                         </div>
                                         <div class="col-12">
                                             <a href="{{ route('main_about') }}" class="btn btn-primary">Know More</a>
@@ -970,16 +956,14 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-8 col-12">
-                                                        <h4>Lorem, ipsum dolor.</h4>
-                                                        <p class="text-clipped" style="--clamp-lines:2">Lorem ipsum dolor
-                                                            sit amet
-                                                            consectetur adipisicing elit. Magnam et ipsam necessitatibus
-                                                            quibusdam
-                                                            repudiandae. Provident facilis hic aperiam ea a.</p>
+                                                        <h4> Anupam Alok | Lead News Editor | Storyteller</h4>
+                                                        <p class="text-clipped" style="--clamp-lines:2">
+                                                            Anupam Alok brings over 18 years of newsroom experience across TV, radio, digital, and print—delivering clear, accurate, mass-impact content without compromise. From ENBA-winning shows to live crisis reporting, he thrives where news demands precision and speed.
+                                                        </p>
                                                         {{-- <a href="{{ route('member_single', ['name' => 'single']) }}"
                                                             class="btn btn-sm btn-primary">View Details</a> --}}
-                                                        {{-- <a data-bs-toggle="modal" data-bs-target="#teamModal"
-                                                            class="btn btn-sm btn-primary">View Details</a> --}}
+                                                        <a data-bs-toggle="modal" data-bs-target="#teamModal"
+                                                            class="btn btn-sm btn-primary">Meet the Storyteller</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1022,12 +1006,12 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 class="modal-title fs-5" id="teamModalLabel">Name: Lorem, ipsum dolor.</h3>
+                            <h3 class="modal-title fs-5" id="teamModalLabel">Name: Anupam Alok</h3>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="row g-3 g-md-4 align-items-center">
+                            <div class="row g-3 g-md-4">
                                 <div class="col-xl-3 col-12">
                                     <div class="rounded-overflow">
                                         <img src="{{ asset('mandi-uploads/team/member.jpg') }}" alt=""
@@ -1036,73 +1020,29 @@
                                     </div>
                                 </div>
                                 <div class="offset-xl-1 col-xl-8 col-12">
-                                    <h4>Lorem, ipsum dolor.</h4>
-                                    <p>Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Magnam et ipsam necessitatibus quibusdam
-                                        repudiandae. Provident facilis hic aperiam ea a.</p>
-                                    <p>Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Magnam et ipsam necessitatibus quibusdam
-                                        repudiandae. Provident facilis hic aperiam ea a.</p>
+                                    <h4>Anupam Alok | Lead News Editor | Storyteller</h4>
+                                    <p>
+                                        With 18+ years in journalism—from Amar Ujala, Pabhat Khabar and News Nation to Deutsche Welle—Anupam Alok has reported some of India’s most defining moments. Reporting the 2016 surgical strike news, working 72 hours non-stop during the Mumbai attacks, and running the evening desk solo for a month during the COVID-19 lockdown has been defining moments of his career.
+                                    </p>
+                                    <p>
+                                        A Political Science and Law graduate turned journalist, Anupam has led content across TV, radio, digital, and print with one core belief: clarity, simplicity and accuracy above all.
+                                    </p>
+                                    <p>
+                                        His show Ankh Kaan Khol Ke won back-to-back Exchange4Media News Broadcasting Awards (ENBA) in 2021 and 2022, topping TRP charts, while Lakh Take Ki Baat led the 7 PM slot nationwide. Off-duty, he unwinds with family on road trips—but in the newsroom, it’s all about discipline, speed, and trust in the story.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a href="{{ route('member_single', ['name' => 'single']) }}"
-                                class="btn btn-sm btn-primary">View Details</a>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            {{-- <a href="{{ route('member_single', ['name' => 'single']) }}"
+                                class="btn btn-sm btn-primary">View Details</a> --}}
+                            <button type="button" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">Close</button>
                             {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
-        {{-- Popup Modal --}}
-        <!-- Modal -->
-        <div class="modal fade" id="contactShortModal" tabindex="-1" aria-labelledby="contactShortModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="contactShortModalLabel">Fill Details Below</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="">
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <label for="" class="form-label">Name</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-12">
-                                    <label for="" class="form-label">Email Address</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-12">
-                                    <label for="" class="form-label">Contact</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="col-12">
-                                    <label for="" class="form-label">Message</label>
-                                    <textarea name="" id="" cols="30" rows="4" class="form-control"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <div class="row g-3">
-                                        <div class="col-auto">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="reset" class="btn btn-secondary">Reset</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
         {{-- @push('scripts')
             <script>
                 $(document).ready(function() {

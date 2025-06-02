@@ -102,7 +102,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-flashy" href="{{ route('main_events') }}">Upcoming Events</a>
+                        <a class="nav-link text-flashy" href="{{ route('main_events') }}">Events</a>
                     </li>
                     <li class="nav-item d-none">
                         <a class="nav-link" href="{{ route('main_contact') }}">Contact Us</a>
