@@ -51,11 +51,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'DashboardController';
 
-$route['login'] = 'PagesController/login';
+$route['login'] = 'AuthController/login';
 $route['logout'] = 'AuthController/logout';
 
-$route['api/(:any)/login'] = 'AuthController/api_login';
-$route['api/(:any)/register'] = 'AuthController/api_register';
+$route['api/(:any)/login'] = 'AuthController/api_login/$1';
+$route['api/(:any)/register'] = 'AuthController/api_register/$1';
 
 $route['api-event-register'] = 'EventsController/api_event_register';
 $route['event/(:any)/check-in/(:any)'] = 'EventsController/check_in_verify/$1/$2';
@@ -84,6 +84,10 @@ $route['report/post/(:any)'] ="posts/ReportsController/view_post/$1";
 $route['report/post/(:any)/edit'] ="posts/EpisodesController/edit_post/$1";
 
 $route['events'] ="posts/EventsController";
+
+$route['users'] ="app/UsersController";
+$route['users/new-user'] ="app/UsersController/new_user";
+$route['my-profile'] ="app/UsersController/my_profile";
 
 $route['register'] = 'DashboardController/register';
 

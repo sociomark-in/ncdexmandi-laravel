@@ -3,29 +3,29 @@ defined('BASEPATH') or exit('No direct script access allowed');
 require_once APPPATH . "core/My_Controller.php";
 class ReportsController extends My_Controller
 {
-    public $error, $data, $request, $response;
+    public $error, $request, $response;
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->error = [];
-        $this->data = ["APP_STORAGE" => $this->APP_STORAGE];
-    }
+	public function __construct()
+	{
+		parent::__construct();
+		$this->error = [];
+	}
 
     public function index()
     {
-        $this->load->admin_dashboard('episodes/home', $this->data);
+        $this->load->admin_dashboard('reports/home', $this->data);
     }
+
     public function new_post()
     {
-        $this->load->admin_dashboard('episodes/new', $this->data);
+        $this->load->admin_dashboard('reports/new', $this->data);
     }
 
     public function view_post($post_id)
     {
         $request = $this->input->get();
         if ($request['post_preview']) {
-            $this->load->admin_dashboard('episodes/preview', $this->data);
+            $this->load->admin_dashboard('reports/preview', $this->data);
         } else {
             redirect();
         }

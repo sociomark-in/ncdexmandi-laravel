@@ -8,17 +8,17 @@
                             <div class="text-center mb-3 mb-lg-4">
                                 <img src="<?= base_url('assets/logo.png') ?>" height="40" alt="Platform Logo">
                             </div>
-                            <?= form_open(base_url('api-auth-login')) ?>
+                            <?= form_open(base_url('api/v2/login')) ?>
                             <div class="mb-3">
                                 <label for="inputUsername" class="form-label">Username</label>
                                 <input type="text" class="form-control" name="username" id="inputUsername">
                             </div>
                             <div class="mb-3">
                                 <label for="inputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" name="password" id="inputPassword1">
+                                <input type="password" class="form-control" name="password" id="inputPassword">
                             </div>
                             <button type="submit" class="btn btn-primary">Login</button>
-                            </form>
+                            <?= form_close() ?>
                         </div>
                     </div>
                 </div>

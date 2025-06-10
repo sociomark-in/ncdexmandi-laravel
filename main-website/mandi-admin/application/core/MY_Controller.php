@@ -4,7 +4,7 @@ date_default_timezone_set("Asia/Kolkata");
 
 class MY_Controller extends CI_Controller
 {
-	public $COMPANY_NAME, $APP_ID = "", $IP, $APP_STORAGE;
+	public $COMPANY_NAME, $APP_ID = "", $IP, $APP_STORAGE, $data, $SESSION;
 	public function __construct()
 	{
 		parent::__construct();
@@ -15,7 +15,19 @@ class MY_Controller extends CI_Controller
 		}
 		$this->APP_ID = get_cookie("app_id", true);
         $this->APP_STORAGE = directory_size(FILE_UPLOAD_FOLDER);
+
+        $this->SESSION = $_SESSION['active_user'];
+
+        if(!isset($this->SESSION)){
+            redirect('login');
+        } else {
+            $this->data['active_user'] = $this->SESSION;
+            $this->data["APP_STORAGE"] = $this->APP_STORAGE;
+        }
 	}
+	public function _access_granted_($modules){
+        return empty(array_diff($modules, json_decode($this->SESSION['role']['modules'])));
+    }
 	public function _auth_(){
 		$app_id = get_cookie("app_id", true);
 		if(( $app_id == null) || ($app_id == "")) {

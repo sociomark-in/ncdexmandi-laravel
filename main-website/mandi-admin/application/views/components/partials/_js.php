@@ -11,8 +11,9 @@
 <script src="<?= base_url("assets") ?>/js/template.js"></script>
 <!-- endinject -->
 
-<!-- Custom js for this page -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<!-- Custom js for this page -->
 <script src="<?= base_url("assets") ?>/js/custom.js"></script>
 <!-- End custom js for this page -->
 
@@ -29,5 +30,20 @@
             maxDate: "+1D",
             yearRange: "-100:+0"
         });
+    })
+
+    $('input[type=password]').each((index, element) => {
+        var button = $(element).next();
+        var type = $(element).attr('type');
+        var icon = $(element).next().children('svg').attr('data-feather');
+        button.on('click', () => {
+            console.log(type);
+            if (type === 'password') {
+                type = 'text';
+            } else {
+                type = 'password';
+            }
+            $(element).attr('type', type);
+        })
     })
 </script>

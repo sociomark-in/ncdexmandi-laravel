@@ -18,7 +18,7 @@
                 </a>
             </li>
 
-            <!-- Nominations -->
+            <!-- Content Management -->
             <li class="nav-item nav-category">Content Management</li>
             <!-- Access Level: jury -->
             <!-- Blogs -->
@@ -99,8 +99,34 @@
                     </ul>
                 </div>
             </li>
-            <!-- Reports -->
-             
+            <!-- FAQs -->
+            <li class="nav-item">
+                <a href="<?= base_url('faqs') ?>" class="nav-link <?= link_is_active()['active'] ?>">
+                    <i class="link-icon" data-feather="database"></i>
+                    <span class="link-title">FAQs</span>
+                </a>
+            </li>
+            <!-- All Comments -->
+            <li class="nav-item">
+                <a href="<?= base_url('') ?>" class="nav-link">
+                    <i class="link-icon" data-feather="message-square"></i>
+                    <span class="link-title">Comments</span>
+                </a>
+            </li>
+
+            <li class="nav-item nav-category">Miscellaneous</li>
+            <li class="nav-item">
+                <a href="<?= base_url('') ?>" class="nav-link <?= link_is_active()['active'] ?>">
+                    <i class="link-icon" data-feather="bookmark"></i>
+                    <span class="link-title">FPOs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= base_url('') ?>" class="nav-link <?= link_is_active()['active'] ?>">
+                    <i class="link-icon" data-feather="bookmark"></i>
+                    <span class="link-title">Commodities</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a href="<?= base_url('') ?>" class="nav-link <?= link_is_active()['active'] ?>">
                     <i class="link-icon" data-feather="bookmark"></i>
@@ -114,9 +140,9 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= base_url('') ?>" class="nav-link">
-                    <i class="link-icon" data-feather="message-square"></i>
-                    <span class="link-title">Comments</span>
+                <a href="<?= base_url('') ?>" class="nav-link <?= link_is_active()['active'] ?>">
+                    <i class="link-icon" data-feather="image"></i>
+                    <span class="link-title">Media</span>
                 </a>
             </li>
 
@@ -132,10 +158,10 @@
                 <div class="collapse" id="emails">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">All Users</a>
+                            <a href="<?= base_url('users') ?>" class="nav-link">All Users</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Add New User</a>
+                            <a href="<?= base_url('users/new-user') ?>" class="nav-link">Add New User</a>
                         </li>
                     </ul>
                 </div>

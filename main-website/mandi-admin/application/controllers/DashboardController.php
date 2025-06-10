@@ -1,36 +1,25 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-
 require_once APPPATH . "core/My_Controller.php";
 
 class DashboardController extends MY_Controller
 {
-	public $data, $error;
+	public $error, $request, $response;
 
 	public function __construct()
 	{
 		parent::__construct();
 		$this->error = [];
-		$this->data = ["APP_STORAGE" => $this->APP_STORAGE];
 	}
+
 	public function index()
 	{
-        $this->load->admin_dashboard('index', $this->data);
+        if($this->_access_granted_(['read'])){
+            $this->load->admin_dashboard('index', $this->data);
+        } else {
+            $this->load->admin_dashboard('no_access', $this->data);
+        }
     }
-
-	public function login()
-	{
-		$data = [
-			'page' => [
-				'title' => "Login Page" . " • " . APP_NAME
-			]
-		];
-		$this->load->view('pages/login', $data);
-	}
-	public function register()
-	{
-		$formdata = $this->input->post();
-	}
 
 	public function qrcode_render()
 	{

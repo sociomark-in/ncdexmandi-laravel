@@ -188,6 +188,19 @@
 </main>
 <script>
     $(document).ready(function() {
+        hasUnsavedChanges = true;
+        // --- Core `beforeunload` Event Listener ---
+        window.addEventListener('beforeunload', (event) => {
+            if (hasUnsavedChanges) {
+                // Prevent the default navigation and trigger the browser's warning.
+                event.preventDefault();
+                // For older browsers, it might be necessary to set returnValue
+                event.returnValue = '';
+                console.log("`beforeunload` triggered: Prompting user about unsaved changes.");
+            } else {
+                console.log("`beforeunload` triggered: No unsaved changes, allowing navigation.");
+            }
+        });
         $('#inputPostContent').summernote({
             placeholder: 'Start typing your post',
             height: 300,
