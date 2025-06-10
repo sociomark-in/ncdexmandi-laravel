@@ -100,7 +100,7 @@
                                     <a class="nav-link" href="#">Podcast</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Reports</a>
+                                    <a class="nav-link" href="{{ route('main_publications') }}">Reports</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Calculators</a>
@@ -109,7 +109,7 @@
                                     <a class="nav-link" href="{{ route('main_gallery') }}">Infographics</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">FAQs</a>
+                                    <a class="nav-link" href="{{ route('faqs_home') }}">FAQs</a>
                                 </li>
 
                             </ul>

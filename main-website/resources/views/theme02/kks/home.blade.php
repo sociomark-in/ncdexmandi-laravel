@@ -198,26 +198,30 @@
                             </nav>
                         </div>
                         <div class="col-12">
-                            <form action="" method="get">
-                                <div class="row justify-content-between">
-                                    <div class="col-xl col-lg-4"><input type="text" placeholder="Search All Episodes by Title" class="form-control"></div>
-                                    <div class="col-xl-2">
-                                        <select name="" id="" class="form-select">
-                                            <option value="">Select A Comodity</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-2">
-                                        <select name="" id="" class="form-select">
-                                            <option value="">Select A State</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-auto">
-                                        <button type="submit" class="btn btn-primary">
-                                            Apply Filters
-                                        </button>
-                                    </div>
+                            <div class="card">
+                                <div class="card-body bg-light">
+                                    <form action="" method="get">
+                                        <div class="row justify-content-between">
+                                            <div class="col-xl col-lg-4"><input type="text" placeholder="Search All Episodes by Title" class="form-control"></div>
+                                            <div class="col-xl-2">
+                                                <select name="" id="" class="form-select">
+                                                    <option value="">Select A Comodity</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-2">
+                                                <select name="" id="" class="form-select">
+                                                    <option value="">Select A State</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-auto">
+                                                <button type="submit" class="btn btn-primary">
+                                                    Apply Filters
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                         <div class="col-12 d-none">
                             <div class="row justify-content-between">
@@ -329,7 +333,7 @@
                             <div class="text-content">
                                 <h2 class="title-icon">
                                     <i class="fa-solid fa-star icon icon-prepend"></i>
-                                    FPOs of The Month
+                                    FPO of The Month
                                 </h2>
                             </div>
                         </div>
@@ -729,9 +733,9 @@
                     </div>
                     <div class="col-12">
                         <div class="row g-2">
-                            @for ($i = new DateTime('2025-05-01'); $i >= new DateTime('2024-01-01'); $i->modify('-2 month'))
+                            @for ($i = date('Y'); $i > 2000; $i--)
                                 <div class="col-xl-3 col-6">
-                                    <a href="">{{ $i->format('F Y') }}</a>
+                                    <a href="">{{ $i }}</a>
                                 </div>
                             @endfor
                         </div>

@@ -43,8 +43,8 @@
             <div class="container">
                 <div class="row g-3" id="gallery">
                     @for ($i = 0; $i < 25; $i++)
-                        <a href="https://placehold.co/1500x1000" class="col-xl-3 col-lg-4 col-6 rounded-overflow">
-                            <img src="https://placehold.co/300x200" alt="" class="w-100">
+                        <a href="https://placehold.co/1500x1000" class="col-xl-3 col-lg-4 col-6">
+                            <img src="https://placehold.co/300x200" alt="" class="w-100 rounded-overflow">
                         </a>
                     @endfor
                 </div>
@@ -64,7 +64,10 @@
                 <div class="row g-3">
                     <div class="col-12">
                         <div class="text-content">
-                            <h2 class="section-title">Gallery Archives</h2>
+                            <h2 class="title-icon">
+                                <i class="fa-solid fa-clock-rotate-left icon icon-prepend"></i>
+                                Gallery Archives
+                            </h2>
                         </div>
                     </div>
                     <div class="col-12">

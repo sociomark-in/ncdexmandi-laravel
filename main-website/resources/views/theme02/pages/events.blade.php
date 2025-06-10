@@ -100,6 +100,7 @@
                 </div>
             </div>
         </section>
+
         <section class="default-spacing pb-0">
             <div class="container">
                 <div class="mb-3 mb-md-4">
@@ -180,20 +181,25 @@
                     </div>
                 </div>
         </section>
-        <section class="default-spacing pb-0 pt-3 pt-md-4">
+
+        <section class="default-spacing pt-md-4">
             <div class="container">
                 <div class="row g-3 mb-3">
-                    <div class="col-12">
+                    <div class="col-xl-6 col-12">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus, pariatur explicabo omnis
                             eius maiores quas nihil sed similique illo nam impedit veniam eum error ad! Ab quibusdam iste a
                             quam perspiciatis itaque nemo excepturi eveniet assumenda. Doloremque culpa, eligendi dolore
-                            voluptatem dolor magnam nesciunt velit, distinctio, aperiam aliquam mollitia!
+                            voluptatem dolor magnam nesciunt velit, distinctio, aperiam aliquam mollitia! (50 Words)
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam natus, pariatur explicabo omnis
+                            eius maiores quas nihil sed similique illo nam impedit veniam eum error ad! Ab quibusdam iste a
+                            quam perspiciatis itaque nemo excepturi eveniet assumenda. Doloremque culpa, eligendi dolore
+                            voluptatem dolor magnam nesciunt velit, distinctio, aperiam aliquam mollitia! (50 Words)
                         </p>
                     </div>
-                </div>
-                <div class="row g-3 flex-row-reverse">
-                    <div class="col-xl-4 col-lg-6 col-12">
+                    <div class="col-xl-6 col-12">
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="text-content">
@@ -218,6 +224,24 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="row g-3 flex-row-reverse d-none">
+                    <div class="col-xl-4 col-lg-6 col-12">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="text-content">
+                                    <h2 class="title-icon">
+                                        <i class="fa-solid fa-question icon icon-prepend"></i>
+                                        Get Featured Form
+                                    </h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, perspiciatis.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                     <div class="col-xl-4 col-lg-6 col-12">
                         <div class="card card-bordered border-primary">
                             <div class="card-body">
@@ -234,7 +258,8 @@
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, error.</p>
                                     </div>
                                     <div class="col-12">
-                                        <a href="" class="btn btn-primary btn-icon">View More&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
+                                        <a href="" class="btn btn-primary btn-icon">View More&nbsp;<i
+                                                class="fa-solid fa-arrow-right icon-append"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +281,8 @@
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, error.</p>
                                     </div>
                                     <div class="col-12">
-                                        <a href="" class="btn btn-secondary btn-icon">View More&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
+                                        <a href="" class="btn btn-secondary btn-icon">View More&nbsp;<i
+                                                class="fa-solid fa-arrow-right icon-append"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +291,113 @@
                 </div>
             </div>
         </section>
-        <section class="default-spacing pb-0">
+
+        <section class="default-spacing pt-md-unset pt-5 bg-secondary-70">
+            <div class="container">
+                <div class="row g-3 flex-row-reverse">
+                    <div class="col-12">
+                        <div class="text-content">
+                            <h2 class="title-icon">
+                                <i class="fa-solid fa-star icon icon-prepend"></i>
+                                Upcoming Events
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="swiper upcomingEventsSwiper">
+                            <div class="swiper-wrapper">
+                                @for ($i = 0; $i < 4; $i++)
+                                    <div class="swiper-slide">
+                                        <div class="event-tile-three">
+                                            <div class="row g-3">
+                                                <div class="col-xl-4 col-lg-6 col-12">
+                                                    <div class="thumb">
+                                                        <a href="blog-single-with-sidebar.html"><img
+                                                                src="https://i3.ytimg.com/vi/7tk9oSJKK1w/hqdefault.jpg"
+                                                                alt="Image Not Found" class="w-100"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-8 col-lg-6 col-12">
+                                                    <div class="event-details">
+                                                        <div class="col-12">
+                                                            <div class="py-0 py-md-4">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <a href="">
+                                                                            <h3 class="clipped-content line-1">
+                                                                                (10-15 Words) Lorem ipsum dolor sit amet
+                                                                                consectetur
+                                                                                adipisicing elit.
+                                                                                Repudiandae iste veniam ipsam suscipit,
+                                                                                alias eaque.
+                                                                            </h3>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <p class="clipped-content line-2">
+                                                                                    (30 Words) Lorem ipsum dolor sit amet
+                                                                                    consectetur
+                                                                                    adipisicing
+                                                                                    elit.
+                                                                                    Vero
+                                                                                    vel repudiandae id temporibus eius
+                                                                                    aliquam cum
+                                                                                    doloremque
+                                                                                    ipsum
+                                                                                    at, molestiae, quis dolorem aperiam
+                                                                                    fugit quia quas?
+                                                                                    At
+                                                                                    dolorem
+                                                                                    repudiandae inventore ipsum, illum optio
+                                                                                    nemo autem
+                                                                                    aliquid
+                                                                                    tempore quos dicta quas, amet officia
+                                                                                    possimus
+                                                                                    magnam
+                                                                                    perferendis facilis sunt ducimus
+                                                                                    laboriosam. Totam.
+                                                                                </p>
+                                                                            </div>
+                                                                            <div class="col">
+                                                                                <p><i
+                                                                                        class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;April
+                                                                                    02, 2025</p>
+                                                                            </div>
+                                                                            <div class="col">
+                                                                                <p><i
+                                                                                        class="fa-solid fa-clock"></i>&nbsp;&nbsp;12:30
+                                                                                    PM.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endfor
+                            </div>
+                        </div>
+                        <script>
+                            new Swiper('.upcomingEventsSwiper', {
+                                loop: true,
+                                spaceBetween: 30,
+                                pagination: {
+                                    el: ".swiper-pagination",
+                                },
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- <section class="default-spacing pb-0">
             <div class="container">
                 <div class="row g-3 flex-row-reverse">
                     <div class="col-12">
@@ -347,7 +479,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <section class="default-spacing pb-0">
             <div class="container">
@@ -364,44 +496,97 @@
                     </div>
                 </div>
                 <div class="row g-3">
-                    @for ($i = 0; $i < 3; $i++)
-                        <div class="col-xl-4 col-lg-6 col-12">
-                            <div class="event-style-one">
-                                <div class="thumb">
-                                    <a href="blog-single-with-sidebar.html"><img
-                                            src="https://i3.ytimg.com/vi/wVYuqFrUEOM/hqdefault.jpg" alt="Image Not Found"
-                                            class="w-100"></a>
-                                    <div class="date">
-                                        <strong>7</strong>
-                                        <span>April, 2025</span>
-                                    </div>
-                                </div>
-                                <div class="event-details">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <h4>
-                                                    <a href="">Lorem ipsum dolor sit amet.</a>
-                                                </h4>
-                                            </div>
-                                            <div class="col">
-                                                <p>
-                                                    <strong>Date:</strong><br>
-                                                    <span>April 02, 2025</span>
-                                                </p>
-                                            </div>
-                                            <div class="col">
-                                                <p>
-                                                    <strong>Time:</strong><br>
-                                                    <span>12:30 PM.</span>
-                                                </p>
+                    <div class="col-12">
+                        <div class="swiper previousEventsSwiper">
+                            <div class="swiper-wrapper">
+                                @for ($i = 0; $i < 3; $i++)
+                                    <div class="swiper-slide">
+                                        <div class="event-tile-three">
+                                            <div class="row g-3">
+                                                <div class="col-xl-5 col-lg-6 col-12">
+                                                    <div class="thumb">
+                                                        <a href="blog-single-with-sidebar.html"><img
+                                                                src="https://i3.ytimg.com/vi/7tk9oSJKK1w/hqdefault.jpg"
+                                                                alt="Image Not Found" class="w-100"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-7 col-lg-6 col-12">
+                                                    <div class="event-details">
+                                                        <div class="col-12">
+                                                            <div class="py-0 py-md-4">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <a href="">
+                                                                            <h3 class="clipped-content line-1">
+                                                                                (10-15 Words) Lorem ipsum dolor sit amet
+                                                                                consectetur
+                                                                                adipisicing elit.
+                                                                                Repudiandae iste veniam ipsam suscipit,
+                                                                                alias eaque.
+                                                                            </h3>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <p class="clipped-content line-2">
+                                                                                    (30 Words) Lorem ipsum dolor sit amet
+                                                                                    consectetur
+                                                                                    adipisicing
+                                                                                    elit.
+                                                                                    Vero
+                                                                                    vel repudiandae id temporibus eius
+                                                                                    aliquam cum
+                                                                                    doloremque
+                                                                                    ipsum
+                                                                                    at, molestiae, quis dolorem aperiam
+                                                                                    fugit quia quas?
+                                                                                    At
+                                                                                    dolorem
+                                                                                    repudiandae inventore ipsum, illum optio
+                                                                                    nemo autem
+                                                                                    aliquid
+                                                                                    tempore quos dicta quas, amet officia
+                                                                                    possimus
+                                                                                    magnam
+                                                                                    perferendis facilis sunt ducimus
+                                                                                    laboriosam. Totam.
+                                                                                </p>
+                                                                            </div>
+                                                                            <div class="col">
+                                                                                <p><i
+                                                                                        class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;April
+                                                                                    02, 2025</p>
+                                                                            </div>
+                                                                            <div class="col">
+                                                                                <p><i
+                                                                                        class="fa-solid fa-clock"></i>&nbsp;&nbsp;12:30
+                                                                                    PM.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endfor
                             </div>
                         </div>
-                    @endfor
+                        <script>
+                            new Swiper('.previousEventsSwiper', {
+                                loop: true,
+                                slidesPerView: 1.4,
+                                spaceBetween: 30,
+                                pagination: {
+                                    el: ".swiper-pagination",
+                                },
+                            });
+                        </script>
+                    </div>
                 </div>
             </div>
         </section>
@@ -537,7 +722,8 @@
                                     <div class="row m-0">
                                         @for ($i = 0; $i < count($states); $i++)
                                             <div class="col-xl-3 col-lg-4 col-12">
-                                                <a href="?state={{ $states[$i] }}" class="nav-link"><small>{{ $states[$i] }}</small></a>
+                                                <a href="?state={{ $states[$i] }}"
+                                                    class="nav-link"><small>{{ $states[$i] }}</small></a>
                                             </div>
                                         @endfor
                                     </div>
@@ -563,9 +749,9 @@
                             </div>
                             <div class="col-12">
                                 <div class="row g-2">
-                                    @for ($i = new DateTime('2025-05-01'); $i >= new DateTime('2024-01-01'); $i->modify('-2 month'))
+                                    @for ($i = date('Y'); $i > 2000; $i--)
                                         <div class="col-xl-3 col-6">
-                                            <a href="">{{ $i->format('F Y') }}</a>
+                                            <a href="">{{ $i }}</a>
                                         </div>
                                     @endfor
                                 </div>

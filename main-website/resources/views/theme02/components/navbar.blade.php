@@ -96,8 +96,8 @@
                             <li><a class="dropdown-item" href="#">Blogs</a></li>
                             <li><a class="dropdown-item" href="#">Webinars</a></li>
                             <li><a class="dropdown-item" href="#">Podcast</a></li>
-                            <li><a class="dropdown-item" href="#">Reports</a></li>
-                            <li><a class="dropdown-item" href="#">Infographics</a></li>
+                            <li><a class="dropdown-item" href="{{ route('main_publications') }}">Reports</a></li>
+                            <li><a class="dropdown-item" href="{{ route('main_gallery') }}">Infographics</a></li>
                             <li><a class="dropdown-item" href="#">FAQs</a></li>
                         </ul>
                     </li>
