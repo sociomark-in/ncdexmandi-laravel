@@ -95,17 +95,93 @@
         </div>
     </div>
     {{-- Popup Modal --}}
-    <aside class="position-fixed floating-widget floating-style-01 ">
+    {{-- <aside class="position-fixed floating-widget floating-style-01 ">
         <a href="" data-bs-toggle="modal" data-bs-target="#contactShortModal" class="btn btn-secondary">Contact
             Us</a>
+    </aside> --}}
+
+    {{-- FAQ Model --}}
+    <div class="modal fade" id="faqChatModal" tabindex="-1" aria-labelledby="faqChatModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="faqChatModalLabel">Ask Your Query</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <form action="">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <input type="text" placeholder="Type Your Query" class="form-control">
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row g-3">
+                                            <div class="col-auto">
+                                                <button type="submit" class="btn btn-primary">Ask Query</button>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="reset" class="btn btn-secondary">Nevermind</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-12">
+                            <p class="mb-1">Most Searched Queries</p>
+                            @for ($i = 0; $i < 5; $i++)
+                                <span class="badge bg-light text-black">Lorem ipsum dolor sit amet.</span>
+                            @endfor
+                        </div>
+                        <hr class="mb-0">
+                        <div class="col-12">
+                            <p>Need a more personlized resolution</p>
+                            <p><a href="{{ route('main_contact') }}" class="btn btn-primary">Contact
+                                    Us</a>&nbsp;&nbsp;OR&nbsp;&nbsp;<a href="{{ route('faqs_home') }}"
+                                    class="btn btn-secondary">Explore More FAQs</a></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- FAQ Model --}}
+    <aside class="floating-widget-stack floating-style-01">
+        <div class="row g-3">
+            <div class="col-12">
+                <div class="widget round-widget bg-primary-100 text-white" data-bs-toggle="modal"
+                    data-bs-target="#contactShortModal">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            @if (!request()->routeIs('faqs_home'))
+                <div class="col-12">
+                    <div class="widget round-widget bg-secondary-100 text-black" data-bs-toggle="modal"
+                        data-bs-target="#faqChatModal">
+                        <i class="fa-solid fa-question"></i>
+                    </div>
+                </div>
+            @endif
+        </div>
     </aside>
     @yield('content')
     @include('theme02.components.footer')
+
+    <script src="{{ asset('theme02/assets/js/jquery.counterup.min.js') }}"></script>
+
     {{-- Initialize AOS --}}
     <script>
         AOS.init({
             // once: true,
             duration: 1000,
+        });
+
+        $(".counter-number").counterUp({
+            delay: 10,
+            time: 1000,
         });
     </script>
     @stack('scripts')

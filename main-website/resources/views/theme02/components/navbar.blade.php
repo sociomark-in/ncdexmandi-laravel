@@ -71,20 +71,20 @@
                     </li>
                     <li class="nav-item">
                         <div class="btn btn-icon btn-search" data-bs-toggle="modal" data-bs-target="#searchModal"><i
-                            class="fa-solid fa-magnifying-glass icon-prepend"></i><span
-                            class="ms-2">Search</span></div>
+                                class="fa-solid fa-magnifying-glass icon-prepend"></i><span class="ms-2">Search</span>
+                        </div>
                     </li>
                 </ul>
                 <ul class="navbar-nav g-3 g-md-4">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('main_home') }}">Home</a>
+                        <a class="nav-link {{ Request::routeIs('main_home') ? 'active' : '' }}" aria-current="page" href="{{ route('main_home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('main_about') }}">About NCDEX Mandi</a>
+                        <a class="nav-link {{ Request::routeIs('main_about') ? 'active' : '' }}" href="{{ route('main_about') }}">About NCDEX Mandi</a>
                     </li>
                     <li class="nav-item">
-                        {{-- <a class="nav-link" href="{{ route('episodes_home') }}">Kheti Ke Sikandar</a> --}}
-                        <a class="nav-link" href="{{ route('kks_home') }}">Kheti Ke Sikandar</a>
+                        {{-- <a class="nav-link {{ Request::routeIs('home') ? 'active' : '' }}" href="{{ route('episodes_home') }}">Kheti Ke Sikandar</a> --}}
+                        <a class="nav-link {{ Request::routeIs('kks_home') ? 'active' : '' }}" href="{{ route('kks_home') }}">Kheti Ke Sikandar</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -98,21 +98,23 @@
                             <li><a class="dropdown-item" href="#">Podcast</a></li>
                             <li><a class="dropdown-item" href="{{ route('main_publications') }}">Reports</a></li>
                             <li><a class="dropdown-item" href="{{ route('main_gallery') }}">Infographics</a></li>
-                            <li><a class="dropdown-item" href="#">FAQs</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-flashy" href="{{ route('main_events') }}">Events</a>
+                        <a class="nav-link {{ Request::routeIs('faqs_home') ? 'active' : '' }}" href="{{ route('faqs_home') }}">FAQs</a>
                     </li>
-                    <li class="nav-item d-none">
-                        <a class="nav-link" href="{{ route('main_contact') }}">Contact Us</a>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::routeIs('main_events') ? 'active' : '' }}" href="{{ route('main_events') }}">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::routeIs('main_contact') ? 'active' : '' }}" href="{{ route('main_contact') }}">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <nav class="navbar bg-white">
-        <div class="container-fluid">
+        <div class="container-fluid position-relative ">
             <div class="swiper bidSwiper">
                 <div class="swiper-wrapper">
                     @for ($i = 0; $i < 5; $i++)
@@ -149,8 +151,9 @@
                     @endfor
                 </div>
                 <!-- <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div> -->
+                        <div class="swiper-button-prev"></div> -->
             </div>
+            <a class="btn btn-primary btn-overlap-fixed right-0">View Complete Market</a>
             <script>
                 new Swiper('.bidSwiper', {
                     loop: true,

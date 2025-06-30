@@ -325,11 +325,7 @@
                                                                     <div class="col-12">
                                                                         <a href="">
                                                                             <h3 class="clipped-content line-1">
-                                                                                (10-15 Words) Lorem ipsum dolor sit amet
-                                                                                consectetur
-                                                                                adipisicing elit.
-                                                                                Repudiandae iste veniam ipsam suscipit,
-                                                                                alias eaque.
+                                                                                (50-60 Characters) Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, ipsum?
                                                                             </h3>
                                                                         </a>
                                                                     </div>
@@ -337,27 +333,7 @@
                                                                         <div class="row">
                                                                             <div class="col-12">
                                                                                 <p class="clipped-content line-2">
-                                                                                    (30 Words) Lorem ipsum dolor sit amet
-                                                                                    consectetur
-                                                                                    adipisicing
-                                                                                    elit.
-                                                                                    Vero
-                                                                                    vel repudiandae id temporibus eius
-                                                                                    aliquam cum
-                                                                                    doloremque
-                                                                                    ipsum
-                                                                                    at, molestiae, quis dolorem aperiam
-                                                                                    fugit quia quas?
-                                                                                    At
-                                                                                    dolorem
-                                                                                    repudiandae inventore ipsum, illum optio
-                                                                                    nemo autem
-                                                                                    aliquid
-                                                                                    tempore quos dicta quas, amet officia
-                                                                                    possimus
-                                                                                    magnam
-                                                                                    perferendis facilis sunt ducimus
-                                                                                    laboriosam. Totam.
+                                                                                    (80-100 Characters) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam porro dolores, deserunt aut, nisi blanditiis suscipit eos sunt accusamus quibusdam excepturi? Perspiciatis illum quaerat impedit alias quidem vero minima dolorem!
                                                                                 </p>
                                                                             </div>
                                                                             <div class="col">
@@ -517,12 +493,8 @@
                                                                 <div class="row">
                                                                     <div class="col-12">
                                                                         <a href="">
-                                                                            <h3 class="clipped-content line-1">
-                                                                                (10-15 Words) Lorem ipsum dolor sit amet
-                                                                                consectetur
-                                                                                adipisicing elit.
-                                                                                Repudiandae iste veniam ipsam suscipit,
-                                                                                alias eaque.
+                                                                            <h3 class="clipped-content line-2">
+                                                                                (50-60 Characters) Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, debitis?
                                                                             </h3>
                                                                         </a>
                                                                     </div>
@@ -530,27 +502,7 @@
                                                                         <div class="row">
                                                                             <div class="col-12">
                                                                                 <p class="clipped-content line-2">
-                                                                                    (30 Words) Lorem ipsum dolor sit amet
-                                                                                    consectetur
-                                                                                    adipisicing
-                                                                                    elit.
-                                                                                    Vero
-                                                                                    vel repudiandae id temporibus eius
-                                                                                    aliquam cum
-                                                                                    doloremque
-                                                                                    ipsum
-                                                                                    at, molestiae, quis dolorem aperiam
-                                                                                    fugit quia quas?
-                                                                                    At
-                                                                                    dolorem
-                                                                                    repudiandae inventore ipsum, illum optio
-                                                                                    nemo autem
-                                                                                    aliquid
-                                                                                    tempore quos dicta quas, amet officia
-                                                                                    possimus
-                                                                                    magnam
-                                                                                    perferendis facilis sunt ducimus
-                                                                                    laboriosam. Totam.
+                                                                                    (80-100 Characters) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam porro dolores, deserunt aut, nisi blanditiis suscipit eos sunt accusamus quibusdam excepturi? Perspiciatis illum quaerat impedit alias quidem vero minima dolorem!
                                                                                 </p>
                                                                             </div>
                                                                             <div class="col">
@@ -751,8 +703,11 @@
                                 <div class="row g-2">
                                     @for ($i = date('Y'); $i > 2000; $i--)
                                         <div class="col-xl-3 col-6">
-                                            <a href="">{{ $i }}</a>
+                                            <a href="">{{ $i }} - {{ $i - 5 }}</a>
                                         </div>
+                                        @php
+                                            $i -= 5;
+                                        @endphp
                                     @endfor
                                 </div>
                             </div>

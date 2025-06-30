@@ -3,11 +3,16 @@ $color-green-rgb: 25, 100, 30;
 $color-yellow: #f7c35f;
 $color-black: #000;
 $color-white: #e4e4e4;
+$color-white-0: #fff;
 
 body {
     font-family: "Outfit", Arial, Helvetica, sans-serif;
     font-size: calc(max(2vmin, 16px));
     color: $color-black;
+}
+
+main {
+    overflow: hidden;
 }
 
 a {
@@ -135,6 +140,14 @@ table {
             color: rgba($color-black, 1);
         }
     }
+    &.btn-overlap-fixed {
+        z-index: 1;
+        position: absolute;
+        border-radius: 0;
+        &.right-0 {
+            right: 0;
+        }
+    }
 
     @media screen and (min-width: 512px) {
         &.btn-search {
@@ -185,17 +198,40 @@ table {
 }
 
 @for $i from 10 through 100 {
-    @if ($i % 10 == 0){
-        .text-black-#{$i}{
-            color: rgba($color-black,  calc($i/100)) !important;
+    @if ($i % 10 == 0) {
+        .text-black-#{$i} {
+            color: rgba($color-black, calc($i/100)) !important;
         }
-        .bg-secondary-#{$i}{
+        .bg-secondary-#{$i} {
             background-color: rgba($color-yellow, calc($i/100)) !important;
+            &.bg-watermark {
+                background-image: url("../icons/logo-faded.png");
+                background-size: calc(max(5vw, 3rem)) auto;
+                background-repeat: repeat;
+                background-position: center;
+                background-blend-mode: lighten;
+                background-attachment: fixed;
+            }
+        }
+        .bg-primary-#{$i} {
+            background-color: rgba($color-green, calc($i/100)) !important;
+            &.bg-watermark {
+                background-image: url("../icons/logo-faded.png");
+                background-size: calc(max(5vw, 3rem)) auto;
+                background-repeat: repeat;
+                background-position: center;
+                background-blend-mode: lighten;
+                background-attachment: fixed;
+            }
         }
     }
 }
 
-.bg-secondary-50{
+.badge{
+    font-weight: normal;
+}
+
+.bg-secondary-50 {
     background-color: rgba($color-yellow, 0.5);
 }
 
@@ -259,12 +295,12 @@ table {
     }
 }
 
-.form-select{
-    &:checked{
+.form-select {
+    &:checked {
         background-color: $color-green;
         color: $color-white;
     }
-    option{
+    option {
         color: $color-black;
     }
 }
@@ -305,21 +341,21 @@ table {
         }
     }
 }
-.accordion{
-    &.accordion-spaced{
+.accordion {
+    &.accordion-spaced {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        .accordion-item{
+        .accordion-item {
             border: 1px solid $color-green;
             border-radius: 0.4rem;
             overflow: hidden;
-            .accordion-button{
+            .accordion-button {
                 border-left: 0.4rem solid $color-green;
                 font-size: calc(max(2vmin, 16px));
                 font-size: calc(max(2vmin, 16px));
             }
-            .accordion-button:not(.collapsed){
+            .accordion-button:not(.collapsed) {
                 color: $color-green;
                 background-color: rgba($color-green, 0.1);
             }
@@ -336,6 +372,11 @@ header {
             .nav-item {
                 .nav-link {
                     color: $color-black;
+                    border-bottom: 1px solid transparent;
+                    &.active {
+                        color: $color-green;
+                        border-color: $color-green;
+                    }
                 }
             }
         }
@@ -471,23 +512,22 @@ section {
     }
 }
 
-.floating-widget{
+.floating-widget-stack {
     z-index: 9999;
-    &.floating-style-01{
-        bottom: 0;
-        right: 0;
+    position: fixed;
+    cursor: pointer;
+    width: 3rem;
+    height: fit-content;
+    &.floating-style-01 {
+        right: 1rem;
+        bottom: 1rem;
+    }
+    .round-widget {
         width: 100%;
-        border-radius: 0;
-        display: flex;
-        *{
-            flex: 1;
-        }
-        @media screen and (min-width: 768px) {
-            display: block;
-            right: 10%;
-            width: fit-content;
-            border-radius: 0.25rem;
-        }
+        aspect-ratio: 1;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
     }
 }
 
@@ -614,31 +654,169 @@ section {
     }
 }
 
-.event-tile-three{
-    background-color: white;
-    border-radius: 1rem;
-    padding: 1rem;
-    .thumb{
+.event-tile-two {
+    .thumb {
         border-radius: 1rem;
         overflow: hidden;
         border: 0.3rem solid $color-green;
         width: 100%;
         aspect-ratio: 16/9;
-        img{
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
         }
     }
-    .event-details{
-        h3{
+    .event-details {
+        h3 {
+            font-size: 1.3rem;
             line-height: 1.3;
         }
-        p{
+        p {
+            font-size: 1rem;
             color: rgba($color-black, 0.7);
         }
     }
+}
+
+.event-tile-three {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    .thumb {
+        border-radius: 1rem;
+        overflow: hidden;
+        border: 0.3rem solid $color-green;
+        width: 100%;
+        aspect-ratio: 16/9;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .event-details {
+        h3 {
+            font-size: 1.3rem;
+            line-height: 1.3;
+        }
+        p {
+            font-size: 1rem;
+            color: rgba($color-black, 0.7);
+        }
+    }
+}
+
+.speaker-style-two {
+    position: relative;
+    border: 0.25rem solid transparent;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 120px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    &::before {
+        clip-path: polygon(0 0, 100% 2rem, 100% 100%, 0% 100%);
+        background-color: $color-white-0;
+        z-index: 0;
+    }
+    &::after {
+        clip-path: polygon(0 2rem, 100% 0, 100% 100%, 0% 100%);
+        background-color: $color-yellow;
+        z-index: 0;
+    }
+    .text-content {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        h3 {
+            font-size: 1.3rem;
+            line-height: 1.3;
+            margin-bottom: 0.2rem;
+        }
+        p {
+            font-size: 1rem;
+            margin: 0;
+            color: rgba($color-black, 0.7);
+        }
+    }
+    .large-desc {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-100%);
+        transition: all 0.5s ease-in-out;
+
+        padding: 1rem;
+        background-color: $color-yellow;
+        z-index: 1;
+
+        h3 {
+            font-size: 1.3rem;
+            line-height: 1.3;
+            margin-bottom: 0.2rem;
+        }
+        p {
+            font-size: 1rem;
+            margin: 0;
+            color: rgba($color-black, 0.7);
+        }
+    }
+
+    &:hover {
+        border-color: $color-green;
+        .large-desc {
+            transform: translateY(0);
+        }
+    }
+}
+
+.flip-content {
+    background-color: transparent;
+    width: 100%;
+    height: 400px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-content:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
 }
 
 svg#india_map {
@@ -662,6 +840,9 @@ svg#india_map {
 .details-view {
     top: 0;
     right: 0;
+    .map_details {
+        min-width: 200px;
+    }
 }
 
 footer {

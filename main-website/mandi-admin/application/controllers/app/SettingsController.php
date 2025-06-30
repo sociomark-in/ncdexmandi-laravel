@@ -1,9 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+require_once APPPATH . "core/My_Controller.php";
 
-class SettingsController extends CI_Controller
+class SettingsController extends MY_Controller
 {
-    private $request, $response, $data;
+    private $request, $response;
 
     public function __construct()
     {
@@ -11,9 +12,9 @@ class SettingsController extends CI_Controller
     }
 
     public function index(){
-        $this->load->admin_dashboard('settings/home');
+        $this->load->admin_dashboard('flows/home', $this->data);
     }
     public function localization(){
-        $this->load->admin_dashboard('settings/localization');
+        $this->load->admin_dashboard('settings/localization', $this->data);
     }
 }

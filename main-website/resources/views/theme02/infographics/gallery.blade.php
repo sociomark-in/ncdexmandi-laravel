@@ -72,10 +72,13 @@
                     </div>
                     <div class="col-12">
                         <div class="row g-2">
-                            @for ($i = date("Y"); $i > 2000; $i--)
-                            <div class="col-xl-3 col-6">
-                                <a href="">{{ $i }}</a>
-                            </div>
+                            @for ($i = date('Y'); $i > 2000; $i--)
+                                <div class="col-xl-3 col-6">
+                                    <a href="">{{ $i }} - {{ $i - 5 }}</a>
+                                </div>
+                                @php
+                                    $i -= 5;
+                                @endphp
                             @endfor
                         </div>
                     </div>

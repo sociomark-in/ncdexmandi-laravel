@@ -1,7 +1,8 @@
 <nav class="sidebar">
     <div class="sidebar-header">
         <a href="#" class="sidebar-brand">
-            <img src="<?= base_url('assets/logo.png') ?>" alt="" width="160">
+            <img src="https://placehold.co/200x200" alt="">
+            <!-- <img src="<?= base_url('assets/logo.png') ?>" alt="" width="160"> -->
         </a>
         <div class="sidebar-toggler">
             <span></span>
@@ -99,6 +100,7 @@
                     </ul>
                 </div>
             </li>
+
             <!-- FAQs -->
             <li class="nav-item">
                 <a href="<?= base_url('faqs') ?>" class="nav-link <?= link_is_active()['active'] ?>">
@@ -106,6 +108,7 @@
                     <span class="link-title">FAQs</span>
                 </a>
             </li>
+
             <!-- All Comments -->
             <li class="nav-item">
                 <a href="<?= base_url('') ?>" class="nav-link">
@@ -149,24 +152,41 @@
             <!-- Access Level: admin -->
 
             <li class="nav-item nav-category">User Management</li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
-                    <i class="link-icon" data-feather="users"></i>
-                    <span class="link-title">Users</span>
+            <li class="nav-item <?= link_is_active(['blogs', 'blog/new-post'], $group = true)['active'] ? "active" : ""  ?>">
+                <a class="nav-link" data-bs-toggle="collapse" href="#blogs" role="button" aria-expanded="<?= link_is_active(['blogs', 'blog/new-post'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="blogs">
+                    <i class="link-icon" data-feather="database"></i>
+                    <span class="link-title">Blogs</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
-                <div class="collapse" id="emails">
+                <div class="collapse <?= link_is_active(['blogs', 'blog/new-post'], $group = true)['show'] ? "show" : "" ?>" id="blogs">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="<?= base_url('users') ?>" class="nav-link">All Users</a>
+                            <a href="<?= base_url("blogs") ?>" class="nav-link <?= link_is_active('blogs')['active'] ? "active" : ""  ?>">All Blogs</a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('users/new-user') ?>" class="nav-link">Add New User</a>
+                            <a href="<?= base_url('blog/new-post') ?>" target="_blank" class="nav-link <?= link_is_active('blog/new-post')['active'] ? "active" : "" ?>">Add New Post</a>
                         </li>
                     </ul>
                 </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?= link_is_active(['users', 'users/new-user'], $group = true)['active'] ? "active" : ""  ?>">
+                <a class="nav-link" data-bs-toggle="collapse" href="#users" role="button" aria-expanded="<?= link_is_active(['users', 'users/new-user'], $group = true)['expand'] ? "true" : "false"  ?>" aria-controls="users">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Users</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse <?= link_is_active(['users', 'users/new-user'], $group = true)['show'] ? "show" : ""  ?>" id="users">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="<?= base_url('users') ?>" class="nav-link <?= link_is_active("users")['active'] ? "active" : "" ?>">All Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('users/new-user') ?>" class="nav-link <?= link_is_active("users/new-user")['active'] ? "active" : "" ?>">Add New User</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item <?= link_is_active("settings")['active'] ? "active" : "" ?>">
                 <a href="<?= base_url('settings') ?>" class="nav-link">
                     <i class="link-icon" data-feather="settings"></i>
                     <span class="link-title">Settings</span>

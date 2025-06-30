@@ -56,75 +56,136 @@
                 <div class="col-xl-6 col-12 grid-margin stretch-card">
                     <div class="row">
                         <div class="col-12 grid-margin stretch-card">
-                            <?= form_open_multipart('api/v2/blog/new', ['id' => ""]) ?>
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Update Profile Information</h5>
-                                    <div class="row g-3 g-md-4">
-                                        <div class="col-12 disabled">
-                                            <label for="" class="form-label">Username</label>
-                                            <input type="text" class="form-control mb-1" value="<?= $active_user['username'] ?>" disabled>
-                                            <span class="form-text">The username cannot be changed once set.</span>
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Basic Information</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="password-tab" data-bs-toggle="tab" data-bs-target="#password-tab-pane" type="button" role="tab" aria-controls="password-tab-pane" aria-selected="false">Update Password</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="email-tab" data-bs-toggle="tab" data-bs-target="#email-tab-pane" type="button" role="tab" aria-controls="email-tab-pane" aria-selected="false">Uopdate Email Address</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content py-3" id="myTabContent">
+                                        <!--
+                                        Module: Basic Details
+                                        Status: PENDING
+                                        Tasks:
+                                        - [ ] Update Basic Details
+                                        - [ ] Validations
+                                        -->
+                                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                            <?= form_open_multipart('api/v2/blog/new', ['id' => ""]) ?>
+                                            <div class="row g-3 g-md-4">
+                                                <div class="col-12 disabled">
+                                                    <label for="" class="form-label">Username</label>
+                                                    <input type="text" class="form-control mb-1" value="<?= $active_user['username'] ?>" disabled>
+                                                    <span class="form-text">The username cannot be changed once set.</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="" class="form-label">First Name (required)</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="" class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control mb-1">
+                                                    <span class="form-text">You can include middle name with your last name.</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Update Information</button>
+                                                    <button type="reset" class="btn btn-outline-secondary">Discard</button>
+                                                </div>
+                                            </div>
+                                            <?= form_close() ?>
                                         </div>
-                                        <div class="col-12">
-                                            <label for="" class="form-label">First Name (required)</label>
-                                            <input type="text" class="form-control">
+                                        <!--
+                                        Module:
+                                        Status: PENDING
+                                        Tasks:
+                                        - [ ] Update Password
+                                        - [ ] Validations: Confirm Password
+                                         -->
+                                        <div class="tab-pane fade" id="password-tab-pane" role="tabpanel" aria-labelledby="password-tab" tabindex="0">
+                                            <?= form_open_multipart('api/v2/blog/new', ['id' => ""]) ?>
+                                            <div class="row g-3 g-md-4">
+                                                <div class="col-12 disabled">
+                                                    <label for="" class="form-label">New Password</label>
+                                                    <input type="text" class="form-control" required>
+                                                </div>
+                                                <div class="col-12 disabled">
+                                                    <label for="" class="form-label">Confirm New Password</label>
+                                                    <input type="text" class="form-control" required>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Update Password</button>
+                                                    <button type="reset" class="btn btn-outline-secondary">Discard</button>
+                                                </div>
+                                            </div>
+                                            <?= form_close() ?>
                                         </div>
-                                        <div class="col-12">
-                                            <label for="" class="form-label">Last Name</label>
-                                            <input type="text" class="form-control mb-1">
-                                            <span class="form-text">You can include middle name with your last name.</span>
+                                        <!--
+                                        Module:
+                                        Status: PENDING
+                                        Tasks:
+                                        - [ ] Update Email Address
+                                        - [ ] Validations: Email Verify with OTP [Add View]
+                                         -->
+                                        <div class="tab-pane fade" id="email-tab-pane" role="tabpanel" aria-labelledby="email-tab" tabindex="0">
+                                            <?= form_open_multipart('api/v2/blog/new', ['id' => ""]) ?>
+                                            <div class="row g-3 g-md-4">
+                                                <div class="col-12">
+                                                    <label for="" class="form-label">New Email Address</label>
+                                                    <input type="text" class="form-control mb-1" required placeholder="Currently Active: <?= $active_user['email'] ?>">
+                                                    <span class="form-text">If you change this, an email will be sent at your new address to confirm it. <strong>The new address will not become active until confirmed.</strong></span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Update Information</button>
+                                                    <button type="reset" class="btn btn-outline-secondary">Discard</button>
+                                                </div>
+                                            </div>
+                                            <?= form_close() ?>
                                         </div>
-                                        <div class="col-12">
-                                            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Update Information</button>
-                                            <button type="reset" class="btn btn-outline-secondary">Discard</button>
+                                        <!--
+                                        Module:
+                                        Status: PENDING
+                                        Tasks:
+                                        - [ ] Update Notification Settings
+                                        - [ ] Validations
+                                         -->
+                                        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                                            <?= form_open_multipart('api/v2/blog/new', ['id' => ""]) ?>
+                                            <div class="row g-3 g-md-4">
+                                                <div class="col-12 disabled">
+                                                    <label for="" class="form-label">Username</label>
+                                                    <input type="text" class="form-control mb-1" value="<?= $active_user['username'] ?>" disabled>
+                                                    <span class="form-text">The username cannot be changed once set.</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="" class="form-label">First Name (required)</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="" class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control mb-1">
+                                                    <span class="form-text">You can include middle name with your last name.</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Update Information</button>
+                                                    <button type="reset" class="btn btn-outline-secondary">Discard</button>
+                                                </div>
+                                            </div>
+                                            <?= form_close() ?>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <?= form_close() ?>
-                        </div>
-                        <div class="col-lg-6 col-12 grid-margin">
-                            <?= form_open_multipart('api/v2/blog/new', ['id' => ""]) ?>
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Update Email</h5>
-                                    <div class="row g-3 g-md-4">
-                                        <div class="col-12">
-                                            <input type="text" class="form-control mb-1" required placeholder="Currently Active: <?= $active_user['email'] ?>">
-                                            <span class="form-text">If you change this, an email will be sent at your new address to confirm it. <strong>The new address will not become active until confirmed.</strong></span>
-                                        </div>
-                                        <div class="col-12">
-                                            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Update Information</button>
-                                            <button type="reset" class="btn btn-outline-secondary">Discard</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?= form_close() ?>
-                        </div>
-                        <div class="col-lg-6 col-12 grid-margin">
-                            <?= form_open_multipart('api/v2/blog/new', ['id' => ""]) ?>
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Update Password</h5>
-                                    <div class="row g-3 g-md-4">
-                                        <div class="col-12 disabled">
-                                            <label for="" class="form-label">New Password</label>
-                                            <input type="text" class="form-control" required>
-                                        </div>
-                                        <div class="col-12 disabled">
-                                            <label for="" class="form-label">Confirm New Password</label>
-                                            <input type="text" class="form-control" required>
-                                        </div>
-                                        <div class="col-12">
-                                            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Update Password</button>
-                                            <button type="reset" class="btn btn-outline-secondary">Discard</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?= form_close() ?>
                         </div>
                     </div>
                 </div>

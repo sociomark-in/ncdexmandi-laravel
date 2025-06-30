@@ -363,9 +363,7 @@
                                                                         <a
                                                                             href="{{ route('fpo_single', ['episode' => rand()]) }}">
                                                                             <h3 class="clipped-content line-1">
-                                                                                DD Kisan 22 December 2024: Transforming
-                                                                                Agriculture through the Digital Agriculture
-                                                                                Mission
+                                                                                Transforming Agriculture through the Digital Agriculture Mission
                                                                             </h3>
                                                                         </a>
                                                                     </div>
@@ -497,8 +495,7 @@
                                                     <div class="col-12">
                                                         <a href="{{ route('fpo_single', ['episode' => rand()]) }}">
                                                             <h3 class="clipped-content line-1">
-                                                                DD Kisan 22 December 2024: Transforming Agriculture through
-                                                                the Digital Agriculture Mission
+                                                                Transforming Agriculture through the Digital Agriculture Mission
                                                             </h3>
                                                         </a>
                                                     </div>
@@ -735,8 +732,11 @@
                         <div class="row g-2">
                             @for ($i = date('Y'); $i > 2000; $i--)
                                 <div class="col-xl-3 col-6">
-                                    <a href="">{{ $i }}</a>
+                                    <a href="">{{ $i }} - {{ $i - 5 }}</a>
                                 </div>
+                                @php
+                                    $i-= 5;
+                                @endphp
                             @endfor
                         </div>
                     </div>
