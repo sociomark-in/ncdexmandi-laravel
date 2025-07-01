@@ -102,8 +102,8 @@
             </li>
 
             <!-- FAQs -->
-            <li class="nav-item">
-                <a href="<?= base_url('faqs') ?>" class="nav-link <?= link_is_active()['active'] ?>">
+            <li class="nav-item <?= link_is_active("faqs")['active'] ? "active" : "" ?>">
+                <a href="<?= base_url('faqs') ?>" class="nav-link">
                     <i class="link-icon" data-feather="database"></i>
                     <span class="link-title">FAQs</span>
                 </a>
@@ -118,32 +118,32 @@
             </li>
 
             <li class="nav-item nav-category">Miscellaneous</li>
-            <li class="nav-item">
-                <a href="<?= base_url('') ?>" class="nav-link <?= link_is_active()['active'] ?>">
+            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
+                <a href="<?= base_url('') ?>" class="nav-link">
                     <i class="link-icon" data-feather="bookmark"></i>
                     <span class="link-title">FPOs</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="<?= base_url('') ?>" class="nav-link <?= link_is_active()['active'] ?>">
+            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
+                <a href="<?= base_url('') ?>" class="nav-link">
                     <i class="link-icon" data-feather="bookmark"></i>
                     <span class="link-title">Commodities</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="<?= base_url('') ?>" class="nav-link <?= link_is_active()['active'] ?>">
+            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
+                <a href="<?= base_url('') ?>" class="nav-link">
                     <i class="link-icon" data-feather="bookmark"></i>
                     <span class="link-title">Categories</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="<?= base_url('') ?>" class="nav-link <?= link_is_active()['active'] ?>">
+            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
+                <a href="<?= base_url('') ?>" class="nav-link">
                     <i class="link-icon" data-feather="bookmark"></i>
                     <span class="link-title">Tags</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="<?= base_url('') ?>" class="nav-link <?= link_is_active()['active'] ?>">
+            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
+                <a href="<?= base_url('') ?>" class="nav-link">
                     <i class="link-icon" data-feather="image"></i>
                     <span class="link-title">Media</span>
                 </a>

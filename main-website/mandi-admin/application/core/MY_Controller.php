@@ -41,4 +41,11 @@ class MY_Controller extends CI_Controller
 		$this->load->model('core/IPLocationModel');
 		return $this->IPLocationModel->get($this->IP);
 	}
+
+    public function api_new_post()
+    {
+        $this->request = $this->input->post();
+        echo "<pre>";
+        print_r($this->request);
+    }
 }

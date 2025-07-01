@@ -57,11 +57,10 @@ $route['logout'] = 'AuthController/logout';
 $route['api/(:any)/login'] = 'AuthController/api_login/$1';
 $route['api/(:any)/register'] = 'AuthController/api_register/$1';
 
-$route['api-event-register'] = 'EventsController/api_event_register';
-$route['event/(:any)/check-in/(:any)'] = 'EventsController/check_in_verify/$1/$2';
-
-
 $route['api/v2/blog/new'] = 'posts/BlogsController/api_new_post';
+$route['api/v2/episode/new'] = 'posts/EpisodesController/api_new_post';
+$route['api/v2/report/new'] = 'posts/ReportsController/api_new_post';
+$route['api/v2/faq/new'] = 'posts/FAQsController/api_new_post';
 
 
 $route['settings'] ="app/SettingsController";
@@ -82,6 +81,8 @@ $route['reports'] ="posts/ReportsController";
 $route['report/new-post'] ="posts/ReportsController/new_post";
 $route['report/post/(:any)'] ="posts/ReportsController/view_post/$1";
 $route['report/post/(:any)/edit'] ="posts/EpisodesController/edit_post/$1";
+
+$route['faqs'] ="posts/FAQsController";
 
 $route['events'] ="posts/EventsController";
 

@@ -24,14 +24,14 @@
             </div>
         </div>
         <div class="">
-            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Blog Post</button>
+            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Post</button>
             <button type="reset" class="btn btn-outline-secondary">Discard</button>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
             <div class="row">
-                <div class="col-xl-6 col-12 grid-margin stretch-card">
+                <div class="col-lg col-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
                             <div class="row g-3 g-md-4">
@@ -64,6 +64,35 @@
                                             <option value="<?= $i ?>">Select <?= $i ?></option>
                                         <?php endfor ?>
                                     </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-12 grid-margin">
+                    <div class="row">
+                        <div class="col-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-baseline mb-3">
+                                        <h6 class="card-title mb-0">Visibility</h6>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="status" value="2" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Draft
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="status" value="1" id="flexCheckChecked" checked>
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                                Published
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -108,11 +137,7 @@
         $('.dropify').dropify({
             error: {
                 'fileSize': 'The file size is too big ({{ value }} max).',
-                'minWidth': 'The image width is too small ({{ value }}}px min).',
-                'maxWidth': 'The image width is too big ({{ value }}}px max).',
-                'minHeight': 'The image height is too small ({{ value }}}px min).',
-                'maxHeight': 'The image height is too big ({{ value }}px max).',
-                'imageFormat': 'The image format is not allowed ({{ value }} only).'
+                'imageFormat': 'The file format is not allowed ({{ value }} only).'
             }
         });
 
