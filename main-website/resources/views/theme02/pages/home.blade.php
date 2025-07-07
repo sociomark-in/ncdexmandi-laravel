@@ -246,10 +246,10 @@
                                                 <div class="col-xl-4 col-lg-6 col-12" data-aos="fade-up"
                                                     data-aos-delay="{{ 100 * $i }}">
                                                     <a href="">
-                                                        <div class="data-card style-green">
+                                                        <div class="data-card">
                                                             <div class="card-body">
                                                                 <div class="text text-center">
-                                                                    <h3><span
+                                                                    <h3 class="text-maroon"><span
                                                                             class="counter-number">{{ $value }}</span>+
                                                                     </h3>
                                                                     <p>{{ $key }}</p>
@@ -262,10 +262,10 @@
                                                 <div class="col-xl-4 col-lg-6 col-12" data-aos="fade-up"
                                                     data-aos-delay="{{ 100 * $i }}">
                                                     <a href="">
-                                                        <div class="data-card style-yellow">
+                                                        <div class="data-card">
                                                             <div class="card-body">
                                                                 <div class="text text-center">
-                                                                    <h3><span
+                                                                    <h3 class="text-navy"><span
                                                                             class="counter-number">{{ $value }}</span>+
                                                                     </h3>
                                                                     <p>{{ $key }}</p>

@@ -152,6 +152,14 @@ table th {
   color: #19641e !important;
 }
 
+.text-maroon {
+  color: #8f322b !important;
+}
+
+.text-navy {
+  color: #004875 !important;
+}
+
 .text-clipped {
   display: -webkit-box;
   line-clamp: var(--clamp-lines);
@@ -482,6 +490,7 @@ table th {
 .card-stack.colored .data-card {
   border-radius: 0.75rem;
   overflow: hidden;
+  box-shadow: 0.2rem 0.2rem 0.5rem 0.25rem rgba(0, 0, 0, 0.05);
 }
 .card-stack.colored .data-card .card-body {
   padding: 2rem 1rem;

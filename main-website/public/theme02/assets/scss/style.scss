@@ -1,4 +1,6 @@
 $color-green: #19641e;
+$color-navy: #004875;
+$color-maroon: #8f322b;
 $color-green-rgb: 25, 100, 30;
 $color-yellow: #f7c35f;
 $color-black: #000;
@@ -159,6 +161,12 @@ table {
 .text-primary {
     color: $color-green !important;
 }
+.text-maroon {
+    color: $color-maroon !important;
+}
+.text-navy {
+    color: $color-navy !important;
+}
 
 .text-clipped {
     display: -webkit-box;
@@ -247,6 +255,7 @@ table {
         .data-card {
             border-radius: 0.75rem;
             overflow: hidden;
+            box-shadow: 0.2rem 0.2rem 0.5rem 0.25rem rgba($color-black, 0.05);
             .card-body {
                 padding: 2rem 1rem;
                 .text {

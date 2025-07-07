@@ -38,30 +38,25 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                         <div class="footer-description footer-social">
                             <h5>About NCDEX Mandi</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quae perferendis
-                                harum distinctio sed eveniet odio dicta facilis officiis placeat?</p>
-                            <ul class="nav gap-2">
-                                <li class="nav-item">
-                                    <a class="nav-link social-icon" href="#"><i
-                                            class="fa-brands fa-facebook-f"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link social-icon" href="#"><i
-                                            class="fa-brands fa-linkedin-in"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link social-icon" href="#"><i
-                                            class="fa-brands fa-youtube"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link social-icon" href="#"><i
-                                            class="fa-brands fa-x-twitter"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link social-icon" href="#"><i
-                                            class="fa-brands fa-instagram"></i></a>
-                                </li>
-                            </ul>
+                            <p>(15 - 20 Words)Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quae perferendis harum distinctio sed eveniet odio dicta?</p>
+                                <ul class="nav gap-2">
+                                    <li class="nav-item">
+                                        <a class="nav-link social-icon" href="https://www.facebook.com/TrustNCDEX/" target="_blank"><i
+                                                class="fa-brands fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link social-icon" href="https://www.linkedin.com/company/27547/" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link social-icon" href="https://www.youtube.com/user/trustncdex" target="_blank"><i
+                                                class="fa-brands fa-youtube"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link social-icon" href="https://x.com/ncdex" target="_blank"><i
+                                                class="fa-brands fa-x-twitter"></i></a>
+                                    </li>
+                                </ul>
                         </div>
                     </div>
                     <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-12">
