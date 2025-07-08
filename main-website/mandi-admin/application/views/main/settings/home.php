@@ -6,7 +6,7 @@
     </div>
 
     <!-- row -->
-    <?= form_open() ?>
+    <?= form_open("api/v2/settings/update") ?>
     <div class="row">
         <div class="col-xl-8 col-12 grid-margin stretch-card">
             <div class="card">
@@ -17,15 +17,15 @@
                     <div class="row g-3">
                         <div class="col-12">
                             <label for="" class="form-label">Website Title</label>
-                            <input type="text" class="form-control" value="NCDEX Mandi">
+                            <input type="text" name="website[title]" class="form-control" value="NCDEX Mandi">
                         </div>
                         <div class="col-12">
                             <label for="" class="form-label">Website URL</label>
-                            <input type="url" class="form-control" placeholder="https://www.website.com" value="https://www.ncdexmandi.com">
+                            <input type="url" name="website[url]" class="form-control" placeholder="https://www.website.com" value="https://www.ncdexmandi.com">
                         </div>
                         <div class="col-12">
                             <label for="" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" placeholder="info@mailaddress.com" value="info@ncdexmandi.com">
+                            <input type="email" name="website[contact_email]" class="form-control" placeholder="info@mailaddress.com" value="info@ncdexmandi.com">
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                     <div class="row g-3">
                         <div class="col-12">
                             <label for="" class="form-label">Installed Languages</label>
-                            <select name="lang" id="langSelect" multiple class="form-control langSelector">
+                            <select name="lang[]" id="langSelect" multiple class="form-control langSelector">
                                 <option value="" data-origin="en">Add Another Language</option>
                                 <option selected value="en-IN" data-origin="en">English</option>
                                 <option selected value="hi-IN" data-origin="hi">हिंदी</option>

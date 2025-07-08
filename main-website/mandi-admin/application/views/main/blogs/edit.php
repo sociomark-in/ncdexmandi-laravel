@@ -20,11 +20,11 @@
                 <a href="<?= base_url("blogs") ?>" class="nav-link"><i class="link-arrow" data-feather="chevron-left"></i></a>
             </div>
             <div>
-                <h4 class="mb-3 mb-md-0">New Blog Post</h4>
+                <h4 class="mb-3 mb-md-0">Edit Blog Post</h4>
             </div>
         </div>
         <div class="">
-            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Blog Post</button>
+            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Changes</button>
             <button type="reset" class="btn btn-outline-secondary">Discard</button>
         </div>
     </div>
@@ -192,7 +192,7 @@
             </div>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Blog Post</button>
+            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Changes</button>
             <button type="reset" class="btn btn-outline-secondary">Discard</button>
         </div>
     </div>
@@ -252,11 +252,6 @@
             },
             styleTags: ['p', 'h4', 'h5'],
         });
-
-        $('button[type=reset]').on('click', ()=>{
-            $('#inputPostContent').summernote('code', '');
-        })
-
         $('.dropify').dropify({
             error: {
                 'fileSize': 'The file size is too big ({{ value }} max).',

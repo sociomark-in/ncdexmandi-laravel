@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="" class="form-label">Password (required)</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" value="<?= generate_password(10) ?>" class="form-control">
                                 </div>
                             </div>
                         </div>

@@ -8,7 +8,7 @@ if (! function_exists('resize_image')) {
         $resized = imagescale($source, $w, $h);
         $newfilepath = $filepath . $name . "_" . $w . "w.jpg";
         if(imagejpeg($resized, $newfilepath)){
-            return true;
+            return $newfilepath;
         }else {
             return false;
         }

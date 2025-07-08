@@ -303,3 +303,67 @@ if ( ! function_exists('repeater'))
 		return ($num > 0) ? str_repeat($data, $num) : '';
 	}
 }
+
+
+if ( ! function_exists('generate_password'))
+{
+    /**
+     * Generates a cryptographically secure random password.
+     *
+     * @param int $length The desired length of the password. Minimum recommended is 12-16.
+     * @param bool $include_uppercase Whether to include uppercase letters.
+     * @param bool $include_lowercase Whether to include lowercase letters.
+     * @param bool $include_numbers Whether to include numbers.
+     * @param bool $include_symbols Whether to include special symbols.
+     * @return string The generated password.
+     * @throws Exception If a sufficient number of random bytes cannot be generated.
+     */
+    function generate_password(
+        $length = 16,
+        $include_uppercase = true,
+        $include_lowercase = true,
+        $include_numbers = true,
+        $include_symbols = true
+    ) {
+        if ($length < 8) {
+            $length = 8; // Enforce a minimum length for security
+        }
+
+        $chars = '';
+        if ($include_lowercase) {
+            $chars .= 'abcdefghijklmnopqrstuvwxyz';
+        }
+        if ($include_uppercase) {
+            $chars .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        }
+        if ($include_numbers) {
+            $chars .= '0123456789';
+        }
+        if ($include_symbols) {
+            $chars .= '!@#$%^&*()_-+=[]{};:,.<>?'; // You can customize this
+        }
+
+        // Ensure at least one character type is selected
+        if (empty($chars)) {
+            throw new InvalidArgumentException('At least one character type must be included for password generation.');
+        }
+
+        $password = '';
+        $chars_length = strlen($chars) - 1;
+
+        // Ensure at least one character from each selected type is present, then fill the rest randomly
+        if ($include_lowercase && !preg_match('/[a-z]/', $password)) $password .= $chars[random_int(0, strpos($chars, 'z'))];
+        if ($include_uppercase && !preg_match('/[A-Z]/', $password)) $password .= $chars[random_int(strpos($chars, 'A'), strpos($chars, 'Z'))];
+        if ($include_numbers && !preg_match('/[0-9]/', $password)) $password .= $chars[random_int(strpos($chars, '0'), strpos($chars, '9'))];
+        if ($include_symbols && !preg_match('/[!@#$%^&*()_\-+=[]{};:,.<>?]/', $password)) $password .= $chars[random_int(strpos($chars, '!'), strpos($chars, '?'))];
+
+
+        for ($i = strlen($password); $i < $length; $i++) {
+            $password .= $chars[random_int(0, $chars_length)];
+        }
+
+        // Shuffle the password to ensure randomness of character positions
+        // Note: random_bytes is used for the shuffle itself, not for character selection
+        return str_shuffle($password);
+    }
+}

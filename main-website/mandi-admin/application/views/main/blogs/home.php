@@ -4,7 +4,7 @@
             <h4 class="mb-3 mb-md-0">Blog Posts</h4>
         </div>
         <div class="">
-            <a href="<?= base_url('blogs/new-post') ?>" target="_blank" class="btn btn-icon-text btn-primary">
+            <a href="<?= base_url('blog/new-post') ?>" target="_blank" class="btn btn-icon-text btn-primary">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
                 Add New Post</a>
         </div>
@@ -24,18 +24,18 @@
                                 <div class="row g-2">
                                     <div class="col-lg-2 col-md-3 col-12">
                                         <select name="post_category" class="form-select" id="">
-                                            <option value="">Select Category</option>
-                                            <?php for ($i = 0; $i < 20; $i++): ?>
-                                                <option value="Option <?= $i ?>">Option <?= $i ?></option>
-                                            <?php endfor ?>
+                                            <option value="">Select a Category</option>
+                                            <?php foreach ($categories as $key => $category): ?>
+                                                <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
+                                            <?php endforeach ?>
                                         </select>
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-12">
-                                        <select name="post_tags" class="form-select" id="">
-                                            <option value="">Select Tags</option>
-                                            <?php for ($i = 0; $i < 20; $i++): ?>
-                                                <option value="Option <?= $i ?>">Option <?= $i ?></option>
-                                            <?php endfor ?>
+                                        <select name="post_tag" class="form-select" id="">
+                                            <option value="">Select A Tag</option>
+                                            <?php foreach ($tags as $key => $tag): ?>
+                                                <option value="<?= $tag['id'] ?>"><?= $tag['name'] ?></option>
+                                            <?php endforeach ?>
                                         </select>
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-12">
@@ -87,12 +87,12 @@
                                 <?php for ($i = 0; $i < 20; $i++) : ?>
                                     <tr>
                                         <td>
-                                            <a target="_blank" href="<?= base_url('blogs/post/' . $i . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="edit-2"></i></a>
+                                            <a target="_blank" href="<?= base_url('blog/post/' . $i . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="edit-2"></i></a>
                                             <button id="deleteButton<?= $i ?>" class="btn link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
                                                 <i class="link-icon px-1 mb-1" data-feather="trash-2"></i>
                                             </button>
                                         </td>
-                                        <td><a target="_blank" href="<?= base_url('blogs/post/' . $i . '?post_preview=true') ?>"><span class="blog-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, praesentium.</span><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a></td>
+                                        <td><a target="_blank" href="<?= base_url('blog/post/' . $i . '?post_preview=true') ?>"><span class="blog-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, praesentium.</span><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a></td>
                                         <td>
                                             <span class="badge">Released</span>
                                             <span class="badge">Released</span>

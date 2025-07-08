@@ -1,5 +1,5 @@
-<?php 
-
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
 class DocketController extends CI_Controller
 {
     public function make(){

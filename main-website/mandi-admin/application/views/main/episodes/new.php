@@ -13,18 +13,18 @@
 <link rel="stylesheet" href="<?= base_url("assets/css/") ?>dropify-custom.min.css">
 <link rel="stylesheet" href="<?= base_url("assets/css/") ?>select2-custom.min.css">
 <main class="page-content">
-    <?= form_open_multipart('api/v2/blog/new', ['id' => ""]) ?>
+    <?= form_open_multipart('api/v2/episode/new', ['id' => ""]) ?>
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
         <div class="d-flex gap-2">
             <div class="nav-item">
                 <a href="<?= base_url("blogs") ?>" class="nav-link"><i class="link-arrow" data-feather="chevron-left"></i></a>
             </div>
             <div>
-                <h4 class="mb-3 mb-md-0">New Blog Post</h4>
+                <h4 class="mb-3 mb-md-0">New Episode</h4>
             </div>
         </div>
         <div class="">
-            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Blog Post</button>
+            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Episode</button>
             <button type="reset" class="btn btn-outline-secondary">Discard</button>
         </div>
     </div>
@@ -37,6 +37,10 @@
                             <div class="mb-3">
                                 <label for="inputTitle" class="form-label">Post Title</label>
                                 <input type="text" name="post_title" class="form-control" maxlength="100" id="inputTitle">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputTitle" class="form-label">YouTube Video URL</label>
+                                <input type="url" name="post_video" class="form-control" maxlength="100" id="inputYouTube">
                             </div>
                             <div class="mb-3">
                                 <label for="inputPostContent" class="form-label">Post Contents</label>
@@ -120,7 +124,23 @@
                                 <h6 class="card-title mb-0">Featured Image</h6>
                             </div>
                             <div class="mb-3">
-                                <input type="file" name="post_image" class="dropify" data-default-file="" data-max-file-size="5M" data-allowed-file-extensions="jpg" />
+                                <img id="videoThumb" src="https://dummyimage.com/600x400&text=Updating the YouTube URL updates this Image" class="w-100" alt="">
+                                <script>
+                                    $("#inputYouTube").on('change', () => {
+                                        var urlVal = $("#inputYouTube");
+                                        var videoID = "";
+                                        if (urlVal.val() != "") {
+                                            videoID = urlVal.val().split('https://')[1].split('/')[1].split('?')[0];
+                                            if(videoID){
+                                                $("#videoThumb").attr('src', "https://i3.ytimg.com/vi/" + videoID + "/hqdefault.jpg");
+                                            } else {
+                                                $("#videoThumb").attr('src', "https://dummyimage.com/600x400&text=Invalid YouTube URL");
+                                            }
+                                        } else {
+                                            $("#videoThumb").attr('src', "https://dummyimage.com/600x400&text=Updating the YouTube URL updates this Image");
+                                        }
+                                    })
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -134,14 +154,28 @@
                             <div class="mb-3">
                                 <label for="inputBlogAuthor" class="form-label">Author</label>
                                 <select name="post_author" class="form-select" id="inputBlogAuthor">
-                                    <?php for ($i = 0; $i < 10; $i++) : ?>
-                                        <option value="<?= $i ?>">Select <?= $i ?></option>
-                                    <?php endfor ?>
+                                    <option value="">Select an Author</option>
+                                    <?php foreach ($authors as $key => $author): ?>
+                                        <?php if ($author['id'] == $active_user['id']) : ?>
+                                            <option selected value="<?= $author['id'] ?>"><?= $author['name'] ?></option>
+                                        <?php else: ?>
+                                            <option value="<?= $author['id'] ?>"><?= $author['name'] ?></option>
+                                        <?php endif ?>
+                                    <?php endforeach ?>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label for="blogCategorySelect" class="form-label">Blog Category</label>
                                 <select name="post_category" class="form-select" id="blogCategorySelect">
+                                    <option value="">Select a Category</option>
+                                    <?php foreach ($categories as $key => $category): ?>
+                                        <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputBlogFPO" class="form-label">Select an FPO</label>
+                                <select name="post_fpo" class="form-select" id="inputBlogFPO">
                                     <?php for ($i = 0; $i < 10; $i++) : ?>
                                         <option value="<?= $i ?>">Select <?= $i ?></option>
                                     <?php endfor ?>
@@ -149,11 +183,17 @@
                             </div>
                             <div class="mb-3">
                                 <label for="inputBlogTags" class="form-label">Tags</label>
-                                <select name="post_tags" class="form-select" id="inputBlogTags" multiple>
+                                <select name="post_tags[]" class="form-select" id="inputBlogTags" multiple>
                                     <?php for ($i = 0; $i < 10; $i++) : ?>
                                         <option value="<?= $i ?>">Select <?= $i ?></option>
                                     <?php endfor ?>
                                 </select>
+                                <script>
+                                    $('#inputBlogTags').select2({
+                                        tags: true, // Enables the tagging feature
+                                        tokenSeparators: [','] // Defines separators for new tags (comma and space)
+                                    });
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -213,7 +253,7 @@
                 ['view', ['fullscreen', 'codeview', 'help']]
             ]
         });
-        $('.dropify').dropify({
+        var drEvent = $('.dropify').dropify({
             error: {
                 'fileSize': 'The file size is too big ({{ value }} max).',
                 'minWidth': 'The image width is too small ({{ value }}}px min).',
@@ -223,7 +263,6 @@
                 'imageFormat': 'The image format is not allowed ({{ value }} only).'
             }
         });
-
         $("#inputPostLanguage").select2({
             templateSelection: (state) => {
                 if (!state.id) {

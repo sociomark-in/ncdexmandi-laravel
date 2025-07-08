@@ -18,9 +18,6 @@
 <!-- End custom js for this page -->
 
 <script>
-    $('main select.form-select').each((index, elem) => {
-        $(elem).select2();
-    })
     $('main input[data-type=date]').each((index, elem) => {
         $(elem).datepicker({
             changeMonth: true,

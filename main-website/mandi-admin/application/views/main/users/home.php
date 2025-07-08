@@ -80,30 +80,30 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php for ($i = 0; $i < 20; $i++) : ?>
+                                <?php foreach ($users as $key => $user) : ?>
                                     <tr>
                                         <td>
-                                            <a target="_blank" href="<?= base_url('blogs/post/' . $i . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="edit-2"></i></a>
-                                            <button id="deleteButton<?= $i ?>" class="btn link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
+                                            <a target="_blank" href="<?= base_url('user/profile/' . $user['id'] . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="edit-2"></i></a>
+                                            <button id="deleteButton<?= $user['id'] ?>" class="btn link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
                                                 <i class="link-icon px-1 mb-1" data-feather="trash-2"></i>
                                             </button>
-                                            <a target="_blank" href="<?= base_url('blogs/post/' . $i . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a>
+                                            <a target="_blank" href="<?= base_url('user/profile/' . $user['id'] . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a>
                                         </td>
-                                        <td><a target="_blank" href="<?= base_url('blogs/post/' . $i . '?post_preview=true') ?>">
+                                        <td><a target="_blank" href="<?= base_url('user/profile/' . $user['id'] . '?post_preview=true') ?>">
                                                 <div class="row g-2">
                                                     <div class="col-auto">
-                                                        <img class="" src="https://ui-avatars.com/api/?name=<?= $active_user['name'] ?>" alt="profile">
+                                                        <img class="" src="https://ui-avatars.com/api/?name=<?= $user['name'] ?>" alt="profile">
                                                     </div>
                                                     <div class="col">
-                                                        &nbsp;Lorem ipsum dolor sit.
+                                                        &nbsp;<?= $user['name'] ?>
                                                     </div>
                                                 </div>
                                             </a></td>
-                                        <td>Lorem ipsum dolor sit.</td>
-                                        <td><a target="_blank" href="mailto:">Lorem ipsum dolor sit.</a></td>
+                                        <td><?= $user['name'] ?></td>
+                                        <td><a target="_blank" href="mailto:<?= $user['email'] ?>"><?= $user['email'] ?></a></td>
                                         <td>
                                             <div class="d-flex gap-1">
-                                                <span class="badge">Admin</span>
+                                                <span class="badge"><?= $user['role']['name'] ?></span>
                                             </div>
                                         </td>
                                         <td>-</td>
@@ -117,7 +117,7 @@
                                             $("#deleteConfirmModal input[name=post_id]").val(<?= $i ?>)
                                         })
                                     </script>
-                                <?php endfor ?>
+                                <?php endforeach ?>
                             </tbody>
                         </table>
                         <script>
@@ -130,6 +130,27 @@
                             });
                         </script>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="deleteConfirmModalLabel">Confirm Delete</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure to delete this user?</p>
+                    <?= form_open() ?>
+                    <input type="hidden" name="post_id">
+                    <input type="hidden" name="redirect_url" value="<?= current_url() ?>">
+                    <?= form_close() ?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">Yes. delete it</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No, don't delete</button>
                 </div>
             </div>
         </div>

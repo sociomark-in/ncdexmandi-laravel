@@ -17,6 +17,10 @@ class UsersController extends My_Controller
     public function index()
     {
         $users = $this->UserModel->get();
+        for ($i=0; $i < count($users); $i++){
+            $users[$i]['role'] = $this->AccessModel->get(['id' => $users[$i]['role']],['id', 'name']);
+        }
+        $this->data['users'] = $users;
         $this->load->admin_dashboard('users/home', $this->data);
     }
 
