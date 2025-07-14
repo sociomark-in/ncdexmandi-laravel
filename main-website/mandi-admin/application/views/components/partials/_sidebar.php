@@ -102,11 +102,22 @@
             </li>
 
             <!-- FAQs -->
-            <li class="nav-item <?= link_is_active("faqs")['active'] ? "active" : "" ?>">
-                <a href="<?= base_url('faqs') ?>" class="nav-link">
+            <li class="nav-item <?= link_is_active(['faqs', 'faq/new-post'], $group = true)['active'] ? "active" : ""  ?>">
+                <a class="nav-link" data-bs-toggle="collapse" href="#faqs" role="button" aria-expanded="<?= link_is_active(['faqs', 'faq/new-post'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="reports">
                     <i class="link-icon" data-feather="database"></i>
                     <span class="link-title">FAQs</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
+                <div class="collapse <?= link_is_active(['faqs', 'faq/new-post'], $group = true)['show'] ? "show" : "" ?>" id="faqs">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="<?= base_url("faqs") ?>" class="nav-link <?= link_is_active('faqs')['active'] ? "active" : ""  ?>">All FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('faq/new-post') ?>" target="_blank" class="nav-link <?= link_is_active('faq/new-post')['active'] ? "active" : "" ?>">Add New Post</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
             <!-- All Comments -->

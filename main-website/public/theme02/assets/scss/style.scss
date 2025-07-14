@@ -393,15 +393,18 @@ header {
 }
 .swiper {
     .swiper-button-prev::after {
-        background-image: url("../icons/left.png");
+        background-image: url("../icons/faCaretLeft.png");
     }
     .swiper-button-next:after {
-        background-image: url("../icons/right.png");
+        background-image: url("../icons/faCaretRight.png");
     }
     .swiper-button-prev,
     .swiper-button-next {
         width: 2.5rem;
         height: 2.5rem;
+        &.swiper-button-disabled{
+            pointer-events: all;
+        }
     }
     .swiper-button-prev,
     .swiper-button-next {
@@ -537,6 +540,48 @@ section {
         border-radius: 50%;
         display: grid;
         place-items: center;
+    }
+}
+
+.youtube-card{
+    .thumb{
+        border: 0.2rem solid $color-green;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+    .content{
+        color: rgba($color-black, 0.5);
+        h5{
+            color: rgba($color-black, 0.8);
+        }
+        p{
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+    &:hover{
+        .content{
+            color: rgba($color-black, 0.7);
+            h5{
+                color: rgba($color-black, 1);
+            }
+        }
+    }
+    &.other{
+        .thumb{
+            border: none;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        .content{
+            h5{
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
+            p{
+                font-size: 0.9rem;
+            }
+        }
     }
 }
 

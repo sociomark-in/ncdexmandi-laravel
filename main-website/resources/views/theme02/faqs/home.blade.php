@@ -622,13 +622,13 @@
                                                 </div>
                                                 <div class="col-xl-4 col-12">
                                                     <div class="row g-3">
-                                                        <div class="col-12">
+                                                        <div class="col-12 d-none">
                                                             <h2 class="title-icon mb-3">
                                                                 <i class="fa-solid fa-filter icon icon-prepend"></i>
                                                                 Filter All FAQs
                                                             </h2>
                                                         </div>
-                                                        <div class="col-12">
+                                                        <div class="col-12 d-none">
                                                             <form action="" method="get">
                                                                 <div class="card">
                                                                     <div class="card-body">
@@ -695,7 +695,7 @@
                                                                         @csrf
                                                                         <div class="row g-2">
                                                                             <div class="col-12">
-                                                                                <textarea name="" id="" cols="30" rows="4" class="form-control"
+                                                                                <textarea name="" id="" cols="30" rows="10" class="form-control"
                                                                                     placeholder="Your Query: Maximum 100 Characters"></textarea>
                                                                             </div>
                                                                             <div class="col-12">

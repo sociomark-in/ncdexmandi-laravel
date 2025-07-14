@@ -42,28 +42,227 @@
 @endphp
 @section('content')
     <main>
-        <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light"
-            style="background-image: url(https://ncdexmandi.com/wp-content/themes/mandi/assets/desktop/images/homePageBg.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2">
-                        <div class="page-title mb-3 mb-lg-4">
-                            <h1>Kheti Ke Sikandar</h1>
+        <section class="nospacing">
+            <div class="">
+                <div class="row g-3 g-md-4">
+                    <div class="col-12">
+                        <div class="swiper bannerSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="" target="_blank" title="External Page Link, Opens in New Tab">
+                                        <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/webp">
+                                            <source media="(min-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/jpeg">
+                                            <source media="(max-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/webp">
+                                            <source media="(max-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/jpeg">
+                                            <img src="https://placehold.co/1600x500"
+                                                alt="A placeholder image" class="w-100"
+                                                onerror="this.onerror=null;this.src='https://placehold.co/1600x500';">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" target="_blank" title="External Page Link, Opens in New Tab">
+                                        <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/webp">
+                                            <source media="(min-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/jpeg">
+                                            <source media="(max-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/webp">
+                                            <source media="(max-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/jpeg">
+                                            <img src="https://placehold.co/1600x500"
+                                                alt="A placeholder image" class="w-100"
+                                                onerror="this.onerror=null;this.src='https://placehold.co/1900x700';">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" target="_blank" title="External Page Link, Opens in New Tab">
+                                        <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/webp">
+                                            <source media="(min-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/jpeg">
+                                            <source media="(max-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/webp">
+                                            <source media="(max-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/jpeg">
+                                            <img src="https://placehold.co/1600x500"
+                                                alt="A placeholder image" class="w-100"
+                                                onerror="this.onerror=null;this.src='https://placehold.co/1900x700';">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="" target="_blank" title="External Page Link, Opens in New Tab">
+                                        <picture>
+                                            <source media="(min-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/webp">
+                                            <source media="(min-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/jpeg">
+                                            <source media="(max-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/webp">
+                                            <source media="(max-width: 1200px)"
+                                                srcset="https://placehold.co/1600x500"
+                                                type="image/jpeg">
+                                            <img src="https://placehold.co/1600x500"
+                                                alt="A placeholder image" class="w-100"
+                                                onerror="this.onerror=null;this.src='https://placehold.co/1900x700';">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
-                        <nav aria-label="">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="{{ route('main_home') }}"><i
-                                            class="fas fa-home"></i>&nbsp;&nbsp;Home</a></li>
-                                <li class="breadcrumb-item active">Kheti Ke Sikandar FPOs</li>
-                            </ol>
-                        </nav>
+                        <script>
+                            new Swiper('.bannerSwiper', {
+                                loop: true,
+                                autoplay: {
+                                    enabled: true,
+                                    delay: 5000
+                                },
+                                navigation: {
+                                    nextEl: ".swiper-button-next",
+                                    prevEl: ".swiper-button-prev",
+                                },
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <section class="default-spacing pb-0">
             <div class="container">
                 <div class="mb-3 mb-md-4">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <nav aria-label="">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="{{ route('main_home') }}">Home</a></li>
+                                    <li class="breadcrumb-item active">Kheti Ke Sikandar</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-12">
+                            <div class="text-content">
+                                <h1 class="title-icon">
+                                    <i class="fa-solid fa-question icon icon-prepend"></i>
+                                    Kheti Ke Sikandar
+                                </h1>
+                                <p>
+                                    Description in minimum 50 words so as to explain what is Kheti Ke Sikandar & FPO of the
+                                    Month. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
+                                    molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan,
+                                    risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget
+                                    condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
+                                    torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim
+                                    egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl,
+                                    eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet
+                                    lacinia. Aliquam in elementum tellus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="default-spacing pt-md-unset pt-5 bg-secondary-70 bg-watermark">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="text-content">
+                            <h2 class="title-icon">
+                                <i class="fa-solid fa-star icon icon-prepend"></i>
+                                FPO of The Month Archives
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="swiper featuredFPOSwiper">
+                            <div class="swiper-wrapper">
+                                @for ($i = 0; $i < 3; $i++)
+                                    <div class="swiper-slide">
+                                        <a href="" class="d-block text-black">
+                                            <div class="youtube-card">
+                                                <div class="row g-3">
+                                                    <div class="col-12">
+                                                        <div class="thumb">
+                                                            <img src="https://placehold.co/600x400" class="w-100"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="content">
+                                                            <h5 class="clipped-content line-2">Lorem ipsum dolor sit amet
+                                                                consectetur adipisicing elit.
+                                                                Perferendis eaque unde tenetur!</h5>
+                                                            <p class="clipped-content line-2">Lorem ipsum dolor sit amet
+                                                                consectetur adipisicing elit.
+                                                                Ratione praesentium deleniti pariatur.</p>
+                                                            <div class="row justify-content-between">
+                                                                <div class="col-auto">
+                                                                    <p>
+                                                                        <i class="fa-solid fa-location-dot"></i>&nbsp;<?= date('F, Y') ?>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <p>
+                                                                        <i class="fa-solid fa-calendar-days"></i>&nbsp;<?= "Location" ?>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                @endfor
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        @push('scripts')
+                            <script>
+                                new Swiper('.featuredFPOSwiper', {
+                                    slidesPerView: 2.8,
+                                    spaceBetween: 40,
+                                    navigation: {
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                    },
+                                });
+                            </script>
+                        @endpush
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="default-spacing pb-0">
+            <div class="container">
+                <div class="">
                     <div class="row g-3">
                         @if (is_null($state_filter))
                             <div class="col-12">
@@ -190,19 +389,12 @@
                             </div>
                         @endif
                         <div class="col-12">
-                            <nav aria-label="">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ route('main_home') }}">Home</a></li>
-                                    <li class="breadcrumb-item active">Kheti Ke Sikandar</li>
-                                </ol>
-                            </nav>
-                        </div>
-                        <div class="col-12">
                             <div class="card">
                                 <div class="card-body bg-light">
                                     <form action="" method="get">
                                         <div class="row justify-content-between">
-                                            <div class="col-xl col-lg-4"><input type="text" placeholder="Search All Episodes by Title" class="form-control"></div>
+                                            <div class="col-xl col-lg-4"><input type="text"
+                                                    placeholder="Search All Episodes by Title" class="form-control"></div>
                                             <div class="col-xl-2">
                                                 <select name="" id="" class="form-select">
                                                     <option value="">Select A Comodity</option>
@@ -225,7 +417,7 @@
                         </div>
                         <div class="col-12 d-none">
                             <div class="row justify-content-between">
-                                <div class="col-lg-auto col-12">
+                                <div class="col-12">
                                     <p class="mb-0">Find FPOs in:</p>
                                     <button class="btn btn-transparent btn-icon px-0" data-bs-toggle="modal"
                                         data-bs-target="#searchPageModal">
@@ -235,231 +427,15 @@
                                         </h3>
                                     </button>
                                 </div>
-                                <div class="col-lg-auto">
-                                    <div class="dropdown dropdown-hover position-static">
-                                        <a data-bs-dropdown-init class="nav-link dropdown-toggle" href="#"
-                                            id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            Mega menu
-                                        </a>
-                                        <!-- Dropdown menu -->
-                                        <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown"
-                                            style="border-top-left-radius: 0;
-                                                          border-top-right-radius: 0;
-                                                        ">
-
-                                            <div class="container">
-                                                <div class="row my-4">
-                                                    <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                                                        <div class="list-group list-group-flush">
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Lorem
-                                                                ipsum</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Dolor
-                                                                sit</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Amet
-                                                                consectetur</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Cras justo
-                                                                odio</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Adipisicing
-                                                                elit</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                                                        <div class="list-group list-group-flush">
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Explicabo
-                                                                voluptas</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Perspiciatis
-                                                                quo</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Cras justo
-                                                                odio</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Laudantium
-                                                                maiores</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Provident
-                                                                dolor</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
-                                                        <div class="list-group list-group-flush">
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Iste
-                                                                quaerato</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Cras justo
-                                                                odio</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Est iure</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Praesentium</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Laboriosam</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-3">
-                                                        <div class="list-group list-group-flush">
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Cras justo
-                                                                odio</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Saepe</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Vel
-                                                                alias</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Sunt
-                                                                doloribus</a>
-                                                            <a href=""
-                                                                class="list-group-item list-group-item-action">Cum
-                                                                dolores</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="text-content">
-                                <h2 class="title-icon">
-                                    <i class="fa-solid fa-star icon icon-prepend"></i>
-                                    FPO of The Month
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="swiper featuredFPOSwiper">
-                                <div class="swiper-wrapper">
-                                    @for ($i = 0; $i < 1; $i++)
-                                        <div class="swiper-slide">
-                                            <div class="event-style-two">
-                                                <div class="row">
-                                                    <div class="col-xl-4 col-lg-6 col-12">
-                                                        <div class="thumb">
-                                                            <a href="{{ route('fpo_single', ['episode' => rand()]) }}"><img
-                                                                    src="https://i3.ytimg.com/vi/QOj9Bx7SrkI/sddefault.jpg"
-                                                                    alt="Image Not Found" class="w-100"></a>
-                                                            <div class="date">
-                                                                <strong>22</strong>
-                                                                <span>December 2024</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-8 col-lg-6 col-12">
-                                                        <div class="event-details">
-                                                            <div class="py-0 py-md-4">
-                                                                <div class="row g-3">
-                                                                    <div class="col-12">
-                                                                        <a
-                                                                            href="{{ route('fpo_single', ['episode' => rand()]) }}">
-                                                                            <h3 class="clipped-content line-1">
-                                                                                Transforming Agriculture through the Digital Agriculture Mission
-                                                                            </h3>
-                                                                        </a>
-                                                                    </div>
-                                                                    <div class="col-lg-6">
-                                                                        <table class="table table-sm table-striped">
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <th>Name of FPO</th>
-                                                                                    <td class="clipped-content line-1">
-                                                                                        Lorem ipsum
-                                                                                        dolor, sit amet consectetur
-                                                                                        adipisicing elit.
-                                                                                        Officiis, molestiae?</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Establishment</th>
-                                                                                    <td>{{ date('F j, Y') }}</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Turnover</th>
-                                                                                    <td>300B+</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Commodities</th>
-                                                                                    <td>300B+</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Members</th>
-                                                                                    <td>300B+</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Locations</th>
-                                                                                    <td>300</td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </div>
-                                                                    <div class="col-lg-6 col-12">
-                                                                        <p class="clipped-content line-4">
-                                                                            The Digital Agriculture Mission of the
-                                                                            Government of India is a new technological
-                                                                            initiative to bring about a transformation in
-                                                                            the agriculture sector. How are farmers getting
-                                                                            technological help through this mission? Watch
-                                                                            this special report of Mandi.com
-                                                                        </p>
-                                                                        <ul
-                                                                            class="nav social-share align-items-center gap-2">
-                                                                            <li class="nav-item me-3">Share:</li>
-                                                                            <li class="nav-item">
-                                                                                <a class="nav-link social-icon"
-                                                                                    href="#"><i
-                                                                                        class="fa-brands fa-facebook-f"></i></a>
-                                                                            </li>
-                                                                            <li class="nav-item">
-                                                                                <a class="nav-link social-icon"
-                                                                                    href="#"><i
-                                                                                        class="fa-brands fa-linkedin-in"></i></a>
-                                                                            </li>
-                                                                            <li class="nav-item">
-                                                                                <a class="nav-link social-icon"
-                                                                                    href="#"><i
-                                                                                        class="fa-brands fa-whatsapp"></i></a>
-                                                                            </li>
-                                                                            <li class="nav-item">
-                                                                                <a class="nav-link social-icon"
-                                                                                    href="#"><i
-                                                                                        class="fa-brands fa-instagram"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endfor
-                                </div>
-                            </div>
-                            @push('scripts')
-                                <script>
-                                    new Swiper('.featuredFPOSwiper', {
-                                        // loop: true,
-                                        spaceBetween: 10,
-                                        pagination: {
-                                            el: ".swiper-pagination",
-                                        },
-                                    });
-                                </script>
-                            @endpush
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
+        <section class="default-spacing pb-0">
+            <div class="container">
                 <div class="row mb-3 mb-md-4">
                     <div class="col-xl">
                         <div class="">
@@ -472,104 +448,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="row g-3 mb-3">
-                    @for ($i = 0; $i < 1; $i++)
-                        <div class="col-12">
-                            <div class="event-style-two">
-                                <div class="row">
-                                    <div class="col-xl-4 col-lg-6 col-12">
+                <div class="row g-3 g-md-4">
+                    @for ($i = 0; $i < 12; $i++)
+                    <div class="col-xl-6 col-12">
+                        <a href="" class="d-block text-black">
+                            <div class="youtube-card">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-xl-5 col-12">
                                         <div class="thumb">
-                                            <a href="{{ route('fpo_single', ['episode' => rand()]) }}"><img
-                                                    src="https://i3.ytimg.com/vi/QOj9Bx7SrkI/sddefault.jpg"
-                                                    alt="Image Not Found" class="w-100"></a>
-                                            <div class="date">
-                                                <strong>22</strong>
-                                                <span>December 2024</span>
-                                            </div>
+                                            <img src="https://placehold.co/600x400" class="w-100"
+                                                alt="">
                                         </div>
                                     </div>
-                                    <div class="col-xl-8 col-lg-6 col-12">
-                                        <div class="event-details">
-                                            <div class="py-0 py-md-4">
-                                                <div class="row g-3">
-                                                    <div class="col-12">
-                                                        <a href="{{ route('fpo_single', ['episode' => rand()]) }}">
-                                                            <h3 class="clipped-content line-1">
-                                                                Transforming Agriculture through the Digital Agriculture Mission
-                                                            </h3>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <table class="table table-sm table-striped">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <th>Name of FPO</th>
-                                                                    <td class="clipped-content line-1">Lorem ipsum
-                                                                        dolor, sit amet consectetur adipisicing elit.
-                                                                        Officiis, molestiae?</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>Establishment</th>
-                                                                    <td>{{ date('F j, Y') }}</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>Turnover</th>
-                                                                    <td>300B+</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>Commodities</th>
-                                                                    <td>300B+</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>Members</th>
-                                                                    <td>300B+</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>Locations</th>
-                                                                    <td>300</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <div class="col-lg-6 col-12">
-                                                        <p class="clipped-content line-4">
-                                                            The Digital Agriculture Mission of the Government of India is a
-                                                            new technological initiative to bring about a transformation in
-                                                            the agriculture sector. How are farmers getting technological
-                                                            help through this mission? Watch this special report of
-                                                            Mandi.com
-                                                        </p>
-                                                        <ul class="nav social-share align-items-center gap-2">
-                                                            <li class="nav-item me-3">Share:</li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link social-icon" href="#"><i
-                                                                        class="fa-brands fa-facebook-f"></i></a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link social-icon" href="#"><i
-                                                                        class="fa-brands fa-linkedin-in"></i></a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link social-icon" href="#"><i
-                                                                        class="fa-brands fa-whatsapp"></i></a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link social-icon" href="#"><i
-                                                                        class="fa-brands fa-instagram"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                    <div class="col-lg col-12">
+                                        <div class="content">
+                                            <h5 class="clipped-content line-2">Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Perferendis eaque unde tenetur!</h5>
+                                            <p class="clipped-content line-2">Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Ratione praesentium deleniti pariatur.</p>
+                                            <div class="row justify-content-between">
+                                                <div class="col-auto">
+                                                    <p>
+                                                        <i class="fa-solid fa-location-dot"></i>&nbsp;<?= date('F, Y') ?>
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <p>
+                                                        <i class="fa-solid fa-calendar-days"></i>&nbsp;<?= "Location" ?>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                    </div>
                     @endfor
-                </div>
-                <div class="">
-                    <hr>
                 </div>
             </div>
         </section>
@@ -724,7 +641,7 @@
                         <div class="text-content">
                             <h2 class="title-icon">
                                 <i class="fa-solid fa-clock-rotate-left icon icon-prepend"></i>
-                                Past Episodes
+                                Episodes Archive
                             </h2>
                         </div>
                     </div>
@@ -735,7 +652,7 @@
                                     <a href="">{{ $i }} - {{ $i - 5 }}</a>
                                 </div>
                                 @php
-                                    $i-= 5;
+                                    $i -= 5;
                                 @endphp
                             @endfor
                         </div>

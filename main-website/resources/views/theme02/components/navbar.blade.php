@@ -24,12 +24,12 @@
             <div class="collapse navbar-collapse justify-content-between flex-row-reverse ms-0 ms-xl-5 mt-3 mt-xl-0"
                 id="navbarNavDropdown">
                 <ul class="navbar-nav gap-2">
-                    <li class="d-none">
+                    <li class="">
                         <div id="google_translate_element"></div>
                         <script type="text/javascript">
                             function googleTranslateElementInit() {
                                 new google.translate.TranslateElement({
-                                    pageLanguage: 'en',
+                                    pageLanguage: 'mr',
                                     includedLanguages: 'en,mr,hi,gu',
                                 }, 'google_translate_element');
                             }

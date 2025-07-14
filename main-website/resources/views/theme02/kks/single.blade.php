@@ -43,11 +43,6 @@
     <main>
         <section class="default-spacing pb-0">
             <div class="container">
-                <div class="row mb-4 justify-content-end">
-                    <div class="col-auto">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#contactPersonModal" class="btn btn-secondary btn-icon">NCDEX Contact Person Details&nbsp;<i class="fa-solid fa-arrow-right icon-append"></i></a>
-                    </div>
-                </div>
                 <div class="event-style-two">
                     <div class="row justify-content-center g-3 g-md-4">
                         <div class="col-12">
@@ -56,7 +51,7 @@
                                     <a href=""><i class="fa-regular fa-user"></i>&nbsp;&nbsp;Lorem, ipsum dolor.</a>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;{{ date("F j, Y") }}
+                                    <i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;{{ date('F j, Y') }}
                                 </div>
                             </div>
                         </div>
@@ -85,6 +80,11 @@
                                             class="fa-brands fa-instagram"></i></a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#contactPersonModal"
+                                class="btn btn-secondary btn-icon">NCDEX Contact Person Details&nbsp;<i
+                                    class="fa-solid fa-arrow-right icon-append"></i></a>
                         </div>
                         <div class="col-lg-6 col-12">
                             <p>
@@ -189,24 +189,26 @@
                 </div>
             </div>
         </section>
-        <div class="modal fade" id="contactPersonModal" tabindex="-1" aria-labelledby="contactPersonModalLabel" aria-hidden="true">
+        <div class="modal fade" id="contactPersonModal" tabindex="-1" aria-labelledby="contactPersonModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="contactPersonModalLabel">NCDEX Contact Persoin for [FPO]</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="contactPersonModalLabel">NCDEX Contact Persoin for [FPO]</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Contact Details:</strong></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi error quos quasi reprehenderit
+                            fugiat iusto, porro tenetur maxime laudantium unde.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  <p><strong>Contact Details:</strong></p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi error quos quasi reprehenderit fugiat iusto, porro tenetur maxime laudantium unde.</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
             </div>
-          </div>
+        </div>
         <section class="default-spacing pb-0">
             <div class="container">
                 <div class="row">
@@ -227,7 +229,8 @@
                                             <a href="https://placehold.co/1500x1000/png" class="d-block rounded-overflow">
                                                 <picture>
                                                     <source srcset="https://placehold.co/300x150/png" type="image/png">
-                                                    <img src="https://placehold.co/300x150/png" alt="" class="w-100">
+                                                    <img src="https://placehold.co/300x150/png" alt=""
+                                                        class="w-100">
                                                 </picture>
                                             </a>
                                         </div>
@@ -249,7 +252,7 @@
                         <div class="text-content">
                             <h2 class="title-icon">
                                 <i class="fa-solid fa-star icon icon-prepend"></i>
-                                View Similar FPOs
+                                View Other FPOs of the Month
                             </h2>
                         </div>
                     </div>
@@ -258,118 +261,54 @@
                             <div class="swiper-wrapper">
                                 @for ($i = 0; $i < 10; $i++)
                                     <div class="swiper-slide">
-                                        <div class="event-style-two">
-                                            <div class="row">
-                                                <div class="col-xl-4 col-lg-6 col-12">
-                                                    <div class="thumb">
-                                                        <a href="{{ route('fpo_single', ['episode' => rand()]) }}"><img
-                                                                src="https://i3.ytimg.com/vi/QOj9Bx7SrkI/sddefault.jpg"
-                                                                alt="Image Not Found" class="w-100"></a>
-                                                        <div class="date">
-                                                            <strong>22</strong>
-                                                            <span>December 2024</span>
+                                        <a href="" class="d-block text-black">
+                                            <div class="youtube-card other">
+                                                <div class="row g-2">
+                                                    <div class="col-12">
+                                                        <div class="thumb">
+                                                            <img src="https://placehold.co/600x400" class="w-100"
+                                                                alt="">
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-xl-8 col-lg-6 col-12">
-                                                    <div class="event-details">
-                                                        <div class="py-0 py-md-4">
-                                                            <div class="row g-3">
-                                                                <div class="col-12">
-                                                                    <a
-                                                                        href="{{ route('fpo_single', ['episode' => rand()]) }}">
-                                                                        <h3 class="clipped-content line-1">
-                                                                            DD Kisan 22 December 2024: Transforming
-                                                                            Agriculture
-                                                                            through the Digital Agriculture Mission
-                                                                        </h3>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="col-lg-6">
-                                                                    <table class="table table-sm table-striped">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <th>Name of FPO</th>
-                                                                                <td class="clipped-content line-1">Lorem
-                                                                                    ipsum
-                                                                                    dolor, sit amet consectetur adipisicing
-                                                                                    elit.
-                                                                                    Officiis, molestiae?</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <th>Establishment</th>
-                                                                                <td>{{ date('F j, Y') }}</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <th>Turnover</th>
-                                                                                <td>300B+</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <th>Commodities</th>
-                                                                                <td>300B+</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <th>Members</th>
-                                                                                <td>300B+</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <th>Locations</th>
-                                                                                <td>300</td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                                <div class="col-lg-6 col-12">
-                                                                    <p class="clipped-content line-4">
-                                                                        The Digital Agriculture Mission of the Government of
-                                                                        India is a new technological initiative to bring
-                                                                        about a
-                                                                        transformation in the agriculture sector. How are
-                                                                        farmers getting technological help through this
-                                                                        mission?
-                                                                        Watch this special report of Mandi.com
+                                                    <div class="col-12">
+                                                        <div class="content">
+                                                            <h5 class="clipped-content line-3">Lorem ipsum dolor sit amet
+                                                                consectetur adipisicing elit. Perferendis eaque unde
+                                                                tenetur!</h5>
+                                                            <div class="row justify-content-between">
+                                                                <div class="col-auto">
+                                                                    <p>
+                                                                        <i
+                                                                            class="fa-solid fa-location-dot"></i>&nbsp;<?= date('F, Y') ?>
                                                                     </p>
-                                                                    <ul class="nav social-share align-items-center gap-2">
-                                                                        <li class="nav-item me-3">Share:</li>
-                                                                        <li class="nav-item">
-                                                                            <a class="nav-link social-icon"
-                                                                                href="#"><i
-                                                                                    class="fa-brands fa-facebook-f"></i></a>
-                                                                        </li>
-                                                                        <li class="nav-item">
-                                                                            <a class="nav-link social-icon"
-                                                                                href="#"><i
-                                                                                    class="fa-brands fa-linkedin-in"></i></a>
-                                                                        </li>
-                                                                        <li class="nav-item">
-                                                                            <a class="nav-link social-icon"
-                                                                                href="#"><i
-                                                                                    class="fa-brands fa-whatsapp"></i></a>
-                                                                        </li>
-                                                                        <li class="nav-item">
-                                                                            <a class="nav-link social-icon"
-                                                                                href="#"><i
-                                                                                    class="fa-brands fa-instagram"></i></a>
-                                                                        </li>
-                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <p>
+                                                                        <i
+                                                                            class="fa-solid fa-calendar-days"></i>&nbsp;<?= 'Location' ?>
+                                                                    </p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 @endfor
                             </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                         @push('scripts')
                             <script>
                                 new Swiper('.featuredFPOSwiper', {
                                     loop: true,
-                                    spaceBetween: 10,
-                                    pagination: {
-                                        el: ".swiper-pagination",
+                                    slidesPerView: 4.5,
+                                    spaceBetween: 30,
+                                    navigation: {
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
                                     },
                                 });
                             </script>

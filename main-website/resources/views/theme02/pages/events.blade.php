@@ -292,7 +292,7 @@
             </div>
         </section>
 
-        <section class="default-spacing pt-md-unset pt-5 bg-secondary-70">
+        <section class="default-spacing pt-md-unset pt-5 bg-secondary-70 bg-watermark">
             <div class="container">
                 <div class="row g-3 flex-row-reverse">
                     <div class="col-12">

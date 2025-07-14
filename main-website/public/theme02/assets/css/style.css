@@ -609,15 +609,19 @@ header nav.navbar .navbar-nav .nav-item .nav-link.active {
 }
 
 .swiper .swiper-button-prev::after {
-  background-image: url("../icons/left.png");
+  background-image: url("../icons/faCaretLeft.png");
 }
 .swiper .swiper-button-next:after {
-  background-image: url("../icons/right.png");
+  background-image: url("../icons/faCaretRight.png");
 }
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
   width: 2.5rem;
   height: 2.5rem;
+}
+.swiper .swiper-button-prev.swiper-button-disabled,
+.swiper .swiper-button-next.swiper-button-disabled {
+  pointer-events: all;
 }
 .swiper .swiper-button-prev::after,
 .swiper .swiper-button-next::after {
@@ -744,6 +748,40 @@ section .section-title::before {
   border-radius: 50%;
   display: grid;
   place-items: center;
+}
+
+.youtube-card .thumb {
+  border: 0.2rem solid #19641e;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.youtube-card .content {
+  color: rgba(0, 0, 0, 0.5);
+}
+.youtube-card .content h5 {
+  color: rgba(0, 0, 0, 0.8);
+}
+.youtube-card .content p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.youtube-card:hover .content {
+  color: rgba(0, 0, 0, 0.7);
+}
+.youtube-card:hover .content h5 {
+  color: black;
+}
+.youtube-card.other .thumb {
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.youtube-card.other .content h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.youtube-card.other .content p {
+  font-size: 0.9rem;
 }
 
 .event-style-one a h3,
