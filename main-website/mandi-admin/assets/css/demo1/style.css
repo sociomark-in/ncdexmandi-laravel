@@ -4536,8 +4536,8 @@ div.tox .btn-group-vertical > .btn-group:not(:first-child) > .tox-button,
   --bs-accordion-btn-focus-box-shadow: none;
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
-  --bs-accordion-active-color: #5b66e6;
-  --bs-accordion-active-bg: #f0f1ff;
+  --bs-accordion-active-color: #106c97;
+  --bs-accordion-active-bg: #e2f6ff;
 }
 
 .accordion-button {
@@ -21698,8 +21698,8 @@ div.apexcharts-canvas .apexcharts-yaxistooltip-right:after {
 }
 div.apexcharts-canvas .apexcharts-tooltip-marker {
   /*rtl:raw:
-  margin-right: 0; 
-  margin-left: 10px; 
+  margin-right: 0;
+  margin-left: 10px;
   */
 }
 
@@ -22410,7 +22410,7 @@ div.tox .tox-dialog__body {
 
 .wizard > .actions {
   /*rtl:raw:
-    text-align: left; 
+    text-align: left;
   */
 }
 

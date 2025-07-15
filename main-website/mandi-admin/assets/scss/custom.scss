@@ -134,6 +134,22 @@ table {
     }
 }
 
+.clipped-content {
+    overflow: hidden; // Keep this for overall clipping
+    // text-overflow: ellipsis; // This is not needed here and can cause issues
+
+    // Add these for multi-line ellipsis to work with line-clamp
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+
+    @for $i from 1 through 5 {
+        &.line-#{$i} {
+            -webkit-line-clamp: $i;
+            line-clamp: $i;
+        }
+    }
+}
+
 .btn {
     border-radius: 0;
     padding: 0.5rem 1rem;

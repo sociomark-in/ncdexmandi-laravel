@@ -20,4 +20,20 @@ class TagsModel extends CI_Model
         $result = $this->db->get($this->table['tags'])->result_array();
         return json_encode($result);
     }
+
+    public function insert($data){
+        $this->db->insert($this->table['tags'], $data);
+        $insert_id = $this->db->insert_id();
+
+        if ($this->db->trans_status() === FALSE)
+        {
+            $this->db->trans_rollback();
+            return FALSE;
+        }
+        else
+        {
+            $this->db->trans_commit(); 
+            return $insert_id;
+        }
+    }
 }

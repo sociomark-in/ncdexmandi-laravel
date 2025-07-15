@@ -8,6 +8,8 @@ class MY_Controller extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+        $this->load->model('UserModel');
+
 		$this->COMPANY_NAME = "Sociomark";
 		$this->IP = "114.79.151.88";
 		if (!is_https()) {
@@ -47,5 +49,19 @@ class MY_Controller extends CI_Controller
         $this->request = $this->input->post();
         echo "<pre>";
         print_r($this->request);
+    }
+
+    public function add_missing_tags($tags_array){
+        $this->load->model('content/TagsModel');
+        $final = [];
+        foreach ($tags_array as $key => $tag) {
+            if(is_numeric($tag)){
+                array_push($final, $tag);
+            }else {
+                $index = $this->TagsModel->insert(['name'=> $tag, 'slug' => slugify($tag)]);
+                array_push($final, $index);
+            }
+        }
+        return $final;
     }
 }

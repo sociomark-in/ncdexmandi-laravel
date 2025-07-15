@@ -90,6 +90,32 @@ table a {
   color: #1c1c1c;
 }
 
+.clipped-content {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.clipped-content.line-1 {
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+.clipped-content.line-2 {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+.clipped-content.line-3 {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+.clipped-content.line-4 {
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+.clipped-content.line-5 {
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+}
+
 .btn {
   border-radius: 0;
   padding: 0.5rem 1rem;

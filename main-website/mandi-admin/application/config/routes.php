@@ -63,7 +63,11 @@ $route['api/(:any)/blog/new'] = 'posts/BlogsController/api_new_post';
 $route['api/(:any)/episode/new'] = 'posts/EpisodesController/api_new_post';
 $route['api/(:any)/report/new'] = 'posts/ReportsController/api_new_post';
 $route['api/(:any)/faq/new'] = 'posts/FAQsController/api_new_post';
+$route['api/(:any)/faq/edit'] = 'posts/FAQsController/api_edit_post';
+$route['api/(:any)/faq/edit_category'] = 'posts/FAQsController/api_edit_category';
+$route['api/(:any)/faq/new_category'] = 'posts/FAQsController/api_new_category';
 
+$route['api/(:any)/faq/api_get'] = 'posts/FAQsController/api_get';
 
 $route['settings'] ="app/SettingsController";
 $route['settings/languages'] ="app/SettingsController/localization";
@@ -85,6 +89,8 @@ $route['report/post/(:any)'] ="posts/ReportsController/view_post/$1";
 $route['report/post/(:any)/edit'] ="posts/EpisodesController/edit_post/$1";
 
 $route['faqs'] ="posts/FAQsController";
+$route['faqs/(:any)/edit'] ="posts/FAQsController/edit_post/$1";
+$route['faqs/new-question'] ="posts/FAQsController/new_post";
 
 $route['events'] ="posts/EventsController";
 
