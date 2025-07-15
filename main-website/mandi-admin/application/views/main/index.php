@@ -206,9 +206,9 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-baseline">
-                                <h6 class="card-title mb-0">All Trends</h6>
+                                <h6 class="card-title mb-0">All FAQs</h6>
                                 <div>
-                                    <a class="btn p-0 btn-icon-text text-dark" href="">View All<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
+                                    <a class="btn p-0 btn-icon-text text-dark" href="<?= base_url('faqs') ?>">View All<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
                                 </div>
                             </div>
                             <div class="row">

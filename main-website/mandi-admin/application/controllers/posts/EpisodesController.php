@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-require_once APPPATH . "core/My_Controller.php";
-class EpisodesController extends My_Controller
+require_once APPPATH . "core/MY_Controller.php";
+class EpisodesController extends MY_Controller
 {
     public $error, $request, $response;
 

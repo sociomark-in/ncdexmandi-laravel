@@ -127,6 +127,12 @@
                     <span class="link-title">Comments</span>
                 </a>
             </li>
+            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
+                <a href="<?= base_url('media') ?>" class="nav-link">
+                    <i class="link-icon" data-feather="image"></i>
+                    <span class="link-title">Media</span>
+                </a>
+            </li>
 
             <li class="nav-item nav-category">Miscellaneous</li>
             <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
@@ -153,12 +159,7 @@
                     <span class="link-title">Tags</span>
                 </a>
             </li>
-            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
-                <a href="<?= base_url('') ?>" class="nav-link">
-                    <i class="link-icon" data-feather="image"></i>
-                    <span class="link-title">Media</span>
-                </a>
-            </li>
+
 
             <!-- Access Level: admin -->
 

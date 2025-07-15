@@ -94,6 +94,8 @@ $route['faqs/new-question'] ="posts/FAQsController/new_post";
 
 $route['events'] ="posts/EventsController";
 
+$route['media'] ="misc/MediaController";
+
 $route['users'] ="app/UsersController";
 $route['users/new-user'] ="app/UsersController/new_user";
 $route['my-profile'] ="app/UsersController/my_profile";
