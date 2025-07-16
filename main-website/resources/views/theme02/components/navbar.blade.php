@@ -29,7 +29,7 @@
                         <script type="text/javascript">
                             function googleTranslateElementInit() {
                                 new google.translate.TranslateElement({
-                                    pageLanguage: 'mr',
+                                    pageLanguage: 'en',
                                     includedLanguages: 'en,mr,hi,gu',
                                 }, 'google_translate_element');
                             }

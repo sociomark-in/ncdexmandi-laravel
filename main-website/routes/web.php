@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\EpisodesController;
 use App\Http\Controllers\EventsController;
+use App\Http\Controllers\FAQController;
 use App\Http\Controllers\FAQsController;
 use App\Http\Controllers\FPOController;
 use App\Http\Controllers\PagesController;
@@ -19,7 +20,8 @@ Route::get('/episodes', [EpisodesController::class, 'index'])->name('episodes_ho
 Route::get('/publications', [ResourcesController::class, 'publications'])->name('main_publications');
 Route::get('/gallery', [ResourcesController::class, 'gallery'])->name('main_gallery');
 Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs_home');
-Route::get('/faqs', [FAQsController::class, 'index'])->name('faqs_home');
+// Route::get('/faqs', [FAQsController::class, 'index'])->name('faqs_home');
+Route::get('/faqs', [FAQController::class, 'index'])->name('faqs_home');
 Route::get('/blogs/search', [BlogsController::class, 'search'])->name('blogs_search');
 Route::get('/member/{name}', [PagesController::class, 'member_single'])->name('member_single');
 Route::fallback(function () {

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\SetGlobalTranslatorCookie;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -16,8 +17,21 @@ return Application::configure(basePath: dirname(__DIR__))
         apiPrefix: 'api',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->web(append: [
+            // Existing web middleware (like EncryptCookies, StartSession, etc.) are usually
+            // added automatically by Laravel's configuration, but you can append yours.
+            // Ensure this runs *after* AddQueuedCookiesToResponse if it's implicitly there.
+            // If your API project doesn't even have web middleware by default, you might
+            // need to add the standard ones manually if you start using session/cookies fully.
+            // For a simple cookie check/set, just appending your middleware is often enough.
+            SetGlobalTranslatorCookie::class, // <-- Add your middleware here for web group
+        ]);
+        $middleware->encryptCookies(except: [
+            'googtrans', // Add the name of your cookie here to exclude it from encryption
+            // 'another_unencrypted_cookie', // Add other cookie names as needed
+        ]);
     })
+
     ->withExceptions(function (Exceptions $exceptions) {
         $exceptions->render(function (NotFoundHttpException $e, Request $request) {
             if ($request->wantsJson()) {
