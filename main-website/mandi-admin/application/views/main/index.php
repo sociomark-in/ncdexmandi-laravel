@@ -229,7 +229,7 @@
         </div>
     </div>
     <!-- row -->
-    <div class="row">
+    <div class="row d-none">
         <div class="col-lg-7 col-xl-9 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
@@ -307,7 +307,7 @@
     </div>
     <!-- row -->
 
-    <div class="row">
+    <div class="row d-none">
         <div class="col-lg-7 col-xl-9 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">

@@ -41,7 +41,6 @@ $(function () {
             }
         });
     }
-
     $("form select.langSelector").each((index, element) => {
         $(element).select2({
             templateSelection: (state) => {
@@ -52,42 +51,32 @@ $(function () {
                 var baseUrl = "/user/pages/images/flags";
                 var $state = $(
                     '<span><i class="flag-icon" title="us" id="us"></i><span class="ms-1 d-none d-md-inline"></span></span>'
-
                 );
 
                 // Use .text() instead of HTML string concatenation to avoid script injection issues
                 $state.find("span").text(state.text);
-                switch (state.element.getAttribute('data-origin').toLowerCase()) {
-                    case 'hi':
-                        $state.find("i").addClass("flag-icon-in");
-                        $state.find("i").attr("title", "in");
-                        $state.find("i").attr("id", "hi-in");
-                        break;
-                    case 'mr':
-                        $state.find("i").addClass("flag-icon-in");
-                        $state.find("i").attr("title", "in");
-                        $state.find("i").attr("id", "mr-in");
-                        break;
-                    case 'gj':
-                        $state.find("i").addClass("flag-icon-in");
-                        $state.find("i").attr("title", "in");
-                        $state.find("i").attr("id", "gj-in");
-                        break;
-                    default:
+                switch (
+                    state.element.getAttribute("data-origin").toLowerCase()
+                ) {
+                    case "en":
+                        $state.find("i").attr("id", "us");
                         $state.find("i").addClass("flag-icon-us");
                         $state.find("i").attr("title", "us");
-                        $state.find("i").attr("id", "us");
+                        break;
+                    default:
+                        $state.find("i").addClass("flag-icon-in");
+                        $state.find("i").attr("title", "in");
                         break;
                 }
                 return $state;
-            }
+            },
         });
-        $(element).on('change', (event) => {
+        $(element).on("change", (event) => {
             $.ajax({
-                method: 'POST',
+                method: "POST",
                 data: {
-                    'lang': $("#langSelect").val(),
-                    'redirect' : '<?= current_url() ?>'
+                    lang: $("#langSelect").val(),
+                    redirect: "<?= current_url() ?>",
                 },
                 url: "<?= base_url('api/v2/') ?>",
                 success: (response) => {
@@ -95,10 +84,10 @@ $(function () {
                 },
                 error: (error) => {
                     console.log(error);
-                }
-            })
-        })
-    })
+                },
+            });
+        });
+    });
 });
 function slugify(text) {
     return (
@@ -106,7 +95,7 @@ function slugify(text) {
             .toString()
             .trim() // Trim leading and trailing whitespace first
             .replace(/^['"]+|['"]+$/g, "") // Trim quotes
-            .replace(/,/g, '-') // Replace commas with hyphens
+            .replace(/,/g, "-") // Replace commas with hyphens
             .toLowerCase()
             .replace(/&/g, "and")
             .replace(/\s+/g, "-")

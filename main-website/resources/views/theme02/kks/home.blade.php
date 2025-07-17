@@ -51,20 +51,16 @@
                                 <div class="swiper-slide">
                                     <a href="" target="_blank" title="External Page Link, Opens in New Tab">
                                         <picture>
-                                            <source media="(min-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(min-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/webp">
-                                            <source media="(min-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(min-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/jpeg">
-                                            <source media="(max-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(max-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/webp">
-                                            <source media="(max-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(max-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/jpeg">
-                                            <img src="https://placehold.co/1600x500"
-                                                alt="A placeholder image" class="w-100"
+                                            <img src="https://placehold.co/1600x500" alt="A placeholder image"
+                                                class="w-100"
                                                 onerror="this.onerror=null;this.src='https://placehold.co/1600x500';">
                                         </picture>
                                     </a>
@@ -72,20 +68,16 @@
                                 <div class="swiper-slide">
                                     <a href="" target="_blank" title="External Page Link, Opens in New Tab">
                                         <picture>
-                                            <source media="(min-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(min-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/webp">
-                                            <source media="(min-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(min-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/jpeg">
-                                            <source media="(max-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(max-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/webp">
-                                            <source media="(max-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(max-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/jpeg">
-                                            <img src="https://placehold.co/1600x500"
-                                                alt="A placeholder image" class="w-100"
+                                            <img src="https://placehold.co/1600x500" alt="A placeholder image"
+                                                class="w-100"
                                                 onerror="this.onerror=null;this.src='https://placehold.co/1900x700';">
                                         </picture>
                                     </a>
@@ -93,20 +85,16 @@
                                 <div class="swiper-slide">
                                     <a href="" target="_blank" title="External Page Link, Opens in New Tab">
                                         <picture>
-                                            <source media="(min-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(min-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/webp">
-                                            <source media="(min-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(min-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/jpeg">
-                                            <source media="(max-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(max-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/webp">
-                                            <source media="(max-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(max-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/jpeg">
-                                            <img src="https://placehold.co/1600x500"
-                                                alt="A placeholder image" class="w-100"
+                                            <img src="https://placehold.co/1600x500" alt="A placeholder image"
+                                                class="w-100"
                                                 onerror="this.onerror=null;this.src='https://placehold.co/1900x700';">
                                         </picture>
                                     </a>
@@ -114,20 +102,16 @@
                                 <div class="swiper-slide">
                                     <a href="" target="_blank" title="External Page Link, Opens in New Tab">
                                         <picture>
-                                            <source media="(min-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(min-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/webp">
-                                            <source media="(min-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(min-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/jpeg">
-                                            <source media="(max-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(max-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/webp">
-                                            <source media="(max-width: 1200px)"
-                                                srcset="https://placehold.co/1600x500"
+                                            <source media="(max-width: 1200px)" srcset="https://placehold.co/1600x500"
                                                 type="image/jpeg">
-                                            <img src="https://placehold.co/1600x500"
-                                                alt="A placeholder image" class="w-100"
+                                            <img src="https://placehold.co/1600x500" alt="A placeholder image"
+                                                class="w-100"
                                                 onerror="this.onerror=null;this.src='https://placehold.co/1900x700';">
                                         </picture>
                                     </a>
@@ -204,7 +188,7 @@
                             <div class="swiper-wrapper">
                                 @for ($i = 0; $i < 3; $i++)
                                     <div class="swiper-slide">
-                                        <a href="" class="d-block text-black">
+                                        <a href="{{ route('fpo_single', ['episode' => rand()]) }}" class="d-block text-black">
                                             <div class="youtube-card">
                                                 <div class="row g-3">
                                                     <div class="col-12">
@@ -224,12 +208,14 @@
                                                             <div class="row justify-content-between">
                                                                 <div class="col-auto">
                                                                     <p>
-                                                                        <i class="fa-solid fa-location-dot"></i>&nbsp;<?= date('F, Y') ?>
+                                                                        <i
+                                                                            class="fa-solid fa-location-dot"></i>&nbsp;<?= date('F, Y') ?>
                                                                     </p>
                                                                 </div>
                                                                 <div class="col-auto">
                                                                     <p>
-                                                                        <i class="fa-solid fa-calendar-days"></i>&nbsp;<?= "Location" ?>
+                                                                        <i
+                                                                            class="fa-solid fa-calendar-days"></i>&nbsp;<?= 'Location' ?>
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -247,11 +233,25 @@
                         @push('scripts')
                             <script>
                                 new Swiper('.featuredFPOSwiper', {
-                                    slidesPerView: 2.8,
-                                    spaceBetween: 40,
+                                    slidesPerView: 1.1,
+                                    spaceBetween: 20,
                                     navigation: {
                                         nextEl: ".swiper-button-next",
                                         prevEl: ".swiper-button-prev",
+                                    },
+                                    breakpoints: {
+                                        640: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 20,
+                                        },
+                                        768: {
+                                            slidesPerView: 2.3,
+                                            spaceBetween: 40,
+                                        },
+                                        1024: {
+                                            slidesPerView: 2.8,
+                                            spaceBetween: 50,
+                                        },
                                     },
                                 });
                             </script>
@@ -392,9 +392,10 @@
                             <div class="card">
                                 <div class="card-body bg-light">
                                     <form action="" method="get">
-                                        <div class="row justify-content-between">
-                                            <div class="col-xl col-lg-4"><input type="text"
-                                                    placeholder="Search All Episodes by Title" class="form-control"></div>
+                                        <div class="row g-3 justify-content-between">
+                                            <div class="col-xl col-lg-4"><input type="search" data-list=".fpos-wrapper"
+                                                    placeholder="Search All Episodes by Title" id="search-1"
+                                                    class="form-control"></div>
                                             <div class="col-xl-2">
                                                 <select name="" id="" class="form-select">
                                                     <option value="">Select A Comodity</option>
@@ -415,6 +416,16 @@
                                 </div>
                             </div>
                         </div>
+                        @push('scripts')
+                            <script src="https://cdn.jsdelivr.net/gh/vdw/HideSeek@master/jquery.hideseek.min.js"></script>
+                            <script>
+                                $('#search-1').hideseek({
+                                    highlight: true,
+                                    nodata: 'No results found',
+                                    list: ".fpos-wrapper .row.g-3.g-md-4",
+                                });;
+                            </script>
+                        @endpush
                         <div class="col-12 d-none">
                             <div class="row justify-content-between">
                                 <div class="col-12">
@@ -448,44 +459,47 @@
                         </div>
                     </div>
                 </div>
-                <div class="row g-3 g-md-4">
+                <div class="row g-3 g-md-4 fpos-wrapper">
                     @for ($i = 0; $i < 12; $i++)
-                    <div class="col-xl-6 col-12">
-                        <a href="" class="d-block text-black">
-                            <div class="youtube-card">
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-xl-5 col-12">
-                                        <div class="thumb">
-                                            <img src="https://placehold.co/600x400" class="w-100"
-                                                alt="">
+                        <div class="col-lg-6 col-12">
+                            <a href="{{ route('fpo_single', ['episode' => rand()]) }}" class="d-block text-black">
+                                <div class="youtube-card">
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-xl-5 col-lg-12 col-md-5 col-12">
+                                            <div class="thumb">
+                                                <img src="https://placehold.co/600x400" class="w-100" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg col-12">
-                                        <div class="content">
-                                            <h5 class="clipped-content line-2">Lorem ipsum dolor sit amet
-                                                consectetur adipisicing elit.
-                                                Perferendis eaque unde tenetur!</h5>
-                                            <p class="clipped-content line-2">Lorem ipsum dolor sit amet
-                                                consectetur adipisicing elit.
-                                                Ratione praesentium deleniti pariatur.</p>
-                                            <div class="row justify-content-between">
-                                                <div class="col-auto">
-                                                    <p>
-                                                        <i class="fa-solid fa-location-dot"></i>&nbsp;<?= date('F, Y') ?>
-                                                    </p>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <p>
-                                                        <i class="fa-solid fa-calendar-days"></i>&nbsp;<?= "Location" ?>
-                                                    </p>
+                                        <div class="col-md col-12">
+                                            <div class="content">
+                                                <h5 class="clipped-content line-2">Lorem ipsum dolor sit
+                                                    amet
+                                                    consectetur adipisicing elit.
+                                                    Perferendis eaque unde tenetur!</h5>
+                                                <p class="clipped-content line-2 d-none d-md-block"> <?= rand() ?>Lorem
+                                                    ipsum dolor
+                                                    sit amet
+                                                    consectetur adipisicing elit.
+                                                    Ratione praesentium deleniti pariatur.</p>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-auto">
+                                                        <p>
+                                                            <i
+                                                                class="fa-solid fa-calendar-days"></i>&nbsp;<?= date('F, Y') ?>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <p>
+                                                            <i class="fa-solid fa-location-dot"></i>&nbsp;<?= 'Location' ?>
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
                     @endfor
                 </div>
             </div>

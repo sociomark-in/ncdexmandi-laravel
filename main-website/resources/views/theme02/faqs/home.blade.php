@@ -49,10 +49,24 @@
                         <script>
                             new Swiper('.faqCategoriesSwiper', {
                                 loop: true,
-                                slidesPerView: 3,
+                                slidesPerView: 1,
                                 spaceBetween: 30,
                                 pagination: {
                                     el: ".swiper-pagination",
+                                },
+                                breakpoints: {
+                                    640: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20,
+                                    },
+                                    768: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 40,
+                                    },
+                                    1024: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 10,
+                                    },
                                 },
                             });
                         </script>
@@ -130,7 +144,8 @@
                                                                             id="faqAccordion">
                                                                             <div class="accordion-item mb-3">
                                                                                 <h2 class="accordion-header">
-                                                                                    <button class="accordion-button collapsed"
+                                                                                    <button
+                                                                                        class="accordion-button collapsed"
                                                                                         type="button"
                                                                                         data-bs-toggle="collapse"
                                                                                         data-bs-target="#collapse{{ $category->id . $faq->id }}"

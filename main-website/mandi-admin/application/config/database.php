@@ -70,8 +70,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
-$active_group = 'production';
 $active_group = 'default';
+$active_group = 'production';
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -99,9 +99,9 @@ $db['default'] = array(
 $db['production'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'stemrx_admin',
-	'password' => 'OaWrSuRRJPgV',
-	'database' => 'stemrx_ci3_db',
+	'username' => 'googlelogin_test_admin',
+	'password' => 'W6BG73VGKQV4',
+	'database' => 'googlelogin_test_ncdexmandi',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

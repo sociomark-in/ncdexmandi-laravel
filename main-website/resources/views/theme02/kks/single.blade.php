@@ -261,7 +261,7 @@
                             <div class="swiper-wrapper">
                                 @for ($i = 0; $i < 10; $i++)
                                     <div class="swiper-slide">
-                                        <a href="" class="d-block text-black">
+                                        <a href="{{ route('fpo_single', ['episode' => rand()]) }}" class="d-block text-black">
                                             <div class="youtube-card other">
                                                 <div class="row g-2">
                                                     <div class="col-12">

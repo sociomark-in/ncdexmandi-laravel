@@ -1,7 +1,7 @@
 <nav class="sidebar">
     <div class="sidebar-header">
         <a href="#" class="sidebar-brand">
-            <img src="https://placehold.co/200x200" alt="">
+            <img src="https://placehold.co/160x40" alt="">
             <!-- <img src="<?= base_url('assets/logo.png') ?>" alt="" width="160"> -->
         </a>
         <div class="sidebar-toggler">
@@ -65,7 +65,7 @@
             <!-- Podcasts -->
             <li class="nav-item <?= link_is_active(['podcasts', 'podcast/new-post'], $group = true)['active'] ? "active" : ""  ?>">
                 <a class="nav-link" data-bs-toggle="collapse" href="#podcasts" role="button" aria-expanded="<?= link_is_active(['podcasts', 'podcast/new-post'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="podcasts">
-                    <i class="link-icon" data-feather="database"></i>
+                    <i class="link-icon" data-feather="disc"></i>
                     <span class="link-title">Podcasts</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
@@ -83,7 +83,7 @@
             <!-- Podcasts -->
 
             <!-- Reports -->
-            <li class="nav-item <?= link_is_active(['reports', 'report/new-post'], $group = true)['active'] ? "active" : ""  ?>">
+            <li class="d-none nav-item <?= link_is_active(['reports', 'report/new-post'], $group = true)['active'] ? "active" : ""  ?>">
                 <a class="nav-link" data-bs-toggle="collapse" href="#reports" role="button" aria-expanded="<?= link_is_active(['reports', 'report/new-post'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="reports">
                     <i class="link-icon" data-feather="database"></i>
                     <span class="link-title">Reports</span>
@@ -120,17 +120,29 @@
                 </div>
             </li>
 
+            <li class="nav-item <?= link_is_active(['gallery', 'infographics'], $group = true)['active'] ? "active" : ""  ?>">
+                <a class="nav-link" data-bs-toggle="collapse" href="#gallery" role="button" aria-expanded="<?= link_is_active(['gallery', 'infographics'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="gallery">
+                    <i class="link-icon" data-feather="image"></i>
+                    <span class="link-title">Media</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse <?= link_is_active(['gallery', 'infographics'], $group = true)['show'] ? "show" : "" ?>" id="gallery">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="<?= base_url("gallery") ?>" class="nav-link <?= link_is_active('gallery')['active'] ? "active" : ""  ?>">Media Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('infographics') ?>" target="_blank" class="nav-link <?= link_is_active('infographics')['active'] ? "active" : "" ?>">CTA Infographics</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
             <!-- All Comments -->
             <li class="nav-item">
                 <a href="<?= base_url('') ?>" class="nav-link">
                     <i class="link-icon" data-feather="message-square"></i>
                     <span class="link-title">Comments</span>
-                </a>
-            </li>
-            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
-                <a href="<?= base_url('media') ?>" class="nav-link">
-                    <i class="link-icon" data-feather="image"></i>
-                    <span class="link-title">Media</span>
                 </a>
             </li>
 
@@ -147,14 +159,14 @@
                     <span class="link-title">Commodities</span>
                 </a>
             </li>
-            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
-                <a href="<?= base_url('') ?>" class="nav-link">
+            <li class="nav-item <?= link_is_active('misc/categories')['active'] ? "active" : "" ?>">
+                <a href="<?= base_url('misc/categories') ?>" class="nav-link">
                     <i class="link-icon" data-feather="bookmark"></i>
                     <span class="link-title">Categories</span>
                 </a>
             </li>
-            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
-                <a href="<?= base_url('') ?>" class="nav-link">
+            <li class="nav-item <?= link_is_active('misc/tags')['active'] ? "active" : "" ?>">
+                <a href="<?= base_url('misc/tags') ?>" class="nav-link">
                     <i class="link-icon" data-feather="bookmark"></i>
                     <span class="link-title">Tags</span>
                 </a>
@@ -191,8 +203,8 @@
             <li class="nav-item nav-category">Apps</li>
             <li class="nav-item">
                 <a href="dashboard.html" class="nav-link">
-                    <i class="link-icon" data-feather="settings"></i>
-                    <span class="link-title">App Settings</span>
+                    <i class="link-icon" data-feather="tool"></i>
+                    <span class="link-title">Developer Tools</span>
                 </a>
             </li>
 

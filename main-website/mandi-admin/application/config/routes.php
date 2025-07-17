@@ -104,8 +104,8 @@ $route['register'] = 'DashboardController/register';
 
 $route[''] = 'DashboardController/index';
 $route['menu'] = 'DashboardController/menu_master';
-$route['menu/categories'] = 'DashboardController/categories_all';
-$route['menu/category/(:any)/menu-items'] = 'DashboardController/menu_items/$1';
+$route['misc/categories'] = 'misc/MiscellaneousController/categories_all';
+$route['misc/tags'] = 'misc/MiscellaneousController/tags_all';
 
 
 $route['404_override'] = '';
