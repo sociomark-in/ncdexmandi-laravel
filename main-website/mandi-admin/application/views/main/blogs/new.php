@@ -198,6 +198,8 @@
     </div>
     <?= form_close() ?>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/speakingurl/14.0.1/speakingurl.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-slugify@1.2.5/dist/slugify.min.js"></script>
 <script>
     $(document).ready(function() {
         hasUnsavedChanges = true;
@@ -308,14 +310,14 @@
             }
         });
 
-        /* URLize: Change text to URL */
+        /* Slugify: Change text to URL */
         var $titleInput = $("#inputTitle");
         var $titleSEOInput = $("#inputSEOPageTitle");
         $titleInput.on("input", () => {
-            $("#inputSEOPageURL").val(slugify($titleInput.val()))
+            $("#inputSEOPageURL").slugify($titleInput)
         })
         $titleSEOInput.on("input", () => {
-            $("#inputSEOPageURL").val(slugify($titleSEOInput.val()))
+            $("#inputSEOPageURL").slugify($titleSEOInput)
         })
 
     });

@@ -43,8 +43,12 @@
                                 <input type="url" name="post_video" class="form-control" maxlength="100" id="inputYouTube">
                             </div>
                             <div class="mb-3">
-                                <label for="inputPostContent" class="form-label">Post Contents</label>
-                                <textarea class="form-control full-editor" id="inputPostContent" rows="10" name="post_content"></textarea>
+                                <label for="fpoJourney" class="form-label">FPO Journey</label>
+                                <textarea class="form-control full-editor" id="fpoJourney" rows="10" name="post_content"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="aboutFPOContent" class="form-label">About FPO</label>
+                                <textarea class="form-control full-editor" id="aboutFPOContent" rows="10" name="post_content"></textarea>
                             </div>
                         </div>
                     </div>
@@ -54,7 +58,7 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-baseline mb-3">
                                 <div class="">
-                                    <h6 class="card-title mb-0">Exerpt</h6>
+                                    <h6 class="card-title mb-0">Post Exerpt</h6>
                                     <p>Add a summary of the post to appear on your home page or blog.</p>
                                 </div>
                             </div>
@@ -226,6 +230,8 @@
     </div>
     <?= form_close() ?>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/speakingurl/14.0.1/speakingurl.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-slugify@1.2.5/dist/slugify.min.js"></script>
 <script>
     $(document).ready(function() {
         hasUnsavedChanges = true;
@@ -241,7 +247,19 @@
                 console.log("`beforeunload` triggered: No unsaved changes, allowing navigation.");
             }
         });
-        $('#inputPostContent').summernote({
+        $('#fpoJourney').summernote({
+            placeholder: 'Start typing your post',
+            height: 300,
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
+        });
+        $('#aboutFPOContent').summernote({
             placeholder: 'Start typing your post',
             height: 300,
             toolbar: [
@@ -303,15 +321,14 @@
             }
         });
 
-        /* URLize: Change text to URL */
+        /* Slugify: Change text to URL */
         var $titleInput = $("#inputTitle");
         var $titleSEOInput = $("#inputSEOPageTitle");
         $titleInput.on("input", () => {
-            $("#inputSEOPageURL").val(slugify($titleInput.val()))
+            $("#inputSEOPageURL").slugify($titleInput)
         })
         $titleSEOInput.on("input", () => {
-            $("#inputSEOPageURL").val(slugify($titleSEOInput.val()))
+            $("#inputSEOPageURL").slugify($titleSEOInput)
         })
-
     });
 </script>
