@@ -82,6 +82,8 @@ $route['episodes'] ="posts/EpisodesController";
 $route['episode/new-post'] ="posts/EpisodesController/new_post";
 $route['episode/post/(:any)'] ="posts/EpisodesController/view_post/$1";
 $route['episode/post/(:any)/edit'] ="posts/EpisodesController/edit_post/$1";
+$route['fpos'] ="posts/FPOsController";
+$route['fpos/(:any)/edit'] ="posts/FPOsController/edit_post/$1";
 
 $route['reports'] ="posts/ReportsController";
 $route['report/new-post'] ="posts/ReportsController/new_post";

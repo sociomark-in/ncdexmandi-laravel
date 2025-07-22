@@ -52,8 +52,9 @@
 <!-- Plugin: JQuery daterangepicker  -->
 
 <!-- Plugin: JQuery select2 -->
-<script type="text/javascript" src="<?= base_url("assets") ?>/vendors/select2/select2.min.js"></script>
-<link rel="stylesheet" type="text/css" href="<?= base_url("assets") ?>/vendors/select2/select2.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
 <!-- Plugin: JQuery daterangepicker  -->
 
 <!-- Plugin: JQuery daterangepicker  -->
@@ -74,9 +75,17 @@
 
 <link rel="stylesheet" href="<?= base_url("assets") ?>/css/custom.min.css">
 <script>
-    $('main select.form-select').each((index, elem) => {
-        $(elem).select2({
-            theme: 'bootstrap-5'
+    $(document).ready(function() {
+        $("main form select.form-select").each((index, elem) => {
+            $(elem).select2({
+                theme: 'bootstrap-5',
+                width: '100%',
+                placeholder: $(elem).data('placeholder') || "Select an Option",
+                allowClear: true,
+                dropdownParent: $(elem).parent()
+            });
+
+            $(elem).parent().addClass('position-relative')
         });
     })
 </script>

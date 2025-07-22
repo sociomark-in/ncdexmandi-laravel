@@ -147,14 +147,14 @@
             </li>
 
             <li class="nav-item nav-category">Miscellaneous</li>
-            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
-                <a href="<?= base_url('') ?>" class="nav-link">
+            <li class="nav-item <?= link_is_active("fpos")['active'] ? "active" : "" ?>">
+                <a href="<?= base_url('fpos') ?>" class="nav-link">
                     <i class="link-icon" data-feather="bookmark"></i>
                     <span class="link-title">FPOs</span>
                 </a>
             </li>
-            <li class="nav-item <?= link_is_active()['active'] ? "active" : "" ?>">
-                <a href="<?= base_url('') ?>" class="nav-link">
+            <li class="nav-item <?= link_is_active('commodities')['active'] ? "active" : "" ?>">
+                <a href="<?= base_url('commodities') ?>" class="nav-link">
                     <i class="link-icon" data-feather="bookmark"></i>
                     <span class="link-title">Commodities</span>
                 </a>

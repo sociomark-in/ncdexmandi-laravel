@@ -340,7 +340,7 @@ if ( ! function_exists('generate_password'))
             $chars .= '0123456789';
         }
         if ($include_symbols) {
-            $chars .= '!@#$%^&*()_-+=[]{};:,.<>?'; // You can customize this
+            $chars .= '!@#$%^&*_'; // You can customize this
         }
 
         // Ensure at least one character type is selected
@@ -355,7 +355,7 @@ if ( ! function_exists('generate_password'))
         if ($include_lowercase && !preg_match('/[a-z]/', $password)) $password .= $chars[random_int(0, strpos($chars, 'z'))];
         if ($include_uppercase && !preg_match('/[A-Z]/', $password)) $password .= $chars[random_int(strpos($chars, 'A'), strpos($chars, 'Z'))];
         if ($include_numbers && !preg_match('/[0-9]/', $password)) $password .= $chars[random_int(strpos($chars, '0'), strpos($chars, '9'))];
-        if ($include_symbols && !preg_match('/[!@#$%^&*()_\-+=[]{};:,.<>?]/', $password)) $password .= $chars[random_int(strpos($chars, '!'), strpos($chars, '?'))];
+        if ($include_symbols && !preg_match('/[!@#$%^&*_]/', $password)) $password .= $chars[random_int(strpos($chars, '!'), strpos($chars, '_'))];
 
 
         for ($i = strlen($password); $i < $length; $i++) {
