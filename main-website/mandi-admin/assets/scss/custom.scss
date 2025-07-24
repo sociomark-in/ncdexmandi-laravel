@@ -140,7 +140,7 @@ table {
 
 .clipped-content {
     overflow: hidden; // Keep this for overall clipping
-    // text-overflow: ellipsis; // This is not needed here and can cause issues
+    text-overflow: ellipsis; // This is not needed here and can cause issues
 
     // Add these for multi-line ellipsis to work with line-clamp
     display: -webkit-box;

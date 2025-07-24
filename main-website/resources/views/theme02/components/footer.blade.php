@@ -67,6 +67,9 @@
                                     <a class="nav-link" href="{{ route('main_about') }}">About NCDEX Mandi</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('faqs_home') }}">FAQs</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{ route('episodes_home') }}">Kheti Ke Sikandar</a>
                                 </li>
                                 <li class="nav-item">
@@ -88,25 +91,21 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Blogs</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="#">Webinars</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Podcast</a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('main_publications') }}">Reports</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Calculators</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('main_gallery') }}">Infographics</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('faqs_home') }}">FAQs</a>
+                                    <a class="nav-link bg-primary p-2" href="">Subscribe Now&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
@@ -116,6 +115,9 @@
                             <div class="row">
                                 <div class="col-xl-6">
                                     <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Calculators</a>
+                                        </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="https://www.nabard.org/"
                                                 target="_blank">NABARD</a>

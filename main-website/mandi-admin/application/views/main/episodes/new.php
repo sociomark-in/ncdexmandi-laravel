@@ -17,7 +17,7 @@
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
         <div class="d-flex gap-2">
             <div class="nav-item">
-                <a href="<?= base_url("blogs") ?>" class="nav-link"><i class="link-arrow" data-feather="chevron-left"></i></a>
+                <a href="<?= base_url("episodes") ?>" class="nav-link"><i class="link-arrow" data-feather="chevron-left"></i></a>
             </div>
             <div>
                 <h4 class="mb-3 mb-md-0">New Episode</h4>

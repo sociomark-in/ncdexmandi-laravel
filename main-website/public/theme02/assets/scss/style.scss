@@ -205,6 +205,10 @@ table {
     animation: "flash" 5s ease-in-out infinite;
 }
 
+.bg-primary{
+    background-color: $color-green !important;
+}
+
 @for $i from 10 through 100 {
     @if ($i % 10 == 0) {
         .text-black-#{$i} {

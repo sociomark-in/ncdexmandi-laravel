@@ -21,7 +21,7 @@ class MiscellaneousController extends MY_Controller
             $users[$i]['role'] = $this->AccessModel->get(['id' => $users[$i]['role']],['id', 'name']);
         }
         $this->data['users'] = $users;
-        $this->load->admin_dashboard('users/home', $this->data);
+        $this->load->admin_dashboard('misc/categories', $this->data);
     }
     public function tags_all()
     {
@@ -30,6 +30,6 @@ class MiscellaneousController extends MY_Controller
             $users[$i]['role'] = $this->AccessModel->get(['id' => $users[$i]['role']],['id', 'name']);
         }
         $this->data['users'] = $users;
-        $this->load->admin_dashboard('users/home', $this->data);
+        $this->load->admin_dashboard('misc/tags', $this->data);
     }
 }

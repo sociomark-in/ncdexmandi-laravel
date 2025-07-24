@@ -76,7 +76,7 @@
 <link rel="stylesheet" href="<?= base_url("assets") ?>/css/custom.min.css">
 <script>
     $(document).ready(function() {
-        $("main form select.form-select").each((index, elem) => {
+        $("form select.form-select").each((index, elem) => {
             $(elem).select2({
                 theme: 'bootstrap-5',
                 width: '100%',

@@ -19864,12 +19864,16 @@ body {
   position: relative;
 }
 .sidebar .sidebar-body .nav .nav-item .nav-link {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
   padding: 0;
   height: 32px;
   white-space: nowrap;
   color: #000;
+}
+.sidebar .sidebar-body .nav .nav-item .nav-link[disabled] {
+    filter: saturate(0) contrast(0.5) opacity(0.5);
+    pointer-events: none;
 }
 .sidebar .sidebar-body .nav .nav-item .nav-link .link-icon {
   width: 16px;

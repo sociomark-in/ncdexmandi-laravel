@@ -19,6 +19,27 @@
                 </a>
             </li>
 
+            <li class="nav-item <?= link_is_active(['leads', 'leads/all-queries', 'leads/all-enquiries'], $group = true)['active'] ? "active" : ""  ?>">
+                <a class="nav-link" disabled data-bs-toggle="collapse" href="#leads" role="button" aria-expanded="<?= link_is_active(['blogs', 'blog/new-post'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="blogs">
+                    <i class="link-icon" data-feather="database"></i>
+                    <span class="link-title">Leads</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse <?= link_is_active(['leads', 'leads/all-queries', 'leads/all-enquiries'], $group = true)['show'] ? "show" : "" ?>" id="leads">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="<?= base_url("leads") ?>" class="nav-link <?= link_is_active('leads')['active'] ? "active" : ""  ?>">All Leads</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('leads/all-queries') ?>" target="_blank" class="nav-link <?= link_is_active('leads/all-queries')['active'] ? "active" : "" ?>">FAQ Queries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('leads/all-enquiries') ?>" target="_blank" class="nav-link <?= link_is_active('leads/all-enquiries')['active'] ? "active" : "" ?>">Enquiries</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
             <!-- Content Management -->
             <li class="nav-item nav-category">Content Management</li>
             <!-- Access Level: jury -->
@@ -64,7 +85,7 @@
 
             <!-- Podcasts -->
             <li class="nav-item <?= link_is_active(['podcasts', 'podcast/new-post'], $group = true)['active'] ? "active" : ""  ?>">
-                <a class="nav-link" data-bs-toggle="collapse" href="#podcasts" role="button" aria-expanded="<?= link_is_active(['podcasts', 'podcast/new-post'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="podcasts">
+                <a class="nav-link" disabled data-bs-toggle="collapse" href="#podcasts" role="button" aria-expanded="<?= link_is_active(['podcasts', 'podcast/new-post'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="podcasts">
                     <i class="link-icon" data-feather="disc"></i>
                     <span class="link-title">Podcasts</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
@@ -102,26 +123,26 @@
             </li>
 
             <!-- FAQs -->
-            <li class="nav-item <?= link_is_active(['faqs', 'faq/new-post'], $group = true)['active'] ? "active" : ""  ?>">
-                <a class="nav-link" data-bs-toggle="collapse" href="#faqs" role="button" aria-expanded="<?= link_is_active(['faqs', 'faq/new-post'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="reports">
+            <li class="nav-item <?= link_is_active(['faqs', 'faqs/new-question'], $group = true)['active'] ? "active" : ""  ?>">
+                <a class="nav-link" data-bs-toggle="collapse" href="#faqs" role="button" aria-expanded="<?= link_is_active(['faqs', 'faqs/new-question'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="reports">
                     <i class="link-icon" data-feather="database"></i>
                     <span class="link-title">FAQs</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
-                <div class="collapse <?= link_is_active(['faqs', 'faq/new-post'], $group = true)['show'] ? "show" : "" ?>" id="faqs">
+                <div class="collapse <?= link_is_active(['faqs', 'faqs/new-question'], $group = true)['show'] ? "show" : "" ?>" id="faqs">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
                             <a href="<?= base_url("faqs") ?>" class="nav-link <?= link_is_active('faqs')['active'] ? "active" : ""  ?>">All FAQs</a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('faq/new-post') ?>" target="_blank" class="nav-link <?= link_is_active('faq/new-post')['active'] ? "active" : "" ?>">Add New Post</a>
+                            <a href="<?= base_url('faqs/new-question') ?>" target="_blank" class="nav-link <?= link_is_active('faqs/new-question')['active'] ? "active" : "" ?>">Add New Post</a>
                         </li>
                     </ul>
                 </div>
             </li>
 
             <li class="nav-item <?= link_is_active(['gallery', 'infographics'], $group = true)['active'] ? "active" : ""  ?>">
-                <a class="nav-link" data-bs-toggle="collapse" href="#gallery" role="button" aria-expanded="<?= link_is_active(['gallery', 'infographics'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="gallery">
+                <a class="nav-link" disabled data-bs-toggle="collapse" href="#gallery" role="button" aria-expanded="<?= link_is_active(['gallery', 'infographics'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="gallery">
                     <i class="link-icon" data-feather="image"></i>
                     <span class="link-title">Media</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
@@ -140,7 +161,7 @@
 
             <!-- All Comments -->
             <li class="nav-item">
-                <a href="<?= base_url('') ?>" class="nav-link">
+                <a href="<?= base_url('') ?>" class="nav-link" disabled>
                     <i class="link-icon" data-feather="message-square"></i>
                     <span class="link-title">Comments</span>
                 </a>
@@ -177,7 +198,7 @@
 
             <li class="nav-item nav-category">User Management</li>
             <li class="nav-item <?= link_is_active(['users', 'users/new-user'], $group = true)['active'] ? "active" : ""  ?>">
-                <a class="nav-link" data-bs-toggle="collapse" href="#users" role="button" aria-expanded="<?= link_is_active(['users', 'users/new-user'], $group = true)['expand'] ? "true" : "false"  ?>" aria-controls="users">
+                <a class="nav-link" disabled data-bs-toggle="collapse" href="#users" role="button" aria-expanded="<?= link_is_active(['users', 'users/new-user'], $group = true)['expand'] ? "true" : "false"  ?>" aria-controls="users">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Users</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
@@ -194,7 +215,7 @@
                 </div>
             </li>
             <li class="nav-item <?= link_is_active("settings")['active'] ? "active" : "" ?>">
-                <a href="<?= base_url('settings') ?>" class="nav-link">
+                <a href="<?= base_url('settings') ?>" class="nav-link" disabled>
                     <i class="link-icon" data-feather="settings"></i>
                     <span class="link-title">Settings</span>
                 </a>
@@ -202,7 +223,7 @@
 
             <li class="nav-item nav-category">Apps</li>
             <li class="nav-item">
-                <a href="dashboard.html" class="nav-link">
+                <a href="dashboard.html" class="nav-link" disabled>
                     <i class="link-icon" data-feather="tool"></i>
                     <span class="link-title">Developer Tools</span>
                 </a>
@@ -210,7 +231,7 @@
 
             <li class="nav-item nav-category">Docs</li>
             <li class="nav-item">
-                <a href="https://www.nobleui.com/html/documentation/docs.html" target="_blank" class="nav-link">
+                <a href="https://www.nobleui.com/html/documentation/docs.html" target="_blank" class="nav-link" disabled>
                     <i class="link-icon" data-feather="hash"></i>
                     <span class="link-title">Documentation</span>
                 </a>
