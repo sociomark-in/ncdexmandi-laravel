@@ -19,7 +19,7 @@
                             <thead>
                                 <tr>
                                     <th class="pt-0">Name of FPO</th>
-                                    <th class="pt-0">Date Created</th>
+                                    <th class="pt-0">Establishment</th>
                                     <th class="pt-0">Head Location</th>
                                     <th class="pt-0">Status</th>
                                 </tr>
@@ -53,7 +53,7 @@
                                                     </script>
                                                 </div>
                                                 <div class="col">
-                                                    <a target="_blank" href=""><span class="clipped-content line-1 d-block" style="width: 500px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et odio atque magnam perspiciatis ducimus.</span></a>
+                                                    <a target="_blank" href=""><span class="clipped-content line-1 d-block" style="width: 400px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et odio atque magnam perspiciatis ducimus.</span></a>
                                                 </div>
                                             </div>
                                         </td>
@@ -83,7 +83,7 @@
                     <div class="row g-3">
                         <div class="col-12">
                             <label for="" class="form-label">Name of the FPO</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control text-counter" maxlength="80">
                         </div>
                         <div class="col-lg-6 col-12">
                             <label for="" class="form-label">State</label>
@@ -105,13 +105,15 @@
                             <label for="" class="form-label">FPO Details</label>
                             <table class="table table-bordered">
                                 <tr>
-                                    <td>Turnover</td>
+                                    <td>No. of Locations</td>
                                     <td>
-                                        <div class="input-group mb-3">
-                                            <input type="number" min="0" max="9999" class="form-control" placeholder="Revenue Turnover" aria-label="Revenue Turnover" aria-describedby="basic-addon2">
-                                            <span class="input-group-text" id="basic-addon2">in &#8377; Lakhs</span>
-                                        </div>
-
+                                        <input type="number" min="0" max="999" class="form-control">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>No. of Members</td>
+                                    <td>
+                                        <input type="number" min="0" max="999" class="form-control">
                                     </td>
                                 </tr>
                                 <tr>
@@ -126,15 +128,13 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>No. of Members</td>
+                                    <td>Turnover</td>
                                     <td>
-                                        <input type="number" min="0" max="999" class="form-control">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>No. of Locations</td>
-                                    <td>
-                                        <input type="number" min="0" max="999" class="form-control">
+                                        <div class="input-group mb-3">
+                                            <input type="number" min="0" max="9999" class="form-control" placeholder="Revenue Turnover" aria-label="Revenue Turnover" aria-describedby="basic-addon2">
+                                            <span class="input-group-text" id="basic-addon2">in &#8377; Lakhs</span>
+                                        </div>
+
                                     </td>
                                 </tr>
                             </table>
@@ -164,7 +164,7 @@
                 <div class="row g-3">
                     <div class="col-12">
                         <label for="" class="form-label">Name of the FPO</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control text-counter" maxlength="80">
                     </div>
                     <div class="col-lg-6 col-12">
                         <label for="" class="form-label">State</label>

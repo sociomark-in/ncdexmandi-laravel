@@ -39,7 +39,7 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="inputTitle" class="form-label">Question Title</label>
-                                <input type="text" name="post_title" value="<?= $faq['post_title'] ?>" class="form-control" maxlength="100" id="inputTitle">
+                                <input type="text" name="post_title" value="<?= $faq['post_title'] ?>" class="form-control text-counter" maxlength="100" id="inputTitle">
                             </div>
                             <div class="mb-3">
                                 <label for="inputPostContent" class="form-label">Answer Contents</label>

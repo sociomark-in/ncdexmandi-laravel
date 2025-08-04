@@ -63,6 +63,26 @@
             </li>
             <!-- Blogs -->
 
+            <!-- News -->
+            <li class="nav-item <?= link_is_active(['news', 'news/new-article'], $group = true)['active'] ? "active" : ""  ?>">
+                <a class="nav-link" data-bs-toggle="collapse" href="#news" role="button" aria-expanded="<?= link_is_active(['news', 'news/new-article'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="news">
+                    <i class="link-icon" data-feather="database"></i>
+                    <span class="link-title">News Articles</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse <?= link_is_active(['news', 'news/new-article'], $group = true)['show'] ? "show" : "" ?>" id="news">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="<?= base_url("news") ?>" class="nav-link <?= link_is_active('news')['active'] ? "active" : ""  ?>">All Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('news/new-article') ?>" target="_blank" class="nav-link <?= link_is_active('news/new-article')['active'] ? "active" : "" ?>">Add News Article</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!-- News -->
+
             <!-- Episodes -->
             <li class="nav-item <?= link_is_active(['episodes', 'episode/new-post'], $group = true)['active'] ? "active" : ""  ?>">
                 <a class="nav-link" data-bs-toggle="collapse" href="#episodes" role="button" aria-expanded="<?= link_is_active(['episodes', 'episode/new-post'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="episodes">
@@ -82,6 +102,26 @@
                 </div>
             </li>
             <!-- Episodes -->
+
+            <!-- FAQs -->
+            <li class="nav-item <?= link_is_active(['faqs', 'faqs/new-question'], $group = true)['active'] ? "active" : ""  ?>">
+                <a class="nav-link" data-bs-toggle="collapse" href="#faqs" role="button" aria-expanded="<?= link_is_active(['faqs', 'faqs/new-question'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="reports">
+                    <i class="link-icon" data-feather="database"></i>
+                    <span class="link-title">FAQs</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse <?= link_is_active(['faqs', 'faqs/new-question'], $group = true)['show'] ? "show" : "" ?>" id="faqs">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="<?= base_url("faqs") ?>" class="nav-link <?= link_is_active('faqs')['active'] ? "active" : ""  ?>">All FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('faqs/new-question') ?>" target="_blank" class="nav-link <?= link_is_active('faqs/new-question')['active'] ? "active" : "" ?>">Add New Post</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!-- FAQs -->
 
             <!-- Podcasts -->
             <li class="nav-item <?= link_is_active(['podcasts', 'podcast/new-post'], $group = true)['active'] ? "active" : ""  ?>">
@@ -121,25 +161,7 @@
                     </ul>
                 </div>
             </li>
-
-            <!-- FAQs -->
-            <li class="nav-item <?= link_is_active(['faqs', 'faqs/new-question'], $group = true)['active'] ? "active" : ""  ?>">
-                <a class="nav-link" data-bs-toggle="collapse" href="#faqs" role="button" aria-expanded="<?= link_is_active(['faqs', 'faqs/new-question'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="reports">
-                    <i class="link-icon" data-feather="database"></i>
-                    <span class="link-title">FAQs</span>
-                    <i class="link-arrow" data-feather="chevron-down"></i>
-                </a>
-                <div class="collapse <?= link_is_active(['faqs', 'faqs/new-question'], $group = true)['show'] ? "show" : "" ?>" id="faqs">
-                    <ul class="nav sub-menu">
-                        <li class="nav-item">
-                            <a href="<?= base_url("faqs") ?>" class="nav-link <?= link_is_active('faqs')['active'] ? "active" : ""  ?>">All FAQs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url('faqs/new-question') ?>" target="_blank" class="nav-link <?= link_is_active('faqs/new-question')['active'] ? "active" : "" ?>">Add New Post</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
+            <!-- Reports -->
 
             <li class="nav-item <?= link_is_active(['gallery', 'infographics'], $group = true)['active'] ? "active" : ""  ?>">
                 <a class="nav-link" disabled data-bs-toggle="collapse" href="#gallery" role="button" aria-expanded="<?= link_is_active(['gallery', 'infographics'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="gallery">

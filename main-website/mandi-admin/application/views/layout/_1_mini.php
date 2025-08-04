@@ -10,7 +10,7 @@ License: For each use you must have a valid license purchased only from above li
 
 <head>
 	<?php $this->load->view('components/_head'); ?>
-	<title>NobleUI - HTML Bootstrap 5 Admin Dashboard Template</title>
+	<title><?= $page['title'] ?? APP_NAME ?></title>
 </head>
 
 <body>

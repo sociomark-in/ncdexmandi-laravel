@@ -36,7 +36,7 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="inputTitle" class="form-label">Question Title</label>
-                                <input type="text" name="post_title" class="form-control" maxlength="100" id="inputTitle">
+                                <input type="text" name="post_title" class="form-control text-counter" maxlength="100" id="inputTitle">
                             </div>
                             <div class="mb-3">
                                 <label for="inputPostContent" class="form-label">Answer Contents</label>
@@ -105,14 +105,16 @@
                             <div class="mb-3">
                                 <label for="inputBlogTags" class="form-label">Tags</label>
                                 <select name="post_tags[]" class="form-select" id="inputBlogTags" multiple>
-                                <?php foreach ($tags as $key => $tag): ?>
+                                    <?php foreach ($tags as $key => $tag): ?>
                                         <option value="<?= $tag['id'] ?>"><?= $tag['name'] ?></option>
                                     <?php endforeach ?>
                                 </select>
                                 <script>
-                                    $('#inputBlogTags').select2({
-                                        tags: true, // Enables the tagging feature
-                                        tokenSeparators: [','] // Defines separators for new tags (comma and space)
+                                    $(document).ready(function() {
+                                        $('#inputBlogTags').select2({
+                                            tags: true,
+                                            tokenSeparators: [',', ' ']
+                                        });
                                     });
                                 </script>
                             </div>
@@ -141,7 +143,7 @@
             </div>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Blog Post</button>
+            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save FAQ Question</button>
             <button type="reset" class="btn btn-outline-secondary">Discard</button>
         </div>
     </div>
@@ -150,7 +152,7 @@
 <script>
     $(document).ready(function() {
         hasUnsavedChanges = true;
-        $('button[type=submit]').on('click', ()=>{
+        $('button[type=submit]').on('click', () => {
             hasUnsavedChanges = false;
         })
         // --- Core `beforeunload` Event Listener ---
@@ -201,7 +203,7 @@
             styleTags: ['p', 'h4', 'h5'],
         });
 
-        $('button[type=reset]').on('click', ()=>{
+        $('button[type=reset]').on('click', () => {
             $('#inputPostContent').summernote('code', '');
         })
 

@@ -69,7 +69,7 @@
                             <div class="d-flex justify-content-between align-items-baseline">
                                 <h6 class="card-title mb-0">All Episodes</h6>
                                 <div>
-                                    <a class="btn p-0 btn-icon-text text-dark" href="">View All<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
+                                    <a class="btn p-0 btn-icon-text text-dark" href="<?= base_url('episodes') ?>">View All<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
                                 </div>
                             </div>
                             <div class="row">
@@ -139,7 +139,7 @@
                             <div class="d-flex justify-content-between align-items-baseline">
                                 <h6 class="card-title mb-0">All FPOs</h6>
                                 <div>
-                                    <a class="btn p-0 btn-icon-text text-dark" href="">View All<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
+                                    <a class="btn p-0 btn-icon-text text-dark" href="<?= base_url('fpos') ?>">View All<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
                                 </div>
                             </div>
                             <div class="row">
@@ -185,7 +185,7 @@
                             <div class="d-flex justify-content-between align-items-baseline">
                                 <h6 class="card-title mb-0">All News Articles</h6>
                                 <div>
-                                    <a class="btn p-0 btn-icon-text text-dark" href="">View All<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
+                                    <a class="btn p-0 btn-icon-text text-dark" href="<?= base_url('news') ?>">View All<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
                                 </div>
                             </div>
                             <div class="row">

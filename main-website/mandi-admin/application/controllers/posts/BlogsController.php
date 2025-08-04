@@ -14,20 +14,42 @@ class BlogsController extends MY_Controller
         $this->load->model('content/BlogsModel');
         $this->load->model('UserModel');
         $this->error = [];
+
+        $this->data['authors'] = $this->UserModel->get(null, ['id', 'name']);
+        $this->data['categories'] = json_decode($this->CategoriesModel->get(null, ['id', 'name']), true);
+        $this->data['tags'] = json_decode($this->TagsModel->get(null, ['id', 'name']), true);
     }
 
     public function index()
     {
-        $this->data['authors'] = $this->UserModel->get(null, ['id', 'name']);
-        $this->data['categories'] = json_decode($this->CategoriesModel->get(null, ['id', 'name']), true);
-        $this->data['tags'] = json_decode($this->TagsModel->get(null, ['id', 'name']), true);
+        $where = $this->input->get() ?? NULL;
+
+        foreach ($where as $key => $value) {
+            if($value == NULL){
+                unset($where[$key]);
+            }
+        }
+        $posts = json_decode($this->BlogsModel->get($where), true);
+        for ($i = 0; $i < count($posts); $i++) {
+            $posts[$i]['category'] = json_decode($this->CategoriesModel->get(['id' => $posts[$i]['post_category']]), true)[0];
+            $posts[$i]['tags'] = json_decode($posts[$i]['post_tags'], true);
+            $tags = [];
+            for ($j = 0; $j < count($posts[$i]['tags']); $j++) {
+                array_push(
+                    $tags,
+                    json_decode($this->TagsModel->get(['id' => $posts[$i]['tags'][$j]]), true)[0]
+                );
+            }
+            $posts[$i]['tags'] = $tags;
+        }
+        $this->data['posts'] = $posts;
+        // echo "<pre>";
+        // print_r($this->data);
+        // die;
         $this->load->admin_dashboard('blogs/home', $this->data);
     }
     public function new_post()
     {
-        $this->data['authors'] = $this->UserModel->get(null, ['id', 'name']);
-        $this->data['categories'] = json_decode($this->CategoriesModel->get(null, ['id', 'name']), true);
-        $this->data['tags'] = json_decode($this->TagsModel->get(null, ['id', 'name']), true);
         $this->load->admin_dashboard('blogs/new', $this->data);
     }
 
@@ -41,8 +63,9 @@ class BlogsController extends MY_Controller
         }
     }
 
-    public function edit_post($post_id){
-        $this->data['post'] = json_decode($this->BlogsModel->get(['id' => $post_id]), true);
+    public function edit_post($post_id)
+    {
+        $this->data['post'] = json_decode($this->BlogsModel->get(['id' => $post_id]), true)[0];
         $this->load->admin_dashboard('blogs/edit', $this->data);
     }
 
@@ -56,18 +79,23 @@ class BlogsController extends MY_Controller
 
     public function api_new_post($version = 2)
     {
-        $this->request = [
-            'post_title' => $this->input->post('post_title'),
-            'post_content' => $this->input->post('post_content'),
-            'post_except' => $this->input->post('post_except'),
-            'seo_title' => $this->input->post('seo')['title'],
-            'seo_description' => $this->input->post('seo')['description'],
-            'seo_slug' => $this->input->post('seo')['slug'],
-            'status' => $this->input->post('status'),
-            'post_author' => $this->input->post('post_author'),
-            'post_category' => $this->input->post('post_category'),
+        $this->request = $this->input->post();
+
+        $tags = $this->add_missing_tags($this->request['post_tags']);
+        $this->request['post_tags'] = $tags;
+
+        $data = [
+            "post_title" => $this->input->post('post_title'),
+            "post_excerpt" => $this->input->post('post_except'),
+            "post_content" => $this->input->post('post_content'),
+            "post_seo_title" => $this->input->post('seo')['title'],
+            "post_seo_description" => $this->input->post('seo')['description'],
+            "slug" => $this->input->post('seo')['slug'],
             'lang' => $this->input->post('lang'),
-            'post_tags' => json_encode($this->input->post('post_tags')),
+            "post_category" => $this->input->post('post_category'),
+            "post_tags" => json_encode($this->input->post('post_tags')),
+            "post_author" => $this->input->post('post_author'),
+            "post_status" => $this->input->post('status'),
         ];
 
         if (!file_exists(FILE_UPLOAD_PATH)) {
@@ -79,7 +107,6 @@ class BlogsController extends MY_Controller
         $new_name = time() . "_" . $_FILES["post_image"]['name'];
         $config['file_name'] = $new_name;
 
-
         $this->load->library('upload', $config);
         $this->load->helper('image');
 
@@ -87,11 +114,18 @@ class BlogsController extends MY_Controller
             $t = resize_image($this->upload->data('file_name'), $this->upload->data('file_path'), 200);
             $i = resize_image($this->upload->data('file_name'), $this->upload->data('file_path'), 580);
             if ($i && $t) {
-                $this->request['post_thumb'] = $t;
-                $this->request['post_image'] = $i;
-                echo "<pre>";
-                print_r($this->request);
-                print_r($_FILES);
+                $path = str_replace("\\", "/", FILE_UPLOAD_PATH);
+                $t = str_replace($path, "", $t);
+                $i = str_replace($path, "", $i);
+                $data['post_seo_thumb'] = $t;
+                $data['post_image'] = $i;
+                try {
+                    $this->BlogsModel->new($data);
+                } catch (Exception $th) {
+                    print_r($th);
+                } finally {
+                    redirect("blogs");
+                }
             }
         } else {
             echo "<pre>";

@@ -36,11 +36,11 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="inputTitle" class="form-label">Post Title</label>
-                                <input type="text" name="post_title" class="form-control" maxlength="100" id="inputTitle">
+                                <input type="text" name="post_title" class="form-control text-counter" maxlength="80" id="inputTitle">
                             </div>
                             <div class="mb-3">
                                 <label for="inputTitle" class="form-label">YouTube Video URL</label>
-                                <input type="url" name="post_video" class="form-control" maxlength="100" id="inputYouTube">
+                                <input type="url" name="post_video" class="form-control" maxlength="80" id="inputYouTube">
                             </div>
                             <div class="mb-3">
                                 <label for="fpoJourney" class="form-label">FPO Journey</label>
@@ -63,7 +63,7 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control mini-editor" maxlength="300" id="inputExerpt" name="post_except"></textarea>
+                                <textarea class="form-control mini-editor text-counter" maxlength="300" id="inputExerpt" name="post_except"></textarea>
                             </div>
                         </div>
                     </div>
@@ -79,11 +79,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageTitle" class="form-label">Page Title</label>
-                                <input type="text" class="form-control" id="inputSEOPageTitle" name="seo[title]" maxlength="100" />
+                                <input type="text" class="form-control text-counter" id="inputSEOPageTitle" name="seo[title]" maxlength="80" />
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageDesc" class="form-label">Description</label>
-                                <textarea class="form-control mini-editor" maxlength="160" name="seo[description]" id="inputSEOPageDesc"></textarea>
+                                <textarea class="form-control mini-editor text-counter" maxlength="160" name="seo[description]" id="inputSEOPageDesc"></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageURL" class="form-label">Page URL</label>

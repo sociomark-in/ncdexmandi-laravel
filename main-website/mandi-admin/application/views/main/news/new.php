@@ -20,11 +20,11 @@
                 <a href="<?= base_url("blogs") ?>" class="nav-link"><i class="link-arrow" data-feather="chevron-left"></i></a>
             </div>
             <div>
-                <h4 class="mb-3 mb-md-0">Edit Blog Post</h4>
+                <h4 class="mb-3 mb-md-0">New News Article</h4>
             </div>
         </div>
         <div class="">
-            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Changes</button>
+            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save News Article</button>
             <button type="reset" class="btn btn-outline-secondary">Discard</button>
         </div>
     </div>
@@ -36,7 +36,7 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="inputTitle" class="form-label">Post Title</label>
-                                <input type="text text-counter" name="post_title" value="<?= $post['post_title'] ?>" class="form-control" maxlength="100" id="inputTitle">
+                                <input type="text" name="post_title" class="form-control text-counter" maxlength="100" id="inputTitle">
                             </div>
                             <div class="mb-3">
                                 <label for="inputPostContent" class="form-label">Post Contents</label>
@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control mini-editor text-counter" maxlength="300" id="inputExerpt" name="post_except"><?= $post['post_excerpt'] ?></textarea>
+                                <textarea class="form-control mini-editor text-counter" maxlength="300" id="inputExerpt" name="post_except"></textarea>
                             </div>
                         </div>
                     </div>
@@ -71,15 +71,15 @@
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageTitle" class="form-label">Page Title</label>
-                                <input type="text" class="form-control text-counter" id="inputSEOPageTitle" name="seo[title]" value="<?= $post['post_seo_title'] ?>" maxlength="100" />
+                                <input type="text" class="form-control text-counter" id="inputSEOPageTitle" name="seo[title]" maxlength="100" />
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageDesc" class="form-label">Description</label>
-                                <textarea class="form-control mini-editor text-counter" maxlength="160" name="seo[description]" id="inputSEOPageDesc"><?= $post['post_seo_description'] ?></textarea>
+                                <textarea class="form-control mini-editor text-counter" maxlength="160" name="seo[description]" id="inputSEOPageDesc"></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageURL" class="form-label">Page URL</label>
-                                <input type="text" class="form-control" id="inputSEOPageURL" name="seo[slug]" maxlength="150" value="<?= $post['slug'] ?>"/>
+                                <input type="text" class="form-control" id="inputSEOPageURL" name="seo[slug]" maxlength="150" />
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                             </div>
                             <div class="mb-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="status" value="2" id="flexCheckDefault" checked>
+                                    <input class="form-check-input" type="radio" name="status" value="2" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Draft
                                     </label>
@@ -104,7 +104,7 @@
                             </div>
                             <div class="mb-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="status" value="1" id="flexCheckChecked">
+                                    <input class="form-check-input" type="radio" name="status" value="1" id="flexCheckChecked" checked>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Published
                                     </label>
@@ -161,9 +161,11 @@
                                     <?php endfor ?>
                                 </select>
                                 <script>
-                                    $('#inputBlogTags').select2({
-                                        tags: true, // Enables the tagging feature
-                                        tokenSeparators: [','] // Defines separators for new tags (comma and space)
+                                    $(document).ready(function() {
+                                        $('#inputBlogTags').select2({
+                                            tags: true,
+                                            tokenSeparators: [',']
+                                        });
                                     });
                                 </script>
                             </div>
@@ -179,10 +181,10 @@
                             <div class="mb-3">
                                 <label for="inputPostLanguage" class="form-label">Post Language</label>
                                 <select name="lang" id="inputPostLanguage" class="form-control">
-                                    <option value="en-IN" data-origin="en">English</option>
-                                    <option value="hi-IN" data-origin="hi">Hindi</option>
-                                    <option value="mr-IN" data-origin="mr">Marathi</option>
-                                    <option value="gu-IN" data-origin="gj">Gujarati</option>
+                                    <option value="en" data-origin="en">English</option>
+                                    <option value="hi" data-origin="hi">Hindi</option>
+                                    <option value="mr" data-origin="mr">Marathi</option>
+                                    <option value="gu" data-origin="gj">Gujarati</option>
                                     <!-- <option value="wyj496iThHwgfU6w" data-origin="Sociomark">Sociomark - Digital Marketing Agency</option> -->
                                 </select>
                             </div>
@@ -192,16 +194,18 @@
             </div>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Changes</button>
+            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Blog Post</button>
             <button type="reset" class="btn btn-outline-secondary">Discard</button>
         </div>
     </div>
     <?= form_close() ?>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/speakingurl/14.0.1/speakingurl.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-slugify@1.2.5/dist/slugify.min.js"></script>
 <script>
     $(document).ready(function() {
         hasUnsavedChanges = true;
-        $('button[type=submit]').on('click', ()=>{
+        $('button[type=submit]').on('click', () => {
             hasUnsavedChanges = false;
         })
         // --- Core `beforeunload` Event Listener ---
@@ -230,9 +234,6 @@
             ],
             // shortcuts: false,
             callbacks: {
-                onInit: function() {
-                    $(this).summernote('code', `<?= $post['post_content'] ?>`);
-                },
                 onPaste: function(e) {
                     var clipboardData = e.originalEvent.clipboardData || window.clipboardData;
                     var pastedText = '';
@@ -250,11 +251,16 @@
 
                     // Insert the plain text into Summernote
                     // 'insertText' is a Summernote API method to insert text at the current cursor position
-                    $(element).summernote('insertText', pastedText);
+                    $('#inputPostContent').summernote('insertText', pastedText);
                 },
             },
             styleTags: ['p', 'h4', 'h5'],
         });
+
+        $('button[type=reset]').on('click', () => {
+            $('#inputPostContent').summernote('code', '');
+        })
+
         $('.dropify').dropify({
             error: {
                 'fileSize': 'The file size is too big ({{ value }} max).',
@@ -306,14 +312,14 @@
             }
         });
 
-        /* URLize: Change text to URL */
+        /* Slugify: Change text to URL */
         var $titleInput = $("#inputTitle");
         var $titleSEOInput = $("#inputSEOPageTitle");
         $titleInput.on("input", () => {
-            $("#inputSEOPageURL").val(slugify($titleInput.val()))
+            $("#inputSEOPageURL").slugify($titleInput)
         })
         $titleSEOInput.on("input", () => {
-            $("#inputSEOPageURL").val(slugify($titleSEOInput.val()))
+            $("#inputSEOPageURL").slugify($titleSEOInput)
         })
 
     });

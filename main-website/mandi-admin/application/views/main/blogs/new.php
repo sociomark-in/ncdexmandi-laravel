@@ -21,6 +21,7 @@
             </div>
             <div>
                 <h4 class="mb-3 mb-md-0">New Blog Post</h4>
+                <input type="hidden" name="redirect" value="<?= current_url() ?>">
             </div>
         </div>
         <div class="">
@@ -36,7 +37,7 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="inputTitle" class="form-label">Post Title</label>
-                                <input type="text" name="post_title" class="form-control" maxlength="100" id="inputTitle">
+                                <input type="text" name="post_title" class="form-control text-counter" maxlength="100" id="inputTitle">
                             </div>
                             <div class="mb-3">
                                 <label for="inputPostContent" class="form-label">Post Contents</label>
@@ -55,7 +56,7 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control mini-editor" maxlength="300" id="inputExerpt" name="post_except"></textarea>
+                                <textarea class="form-control mini-editor text-counter" maxlength="300" id="inputExerpt" name="post_except"></textarea>
                             </div>
                         </div>
                     </div>
@@ -71,11 +72,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageTitle" class="form-label">Page Title</label>
-                                <input type="text" class="form-control" id="inputSEOPageTitle" name="seo[title]" maxlength="100" />
+                                <input type="text" class="form-control text-counter" id="inputSEOPageTitle" name="seo[title]" maxlength="100" />
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageDesc" class="form-label">Description</label>
-                                <textarea class="form-control mini-editor" maxlength="160" name="seo[description]" id="inputSEOPageDesc"></textarea>
+                                <textarea class="form-control mini-editor text-counter" maxlength="160" name="seo[description]" id="inputSEOPageDesc"></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageURL" class="form-label">Page URL</label>
@@ -161,9 +162,11 @@
                                     <?php endfor ?>
                                 </select>
                                 <script>
-                                    $('#inputBlogTags').select2({
-                                        tags: true, // Enables the tagging feature
-                                        tokenSeparators: [','] // Defines separators for new tags (comma and space)
+                                    $(document).ready(function() {
+                                        $('#inputBlogTags').select2({
+                                            tags: true,
+                                            tokenSeparators: [',']
+                                        });
                                     });
                                 </script>
                             </div>
@@ -179,10 +182,10 @@
                             <div class="mb-3">
                                 <label for="inputPostLanguage" class="form-label">Post Language</label>
                                 <select name="lang" id="inputPostLanguage" class="form-control">
-                                    <option value="en-IN" data-origin="en">English</option>
-                                    <option value="hi-IN" data-origin="hi">Hindi</option>
-                                    <option value="mr-IN" data-origin="mr">Marathi</option>
-                                    <option value="gu-IN" data-origin="gj">Gujarati</option>
+                                    <option value="en" data-origin="en">English</option>
+                                    <option value="hi" data-origin="hi">Hindi</option>
+                                    <option value="mr" data-origin="mr">Marathi</option>
+                                    <option value="gu" data-origin="gj">Gujarati</option>
                                     <!-- <option value="wyj496iThHwgfU6w" data-origin="Sociomark">Sociomark - Digital Marketing Agency</option> -->
                                 </select>
                             </div>
@@ -203,7 +206,7 @@
 <script>
     $(document).ready(function() {
         hasUnsavedChanges = true;
-        $('button[type=submit]').on('click', ()=>{
+        $('button[type=submit]').on('click', () => {
             hasUnsavedChanges = false;
         })
         // --- Core `beforeunload` Event Listener ---
@@ -230,7 +233,7 @@
                 ['insert', ['link', 'picture', 'video']],
                 ['view', ['fullscreen']]
             ],
-            shortcuts: false,
+            // shortcuts: false,
             callbacks: {
                 onPaste: function(e) {
                     var clipboardData = e.originalEvent.clipboardData || window.clipboardData;
@@ -249,13 +252,13 @@
 
                     // Insert the plain text into Summernote
                     // 'insertText' is a Summernote API method to insert text at the current cursor position
-                    $(element).summernote('insertText', pastedText);
+                    $('#inputPostContent').summernote('insertText', pastedText);
                 },
             },
             styleTags: ['p', 'h4', 'h5'],
         });
 
-        $('button[type=reset]').on('click', ()=>{
+        $('button[type=reset]').on('click', () => {
             $('#inputPostContent').summernote('code', '');
         })
 

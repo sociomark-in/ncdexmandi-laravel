@@ -30,7 +30,7 @@
                             function googleTranslateElementInit() {
                                 new google.translate.TranslateElement({
                                     pageLanguage: 'en',
-                                    includedLanguages: 'en,mr,hi,gu',
+                                    includedLanguages: 'en,mr,hi,gu,ar',
                                 }, 'google_translate_element');
                             }
 
@@ -79,7 +79,7 @@
                     <li class="nav-item">
                         <a class="nav-link {{ Request::routeIs('main_home') ? 'active' : '' }}" aria-current="page" href="{{ route('main_home') }}">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none">
                         <a class="nav-link {{ Request::routeIs('main_about') ? 'active' : '' }}" href="{{ route('main_about') }}">About NCDEX Mandi</a>
                     </li>
                     <li class="nav-item">

@@ -174,11 +174,11 @@
                 <div class="row g-3">
                     <div class="col-12">
                         <label for="" class="form-label">Name the Category</label>
-                        <input type="text" name="name" class="form-control" required>
+                        <input type="text" name="name" class="form-control text-counter" maxlength="100" required>
                     </div>
                     <div class="col-12">
                         <label for="" class="form-label">Category Description</label>
-                        <textarea name="description" class="form-control" rows="5"></textarea>
+                        <textarea name="description" class="form-control text-counter" maxlength="300" rows="5"></textarea>
                     </div>
                 </div>
             </div>
@@ -203,11 +203,11 @@
                 <div class="row g-3">
                     <div class="col-12">
                         <label for="" class="form-label">Name the Category</label>
-                        <input type="text" name="name" class="form-control" required>
+                        <input type="text" name="name" class="form-control text-counter" maxlength="100" required>
                     </div>
                     <div class="col-12">
                         <label for="" class="form-label">Category Description</label>
-                        <textarea name="description" class="form-control" rows="5"></textarea>
+                        <textarea name="description" class="form-control text-counter" maxlength="300" rows="5"></textarea>
                     </div>
                 </div>
             </div>

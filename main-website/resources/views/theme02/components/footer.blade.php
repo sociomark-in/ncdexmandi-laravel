@@ -38,25 +38,26 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                         <div class="footer-description footer-social">
                             <h5>About NCDEX Mandi</h5>
-                            <p>(15 - 20 Words)Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quae perferendis harum distinctio sed eveniet odio dicta?</p>
-                                <ul class="nav gap-2">
-                                    <li class="nav-item">
-                                        <a class="nav-link social-icon" href="https://www.facebook.com/TrustNCDEX/" target="_blank"><i
-                                                class="fa-brands fa-facebook-f"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link social-icon" href="https://www.linkedin.com/company/27547/" target="_blank"><i
-                                                class="fa-brands fa-linkedin-in"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link social-icon" href="https://www.youtube.com/user/trustncdex" target="_blank"><i
-                                                class="fa-brands fa-youtube"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link social-icon" href="https://x.com/ncdex" target="_blank"><i
-                                                class="fa-brands fa-x-twitter"></i></a>
-                                    </li>
-                                </ul>
+                            <p>(15 - 20 Words)Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quae
+                                perferendis harum distinctio sed eveniet odio dicta?</p>
+                            <ul class="nav gap-2">
+                                <li class="nav-item">
+                                    <a class="nav-link social-icon" href="https://www.facebook.com/TrustNCDEX/"
+                                        target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link social-icon" href="https://www.linkedin.com/company/27547/"
+                                        target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link social-icon" href="https://www.youtube.com/user/trustncdex"
+                                        target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link social-icon" href="https://x.com/ncdex" target="_blank"><i
+                                            class="fa-brands fa-x-twitter"></i></a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-12">
@@ -104,7 +105,9 @@
                                     <a class="nav-link" href="{{ route('main_gallery') }}">Infographics</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link bg-primary p-2" href="">Subscribe Now&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+                                    <button class="nav-link bg-primary p-2" data-bs-toggle="modal"
+                                        data-bs-target="#subscribeModal">Subscribe Now&nbsp;&nbsp;<i
+                                            class="fa-solid fa-arrow-right"></i></button>
                                 </li>
                             </ul>
                         </div>
@@ -292,3 +295,107 @@
     </div>
 </footer>
 <!-- End Footer -->
+<div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="subscribeModalLabel">Subscribe for Updates!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="post">
+                    @csrf
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="" class="form-label">Enter your Email Address</label>
+                            <input type="email" name="" id="" class="form-control"
+                                placeholder="Email Address">
+                        </div>
+                        <div class="col-12">
+                            <p class="">Select from below Resources:</p>
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="resources[]"
+                                        value="Blogs" checked id="checkDefault">
+                                        <label class="form-check-label" for="checkDefault">
+                                            Blogs
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="resources[]"
+                                            value="FAQs" checked id="checkDefault">
+                                        <label class="form-check-label" for="checkDefault">
+                                            FAQs
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="resources[]"
+                                            value="Key Institutions" id="checkDefault">
+                                        <label class="form-check-label" for="checkDefault">
+                                            Key Institutions
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="resources[]"
+                                            value="Webinars" id="checkDefault">
+                                        <label class="form-check-label" for="checkDefault">
+                                            Webinars
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="resources[]"
+                                            value="Podcast" id="checkDefault">
+                                        <label class="form-check-label" for="checkDefault">
+                                            Podcast
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="resources[]"
+                                            value="Reports" id="checkDefault">
+                                        <label class="form-check-label" for="checkDefault">
+                                            Reports
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="resources[]"
+                                            value="Infographics" id="checkDefault">
+                                        <label class="form-check-label" for="checkDefault">
+                                            Infographics
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="resources[]"
+                                            value="News Articles" id="checkDefault">
+                                        <label class="form-check-label" for="checkDefault">
+                                            News Articles
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

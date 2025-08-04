@@ -1,12 +1,12 @@
 <main class="page-content">
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
         <div>
-            <h4 class="mb-3 mb-md-0">Blog Posts</h4>
+            <h4 class="mb-3 mb-md-0">News Articles</h4>
         </div>
         <div class="">
-            <a href="<?= base_url('blog/new-post') ?>" target="_blank" class="btn btn-icon-text btn-primary">
+            <a href="<?= base_url('news/new-article') ?>" target="_blank" class="btn btn-icon-text btn-primary">
                 <i class="btn-icon-prepend" data-feather="plus"></i>
-                Add New Post</a>
+                Add New Article</a>
         </div>
     </div>
 
@@ -16,14 +16,14 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline mb-2">
-                        <h6 class="card-title mb-0">All Posts</h6>
+                        <h6 class="card-title mb-0">All Articles</h6>
                     </div>
                     <div class="row mb-3">
                         <div class="col-12">
-                            <form action="<?= base_url("blogs") ?>" method="get">
+                            <form action="<?= base_url("news") ?>" method="get">
                                 <div class="row g-2">
                                     <div class="col-lg-2 col-md-3 col-12">
-                                        <select name="post_category" data-placeholder="Select a Category" class="form-select" id="">
+                                        <select name="post_category" class="form-select" id="">
                                             <option value="">Select a Category</option>
                                             <?php foreach ($categories as $key => $category): ?>
                                                 <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
@@ -31,7 +31,7 @@
                                         </select>
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-12">
-                                        <select name="post_tag" data-placeholder="Select A Tag" class="form-select" id="">
+                                        <select name="post_tag" class="form-select" id="">
                                             <option value="">Select A Tag</option>
                                             <?php foreach ($tags as $key => $tag): ?>
                                                 <option value="<?= $tag['id'] ?>"><?= $tag['name'] ?></option>
@@ -39,11 +39,11 @@
                                         </select>
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-12">
-                                        <select name="post_status" data-placeholder="Select Visibility" class="form-select" id="">
+                                        <select name="post_status" class="form-select" id="">
                                             <option value="">Select Visibility</option>
-                                            <option value="1">Released</option>
-                                            <option value="2">Draft</option>
-                                            <option value="3">Archived</option>
+                                            <?php for ($i = 0; $i < 20; $i++): ?>
+                                                <option value="Option <?= $i ?>">Option <?= $i ?></option>
+                                            <?php endfor ?>
                                         </select>
                                     </div>
                                     <div class="col-auto">
@@ -60,13 +60,10 @@
                                     <a class="nav-link <?= (in_array($this->input->get('post_status'), [NULL, ""])) ? "active" : "" ?>" aria-current="page" href="<?= current_url() ?>">All Posts <span class="badge bg-dark">200</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($this->input->get('post_status') == "1") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=1">Released <span class="badge bg-dark">200</span></a>
+                                    <a class="nav-link <?= ($this->input->get('post_status') == "released") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=released">Released <span class="badge bg-dark">200</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($this->input->get('post_status') == "2") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=2">Draft <span class="badge bg-dark">200</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link <?= ($this->input->get('post_status') == "3") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=3">Archived <span class="badge bg-dark">200</span></a>
+                                    <a class="nav-link <?= ($this->input->get('post_status') == "draft") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=draft">Draft <span class="badge bg-dark">200</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -76,7 +73,7 @@
                             <thead>
                                 <tr>
                                     <th class="pt-0"></th>
-                                    <th class="pt-0">Blog Title</th>
+                                    <th class="pt-0">Article Title</th>
                                     <th class="pt-0">Categories</th>
                                     <th class="pt-0">Tags</th>
                                     <!-- <th class="pt-0">Lang</th>
@@ -87,52 +84,25 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php
-                                foreach ($posts as $key => $post) :
-                                    $status = "Draft";
-                                    switch ($post['post_status']) {
-                                        case '1':
-                                            $status = [
-                                                "text" => "Released",
-                                                "class" => 'bg-success'
-                                            ];
-                                            break;
-                                        case '2':
-                                            $status = [
-                                                "text" => "Draft",
-                                                "class" => ''
-                                            ];
-                                            break;
-                                        case '3':
-                                            $status = [
-                                                "text" => "Archived",
-                                                "class" => 'bg-danger'
-                                            ];
-                                            break;
-
-                                        default:
-                                            $status = [
-                                                "text" => "NA",
-                                                "class" => ''
-                                            ];
-                                            break;
-                                    }
-                                ?>
+                                <?php for ($i = 0; $i < 20; $i++) : ?>
                                     <tr>
                                         <td>
-                                            <a target="_blank" href="<?= base_url('blog/post/' . $key . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="edit-2"></i></a>
-                                            <button id="deleteButton<?= $key ?>" class="btn link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
+                                            <a target="_blank" href="<?= base_url('news/article/' . $i . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="edit-2"></i></a>
+                                            <button id="deleteButton<?= $i ?>" class="btn link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
                                                 <i class="link-icon px-1 mb-1" data-feather="trash-2"></i>
                                             </button>
                                         </td>
-                                        <td><a target="_blank" href="<?= base_url('blog/post/' . $key . '?post_preview=true') ?>"><span class="blog-title"><?= $post['post_title'] ?></span><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a></td>
+                                        <td><a target="_blank" href="<?= base_url('news/article/' . $i . '?post_preview=true') ?>"><span class="blog-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, praesentium.</span><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a></td>
                                         <td>
-                                            <a href="<?= current_url() . "?post_category=" . $post['category']['id'] ?>"><span class="badge"><?= $post['category']['name'] ?></span></a>
+                                            <span class="badge">Released</span>
+                                            <span class="badge">Released</span>
                                         </td>
                                         <td>
-                                            <?php foreach ($post['tags'] as $key => $tag): ?>
-                                                <a href="<?= current_url() . "?post_tags=" . $tag['id'] ?>"><span class="badge"><?= $tag['name'] ?></span></a>
-                                            <?php endforeach ?>
+                                            <div class="d-flex gap-1">
+                                                <span class="badge">Released</span>
+                                                <span class="badge">Released</span>
+                                                <span class="badge">+4 More</span>
+                                            </div>
                                         </td>
                                         <!-- <td>
                                             <a href="<?= base_url('') ?>">
@@ -151,16 +121,16 @@
                                         </td> -->
                                         <td>-</td>
                                         <td>
-                                            <a href="<?= current_url() . "?post_status=" . $post['post_status'] ?>"><span class="badge <?= $status['class'] ?>"><?= $status['text'] ?></span></a><br>
+                                            <span>Released</span><br>
                                             <span class="text-muted"><?= date("Y/m/d H:i A") ?></span>
                                         </td>
                                     </tr>
                                     <script>
-                                        $("#deleteButton<?= $key ?>").on('click', () => {
-                                            $("#deleteConfirmModal input[name=post_id]").val(<?= $key ?>)
+                                        $("#deleteButton<?= $i ?>").on('click', () => {
+                                            $("#deleteConfirmModal input[name=post_id]").val(<?= $i ?>)
                                         })
                                     </script>
-                                <?php endforeach ?>
+                                <?php endfor ?>
                             </tbody>
                         </table>
                         <script>

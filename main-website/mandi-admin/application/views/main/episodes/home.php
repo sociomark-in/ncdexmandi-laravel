@@ -123,7 +123,7 @@
                     <div class="row g-3">
                         <div class="col-12">
                             <label for="" class="form-label">Episode Title</label>
-                            <input type="text" class="form-control">
+                            <input type="text" maxlength="80" class="form-control text-counter">
                         </div>
                         <div class="col-12">
                             <label for="" class="form-label">Select An FPO</label>

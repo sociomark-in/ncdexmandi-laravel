@@ -20,7 +20,7 @@
                 <a href="<?= base_url("blogs") ?>" class="nav-link"><i class="link-arrow" data-feather="chevron-left"></i></a>
             </div>
             <div>
-                <h4 class="mb-3 mb-md-0">Edit Blog Post</h4>
+                <h4 class="mb-3 mb-md-0">Edit News Article</h4>
             </div>
         </div>
         <div class="">
@@ -35,11 +35,11 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="mb-3">
-                                <label for="inputTitle" class="form-label">Post Title</label>
-                                <input type="text text-counter" name="post_title" value="<?= $post['post_title'] ?>" class="form-control" maxlength="100" id="inputTitle">
+                                <label for="inputTitle" class="form-label">Article Title</label>
+                                <input type="text text-counter" name="post_title" class="form-control" maxlength="100" id="inputTitle">
                             </div>
                             <div class="mb-3">
-                                <label for="inputPostContent" class="form-label">Post Contents</label>
+                                <label for="inputPostContent" class="form-label">Article Contents</label>
                                 <textarea class="form-control full-editor" id="inputPostContent" rows="10" name="post_content"></textarea>
                             </div>
                         </div>
@@ -51,11 +51,11 @@
                             <div class="d-flex justify-content-between align-items-baseline mb-3">
                                 <div class="">
                                     <h6 class="card-title mb-0">Exerpt</h6>
-                                    <p>Add a summary of the post to appear on your home page or blog.</p>
+                                    <p>Add a summary of the post to appear on your home page or article.</p>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control mini-editor text-counter" maxlength="300" id="inputExerpt" name="post_except"><?= $post['post_excerpt'] ?></textarea>
+                                <textarea class="form-control mini-editor text-counter" maxlength="300" id="inputExerpt" name="post_except"></textarea>
                             </div>
                         </div>
                     </div>
@@ -66,20 +66,20 @@
                             <div class="d-flex justify-content-between align-items-baseline mb-3">
                                 <div class="">
                                     <h6 class="card-title mb-0">Search engine listing preview</h6>
-                                    <p>Add a title and description to see how this Blog post might appear in a search engine listing</p>
+                                    <p>Add a title and description to see how this news article might appear in a search engine listing</p>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageTitle" class="form-label">Page Title</label>
-                                <input type="text" class="form-control text-counter" id="inputSEOPageTitle" name="seo[title]" value="<?= $post['post_seo_title'] ?>" maxlength="100" />
+                                <input type="text" class="form-control text-counter" id="inputSEOPageTitle" name="seo[title]" maxlength="100" />
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageDesc" class="form-label">Description</label>
-                                <textarea class="form-control mini-editor text-counter" maxlength="160" name="seo[description]" id="inputSEOPageDesc"><?= $post['post_seo_description'] ?></textarea>
+                                <textarea class="form-control mini-editor text-counter" maxlength="160" name="seo[description]" id="inputSEOPageDesc"></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="inputSEOPageURL" class="form-label">Page URL</label>
-                                <input type="text" class="form-control" id="inputSEOPageURL" name="seo[slug]" maxlength="150" value="<?= $post['slug'] ?>"/>
+                                <input type="text" class="form-control" id="inputSEOPageURL" name="seo[slug]" maxlength="150" />
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                             </div>
                             <div class="mb-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="status" value="2" id="flexCheckDefault" checked>
+                                    <input class="form-check-input" type="radio" name="status" value="2" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Draft
                                     </label>
@@ -104,7 +104,7 @@
                             </div>
                             <div class="mb-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="status" value="1" id="flexCheckChecked">
+                                    <input class="form-check-input" type="radio" name="status" value="1" id="flexCheckChecked" checked>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Published
                                     </label>
@@ -177,7 +177,7 @@
                                 <h6 class="card-title mb-0">Languages & Localization</h6>
                             </div>
                             <div class="mb-3">
-                                <label for="inputPostLanguage" class="form-label">Post Language</label>
+                                <label for="inputPostLanguage" class="form-label">Article Language</label>
                                 <select name="lang" id="inputPostLanguage" class="form-control">
                                     <option value="en-IN" data-origin="en">English</option>
                                     <option value="hi-IN" data-origin="hi">Hindi</option>
@@ -228,11 +228,8 @@
                 ['insert', ['link', 'picture', 'video']],
                 ['view', ['fullscreen']]
             ],
-            // shortcuts: false,
+            shortcuts: false,
             callbacks: {
-                onInit: function() {
-                    $(this).summernote('code', `<?= $post['post_content'] ?>`);
-                },
                 onPaste: function(e) {
                     var clipboardData = e.originalEvent.clipboardData || window.clipboardData;
                     var pastedText = '';

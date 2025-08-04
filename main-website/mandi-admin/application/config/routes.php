@@ -77,6 +77,11 @@ $route['blog/new-post'] ="posts/BlogsController/new_post";
 $route['blog/post/(:any)'] ="posts/BlogsController/view_post/$1";
 $route['blog/post/(:any)/edit'] ="posts/BlogsController/edit_post/$1";
 
+$route['news'] ="posts/NewsController";
+$route['news/new-article'] ="posts/NewsController/new_post";
+$route['news/article/(:any)'] ="posts/NewsController/view_post/$1";
+$route['news/article/(:any)/edit'] ="posts/NewsController/edit_post/$1";
+
 
 $route['episodes'] ="posts/EpisodesController";
 $route['episode/new-post'] ="posts/EpisodesController/new_post";

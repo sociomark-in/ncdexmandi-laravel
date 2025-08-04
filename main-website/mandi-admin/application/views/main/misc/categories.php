@@ -17,13 +17,13 @@
                         <div class="col-md-auto col-12">
                             <ul class="nav nav-underline">
                                 <li class="nav-item">
-                                    <a class="nav-link <?= (in_array($this->input->get('post_status'), [NULL, ""])) ? "active" : "" ?>" aria-current="page" href="<?= current_url() ?>">All Categories&nbsp;<span class="badge bg-dark">200</span></a>
+                                    <a class="nav-link <?= (in_array($this->input->get('post_status'), [NULL, ""])) ? "active" : "" ?>" aria-current="page" href="<?= current_url() ?>">All&nbsp;<span class="badge bg-dark">200</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($this->input->get('post_status') == "active") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=active">Active Categories&nbsp;<span class="badge bg-dark">200</span></a>
+                                    <a class="nav-link <?= ($this->input->get('post_status') == "active") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=active">Active&nbsp;<span class="badge bg-dark">200</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($this->input->get('post_status') == "inactive") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=inactive">Inactive Categories&nbsp;<span class="badge bg-dark">200</span></a>
+                                    <a class="nav-link <?= ($this->input->get('post_status') == "inactive") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=inactive">Inactive&nbsp;<span class="badge bg-dark">200</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -39,12 +39,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php for ($i=0; $i < 20; $i++) : ?>
+                                <?php for ($i = 0; $i < 20; $i++) : ?>
                                     <tr>
                                         <td>
                                             <a target="_blank" href="<?= base_url('user/profile/' . $i . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="edit-2"></i></a>
-                                            <button id="deleteButton<?= $i ?>" class="btn link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
-                                                <i class="link-icon px-1 mb-1" data-feather="trash-2"></i>
+                                            <button id="deleteButton<?= $i ?>" class="btn btn-danger link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
+                                                <i class="link-icon px-1 mb-1" data-feather="trash"></i>
                                             </button>
                                             <a target="_blank" href="<?= base_url('user/profile/' . $i . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a>
                                         </td>
@@ -76,14 +76,40 @@
         <div class="col-xl-4 col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline mb-2 mb-md-3">
+                    <div class="d-flex justify-content-between align-items-baseline mb-2 mb-md-3">
                         <h6 class="card-title mb-0">Add A New Category</h6>
                     </div>
+                    <?= form_open() ?>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="" class="form-label">Category Name</label>
+                            <input type="text" class="form-control text-counter" maxlength="100" id="inputTitle">
+                        </div>
+                        <div class="col-12">
+                            <label for="" class="form-label">Category Slug</label>
+                            <input type="text" class="form-control" id="inputSlug">
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Tag</button>
+                            <button type="reset" class="btn btn-outline-secondary">Discard</button>
+                        </div>
+                    </div>
+                    <?= form_close() ?>
                 </div>
             </div>
         </div>
     </div>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/speakingurl/14.0.1/speakingurl.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-slugify@1.2.5/dist/slugify.min.js"></script>
+<script>
+    /* Slugify: Change text to URL */
+    var $titleInput = $("#inputTitle");
+    $titleInput.on("input", () => {
+        $("#inputSlug").slugify($titleInput)
+    })
+</script>
+
 <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

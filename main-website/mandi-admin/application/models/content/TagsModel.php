@@ -32,7 +32,7 @@ class TagsModel extends CI_Model
         }
         else
         {
-            $this->db->trans_commit(); 
+            $this->db->trans_commit();
             return $insert_id;
         }
     }
