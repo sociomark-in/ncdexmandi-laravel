@@ -157,9 +157,9 @@
                             <div class="mb-3">
                                 <label for="inputBlogTags" class="form-label">Tags</label>
                                 <select name="post_tags[]" class="form-select" id="inputBlogTags" multiple>
-                                    <?php for ($i = 0; $i < 10; $i++) : ?>
-                                        <option value="<?= $i ?>">Select <?= $i ?></option>
-                                    <?php endfor ?>
+                                    <?php foreach ($tags as $key => $tag): ?>
+                                        <option value="<?= $tag['id'] ?>"><?= $tag['name'] ?></option>
+                                    <?php endforeach ?>
                                 </select>
                                 <script>
                                     $(document).ready(function() {

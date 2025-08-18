@@ -23,15 +23,18 @@ class BlogsController extends MY_Controller
     public function index()
     {
         $where = $this->input->get() ?? NULL;
+        $tags = $this->input->get('post_tags') ?? NULL;
 
         foreach ($where as $key => $value) {
             if($value == NULL){
                 unset($where[$key]);
             }
         }
-        $posts = json_decode($this->BlogsModel->get($where), true);
+       
+
+        $posts = json_decode($this->BlogsModel->get(null, $where), true);
         for ($i = 0; $i < count($posts); $i++) {
-            $posts[$i]['category'] = json_decode($this->CategoriesModel->get(['id' => $posts[$i]['post_category']]), true)[0];
+            $posts[$i]['category'] = json_decode($this->CategoriesModel->get(['id' => $posts[$i]['post_category']]), true)[0] ?? [];
             $posts[$i]['tags'] = json_decode($posts[$i]['post_tags'], true);
             $tags = [];
             for ($j = 0; $j < count($posts[$i]['tags']); $j++) {
@@ -43,9 +46,7 @@ class BlogsController extends MY_Controller
             $posts[$i]['tags'] = $tags;
         }
         $this->data['posts'] = $posts;
-        // echo "<pre>";
-        // print_r($this->data);
-        // die;
+
         $this->load->admin_dashboard('blogs/home', $this->data);
     }
     public function new_post()

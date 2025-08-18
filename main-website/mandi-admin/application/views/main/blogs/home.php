@@ -31,7 +31,7 @@
                                         </select>
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-12">
-                                        <select name="post_tag" data-placeholder="Select A Tag" class="form-select" id="">
+                                        <select name="post_tags" data-placeholder="Select A Tag" class="form-select" id="">
                                             <option value="">Select A Tag</option>
                                             <?php foreach ($tags as $key => $tag): ?>
                                                 <option value="<?= $tag['id'] ?>"><?= $tag['name'] ?></option>
@@ -84,6 +84,7 @@
                                     <th class="pt-0">Lang</th> -->
                                     <th class="pt-0">Comments</th>
                                     <th class="pt-0">Date</th>
+                                    <th class="pt-0">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -150,9 +151,9 @@
                                             </a>
                                         </td> -->
                                         <td>-</td>
+                                        <td><?= date("Y/m/d H:i A") ?></td>
                                         <td>
                                             <a href="<?= current_url() . "?post_status=" . $post['post_status'] ?>"><span class="badge <?= $status['class'] ?>"><?= $status['text'] ?></span></a><br>
-                                            <span class="text-muted"><?= date("Y/m/d H:i A") ?></span>
                                         </td>
                                     </tr>
                                     <script>

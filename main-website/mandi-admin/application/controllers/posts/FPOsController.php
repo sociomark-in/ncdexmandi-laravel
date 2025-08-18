@@ -11,6 +11,7 @@ class FPOsController extends MY_Controller
         $this->load->model('content/CategoriesModel');
         $this->load->model('content/TagsModel');
         $this->load->model('data/FPOsModel');
+        $this->load->model('data/CommoditiesModel');
         $this->load->model('UserModel');
         $this->error = [];
     }
@@ -80,6 +81,28 @@ class FPOsController extends MY_Controller
         } else {
             echo "<pre>";
             print_r($this->request);
+        }
+    }
+
+    public function api_new_commodity() {
+        $this->request = $this->input->post();
+        $data['name'] = $this->request['name'];
+        $data['slug'] = slugify($this->request['name']);
+        $data['valid_until'] = date('Y-m-d', strtotime($this->request['validity']));
+        if ($this->CommoditiesModel->insert($data)) {
+            redirect('commodities');
+        }
+    }
+
+    public function api_edit_commodity() {
+        $this->request = $this->input->post();
+        $where['id'] = $this->request['id'];
+        
+        $data['name'] = $this->request['name'];
+        $data['slug'] = slugify($this->request['name']);
+        $data['valid_until'] = date('Y-m-d', strtotime($this->request['validity']));
+        if ($this->CommoditiesModel->update($data, $where)) {
+            redirect('commodities');
         }
     }
 }

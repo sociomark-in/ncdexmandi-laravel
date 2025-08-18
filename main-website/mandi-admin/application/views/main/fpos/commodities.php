@@ -97,16 +97,16 @@
                     <div class="d-flex justify-content-between align-items-baseline mb-2">
                         <h6 class="card-title">Add A New Comodity</h6>
                     </div>
-                    <?= form_open() ?>
+                    <?= form_open("api/v2/fpo/commodity/new") ?>
                     <div class="row g-3">
                         <div class="col-12">
                             <label for="" class="form-label">Commodity Name</label>
-                            <input type="text" class="form-control text-counter" maxlength="80">
+                            <input type="text" name="name" class="form-control text-counter" maxlength="80">
                         </div>
 
                         <div class="col-lg-6 col-12">
                             <label for="" class="form-label">Valid Through</label>
-                            <input type="date" class="form-control">
+                            <input type="date" name="validity" value="<?= date('Y-m-d') ?>" class="form-control">
                         </div>
                         <div class="col-12">
                             <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Commodity Details</button>
