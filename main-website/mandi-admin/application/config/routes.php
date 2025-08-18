@@ -69,6 +69,8 @@ $route['api/(:any)/faq/new_category'] = 'posts/FAQsController/api_new_category';
 
 $route['api/(:any)/faq/api_get'] = 'posts/FAQsController/api_get';
 
+$route['api/(:any)/fpo/commodity/new'] = 'posts/FPOsController/api_new_commodity';
+
 $route['settings'] ="app/SettingsController";
 $route['settings/languages'] ="app/SettingsController/localization";
 
@@ -102,7 +104,9 @@ $route['faqs/new-question'] ="posts/FAQsController/new_post";
 
 $route['events'] ="posts/EventsController";
 
-$route['media'] ="misc/MediaController";
+$route['gallery'] ="misc/MediaController";
+$route['gallery/(:any)'] ="misc/MediaController/single/$1";
+$route['infographics'] ="misc/MediaController";
 
 $route['users'] ="app/UsersController";
 $route['users/new-user'] ="app/UsersController/new_user";

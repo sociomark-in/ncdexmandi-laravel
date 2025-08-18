@@ -10,4 +10,9 @@ class MediaController extends MY_Controller
     {
         parent::__construct();
     }
+
+    public function index()
+    {
+        $this->load->admin_dashboard('media/home', $this->data);
+    }
 }
