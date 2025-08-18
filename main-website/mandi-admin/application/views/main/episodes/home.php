@@ -23,8 +23,8 @@
                             <form action="<?= base_url("episodes") ?>" method="get">
                                 <div class="row g-2">
                                     <div class="col-xl-3 col-lg-2 col-md-3 col-12">
-                                        <select name="post_category" data-placeholder="Select Category" class="form-select" id="">
-                                            <option value="">Select Category</option>
+                                        <select name="post_category" data-placeholder="Select FPO" class="form-select" id="">
+                                            <option value="">Select FPO</option>
                                             <?php for ($i = 0; $i < 20; $i++): ?>
                                                 <option value="Option <?= $i ?>">Option <?= $i ?></option>
                                             <?php endfor ?>
@@ -69,7 +69,7 @@
                                 <tr>
                                     <th class="pt-0"></th>
                                     <th class="pt-0">Episode Title</th>
-                                    <th class="pt-0">Categories</th>
+                                    <th class="pt-0">FPO Name</th>
                                     <th class="pt-0">Status</th>
                                 </tr>
                             </thead>
@@ -84,8 +84,7 @@
                                         </td>
                                         <td><a target="_blank" href="<?= base_url('episodes/post/' . $i . '?post_preview=true') ?>"><span class="blog-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, praesentium.</span><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a></td>
                                         <td>
-                                            <span class="badge">Released</span>
-                                            <span class="badge">Released</span>
+                                            <span>FPO Name</span>
                                         </td>
                                         <td>
                                             <span>Released</span><br>

@@ -19,6 +19,7 @@
                 </a>
             </li>
 
+            <!-- Leads -->
             <li class="nav-item <?= link_is_active(['leads', 'leads/all-queries', 'leads/all-enquiries'], $group = true)['active'] ? "active" : ""  ?>">
                 <a class="nav-link" disabled data-bs-toggle="collapse" href="#leads" role="button" aria-expanded="<?= link_is_active(['blogs', 'blog/new-post'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="blogs">
                     <i class="link-icon" data-feather="database"></i>
@@ -39,10 +40,12 @@
                     </ul>
                 </div>
             </li>
+            <!-- Leads -->
 
             <!-- Content Management -->
             <li class="nav-item nav-category">Content Management</li>
             <!-- Access Level: jury -->
+
             <!-- Blogs -->
             <li class="nav-item <?= link_is_active(['blogs', 'blog/new-post'], $group = true)['active'] ? "active" : ""  ?>">
                 <a class="nav-link" data-bs-toggle="collapse" href="#blogs" role="button" aria-expanded="<?= link_is_active(['blogs', 'blog/new-post'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="blogs">
@@ -163,8 +166,9 @@
             </li>
             <!-- Reports -->
 
+            <!-- Infographics -->
             <li class="nav-item <?= link_is_active(['gallery', 'infographics'], $group = true)['active'] ? "active" : ""  ?>">
-                <a class="nav-link" disabled data-bs-toggle="collapse" href="#gallery" role="button" aria-expanded="<?= link_is_active(['gallery', 'infographics'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="gallery">
+                <a class="nav-link" data-bs-toggle="collapse" href="#gallery" role="button" aria-expanded="<?= link_is_active(['gallery', 'infographics'], $group = true)['expand'] ? "true" : "false" ?>" aria-controls="gallery">
                     <i class="link-icon" data-feather="image"></i>
                     <span class="link-title">Media</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
@@ -175,11 +179,12 @@
                             <a href="<?= base_url("gallery") ?>" class="nav-link <?= link_is_active('gallery')['active'] ? "active" : ""  ?>">Media Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('infographics') ?>" target="_blank" class="nav-link <?= link_is_active('infographics')['active'] ? "active" : "" ?>">CTA Infographics</a>
+                            <a href="<?= base_url('infographics') ?>" target="_blank" class="nav-link <?= link_is_active('infographics')['active'] ? "active" : "" ?>">Infographics (Banners)</a>
                         </li>
                     </ul>
                 </div>
             </li>
+            <!-- Infographics -->
 
             <!-- All Comments -->
             <li class="nav-item">
@@ -220,7 +225,7 @@
 
             <li class="nav-item nav-category">User Management</li>
             <li class="nav-item <?= link_is_active(['users', 'users/new-user'], $group = true)['active'] ? "active" : ""  ?>">
-                <a class="nav-link" disabled data-bs-toggle="collapse" href="#users" role="button" aria-expanded="<?= link_is_active(['users', 'users/new-user'], $group = true)['expand'] ? "true" : "false"  ?>" aria-controls="users">
+                <a class="nav-link" data-bs-toggle="collapse" href="#users" role="button" aria-expanded="<?= link_is_active(['users', 'users/new-user'], $group = true)['expand'] ? "true" : "false"  ?>" aria-controls="users">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Users</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
@@ -237,7 +242,7 @@
                 </div>
             </li>
             <li class="nav-item <?= link_is_active("settings")['active'] ? "active" : "" ?>">
-                <a href="<?= base_url('settings') ?>" class="nav-link" disabled>
+                <a href="<?= base_url('settings') ?>" class="nav-link">
                     <i class="link-icon" data-feather="settings"></i>
                     <span class="link-title">Settings</span>
                 </a>

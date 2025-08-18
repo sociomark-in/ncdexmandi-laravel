@@ -1,11 +1,13 @@
 $color-green: #19641e;
 $color-navy: #004875;
 $color-maroon: #8f322b;
+$color-red: #ff5347;
 $color-green-rgb: 25, 100, 30;
 $color-yellow: #f7c35f;
 $color-black: #000;
 $color-white: #e4e4e4;
 $color-white-0: #fff;
+
 
 body {
     font-family: "Outfit", Arial, Helvetica, sans-serif;
@@ -158,6 +160,29 @@ table {
     }
 }
 
+.tabnav.nav {
+    &.nav-pills {
+        .nav-item {
+            .nav-link {
+                color: $color-green;
+                border: 2px solid $color-green;
+                &.active{
+                    background-color: $color-green;
+                    color: $color-white-0;
+                }
+                &.featured-link {
+                    color: $color-black;
+                    border-color: $color-yellow;
+                    &.active{
+                        background-color: $color-yellow;
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .text-primary {
     color: $color-green !important;
 }
@@ -205,7 +230,7 @@ table {
     animation: "flash" 5s ease-in-out infinite;
 }
 
-.bg-primary{
+.bg-primary {
     background-color: $color-green !important;
 }
 
@@ -239,9 +264,20 @@ table {
     }
 }
 
-.badge{
+.badge {
     font-weight: normal;
+    &.bg-yellow{
+        color: $color-black;
+    }
 }
+
+.bg-yellow{
+    background-color: $color-yellow;
+}
+.bg-new{
+    background-color: $color-red;
+}
+
 
 .bg-secondary-50 {
     background-color: rgba($color-yellow, 0.5);
@@ -406,7 +442,7 @@ header {
     .swiper-button-next {
         width: 2.5rem;
         height: 2.5rem;
-        &.swiper-button-disabled{
+        &.swiper-button-disabled {
             pointer-events: all;
         }
     }
@@ -547,44 +583,51 @@ section {
     }
 }
 
-.youtube-card{
-    .thumb{
+.youtube-card {
+    .thumb {
         border: 0.2rem solid $color-green;
         border-radius: 1rem;
         overflow: hidden;
     }
-    .content{
+    .content {
         color: rgba($color-black, 0.5);
-        h5{
+        h5 {
             color: rgba($color-black, 0.8);
         }
-        p{
+        p {
             font-size: 1rem;
             font-weight: 400;
         }
     }
-    &:hover{
-        .content{
+    &:hover {
+        .content {
             color: rgba($color-black, 0.7);
-            h5{
+            h5 {
                 color: rgba($color-black, 1);
             }
         }
     }
-    &.other{
-        .thumb{
+    &.other {
+        .thumb {
             border: none;
             border-radius: 1rem;
             overflow: hidden;
         }
-        .content{
-            h5{
+        .content {
+            h5 {
                 font-size: 1.1rem;
                 font-weight: 500;
             }
-            p{
+            p {
                 font-size: 0.9rem;
             }
+        }
+    }
+
+    &.episode-otm{
+        background-color: rgba($color-yellow, 0.25);
+        .thumb{
+            border-color: $color-yellow;
         }
     }
 }
@@ -960,7 +1003,7 @@ footer {
                 content: "";
                 background-color: $color-white;
                 height: 2px;
-                width: max(10%, 200px);
+                width: min(100%, 200px);
                 bottom: -0.75rem;
                 left: 0;
             }

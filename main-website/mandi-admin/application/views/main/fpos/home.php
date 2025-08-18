@@ -14,13 +14,25 @@
                     <div class="d-flex justify-content-between align-items-baseline mb-2">
                         <h6 class="card-title">All FPOs</h6>
                     </div>
+                    <div class="row mb-3">
+                        <div class="w-100">
+                            <input type="text" class="form-control form-control-sm" id="myCustomSearch" placeholder="Search FPOs" aria-label="Search FPOs">
+                            <script>
+                                $(document).ready(function() {
+                                    $('#myCustomSearch').on('keyup', function() {
+                                        dataTable.search(this.value).draw();
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-hover mb-0" id="FPOsDataTable">
                             <thead>
                                 <tr>
                                     <th class="pt-0">Name of FPO</th>
                                     <th class="pt-0">Establishment</th>
-                                    <th class="pt-0">Head Location</th>
+                                    <th class="pt-0">State</th>
                                     <th class="pt-0">Status</th>
                                 </tr>
                             </thead>
@@ -30,10 +42,10 @@
                                         <td>
                                             <div class="row g-3">
                                                 <div class="col-auto pt-1">
-                                                <button type="button" id="editFPOButton<?= $i ?>" class="btn btn-sm btn-icon" data-bs-toggle="modal" data-bs-target="#editFPOModal">
+                                                    <button type="button" id="editFPOButton<?= $i ?>" class="btn btn-sm btn-icon" data-bs-toggle="modal" data-bs-target="#editFPOModal">
                                                         <i data-feather="edit"></i>
-                                                    </a>
-                                                    <!-- <?php if ($post['status']) : ?>
+                                                        </a>
+                                                        <!-- <?php if ($post['status']) : ?>
                                                             <button type="button" class="btn btn-sm btn-icon">
                                                                 <i data-feather="eye"></i>
                                                             </button>
@@ -42,15 +54,15 @@
                                                                 <i data-feather="eye-off"></i>
                                                             </button>
                                                         <?php endif ?> -->
-                                                    <button type="button" id="deleteFPOButton<?= $i ?>" class="btn btn-sm btn-danger btn-icon" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
-                                                        <i data-feather="trash"></i>
-                                                    </button>
-                                                    <script>
-                                                        $("#deleteFAQButton<?= $i ?>").on('click', () => {
-                                                            $("#deleteConfirmModal input[name=id]").val(<?= $i ?>)
-                                                            $("#deleteConfirmModal input[name=type]").val('faq')
-                                                        })
-                                                    </script>
+                                                        <button type="button" id="deleteFPOButton<?= $i ?>" class="btn btn-sm btn-danger btn-icon" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
+                                                            <i data-feather="trash"></i>
+                                                        </button>
+                                                        <script>
+                                                            $("#deleteFAQButton<?= $i ?>").on('click', () => {
+                                                                $("#deleteConfirmModal input[name=id]").val(<?= $i ?>)
+                                                                $("#deleteConfirmModal input[name=type]").val('faq')
+                                                            })
+                                                        </script>
                                                 </div>
                                                 <div class="col">
                                                     <a target="_blank" href=""><span class="clipped-content line-1 d-block" style="width: 400px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et odio atque magnam perspiciatis ducimus.</span></a>
@@ -58,15 +70,23 @@
                                             </div>
                                         </td>
                                         <td><?= date('F j, Y') ?></td>
-                                        <td>Mumbai, Maharashtra</td>
+                                        <td>Maharashtra</td>
                                         <td><span class="badge bg-success">Active</span></td>
                                     </tr>
                                 <?php endfor ?>
                             </tbody>
                         </table>
                         <script>
-                            new DataTable('#FPOsDataTable', {
-                                paging: false
+                            $.extend($.fn.dataTable.ext.classes, {
+                                sFilterInput: "form-control w-100"
+                            });
+                            dataTable = new DataTable('#FPOsDataTable', {
+                                paging: false,
+                                dom: 'rtip'
+                            });
+                            $('#myCustomSearch').on('keyup', function() {
+                                // Use the .search() API to set the search term
+                                dataTable.search(this.value).draw();
                             });
                         </script>
                     </div>

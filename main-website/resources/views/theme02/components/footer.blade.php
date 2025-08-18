@@ -60,7 +60,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-12">
+                    <div class="col-xxl-2 col-xl-3 col-lg-4 col-6">
                         <div class="footer-links">
                             <h5>Quick Links</h5>
                             <ul class="nav flex-column">
@@ -85,9 +85,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-12">
+                    <div class="col-xxl-2 col-xl-3 col-lg-4 col-6">
                         <div class="footer-links">
-                            <h5>Important Resources</h5>
+                            <h5>Resources</h5>
                             <ul class="nav flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Blogs</a>
@@ -116,7 +116,7 @@
                         <div class="footer-links">
                             <h5>Important Links</h5>
                             <div class="row">
-                                <div class="col-xl-6">
+                                <div class="col-6">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Calculators</a>
@@ -145,7 +145,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-xl-6">
+                                <div class="col-6">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="http://www.nafed-india.com/"
@@ -394,7 +394,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary">Subscribe Now</button>
             </div>
         </div>
     </div>

@@ -121,7 +121,7 @@
                                     <tr>
                                         <td>
                                             <a target="_blank" href="<?= base_url('blog/post/' . $key . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="edit-2"></i></a>
-                                            <button id="deleteButton<?= $key ?>" class="btn link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
+                                            <button id="deleteButton<?= $key ?>" class="btn btn-danger link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
                                                 <i class="link-icon px-1 mb-1" data-feather="trash-2"></i>
                                             </button>
                                         </td>

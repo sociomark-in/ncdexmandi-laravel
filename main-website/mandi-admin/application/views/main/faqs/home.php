@@ -115,7 +115,7 @@
                                                             </button>
                                                         <?php endif ?> -->
                                                         <button type="button" id="deleteFAQButton<?= $key ?>" class="btn btn-sm btn-danger btn-icon" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
-                                                            <i data-feather="trash"></i>
+                                                            <i data-feather="trash-2"></i>
                                                         </button>
                                                         <script>
                                                             $("#deleteFAQButton<?= $key ?>").on('click', () => {
@@ -160,6 +160,7 @@
         </div>
     </div>
 </main>
+
 <div class="modal fade" id="editFAQCat" tabindex="-1" aria-labelledby="editFAQCatLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

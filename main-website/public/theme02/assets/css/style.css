@@ -148,6 +148,23 @@ table th {
   }
 }
 
+.tabnav.nav.nav-pills .nav-item .nav-link {
+  color: #19641e;
+  border: 2px solid #19641e;
+}
+.tabnav.nav.nav-pills .nav-item .nav-link.active {
+  background-color: #19641e;
+  color: #fff;
+}
+.tabnav.nav.nav-pills .nav-item .nav-link.featured-link {
+  color: #000;
+  border-color: #f7c35f;
+}
+.tabnav.nav.nav-pills .nav-item .nav-link.featured-link.active {
+  background-color: #f7c35f;
+  color: #000;
+}
+
 .text-primary {
   color: #19641e !important;
 }
@@ -478,6 +495,17 @@ table th {
 .badge {
   font-weight: normal;
 }
+.badge.bg-yellow {
+  color: #000;
+}
+
+.bg-yellow {
+  background-color: #f7c35f;
+}
+
+.bg-new {
+  background-color: #ff5347;
+}
 
 .bg-secondary-50 {
   background-color: rgba(247, 195, 95, 0.5);
@@ -786,6 +814,12 @@ section .section-title::before {
 }
 .youtube-card.other .content p {
   font-size: 0.9rem;
+}
+.youtube-card.episode-otm {
+  background-color: rgba(247, 195, 95, 0.25);
+}
+.youtube-card.episode-otm .thumb {
+  border-color: #f7c35f;
 }
 
 .event-style-one a h3,
@@ -1129,7 +1163,7 @@ footer .footer-links h5::after {
   content: "";
   background-color: #e4e4e4;
   height: 2px;
-  width: max(10%, 200px);
+  width: min(100%, 200px);
   bottom: -0.75rem;
   left: 0;
 }

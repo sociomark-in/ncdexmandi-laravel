@@ -40,9 +40,6 @@
         'Puducherry',
     ];
 @endphp
-@push('libraries')
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-@endpush
 @section('content')
     <main>
         <section class="nospacing">
@@ -155,7 +152,7 @@
                         <div class="col-12">
                             <div class="text-content">
                                 <h1 class="title-icon">
-                                    <i class="fa-solid fa-calendar icon icon-prepend"></i>
+                                    <i class="fa-solid fa-question icon icon-prepend"></i>
                                     Kheti Ke Sikandar
                                 </h1>
                                 <p>
@@ -175,13 +172,98 @@
                 </div>
             </div>
         </section>
+        <section class="default-spacing pt-md-unset pt-5 bg-secondary-70 bg-watermark">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="text-content">
+                            <h2 class="title-icon">
+                                <i class="fa-solid fa-star icon icon-prepend"></i>
+                                FPO of The Month Archives
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="swiper featuredFPOSwiper">
+                            <div class="swiper-wrapper">
+                                @for ($i = 0; $i < 3; $i++)
+                                    <div class="swiper-slide">
+                                        <a href="{{ route('fpo_single', ['episode' => rand()]) }}" class="d-block text-black">
+                                            <div class="youtube-card">
+                                                <div class="row g-3">
+                                                    <div class="col-12">
+                                                        <div class="thumb">
+                                                            <img src="https://placehold.co/600x400" class="w-100"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="content">
+                                                            <h5 class="clipped-content line-2">Lorem ipsum dolor sit amet
+                                                                consectetur adipisicing elit.
+                                                                Perferendis eaque unde tenetur!</h5>
+                                                            <p class="clipped-content line-2">Lorem ipsum dolor sit amet
+                                                                consectetur adipisicing elit.
+                                                                Ratione praesentium deleniti pariatur.</p>
+                                                            <div class="row justify-content-between">
+                                                                <div class="col-auto">
+                                                                    <p>
+                                                                        <i
+                                                                            class="fa-solid fa-location-dot"></i>&nbsp;<?= date('F, Y') ?>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <p>
+                                                                        <i
+                                                                            class="fa-solid fa-calendar-days"></i>&nbsp;<?= 'Location' ?>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                @endfor
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        @push('scripts')
+                            <script>
+                                new Swiper('.featuredFPOSwiper', {
+                                    slidesPerView: 1.1,
+                                    spaceBetween: 20,
+                                    navigation: {
+                                        nextEl: ".swiper-button-next",
+                                        prevEl: ".swiper-button-prev",
+                                    },
+                                    breakpoints: {
+                                        640: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 20,
+                                        },
+                                        768: {
+                                            slidesPerView: 2.3,
+                                            spaceBetween: 40,
+                                        },
+                                        1024: {
+                                            slidesPerView: 2.8,
+                                            spaceBetween: 50,
+                                        },
+                                    },
+                                });
+                            </script>
+                        @endpush
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="default-spacing pb-0">
             <div class="container">
                 <div class="">
                     <div class="row g-3">
-                        <div class="col-12">
-                            <h2>Popular States</h2>
-                        </div>
                         @if (is_null($state_filter))
                             <div class="col-12">
                                 <div class="swiper statesMainEventSwiper">
@@ -371,63 +453,18 @@
                             <div class="text-content">
                                 <h2 class="title-icon">
                                     <i class="fa-solid fa-calendar icon icon-prepend"></i>
-                                    Kheti Ke Sikandar Episodes
+                                    All Episodes
                                 </h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row g-3 mb-3">
-                    <div class="col-12">
-                        <ul class="tabnav nav nav-pills gap-3 filter-menu-active">
-                            <li class="nav-item">
-                                <button type="button" class="nav-link active" data-filter="*">All Episodes</button>
-                            </li>
-                            <li class="nav-item">
-                                <button type="button" class="nav-link featured-link" data-filter=".featured">FPO of the Month</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row g-3 g-md-4 fpos-wrapper w-100">
-                    <div class="col-lg-6 col-12 episode featured">
-                        <a href="{{ route('fpo_single', ['episode' => rand()]) }}" class="d-block text-black">
-                            <div class="youtube-card episode-otm">
-                                <div class="row p-2 align-items-center">
-                                    <div class="col-xl-5 col-lg-12 col-md-5 col-12">
-                                        <div class="thumb">
-                                            <img src="https://placehold.co/600x400" class="w-100" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-md col-12">
-                                        <div class="content">
-                                            <span class="badge bg-new">New</span>
-                                            <span class="badge bg-yellow">FPO of the Month</span>
-                                            <h5 class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Debitis ut quis deserunt distinctio, sed nihil?</h5>
-                                            <div class="row justify-content-between">
-                                                <div class="col-auto">
-                                                    <p>
-                                                        <i class="fa-solid fa-calendar-days"></i>&nbsp;<?= date('F, Y') ?>
-                                                    </p>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <p>
-                                                        <i class="fa-solid fa-location-dot"></i>&nbsp;<?= 'Location' ?>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                <div class="row g-3 g-md-4 fpos-wrapper">
                     @for ($i = 0; $i < 12; $i++)
-                        <div class="col-lg-6 col-12 episode">
+                        <div class="col-lg-6 col-12">
                             <a href="{{ route('fpo_single', ['episode' => rand()]) }}" class="d-block text-black">
                                 <div class="youtube-card">
-                                    <div class="row p-2 align-items-center">
+                                    <div class="row g-3 align-items-center">
                                         <div class="col-xl-5 col-lg-12 col-md-5 col-12">
                                             <div class="thumb">
                                                 <img src="https://placehold.co/600x400" class="w-100" alt="">
@@ -435,10 +472,15 @@
                                         </div>
                                         <div class="col-md col-12">
                                             <div class="content">
-                                                <span class="badge bg-new">New</span>
-                                                <span class="badge bg-yellow">FPO of the Month</span>
-                                                <h5 class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                    Debitis ut quis deserunt distinctio, sed nihil?</h5>
+                                                <h5 class="clipped-content line-2">Lorem ipsum dolor sit
+                                                    amet
+                                                    consectetur adipisicing elit.
+                                                    Perferendis eaque unde tenetur!</h5>
+                                                <p class="clipped-content line-2 d-none d-md-block"> <?= rand() ?>Lorem
+                                                    ipsum dolor
+                                                    sit amet
+                                                    consectetur adipisicing elit.
+                                                    Ratione praesentium deleniti pariatur.</p>
                                                 <div class="row justify-content-between">
                                                     <div class="col-auto">
                                                         <p>
@@ -460,32 +502,6 @@
                         </div>
                     @endfor
                 </div>
-                @push('scripts')
-                    <script>
-                        var $filter = ".fpos-wrapper",
-                            $filterItem = ".episode",
-                            $filterMenu = ".filter-menu-active";
-
-                        var $grid = $($filter).isotope({
-                            itemSelector: $filterItem,
-                            filter: "*",
-                        });
-
-                        // filter items on button click
-                        $($filterMenu).on("click", "button", function() {
-                            var filterValue = $(this).attr("data-filter");
-                            $grid.isotope({
-                                filter: filterValue,
-                            });
-
-                            event.preventDefault();
-                            // $(this).find(".active").removeClass("active");
-                            // $(this).addClass("active");
-                            $(this).find('active').removeClass('active');
-                            $(this).addClass("active");
-                        });
-                    </script>
-                @endpush
             </div>
         </section>
         <!-- Modal -->
@@ -645,10 +661,13 @@
                     </div>
                     <div class="col-12">
                         <div class="row g-2">
-                            @for ($i = date('Y'); $i > 2020; $i--)
+                            @for ($i = date('Y'); $i > 2000; $i--)
                                 <div class="col-xl-3 col-6">
-                                    <a href="">{{ $i }}</a>
+                                    <a href="">{{ $i }} - {{ $i - 5 }}</a>
                                 </div>
+                                @php
+                                    $i -= 5;
+                                @endphp
                             @endfor
                         </div>
                     </div>

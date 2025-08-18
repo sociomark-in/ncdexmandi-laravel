@@ -19,6 +19,11 @@ class FPOsController extends MY_Controller
     {
         $this->load->admin_dashboard('fpos/home', $this->data);
     }
+    public function commodities()
+    {
+        $this->data['commodities'] = json_decode($this->FPOsModel->get_commodities(), true);
+        $this->load->admin_dashboard('fpos/commodities', $this->data);
+    }
     public function new_post()
     {
         $this->data['authors'] = $this->UserModel->get(null, ['id', 'name']);

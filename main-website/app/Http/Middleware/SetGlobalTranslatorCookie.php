@@ -29,9 +29,10 @@ class SetGlobalTranslatorCookie
         $langCookie = 'googtrans';
         $lang = "/en/" . $siteLanguage->config_value;
 
+        $expirationMinutes = 0; // For Session Expire
+
         if (!$request->hasCookie($langCookie)) {
             // Cookie does NOT exist, so set it
-            $expirationMinutes = 0; // For Session Expire
 
 
             // Method: Using the Cookie Facade's queue method
@@ -55,6 +56,26 @@ class SetGlobalTranslatorCookie
 
         } else {
             // Cookie already exists, retrieve and potentially use its value
+
+            if( $request->cookie($langCookie) === $lang ) {
+                // If the existing cookie matches the desired value, do nothing
+                Log::info("Middleware: Existing googtrans cookie matches: " . $lang);
+            } else {
+                // If it exists but does not match, you might want to update it or log it
+                Log::info("Middleware: Existing googtrans cookie does not match. Current: " . $request->cookie($langCookie) . ", Expected: " . $lang);
+                // Optionally, you can update the cookie if it doesn't match
+                Cookie::queue(
+                    $langCookie,  // Name
+                    $lang,        // Value
+                    $expirationMinutes,    // Minutes to live
+                    '/',                   // Path
+                    config('session.domain'), // Domain (from your session config, or null for current host)
+                    config('session.secure'), // Secure (from your session config, or true for HTTPS)
+                    false,                  // HttpOnly (true to prevent JavaScript access)
+                    true,                 // Raw (false by default, handles encoding)
+                );
+            }
+
             $existingLang = $request->cookie($langCookie);
             Log::info("Middleware: Existing googtrans cookie found: " . $existingLang);
             // $response->setContent($response->getContent() . "<br>Found existing googtrans: " . $existingVisitorId);

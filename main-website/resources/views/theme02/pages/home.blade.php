@@ -944,7 +944,7 @@
                                     @push('scripts')
                                         <script>
                                             new Swiper('.teamSwiper', {
-                                                slidesPerView: 2,
+                                                slidesPerView: 1.2,
                                                 spaceBetween: 50,
                                                 // loop: true,
                                                 autoplay: {
@@ -952,7 +952,7 @@
                                                 },
                                                 breakpoints: {
                                                     640: {
-                                                        slidesPerView: 3,
+                                                        slidesPerView: 2,
                                                         spaceBetween: 20,
                                                     },
                                                     768: {
