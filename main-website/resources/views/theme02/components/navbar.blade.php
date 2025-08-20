@@ -93,7 +93,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Key Institutions</a></li>
-                            <li><a class="dropdown-item" href="#">Blogs</a></li>
+                            <li><a class="dropdown-item" href="{{ route('blogs_home') }}">Blogs</a></li>
                             <li><a class="dropdown-item" href="#">Webinars</a></li>
                             <li><a class="dropdown-item" href="#">Podcast</a></li>
                             <li><a class="dropdown-item" href="{{ route('main_publications') }}">Reports</a></li>

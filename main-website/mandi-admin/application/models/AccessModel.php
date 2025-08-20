@@ -71,8 +71,4 @@ class AccessModel extends CI_Model
             }
         }
     }
-
-    public function new($data){
-        $this->db->insert('users', $data);
-    }
 }

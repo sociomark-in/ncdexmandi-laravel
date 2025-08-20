@@ -17,8 +17,8 @@ class UsersController extends MY_Controller
     public function index()
     {
         $users = $this->UserModel->get();
-        for ($i=0; $i < count($users); $i++){
-            $users[$i]['role'] = $this->AccessModel->get(['id' => $users[$i]['role']],['id', 'name']);
+        for ($i = 0; $i < count($users); $i++) {
+            $users[$i]['role'] = $this->AccessModel->get(['id' => $users[$i]['role']], ['id', 'name']);
         }
         $this->data['users'] = $users;
         $this->load->admin_dashboard('users/home', $this->data);
@@ -36,5 +36,33 @@ class UsersController extends MY_Controller
         } else {
             $this->load->admin_dashboard('no_access', $this->data);
         }
+    }
+
+    public function api_new_user()
+    {
+        $this->request = $this->input->post();
+        $data = [
+            'name' => implode(" ", $this->request['name']) ?? '',
+            'email' => $this->request['email'] ?? '',
+            'password' => $this->request['password'] ?? '',
+            'role' => $this->request['role'] ?? 3,
+            'status' => $this->request['status'] ?? 'active',
+        ];
+        echo "<pre>";
+        print_r($data);
+        echo "</pre>";
+        die;
+        if ($this->_access_granted_(['create'])) {
+            $this->response = $this->UserModel->create($this->request);
+            if ($this->response['status'] == 'success') {
+                $this->response['message'] = 'User created successfully.';
+            } else {
+                $this->response['message'] = 'Failed to create user.';
+            }
+        } else {
+            $this->response = ['status' => 'error', 'message' => 'Access denied.'];
+        }
+        $this->session->set_flashdata('response', $this->response);
+        redirect('users');
     }
 }

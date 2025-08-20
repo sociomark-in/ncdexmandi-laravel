@@ -71,6 +71,8 @@ $route['api/(:any)/faq/api_get'] = 'posts/FAQsController/api_get';
 
 $route['api/(:any)/fpo/commodity/new'] = 'posts/FPOsController/api_new_commodity';
 
+$route['api/(:any)/users/new'] ="app/UsersController/api_new_user";
+
 $route['settings'] ="app/SettingsController";
 $route['settings/languages'] ="app/SettingsController/localization";
 

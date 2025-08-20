@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="<?= base_url("assets/css/") ?>dropify-custom.min.css">
 <link rel="stylesheet" href="<?= base_url("assets/css/") ?>select2-custom.min.css">
 <main class="page-content">
-    <?= form_open_multipart('api/v2/blog/new', ['id' => ""]) ?>
+    <?= form_open_multipart('api/v2/users/new', ['id' => ""]) ?>
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
         <div class="d-flex gap-2">
             <div class="nav-item">
@@ -37,23 +37,23 @@
                             <div class="row g-3 g-md-4">
                                 <div class="col-12">
                                     <label for="" class="form-label">Email Address (required)</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="email" class="form-control">
                                 </div>
                                 <div class="col-12">
                                     <label for="" class="form-label">First Name (required)</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="name[0]" class="form-control">
                                 </div>
                                 <div class="col-12">
                                     <label for="" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="name[1]" class="form-control">
                                 </div>
                                 <div class="col-12">
                                     <label for="" class="form-label">Username (required)</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="username" class="form-control">
                                 </div>
                                 <div class="col-12">
                                     <label for="" class="form-label">Password (required)</label>
-                                    <input type="text" value="<?= generate_password(10) ?>" class="form-control">
+                                    <input type="text" name="password" value="<?= generate_password(10) ?>" class="form-control">
                                 </div>
                             </div>
                         </div>
