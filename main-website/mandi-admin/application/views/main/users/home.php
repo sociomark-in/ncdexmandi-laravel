@@ -26,7 +26,7 @@
                                         <input type="text" class="form-control" placeholder="Search By Name">
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-12">
-                                        <select name="user_role" class="form-select" id="">
+                                        <select name="user_role" class="form-select" id="" data-placeholder="Select Role">
                                             <option value="">Select Role</option>
                                             <?php for ($i = 0; $i < 20; $i++): ?>
                                                 <option value="Option <?= $i ?>">Option <?= $i ?></option>
@@ -34,8 +34,8 @@
                                         </select>
                                     </div>
                                     <div class="col-lg-2 col-md-3 col-12">
-                                        <select name="user_status" class="form-select" id="">
-                                            <option value="">Select Visibility</option>
+                                        <select name="user_status" class="form-select" id="" data-placeholder="Select Status">
+                                            <option value="">Select Status</option>
                                             <?php for ($i = 0; $i < 20; $i++): ?>
                                                 <option value="Option <?= $i ?>">Option <?= $i ?></option>
                                             <?php endfor ?>
@@ -75,8 +75,8 @@
                                     <th class="pt-0">Lang</th>
                                     <th class="pt-0">Lang</th> -->
                                     <th class="pt-0">Role</th>
-                                    <th class="pt-0">Posts</th>
-                                    <th class="pt-0">Date</th>
+                                    <th class="pt-0">Status</th>
+                                    <th class="pt-0">Created At</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -106,10 +106,11 @@
                                                 <span class="badge"><?= $user['role']['name'] ?></span>
                                             </div>
                                         </td>
-                                        <td>-</td>
                                         <td>
-                                            <span>Active</span><br>
-                                            <span class="text-muted"><?= date("Y/m/d H:i A") ?></span>
+                                            <span class="badge bg-success">Active</span>
+                                        </td>
+                                        <td>
+                                            <?= date("Y/m/d H:i A") ?>
                                         </td>
                                     </tr>
                                     <script>

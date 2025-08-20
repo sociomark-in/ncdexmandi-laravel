@@ -9,11 +9,11 @@ class SettingsController extends MY_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('app/SettingsModel');
     }
 
     public function index()
     {
-        $this->load->model('app/SettingsModel');
         $result = json_decode($this->SettingsModel->get(), true);
 
         $settings = [];
@@ -46,9 +46,29 @@ class SettingsController extends MY_Controller
             "date_format" => $this->request['date_format'],
             "time_format" => $this->request['time_format'],
         ];
-        echo "<pre>";
-        print_r($this->request);
-        echo "<br>";
-        print_r($data);
+
+        if($data['date_format']['other'][0] == NULL){
+            $data['date_format'] = $data['date_format']['default'];
+        } else {
+            $data['date_format'] = $data['date_format']['other'][0];
+        }
+        if($data['time_format']['other'][0] == NULL){
+            $data['time_format'] = $data['time_format']['default'];
+        } else {
+            $data['time_format'] = $data['time_format']['other'][0];
+        }
+
+        foreach ($data as $key => $entry) {
+            $this->SettingsModel->update(
+                [
+                    "config_value" => $entry
+                ],
+                [
+                    "config_key" => $key
+                ]
+            );
+        }
+
+        redirect('settings');
     }
 }

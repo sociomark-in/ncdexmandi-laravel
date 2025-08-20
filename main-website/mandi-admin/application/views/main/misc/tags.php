@@ -18,13 +18,13 @@
                             <!-- Alternative - Isotope.js -->
                             <ul class="nav nav-underline">
                                 <li class="nav-item">
-                                    <a class="nav-link <?= (in_array($this->input->get('post_status'), [NULL, ""])) ? "active" : "" ?>" aria-current="page" href="<?= current_url() ?>">All&nbsp;<span class="badge bg-dark">200</span></a>
+                                    <a class="nav-link <?= (in_array($this->input->get('status'), [NULL, ""])) ? "active" : "" ?>" aria-current="page" href="<?= current_url() ?>">All&nbsp;<span class="badge bg-dark">200</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($this->input->get('post_status') == "active") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=active">Active&nbsp;<span class="badge bg-dark">200</span></a>
+                                    <a class="nav-link <?= ($this->input->get('status') == "1") ? "active" : "" ?>" href="<?= current_url() ?>?status=1">Active&nbsp;<span class="badge bg-dark">200</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($this->input->get('post_status') == "inactive") ? "active" : "" ?>" href="<?= current_url() ?>?post_status=inactive">Inactive&nbsp;<span class="badge bg-dark">200</span></a>
+                                    <a class="nav-link <?= ($this->input->get('status') == "0") ? "active" : "" ?>" href="<?= current_url() ?>?status=0">Inactive&nbsp;<span class="badge bg-dark">200</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -40,25 +40,31 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php for ($i = 0; $i < 20; $i++) : ?>
+                                <?php foreach ($tags as $key => $tag) : ?>
                                     <tr>
                                         <td>
-                                            <a target="_blank" href="<?= base_url('user/profile/' . $i . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="edit-2"></i></a>
-                                            <button id="deleteButton<?= $i ?>" class="btn btn-danger link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
+                                            <a target="_blank" href="<?= base_url('user/profile/' . $key . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="edit-2"></i></a>
+                                            <button id="deleteButton<?= $key ?>" class="btn btn-danger link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
                                                 <i class="link-icon px-1 mb-1" data-feather="trash"></i>
                                             </button>
-                                            <a target="_blank" href="<?= base_url('user/profile/' . $i . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a>
+                                            <a target="_blank" href="<?= base_url('user/profile/' . $key . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a>
                                         </td>
-                                        <td>Lorem ipsum dolor sit.</td>
-                                        <td><span class="badge bg-success">Active</span></td>
+                                        <td><?= $tag['name'] ?><br><small class="text-muted">(<?= $tag['slug'] ?>)</small></td>
+                                        <td>
+                                            <?php if ($tag['status'] == 1) : ?>
+                                                <span class="badge bg-success">Active</span>
+                                            <?php else : ?>
+                                                <span class="badge bg-danger">Inactive</span>
+                                            <?php endif ?>
+                                        </td>
                                         <td><?= date('F j, Y') ?></td>
                                     </tr>
                                     <script>
-                                        $("#deleteButton<?= $i ?>").on('click', () => {
-                                            $("#deleteConfirmModal input[name=post_id]").val(<?= $i ?>)
+                                        $("#deleteButton<?= $key ?>").on('click', () => {
+                                            $("#deleteConfirmModal input[name=post_id]").val(<?= $key ?>)
                                         })
                                     </script>
-                                <?php endfor ?>
+                                <?php endforeach ?>
                             </tbody>
                         </table>
                         <script>

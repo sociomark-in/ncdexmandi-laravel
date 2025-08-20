@@ -10,7 +10,7 @@ class MiscellaneousController extends MY_Controller
     {
         parent::__construct();
         $this->load->model('UserModel');
-        $this->load->model('AccessModel');
+        $this->load->model('content/TagsModel');
         $this->error = [];
     }
 
@@ -25,11 +25,16 @@ class MiscellaneousController extends MY_Controller
     }
     public function tags_all()
     {
-        $users = $this->UserModel->get();
-        for ($i=0; $i < count($users); $i++){
-            $users[$i]['role'] = $this->AccessModel->get(['id' => $users[$i]['role']],['id', 'name']);
+        $where = $this->input->get() ?? NULL;
+
+        foreach ($where as $key => $value) {
+            if($value == NULL){
+                unset($where[$key]);
+            }
         }
-        $this->data['users'] = $users;
+
+        $tags = json_decode($this->TagsModel->get($where), true);
+        $this->data['tags'] = $tags;
         $this->load->admin_dashboard('misc/tags', $this->data);
     }
 }
