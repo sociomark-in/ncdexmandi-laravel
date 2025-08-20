@@ -127,7 +127,7 @@
                                                     <div class="col">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $key . $post['id'] ?>" aria-expanded="false" aria-controls="collapse<?= $key . $post['id'] ?>">
                                                             <?php if ($post['status']) : ?>
-                                                                <?= $post['id'] ?>. &nbsp;<?= $post['post_title'] ?>
+                                                                <?= $key + 1 ?>. &nbsp;<?= $post['post_title'] ?>
                                                             <?php else : ?>
                                                                 <strike><?= $post['id'] ?>. &nbsp;<?= $post['post_title'] ?></strike>
                                                             <?php endif ?>

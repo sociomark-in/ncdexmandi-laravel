@@ -9,22 +9,6 @@
                 Add New Post</a>
         </div>
     </div>
-    <script>
-        $(document).ready(function() {
-            <?php if (isset($_SESSION['post_status'])): ?>
-                <?php switch ($_SESSION['post_status']['status']):
-                    case 'success': ?>
-                        toastr.success("<?= $_SESSION['post_status']['message'] ?>");
-                        <?php break; ?>
-                    <?php
-                    default: ?>
-                        toastr.error("<?= $_SESSION['post_status']['message'] ?>");
-                        <?php break; ?>
-                <?php endswitch ?>
-                <?php unset($_SESSION['post_status']) ?>
-            <?php endif ?>
-        });
-    </script>
 
     <!-- row -->
     <div class="row">
@@ -96,8 +80,8 @@
                                     <th class="pt-0">Categories</th>
                                     <th class="pt-0">Tags</th>
                                     <!-- <th class="pt-0">Lang</th>
-                                    <th class="pt-0">Lang</th>
-                                    <th class="pt-0">Lang</th> -->
+                                <th class="pt-0">Lang</th>
+                                <th class="pt-0">Lang</th> -->
                                     <th class="pt-0">Comments</th>
                                     <th class="pt-0">Date</th>
                                     <th class="pt-0">Status</th>
@@ -152,20 +136,20 @@
                                             <?php endforeach ?>
                                         </td>
                                         <!-- <td>
-                                            <a href="<?= base_url('') ?>">
-                                                <i class="link-icon px-1 mb-1" data-feather="plus"></i>
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="javascript:void(0)">
-                                                <i class="link-icon px-1 mb-1 text-success" data-feather="check"></i>
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="<?= base_url('') ?>">
-                                                <i class="link-icon px-1 mb-1" data-feather="plus"></i>
-                                            </a>
-                                        </td> -->
+                                        <a href="<?= base_url('') ?>">
+                                            <i class="link-icon px-1 mb-1" data-feather="plus"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:void(0)">
+                                            <i class="link-icon px-1 mb-1 text-success" data-feather="check"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= base_url('') ?>">
+                                            <i class="link-icon px-1 mb-1" data-feather="plus"></i>
+                                        </a>
+                                    </td> -->
                                         <td>-</td>
                                         <td><?= date("Y/m/d H:i A") ?></td>
                                         <td>

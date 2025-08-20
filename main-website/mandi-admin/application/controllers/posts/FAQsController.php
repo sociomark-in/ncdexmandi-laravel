@@ -57,8 +57,15 @@ class FAQsController extends MY_Controller
             'description' => $this->request['description'],
         ];
         if ($this->FAQsModel->new_category($data)) {
-            redirect($this->request['redirect']);
+            $this->response['status'] = 'success';
+            $this->response['message'] = 'FAQ Category added successfully.';
+        } else {
+            $this->response['status'] = 'error';
+            $this->response['message'] = 'Failed to add FAQ Category.';
         }
+
+        $this->session->set_flashdata('post_status', $this->response);
+        redirect($this->request['redirect']);
     }
     public function api_edit_category()
     {
@@ -84,8 +91,14 @@ class FAQsController extends MY_Controller
             'post_tags' => json_encode($this->request['post_tags'] ?? NULL),
         ];
         if ($this->FAQsModel->new($data)) {
-            redirect('faqs');
+            $this->response['status'] = 'success';
+            $this->response['message'] = 'FAQ added successfully.';
+        } else {
+            $this->response['status'] = 'error';
+            $this->response['message'] = 'Failed to add FAQ.';
         }
+        $this->session->set_flashdata('post_status', $this->response);
+        redirect('faqs');
     }
     public function api_edit_post()
     {
