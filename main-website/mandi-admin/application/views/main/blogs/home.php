@@ -9,6 +9,22 @@
                 Add New Post</a>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            <?php if (isset($_SESSION['post_status'])): ?>
+                <?php switch ($_SESSION['post_status']['status']):
+                    case 'success': ?>
+                        toastr.success("<?= $_SESSION['post_status']['message'] ?>");
+                        <?php break; ?>
+                    <?php
+                    default: ?>
+                        toastr.error("<?= $_SESSION['post_status']['message'] ?>");
+                        <?php break; ?>
+                <?php endswitch ?>
+                <?php unset($_SESSION['post_status']) ?>
+            <?php endif ?>
+        });
+    </script>
 
     <!-- row -->
     <div class="row">

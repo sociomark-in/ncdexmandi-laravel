@@ -26,11 +26,11 @@ class BlogsController extends MY_Controller
         $tags = $this->input->get('post_tags') ?? NULL;
 
         foreach ($where as $key => $value) {
-            if($value == NULL){
+            if ($value == NULL) {
                 unset($where[$key]);
             }
         }
-       
+
 
         $posts = json_decode($this->BlogsModel->get(null, $where), true);
         for ($i = 0; $i < count($posts); $i++) {
@@ -121,16 +121,25 @@ class BlogsController extends MY_Controller
                 $data['post_seo_thumb'] = $t;
                 $data['post_image'] = $i;
                 try {
-                    $this->BlogsModel->new($data);
+                    if ($this->BlogsModel->new($data)) {
+                        $this->response['status'] = 'success';
+                        $this->response['message'] = 'Post created successfully.';
+                    }
                 } catch (Exception $th) {
                     print_r($th);
                 } finally {
                     redirect("blogs");
                 }
+            } else {
+                $this->response['status'] = 'error';
+                $this->response['message'] = 'There was an error uploading the image. Please try again.';
             }
         } else {
-            echo "<pre>";
-            print_r($this->request);
+            $this->response['status'] = 'error';
+            $this->response['message'] = 'There was an unknown error. Please try again.';
         }
+
+        $this->session->set_flashdata('post_status', $this->response);
+        redirect("blogs");
     }
 }

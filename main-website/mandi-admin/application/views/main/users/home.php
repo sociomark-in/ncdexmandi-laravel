@@ -13,8 +13,7 @@
     <script>
         $(document).ready(function() {
             toastr.info('Welcome to the Users Page');
-            toastr.success('This is a success message');
-            toastr.error('This is an error message');
+
             toastr.warning('This is a warning message');
         });
     </script>
