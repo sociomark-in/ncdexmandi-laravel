@@ -1,0 +1,20 @@
+$color-success: #51A351;
+$color-info: #2F96B4;
+$color-warning: #F89406;
+$color-error: #BD362F;
+
+
+#toast-container{
+    &>.toast-success{
+        background-color: $color-success !important;
+    }
+    &>.toast-warning{
+        background-color: $color-warning !important;
+    }
+    &>.toast-info{
+        background-color: $color-info !important;
+    }
+    &>.toast-error{
+        background-color: $color-error !important;
+    }
+}
