@@ -19,7 +19,7 @@
                                                 <h4 class="mb-1">Welcome Back, Hemant!</h4>
                                                 <p class="tx-18">You have <a href=""><u>4 meetings</u></a> today,</p>
                                             </div>
-                                            <a href="" class="btn btn-primary btn-icon-text">View Profile<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
+                                            <a href="<?= base_url('my-profile') ?>" class="btn btn-primary btn-icon-text">View Profile<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
                                         </div>
                                         <div class="">
                                             <img class="wd-50 ht-50 rounded-circle" src="https://ui-avatars.com/api/?name=Hemant+Karekar" alt="">

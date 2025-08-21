@@ -99,16 +99,19 @@
                     <div class="d-flex justify-content-between align-items-baseline mb-2">
                         <h6 class="card-title">Add A New FPO</h6>
                     </div>
-                    <?= form_open() ?>
+                    <?= form_open('api/v2/fpo/new') ?>
                     <div class="row g-3">
                         <div class="col-12">
                             <label for="" class="form-label">Name of the FPO</label>
-                            <input type="text" class="form-control text-counter" maxlength="80">
+                            <input type="text" name="name" class="form-control text-counter" maxlength="80">
                         </div>
                         <div class="col-lg-6 col-12">
                             <label for="" class="form-label">State</label>
-                            <select class="form-select" name="" data-placeholder="Select A State" id="" style="width: 100%;">
-                                <option value="">Select A State</option>
+                            <select class="form-select" name="state" data-placeholder="Select A State / UT" id="" style="width: 100%;">
+                                <option value="">Select A State / UT</option>
+                                <?php foreach ($options['states'] as $key => $value) : ?>
+                                    <option value="<?= $value ?>"><?= $value ?></option>
+                                <?php endforeach ?>
                             </select>
                         </div>
                         <!-- <div class="col-lg-6 col-12">
@@ -119,7 +122,7 @@
                         </div> -->
                         <div class="col-lg-6 col-12">
                             <label for="" class="form-label">Date of Establishment</label>
-                            <input type="date" class="form-control">
+                            <input type="date" name="estd" class="form-control">
                         </div>
                         <div class="col-12">
                             <label for="" class="form-label">FPO Details</label>
@@ -127,22 +130,22 @@
                                 <tr>
                                     <td>No. of Locations</td>
                                     <td>
-                                        <input type="number" min="0" max="999" class="form-control">
+                                        <input type="number" name="locations" min="0" max="999" class="form-control">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>No. of Members</td>
                                     <td>
-                                        <input type="number" min="0" max="999" class="form-control">
+                                        <input type="number" name="members" min="0" max="999" class="form-control">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Commodities</td>
                                     <td>
                                         <select name="commodities[]" class="form-select" data-placeholder="Select Comodity" id="inputBlogTags" multiple>
-                                            <?php for ($i = 0; $i < 10; $i++) : ?>
-                                                <option value="<?= $i ?>">Select <?= $i ?></option>
-                                            <?php endfor ?>
+                                            <?php foreach ($options['commodities'] as $key => $value) : ?>
+                                                <option value="<?= $value['id'] ?>"><?= $value['name'] ?></option>
+                                            <?php endforeach ?>
                                         </select>
                                         <!-- <input type="number" min="0" max="999" class="form-control"> -->
                                     </td>
@@ -151,7 +154,7 @@
                                     <td>Turnover</td>
                                     <td>
                                         <div class="input-group mb-3">
-                                            <input type="number" min="0" max="9999" class="form-control" placeholder="Revenue Turnover" aria-label="Revenue Turnover" aria-describedby="basic-addon2">
+                                            <input type="number" name="turnover" min="0" max="9999" class="form-control" placeholder="Revenue Turnover" aria-label="Revenue Turnover" aria-describedby="basic-addon2">
                                             <span class="input-group-text" id="basic-addon2">in &#8377; Lakhs</span>
                                         </div>
 

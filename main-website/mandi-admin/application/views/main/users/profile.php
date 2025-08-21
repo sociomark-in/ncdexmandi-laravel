@@ -59,7 +59,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Update Profile Information</h5>
-                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <ul class="nav nav-tabs gap-2" id="myTab" role="tablist">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Basic Information</button>
                                         </li>

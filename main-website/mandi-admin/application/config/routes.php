@@ -62,6 +62,8 @@ $route['api/(:any)/settings/update'] = 'app/SettingsController/api_update_settin
 $route['api/(:any)/blog/new'] = 'posts/BlogsController/api_new_post';
 $route['api/(:any)/episode/new'] = 'posts/EpisodesController/api_new_post';
 $route['api/(:any)/report/new'] = 'posts/ReportsController/api_new_post';
+$route['api/(:any)/tags/new'] = 'misc/MiscellaneousController/api_new_tag';
+$route['api/(:any)/category/new'] = 'misc/MiscellaneousController/api_new_category';
 $route['api/(:any)/faq/new'] = 'posts/FAQsController/api_new_post';
 $route['api/(:any)/faq/edit'] = 'posts/FAQsController/api_edit_post';
 $route['api/(:any)/faq/edit_category'] = 'posts/FAQsController/api_edit_category';
@@ -69,6 +71,7 @@ $route['api/(:any)/faq/new_category'] = 'posts/FAQsController/api_new_category';
 
 $route['api/(:any)/faq/api_get'] = 'posts/FAQsController/api_get';
 
+$route['api/(:any)/fpo/new'] = 'posts/FPOsController/api_new_post';
 $route['api/(:any)/fpo/commodity/new'] = 'posts/FPOsController/api_new_commodity';
 
 $route['api/(:any)/users/new'] ="app/UsersController/api_new_user";

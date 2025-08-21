@@ -37,4 +37,6 @@ class MiscellaneousController extends MY_Controller
         $this->data['tags'] = $tags;
         $this->load->admin_dashboard('misc/tags', $this->data);
     }
+
+    
 }

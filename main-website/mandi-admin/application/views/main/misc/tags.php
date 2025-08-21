@@ -47,7 +47,6 @@
                                             <button id="deleteButton<?= $key ?>" class="btn btn-danger link-icon p-0" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
                                                 <i class="link-icon px-1 mb-1" data-feather="trash"></i>
                                             </button>
-                                            <a target="_blank" href="<?= base_url('user/profile/' . $key . '/edit') ?>"><i class="link-icon px-1 mb-1" data-feather="external-link"></i></a>
                                         </td>
                                         <td><?= $tag['name'] ?><br><small class="text-muted">(<?= $tag['slug'] ?>)</small></td>
                                         <td>
@@ -86,15 +85,11 @@
                     <div class="d-flex justify-content-between align-items-baseline mb-2 mb-md-3">
                         <h6 class="card-title mb-0">Add A New Tag</h6>
                     </div>
-                    <?= form_open() ?>
+                    <?= form_open("api/v2/misc/tags/new") ?>
                     <div class="row g-3">
                         <div class="col-12">
                             <label for="" class="form-label">Tag Name</label>
-                            <input type="text" class="form-control text-counter" maxlength="100" id="inputTitle">
-                        </div>
-                        <div class="col-12">
-                            <label for="" class="form-label">Tag Slug</label>
-                            <input type="text" class="form-control" id="inputSlug">
+                            <input type="text" name="name" class="form-control text-counter" maxlength="30" id="inputTitle">
                         </div>
                         <div class="col-12">
                             <button type="submit" class="btn me-2 btn-primary btn-icon-text"><i class="link-arrow btn-icon-prepend" data-feather="save"></i>Save Tag</button>

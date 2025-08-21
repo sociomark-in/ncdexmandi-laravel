@@ -8,6 +8,25 @@ class CommoditiesModel extends CI_Model {
     }
 
     /**
+     * Get all commodities from 'post_commodities' table
+     *
+     * @param array $where Conditions for the query
+     * @return array|bool Array of commodities or false on failure
+     */
+    public function get($where = null, $select = ["*"]) {
+        $this->db->select($select);
+        $this->db->distinct();
+        if (!is_null($where)) {
+            $this->db->where($where);
+        }
+        $query = $this->db->get('post_commodities');
+        if ($query->num_rows() > 0) {
+            return json_encode($query->result_array()); // Return the result as an array
+        }
+        return false; // Return false if no records found
+    }
+
+    /**
      * Insert data into 'post_commodities' table
      *
      * @param array $data
